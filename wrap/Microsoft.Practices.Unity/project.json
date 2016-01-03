@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net451": {
+      "bin": {
+        "assembly": "../../packages/Unity.3.0.1304.1/lib/Net45/Microsoft.Practices.Unity.dll"
+      }
+    }
+  }
+}

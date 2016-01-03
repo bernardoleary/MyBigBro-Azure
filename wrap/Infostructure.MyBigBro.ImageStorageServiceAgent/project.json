@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net451": {
+      "wrappedProject": "../../Infostructure.MyBigBro.ImageStorageServiceAgent/Infostructure.MyBigBro.ImageStorageServiceAgent.csproj",
+      "bin": {
+        "assembly": "../../Infostructure.MyBigBro.ImageStorageServiceAgent/obj/{configuration}/Infostructure.MyBigBro.ImageStorageServiceAgent.dll",
+        "pdb": "../../Infostructure.MyBigBro.ImageStorageServiceAgent/obj/{configuration}/Infostructure.MyBigBro.ImageStorageServiceAgent.pdb"
+      },
+      "dependencies": {
+        "Microsoft.Data.Edm": "5.6.1",
+        "Microsoft.Data.OData": "5.6.1",
+        "Microsoft.Data.Services.Client": "5.6.1",
+        "Microsoft.WindowsAzure.ConfigurationManager": "1.8.0.0",
+        "Newtonsoft.Json": "5.0.8",
+        "System.Spatial": "5.6.1",
+        "WindowsAzure.Storage": "3.0.3.0",
+        "Infostructure.MyBigBro.Domain": "1.0.0-*",
+        "AWSSDK": "1.0.0-*"
+      }
+    }
+  }
+}

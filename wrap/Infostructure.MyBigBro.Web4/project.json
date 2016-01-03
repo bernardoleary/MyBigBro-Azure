@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net451": {
+      "wrappedProject": "../../Infostructure.MyBigBro.Web4/Infostructure.MyBigBro.Web4.csproj",
+      "bin": {
+        "assembly": "../../Infostructure.MyBigBro.Web4/obj/{configuration}/Infostructure.MyBigBro.Web4.dll",
+        "pdb": "../../Infostructure.MyBigBro.Web4/obj/{configuration}/Infostructure.MyBigBro.Web4.pdb"
+      },
+      "dependencies": {
+        "Microsoft.AspNet.WebApi": "5.0.0",
+        "Microsoft.AspNet.WebApi.Client": "5.0.0",
+        "Microsoft.AspNet.WebApi.Core": "5.0.0",
+        "Microsoft.AspNet.WebApi.WebHost": "5.0.0",
+        "Newtonsoft.Json": "5.0.6",
+        "Unity": "3.0.1304.1",
+        "Unity.WebAPI": "5.1",
+        "Infostructure.MyBigBro.BusinessLogic": "1.0.0-*",
+        "Infostructure.MyBigBro.DataModel": "1.0.0-*",
+        "Infostructure.MyBigBro.Domain": "1.0.0-*",
+        "Infostructure.MyBigBro.ImageStorageServiceAgent": "1.0.0-*",
+        "EntityFramework": "1.0.0-*"
+      }
+    }
+  }
+}

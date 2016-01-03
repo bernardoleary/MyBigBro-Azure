@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net451": {
+      "wrappedProject": "../../Infostructure.MyBigBro.Domain/Infostructure.MyBigBro.Domain.csproj",
+      "bin": {
+        "assembly": "../../Infostructure.MyBigBro.Domain/obj/{configuration}/Infostructure.MyBigBro.Domain.dll",
+        "pdb": "../../Infostructure.MyBigBro.Domain/obj/{configuration}/Infostructure.MyBigBro.Domain.pdb"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net451": {
+      "bin": {
+        "assembly": "../../Resources/AWSSDKAndSamples_1.5.5.1/AWSSDK.dll"
+      }
+    }
+  }
+}

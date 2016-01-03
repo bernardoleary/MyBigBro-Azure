@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net451": {
+      "wrappedProject": "../../Infostructure.MyBigBro.DataModel/Infostructure.MyBigBro.DataModel.csproj",
+      "bin": {
+        "assembly": "../../Infostructure.MyBigBro.DataModel/obj/{configuration}/Infostructure.MyBigBro.DataModel.dll",
+        "pdb": "../../Infostructure.MyBigBro.DataModel/obj/{configuration}/Infostructure.MyBigBro.DataModel.pdb"
+      },
+      "dependencies": {
+        "EntityFramework": "4.2.0.0",
+        "Infostructure.MyBigBro.Domain": "1.0.0-*"
+      }
+    }
+  }
+}

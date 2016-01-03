@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net451": {
+      "wrappedProject": "../../Infostructure.MyBigBro.Web.Tests/Infostructure.MyBigBro.Web.Tests.csproj",
+      "bin": {
+        "assembly": "../../Infostructure.MyBigBro.Web.Tests/obj/{configuration}/Infostructure.MyBigBro.Web.Tests.dll",
+        "pdb": "../../Infostructure.MyBigBro.Web.Tests/obj/{configuration}/Infostructure.MyBigBro.Web.Tests.pdb"
+      },
+      "dependencies": {
+        "nunit.framework": "1.0.0-*"
+      }
+    }
+  }
+}

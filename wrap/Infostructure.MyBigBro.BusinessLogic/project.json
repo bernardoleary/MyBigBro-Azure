@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net451": {
+      "wrappedProject": "../../Infostructure.MyBigBro.BusinessLogic/Infostructure.MyBigBro.BusinessLogic.csproj",
+      "bin": {
+        "assembly": "../../Infostructure.MyBigBro.BusinessLogic/obj/{configuration}/Infostructure.MyBigBro.BusinessLogic.dll",
+        "pdb": "../../Infostructure.MyBigBro.BusinessLogic/obj/{configuration}/Infostructure.MyBigBro.BusinessLogic.pdb"
+      },
+      "dependencies": {
+        "EntityFramework": "4.2.0.0",
+        "Infostructure.MyBigBro.DataModel": "1.0.0-*",
+        "Infostructure.MyBigBro.Domain": "1.0.0-*",
+        "Infostructure.MyBigBro.ImageStorageServiceAgent": "1.0.0-*",
+        "Microsoft.Practices.Unity": "1.0.0-*"
+      }
+    }
+  }
+}
