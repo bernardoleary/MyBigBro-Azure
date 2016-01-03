@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html ng-app="MyBigBroApp">
+<head>
+    <title>My Big Bro</title>
+
+    <!-- Optional theme -->
+    <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
+    <link href="content/css/bootstrap.css" rel="stylesheet" />
+    <link href="content/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <link href="Content/css/toaster.css" rel="stylesheet" />
+    <link href="content/css/loading-bar.min.css" rel="stylesheet" />
+    <link href="content/css/site.css" rel="stylesheet" />
+    <link href="content/css/datetimepicker.css" rel="stylesheet" />
+    <link href="content/css/navbar.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    
+    <!-- 3rd party libraries -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-animate.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.9.0/ui-bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.9.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src='scripts/underscore.js'></script>
+    <script src='scripts/angular-google-maps.js'></script>
+    <script src="scripts/toaster.js"></script>
+    <script src="scripts/loading-bar.min.js"></script>
+    <script src="scripts/moment.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/datetimepicker.js"></script>
+
+    <!-- Load app main script -->
+    <script src="app/app.js"></script>
+    <script src="app/services/capturedImagesGeoMarkerService.js"></script>
+    <script src="app/controllers/mainController.js"></script>
+    <script src="app/controllers/aboutController.js"></script>
+    <script src="app/controllers/loginController.js"></script>
+
+</head>
+    <body>
+        <header class="container" data-ng-controller="mainController">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <!-- Toggle get grouped for better mobile display -->
+                    <div class="navbar-header pull-left">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">My Big Bro</a>
+                    </div>                    
+                    <div class="collapse navbar-collapse">
+                        <!-- The date window that we are searching within -->
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" data-toggle="dropdown">Selected Start Date/Time: {{ data.startdatetime | date:'yyyy-MM-dd HH:mm' }} <strong class="caret"></strong></a>
+                                <div class="dropdown-menu">
+                                    <datetimepicker id="datetimepickerStart"
+                                                    data-ng-model="data.startdatetime"
+                                                    data-datetimepicker-config="{ dropdownSelector: '.dropdown-toggle' }"
+                                                    data-on-set-time="onStartTimeSet">
+                                    </datetimepicker>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" data-toggle="dropdown">Selected End Date/Time: {{ data.enddatetime | date:'yyyy-MM-dd HH:mm' }} <strong class="caret"></strong></a>
+                                <div class="dropdown-menu">
+                                    <datetimepicker id="datetimepickerEnd"
+                                                    data-ng-model="data.enddatetime"
+                                                    data-datetimepicker-config="{ dropdownSelector: '.dropdown-toggle' }"
+                                                    data-on-set-time="onEndTimeSet">
+                                    </datetimepicker>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="input-lg">
+                                <input type="text"
+                                       class="text-center"
+                                       placeholder="Device Name"
+                                       ng-model="data.devicename"
+                                       ng-blur="onDeviceNameChange($event)"
+                                       title="Tab out to trigger search, clear this field to see all results." />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section id="body" class="container-full">
+            <div id="map" style="width: 100%; height: 700px;"></div>
+        </section>
+        
+        <!-- This bit of script to stop the DDL from retracting needs to go at the bottom, or it loads too early -->
+        <script language="javascript">
+            $('.dropdown-toggle').dropdown();
+            $('.dropdown-menu').find('form').click(function (e) {
+                e.stopPropagation();
+            });
+        </script>
+
+    </body>
+</html>
+

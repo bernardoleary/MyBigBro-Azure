@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+    </configSections>
+    <connectionStrings>
+        <add name="Infostructure.MyBigBro.DataModel.Properties.Settings.MyBigBro"
+            connectionString="Data Source=NEC\SQLEXPRESS2008R2;Initial Catalog=MyBigBro;Integrated Security=True" />
+    </connectionStrings>
+</configuration>

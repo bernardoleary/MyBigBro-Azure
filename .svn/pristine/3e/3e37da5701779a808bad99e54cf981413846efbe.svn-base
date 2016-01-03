@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using Infostructure.MyBigBro.DataModel.DataAccess;
+using Infostructure.MyBigBro.DataModel.Models;
+
+namespace Infostructure.MyBigBro.Web.Controllers
+{
+    public class CapturedImagesGeoMarkerController : ApiController
+    {
+        private IMyBigBroRepository _myBigBroRepository = null;
+
+        public CapturedImagesGeoMarkerController() {}
+
+        public CapturedImagesGeoMarkerController(IMyBigBroRepository myBigBroRepository)
+        {
+            _myBigBroRepository = myBigBroRepository;
+        }
+
+        // GET api/geomarker
+        public IEnumerable<CapturedImage> Get(int id)
+        {
+            if (ModelState.IsValid)
+            {
+                // Refactor this so that it is encapsulated at the business logic layer.
+                var capturedImages = from capturedImage in _myBigBroRepository.Set<CapturedImage>()
+                                     join capturedImageGeoMarker in _myBigBroRepository.Set<CapturedImageGeoMarker>() on capturedImage.Id equals capturedImageGeoMarker.CapturedImageId
+                                     join geoMarker in _myBigBroRepository.Set<GeoMarker>() on capturedImageGeoMarker.GeoMarkerId equals geoMarker.Id                                     
+                                     where geoMarker.Id == id
+                                     select capturedImage;
+                return capturedImages;
+            }
+            throw new HttpResponseException(HttpStatusCode.BadRequest);
+        }
+    }
+}

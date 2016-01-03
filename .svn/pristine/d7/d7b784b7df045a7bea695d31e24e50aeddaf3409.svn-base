@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="Infostructure.MyBigBro.ImageStorageServiceAgent.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <applicationSettings>
+        <Infostructure.MyBigBro.ImageStorageServiceAgent.Properties.Settings>
+            <setting name="awsBucket" serializeAs="String">
+                <value>mybigbro</value>
+            </setting>
+            <setting name="awsRootUrl" serializeAs="String">
+                <value>https://s3-ap-southeast-2.amazonaws.com</value>
+            </setting>
+        </Infostructure.MyBigBro.ImageStorageServiceAgent.Properties.Settings>
+    </applicationSettings>
+</configuration>

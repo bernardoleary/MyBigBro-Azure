@@ -1,0 +1,11 @@
+﻿angular.module('MyBigBroApp.services').
+    factory('webCamsService', function ($http) {
+        var webCamsApi = {};
+        webCamsApi.getNearestWebCam = function (deviceName) {
+            return $http({
+                method: 'GET',
+                url: 'http://' + document.location.host + '/api/webcams/nearest?deviceName=' + deviceName
+            });
+        };
+        return webCamsApi;
+    });

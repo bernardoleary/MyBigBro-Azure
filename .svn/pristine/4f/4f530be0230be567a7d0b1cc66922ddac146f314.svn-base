@@ -1,0 +1,98 @@
+﻿angular.module('MyBigBroApp.controllers', []).
+    controller('mainController', function($scope, capturedImagesGeoMarkerService) {
+
+        // Google Maps default components
+        var mapOptions = {
+            //zoom: 12,
+            //center: new google.maps.LatLng(-36.8128985253311, 174.75273049276021),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var infoWindow = new google.maps.InfoWindow();        
+
+        // Scope variables
+        $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        $scope.data = {};
+        $scope.data.startdatetime = '';
+        $scope.data.enddatetime = '';
+        $scope.markers = [];
+
+        // Draw our markers, first run through
+        drawMarkers();
+
+        // Function to draw our geomarkers with images
+        function drawMarkers() {
+            // The array we will store our service results in
+            var capturedImagesGeoMarker = [];
+            // Clear existing markers                   
+            for (var i = 0; i < $scope.markers.length; i++) {
+                $scope.markers[i].setMap(null);
+            }
+            $scope.markers = [];
+            // Create new markers
+            if ($scope.data.startdatetime == '' || $scope.data.enddatetime == '')
+            // Just get the top one
+                capturedImagesGeoMarkerService.getCapturedImagesGeoMarkerTop(1).success(function(response) {
+                    capturedImagesGeoMarker = response;
+                    createMarker(capturedImagesGeoMarker[0]);
+                    fitBounds();
+                });
+            else {
+                // Create by date window
+                var startdatetimeVal = moment($scope.data.startdatetime).format("YYYY-MM-DD HH:MM");
+                var enddatetimeVal = moment($scope.data.enddatetime).format("YYYY-MM-DD HH:MM");
+                capturedImagesGeoMarkerService.getCapturedImagesGeoMarkerForDateTimeWindow(startdatetimeVal, enddatetimeVal).success(function(response) {
+                    capturedImagesGeoMarker = response;
+                    for (var i = 0; i < capturedImagesGeoMarker.length; i++) {
+                        createMarker(capturedImagesGeoMarker[i]);
+                    }
+                    fitBounds();
+                });
+            }        
+        };
+
+        // Function to set the bounds of the map
+        function fitBounds() {
+            alert($scope.markers.length);
+            var bounds = new google.maps.LatLngBounds();
+            for (i = 0; i < $scope.markers.length; i++) {
+                bounds.extend($scope.markers[i].getPosition());
+            }
+            $scope.map.fitBounds(bounds);
+        };
+
+        // Function to create a geomarker on the map
+        function createMarker(info) {
+            var marker = new google.maps.Marker({
+                map: $scope.map,
+                position: new google.maps.LatLng(info.GeoMarker.YCoord, info.GeoMarker.XCoord),
+                title: info.GeoMarker.MarkerDateTime
+            });
+            marker.content = '<div class="infoWindowContent"><img src="' + info.CapturedImage.Url + '" alt="Smile"></div>';
+            google.maps.event.addListener(marker, 'click', function() {
+                infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
+                infoWindow.open($scope.map, marker);
+            });
+            $scope.markers.push(marker);
+        };
+
+        // Event to enabled a popup with the image in it
+        $scope.openInfoWindow = function(e, selectedMarker) {
+            e.preventDefault();
+            google.maps.event.trigger(selectedMarker, 'click');
+        };
+
+        // Event to get start time DDL change
+        $scope.onStartTimeSet = function (newDate, oldDate) {
+            $scope.data.startdatetime = newDate;
+            console.log($scope.data.startdatetime);
+            drawMarkers();
+        };
+
+        // Event to end start time DDL change
+        $scope.onEndTimeSet = function (newDate, oldDate) {
+            $scope.data.enddatetime = newDate;
+            console.log($scope.data.enddatetime);
+            drawMarkers();
+        };
+
+    });

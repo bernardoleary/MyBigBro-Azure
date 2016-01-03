@@ -1,0 +1,167 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Infostructure.MyBigBro.BusinessLogic.GeoSpatial;
+using Infostructure.MyBigBro.BusinessLogic.Services;
+using Infostructure.MyBigBro.BusinessLogic.WebCam;
+using Infostructure.MyBigBro.DataModel.DataAccess;
+using Infostructure.MyBigBro.DataModel.Models;
+using Infostructure.MyBigBro.Domain;
+using Infostructure.MyBigBro.ImageStorageServiceAgent;
+using Moq;
+using NUnit.Framework;
+
+namespace Infostructure.MyBigBro.BusinessLogic.Tests.UnitTests
+{
+    [TestFixture]
+    public class TestGeoMarkerService
+    {
+        private Mock<IWebCamControl> webCamControl = null;
+        private Mock<ILocation> location = null;
+        private Mock<IGeoMarker> geoMarker = null;
+        private Mock<IWebCam> webCam1 = null;
+        private Mock<IWebCam> webCam2 = null;
+        private Mock<IMyBigBroRepository> mockRepository;
+        private GeoMarkerService geoMarkerService;
+
+        [SetUp]
+        public void SetUpUnitTestsWebCamService()
+        {
+            // arrange - setup mock services and repository
+            webCamControl = new Mock<IWebCamControl>();
+            location = new Mock<ILocation>();
+            geoMarker = new Mock<IGeoMarker>();
+            webCam1 = new Mock<IWebCam>();
+            webCam2 = new Mock<IWebCam>();
+            mockRepository = new Mock<IMyBigBroRepository>();
+
+            // arrange - setup mock datasets
+            var geoMarker1 = new GeoMarker
+            {
+                Id = 234,
+                XCoord = 2,
+                YCoord = 2,
+                MarkerDateTime = new DateTime(2014, 01, 01, 10, 10, 00)
+            };
+            var capturedImage1 = new CapturedImage
+            {
+                Id = 345,
+                WebCamId = 123,
+                DateTimeCaptured = new DateTime(2014, 01, 01, 10, 10, 00),
+                Url = "http://test.com/1"
+            };
+            var geoMarker2 = new GeoMarker
+            {
+                Id = 12,
+                XCoord = 4,
+                YCoord = 4,
+                MarkerDateTime = new DateTime(2014, 01, 01, 10, 30, 00)
+            };
+            var capturedImage2 = new CapturedImage
+            {
+                Id = 14,
+                WebCamId = 345,
+                DateTimeCaptured = new DateTime(2014, 01, 01, 10, 30, 00),
+                Url = "http://test.com/2"
+            };
+            var geoMarker3 = new GeoMarker
+            {
+                Id = 1,
+                XCoord = 6,
+                YCoord = 6,
+                MarkerDateTime = new DateTime(2014, 01, 01, 10, 45, 00)
+            };
+            var capturedImage3 = new CapturedImage
+            {
+                Id = 2,
+                WebCamId = 567,
+                DateTimeCaptured = new DateTime(2014, 01, 01, 10, 45, 00),
+                Url = "http://test.com/3"
+            };
+            var capturedImageGeoMarker = new CapturedImageGeoMarker();
+            capturedImageGeoMarker.Id = 789;
+            capturedImageGeoMarker.CapturedImageId = capturedImage1.Id;
+            capturedImageGeoMarker.GeoMarkerId = geoMarker1.Id;
+            var capturedImageGeoMarker2 = new CapturedImageGeoMarker();
+            capturedImageGeoMarker2.Id = 222;
+            capturedImageGeoMarker2.CapturedImageId = capturedImage2.Id;
+            capturedImageGeoMarker2.GeoMarkerId = geoMarker2.Id;
+            var capturedImageGeoMarker3 = new CapturedImageGeoMarker();
+            capturedImageGeoMarker3.Id = 333;
+            capturedImageGeoMarker3.CapturedImageId = capturedImage3.Id;
+            capturedImageGeoMarker3.GeoMarkerId = geoMarker3.Id;
+            mockRepository.Setup(x => x.Set<GeoMarker>()).Returns(new List<GeoMarker> { geoMarker1, geoMarker2, geoMarker3 }.AsQueryable());
+            mockRepository.Setup(x => x.Set<CapturedImage>()).Returns(new List<CapturedImage> { capturedImage1, capturedImage2, capturedImage3 }.AsQueryable());
+            mockRepository.Setup(x => x.Set<CapturedImageGeoMarker>()).Returns(new List<CapturedImageGeoMarker> { capturedImageGeoMarker, capturedImageGeoMarker2, capturedImageGeoMarker3 }.AsQueryable());
+
+            // setup service to test
+            geoMarkerService = new GeoMarkerService(webCamControl.Object, location.Object, mockRepository.Object);
+        }
+
+        [Test]
+        public void TestProcessGeoMarker()
+        {
+            // arrange
+            geoMarkerService.WebCamControl = webCamControl.Object;
+            geoMarkerService.MyBigBroRepository = mockRepository.Object;
+            webCam1.SetupProperty(x => x.XCoord, 123.12);
+            webCam1.SetupProperty(y => y.YCoord, 123.12);
+            webCam2.SetupProperty(x => x.XCoord, 124.12);
+            webCam2.SetupProperty(y => y.YCoord, 124.12);
+            var webCamList = new List<IWebCam>();
+            webCamList.Add(webCam1.Object);
+            webCamList.Add(webCam2.Object);
+            location.Setup(x => x.GetWebCamsWithinWebCamRadiusOfVisibility(It.IsAny<Point>(), true)).Returns(webCamList);
+            geoMarkerService.Location = location.Object;
+            geoMarker.SetupProperty(x => x.XCoord, 123.33);
+            geoMarker.SetupProperty(y => y.YCoord, 123.33);
+
+            // act
+            var result = geoMarkerService.ProcessGeoMarker(geoMarker.Object);
+
+            // assert
+            Assert.NotNull(result);
+            Assert.AreEqual(result, 2);
+        }
+
+        [Test]
+        public void TestGetMarkersWithImage()
+        {
+            // arrange
+            var top = 1;            
+            
+            // act
+            var result = geoMarkerService.GetMarkersWithImage(top);
+
+            // assert            
+            Assert.IsInstanceOf<IEnumerable<ICapturedImageGeoMarkerDetail>>(result);
+            var first = result.FirstOrDefault();
+            Assert.NotNull(first.GeoMarker);
+            Assert.NotNull(first.CapturedImage);
+            // Test ordering is working fine
+            Assert.AreEqual(345, first.CapturedImage.Id);
+        }
+
+        [Test]
+        public void TestGetMarkersWithImageForTimeframe()
+        {
+            // arrange
+            var startDateTime = new DateTime(2014, 01, 01, 10, 15, 00);
+            var endDateTime = new DateTime(2014, 01, 01, 10, 50, 00);
+
+            // act
+            var result = geoMarkerService.GetMarkersWithImageForTimeframe(startDateTime, endDateTime);
+
+            // assert            
+            Assert.AreEqual(2, result.Count());
+            Assert.IsInstanceOf<IEnumerable<ICapturedImageGeoMarkerDetail>>(result);
+            var first = result.FirstOrDefault();
+            Assert.NotNull(first.GeoMarker);
+            Assert.NotNull(first.CapturedImage);
+            // Test ordering is working fine
+            Assert.AreEqual(14, first.CapturedImage.Id);
+        }
+    }
+}

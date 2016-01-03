@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="UTF-8" ?> <TrafficCams>
+  <Cam>
+    <name>I-93 @ Rte 28 (Exit 5)</name>
+    <active>false</active>
+    <description>I-93 @ Rte 28 (Exit 5, Randolph)</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/2.jpg</image>
+    <lat>42.20450003</lat>
+    <long>-71.06517015</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 2_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/camlstbgno.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 NB @ Rte 24 (Exit 4)</name>
+    <active>false</active>
+    <description>I-93 NB @ Rte 24 (Exit 4), Randolph</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/4.jpg</image>
+    <lat>42.20278779</lat>
+    <long>-71.07921622</long>
+    <static1_img>http://www1.eot.state.ma.us/images/camlstbgno.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\CAM 4_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 @ Ponkapoag Trail (Exit 3)</name>
+    <active>true</active>
+    <description>I-93 @ Ponkapoag Trail (Exit 3), Canton</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/5.jpg</image>
+    <lat>42.20377945</lat>
+    <long>-71.09971047</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 5_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 5_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 @ Rte 138 (Exit 2)</name>
+    <active>true</active>
+    <description>I-93 @ Rte 138 (Exit 2), Canton</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/6.jpg</image>
+    <lat>42.203488</lat>
+    <long>-71.119502</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 6_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 6_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ Great Plain Ave (Exit 18)</name>
+    <active>false</active>
+    <description>I-95 @ Great Plain Ave (Exit 18), Needham</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/9.jpg</image>
+    <lat>42.26849288</lat>
+    <long>-71.20323139</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 9_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 9_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ x19 Highland Ave</name>
+    <active>true</active>
+    <description>I-95 @ Highland Ave (Exit 19), Needham</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/10.jpg</image>
+    <lat>42.30326287</lat>
+    <long>-71.22514162</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 10_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 10_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ Rte 9 (Exit 20) </name>
+    <active>true</active>
+    <description>I-95 @ Rte 9 (Exit 20), Wellesley</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/11.jpg</image>
+    <lat>42.31614513</lat>
+    <long>-71.23237617</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 11_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 11_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ Rte 16 (Exit 21)</name>
+    <active>true</active>
+    <description>I-95 @ Rte 16 (Exit 21), Newton</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/12.jpg</image>
+    <lat>42.3283411</lat>
+    <long>-71.25109423</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 12_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 12_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ x23 (I-90, Mass Pike)</name>
+    <active>true</active>
+    <description>I-95 x23 (I-90, Mass Pike), Weston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/13.jpg</image>
+    <lat>42.33928538</lat>
+    <long>-71.26233675</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 13_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 13_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ Rte 30 (Exit 25)</name>
+    <active>true</active>
+    <description>I-95 @ Rte 30 (Exit 25), Weston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/14.jpg</image>
+    <lat>42.359158</lat>
+    <long>-71.270486</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 14_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 14_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ Rte 20 (Exit 26)</name>
+    <active>true</active>
+    <description>I-95 @ Rte 20 (Exit 26), Waltham</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/15.jpg</image>
+    <lat>42.36889442</lat>
+    <long>-71.27057829</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 15_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 15_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ Totten Pond Rd (Exit 27)</name>
+    <active>true</active>
+    <description>I-95 @ Totten Pond Rd (Exit 27), Waltham</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/16.jpg</image>
+    <lat>42.397215</lat>
+    <long>-71.261731</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 16_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 16_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ Rte 2 (Exit 29)</name>
+    <active>false</active>
+    <description>I-95 @ Rte 2 (Exit 29), Lexington</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/17.jpg</image>
+    <lat>42.42875854</lat>
+    <long>-71.25975208</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 17_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 17_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ Rte 2A (Exit 30)</name>
+    <active>false</active>
+    <description>I-95 @ Rte 2A (Exit 30), Lexington</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/18.jpg</image>
+    <lat>42.44276415</lat>
+    <long>-71.25854411</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 18_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 18_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ Rts 4&amp;225 (Exit 31)</name>
+    <active>true</active>
+    <description>I-95 @ Rts 4&amp;225 (Exit 31), Lexington</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/19.jpg</image>
+    <lat>42.47137206</lat>
+    <long>-71.24490019</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 19_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 19_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ Rte 3 (Exit 32)</name>
+    <active>false</active>
+    <description>I-95 @ Rte 3 (Exit 32), Burlington</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/20.jpg</image>
+    <lat>42.4781931</lat>
+    <long>-71.21668176</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 20_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 20_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ Rte 3A (Exit 33)</name>
+    <active>false</active>
+    <description>I-95 @ Rte 3A (Exit 33), Burlington</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/21.jpg</image>
+    <lat>42.48981377</lat>
+    <long>-71.19149884</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 21_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 21_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ Winn St (Exit 34)</name>
+    <active>true</active>
+    <description>I-95 at Winn St (Exit 34), Burlington</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/22.jpg</image>
+    <lat>42.49568093</lat>
+    <long>-71.17743162</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 22_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 22_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ Rte 38 (Exit 35)</name>
+    <active>true</active>
+    <description>I-95 at Rte 38 (Exit 35), Woburn</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/23.jpg</image>
+    <lat>42.49893543</lat>
+    <long>-71.15718334</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 23_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 23_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ Washington St (Exit 36)</name>
+    <active>true</active>
+    <description>I-95 at Washington St (Exit 36), Woburn</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/24.jpg</image>
+    <lat>42.50219131</lat>
+    <long>-71.12719983</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 24_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 24_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 @ Sullivan Square (Exit 28)</name>
+    <active>true</active>
+    <description>I-93 @ Sullivan Square (Exit 28), Charlestown</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/27.jpg</image>
+    <lat>42.392403</lat>
+    <long>-71.085231</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 27_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 27_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 between I-93 and Rte 28 (Exits 37-38)</name>
+    <active>false</active>
+    <description>I-95 between I-93 and Rte 28 (Exits 37-38), Reading</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/26.jpg</image>
+    <lat>42.50302492</lat>
+    <long>-71.10978454</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 26_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 26_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 @ Leverett Connector (Exit 26)</name>
+    <active>false</active>
+    <description>I-93 @ Leverett Connector (Exit 26), Boston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/28.jpg</image>
+    <lat>42.383748</lat>
+    <long>-71.076533</long>
+    <static1_img>http://www1.eot.state.ma.us/images/camlstbgno.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 28_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 @ Rte I-95 (x25A)</name>
+    <active>true</active>
+    <description>Rte 3 @ Rte I-95/128 (x25A), Burlington</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/30.jpg</image>
+    <lat>42.476994</lat>
+    <long>-71.219922</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 30_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/camlstbgno.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 between I-95 &amp; Rte 62</name>
+    <active>true</active>
+    <description>Rte 3 between I-95 &amp; Rte 62, Burlington</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/31.jpg</image>
+    <lat>42.492211</lat>
+    <long>-71.232938</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 31_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 31_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 @ Rte 62 (Exit 26)</name>
+    <active>false</active>
+    <description>Rte 3 @ Rte 62 (Exit 26), Bedford</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/32.jpg</image>
+    <lat>42.502</lat>
+    <long>-71.2437</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 32_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 32_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 north of Rte 62 (Exit 26)</name>
+    <active>true</active>
+    <description>Rte 3 north of Rte 62 (Exit 26), Bedford</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/33.jpg</image>
+    <lat>42.51128</lat>
+    <long>-71.252166</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 33_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 33_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 south of Orchard Rd (b/w x26 &amp; x27)</name>
+    <active>true</active>
+    <description>Rte 3 south of Orchard Rd, Bedford</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/34.jpg</image>
+    <lat>42.523994</lat>
+    <long>-71.265219</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 34_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 34_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3, south of Concord Rd (Exit 27)</name>
+    <active>true</active>
+    <description>Rte 3, south of Concord Rd (Exit 27), Billerica</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/35.jpg</image>
+    <lat>42.532194</lat>
+    <long>-71.276738</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 35_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 35_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 @ x27 Concord Rd</name>
+    <active>true</active>
+    <description>Rte 3 @ x27 Concord Rd, Billerica</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/36.jpg</image>
+    <lat>42.542142</lat>
+    <long>-71.282808</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 36_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 36_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 between Exits 27 &amp; 28</name>
+    <active>true</active>
+    <description>Rte 3 between Exits 27 &amp; 28, Billerica</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/37.jpg</image>
+    <lat>42.551536</lat>
+    <long>-71.290004</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 37_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 37_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 @ Treble Cove Rd (Exit 28)</name>
+    <active>true</active>
+    <description>Rte 3 @ Treble Cove Rd (Exit 28), Billerica</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/38.jpg</image>
+    <lat>42.559142</lat>
+    <long>-71.29674</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 38_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 38_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 at Rte 129 (Exit 29)</name>
+    <active>false</active>
+    <description>Rte 3 at Rte 129 (Exit 29), Chelmsford</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/40.jpg</image>
+    <lat>42.588518</lat>
+    <long>-71.312324</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 40_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 40_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 @ Lowell Connector (Exit 30)</name>
+    <active>true</active>
+    <description>Rte 3 @ Lowell Connector (Exit 30), Chelmsford</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/41.jpg</image>
+    <lat>42.599215</lat>
+    <long>-71.321382</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 41_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 41_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 @ I-495 (Exit 30)</name>
+    <active>true</active>
+    <description>Rte 3 @ I-495 (Exit 30), Chelmsford</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/42.jpg</image>
+    <lat>42.605126</lat>
+    <long>-71.324937</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 42_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 42_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 @ Rte 110 (Exit 31)</name>
+    <active>true</active>
+    <description>Rte 3 @ Rte 110 (Exit 31), Chelmsford</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/43.jpg</image>
+    <lat>42.613625</lat>
+    <long>-71.328445</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 43_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 43_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3, south of Drum Hill Rd</name>
+    <active>false</active>
+    <description>Rte 3, south of Drum Hill Rd, Chelmsford</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/45.jpg</image>
+    <lat>42.620109</lat>
+    <long>-71.354902</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 45_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 45_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3, north of Rte 110</name>
+    <active>true</active>
+    <description>Rte 3, north of Rte 110, Chelmsford</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/44.jpg</image>
+    <lat>42.620925</lat>
+    <long>-71.344698</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 44_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 44_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 @ Drum Hill Rd (Exit 32)</name>
+    <active>true</active>
+    <description>Rte 3 at Drumhill Rd (Exit 32), Chelmsford</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/46.jpg</image>
+    <lat>42.621991</lat>
+    <long>-71.365097</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 46_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 46_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3, north of Drum Hill Rd</name>
+    <active>false</active>
+    <description>Rte 3, north of Drum Hill Rd, Chelmsford</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/47.jpg</image>
+    <lat>42.624403</lat>
+    <long>-71.376152</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 47_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 47_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3, south of Groton Rd</name>
+    <active>true</active>
+    <description>Rte 3, south of Groton Rd, North Chelmsford</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/48.jpg</image>
+    <lat>42.6275</lat>
+    <long>-71.394353</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 48_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 48_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 @ Groton Rd (Exit 33)</name>
+    <active>false</active>
+    <description>Rte 3 @ Groton Rd (Exit 33),  North Chelmsford</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/49.jpg</image>
+    <lat>42.632159</lat>
+    <long>-71.406333</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 49_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 49_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3, south of Westford Rd</name>
+    <active>false</active>
+    <description>Rte 3, south of Westford Rd, Westford</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/50.jpg</image>
+    <lat>42.646222</lat>
+    <long>-71.418261</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 50_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 50_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 @ Westford Rd (Exit 34)</name>
+    <active>true</active>
+    <description>Rte 3 @ Westford Rd (Exit 34), Tyngsboro</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/51.jpg</image>
+    <lat>42.658359</lat>
+    <long>-71.428302</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 51_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 51_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3, south of Rte 113</name>
+    <active>true</active>
+    <description>Rte 3, south of Rte 113, Tyngsboro</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/52.jpg</image>
+    <lat>42.670576</lat>
+    <long>-71.437909</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 52_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 52_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 @ Rte 113 (Exit 35)</name>
+    <active>true</active>
+    <description>Rte 3 @ Rte 113 (Exit 35), Tyngsboro</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/53.jpg</image>
+    <lat>42.681628</lat>
+    <long>-71.44186</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 53_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 53_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 at Middlesex Rd (Exit 36)</name>
+    <active>false</active>
+    <description>Rte 3 at Middlesex Rd (Exit 36), Tyngsboro</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/54.jpg</image>
+    <lat>42.69111</lat>
+    <long>-71.444183</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 54_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 54_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 between Rts 28 &amp; 37 (Exits 5 &amp; 6)</name>
+    <active>true</active>
+    <description>I-93 between Rte 28 and 37(Exit 5 &amp; 6), Braintree </description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/1.jpg</image>
+    <lat>42.211292</lat>
+    <long>-71.044931</long>
+    <static1_img>~\images\static_direction_images\CAM 1_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\CAM 1_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rt 6 East .5 mile West of Rt 6A</name>
+    <active>true</active>
+    <description>Rt 6 East .5 mile West of Rt 6A, Sagamore</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/60.jpg</image>
+    <lat>41.77521042</lat>
+    <long>-70.55734324</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 60_WB.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 60_EB.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rt 6 East 200 ft West of Rt 6A</name>
+    <active>true</active>
+    <description>Rt 6 East 200 ft West of Rt 6A, Sagamore</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/61.jpg</image>
+    <lat>41.77966184</lat>
+    <long>-70.55021665</long>
+    <static1_img>http://www1.eot.state.ma.us/images/camlstbgno.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 61_EB.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rt 6 West, North of Sagamore Bridge</name>
+    <active>true</active>
+    <description>Rt 6 West, North of Sagamore Bridge, Sagamore</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/62.jpg</image>
+    <lat>41.77883788</lat>
+    <long>-70.54326993</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 62_WB.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 62_EB.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>45 State Rd, Sagamore Depot</name>
+    <active>true</active>
+    <description>45 State Rd, Sagamore Depot, Sagamore</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/63.jpg</image>
+    <lat>41.78429586</lat>
+    <long>-70.54228114</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 63_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 63_EB.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 South @ Exit 1</name>
+    <active>true</active>
+    <description>Rte 3 South at exit 1, Sagamore</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/64.jpg</image>
+    <lat>41.788</lat>
+    <long>-70.545</long>
+    <static1_img>http://www1.eot.state.ma.us/images/camlstbgno.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 64_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 @ Rte 37 (Exit 6)</name>
+    <active>true</active>
+    <description>I-93 @ Rte 37 (Exit 6), Braintree</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/101.jpg</image>
+    <lat>42.2229</lat>
+    <long>-71.0308</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 101_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 101_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3, south of I-93 (exit 18)</name>
+    <active>false</active>
+    <description>Rte 3, just South of I-93 (exit 18), Quincy</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/102.jpg</image>
+    <lat>42.227326</lat>
+    <long>-71.012589</long>
+    <static1_img>http://www1.eot.state.ma.us/images/camlstbgno.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 102_SB.jpg</static2_img>
+    <static2_direction>Northbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 SB @ x7 Rte 3</name>
+    <active>true</active>
+    <description>I-93 SB @ x7 (Rte 3), Quincy</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/103.jpg</image>
+    <lat>42.229439</lat>
+    <long>-71.023259</long>
+    <static1_img>http://www1.eot.state.ma.us/images/camlstbgno.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 103_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 NB at Rte 3 &amp; Washington St</name>
+    <active>true</active>
+    <description>I-93 NB at Rte 3 &amp; Washington St, Quincy</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/104.jpg</image>
+    <lat>42.22871</lat>
+    <long>-71.019978</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 104_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/camlstbgno.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 between Exits 7 and 8</name>
+    <active>false</active>
+    <description>I-93 between Exits 7 and 8, Quincy</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/105.jpg</image>
+    <lat>42.23812933</lat>
+    <long>-71.02412224</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 105_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 105_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 at Furnace Brook (Exit 8)</name>
+    <active>true</active>
+    <description>I-93 at Furnace Brook (Exit 8), Quincy</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/106.jpg</image>
+    <lat>42.243411</lat>
+    <long>-71.027735</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 106_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 106_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 at Granite Ave (Exit 11)</name>
+    <active>false</active>
+    <description>I-93 at Granite Ave (Exit 11), Milton</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/107.jpg</image>
+    <lat>42.271123</lat>
+    <long>-71.049611</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 107_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 107_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 at Neponset River (Exits 11-12)</name>
+    <active>true</active>
+    <description>I-93 at Neponset River (Exits 11-12), Boston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/108.jpg</image>
+    <lat>42.2805</lat>
+    <long>-71.0461</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 108_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 108_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 @ Tenean Beach (Exits 12-13)</name>
+    <active>false</active>
+    <description>I-93 @ Tenean Beach (Exits 12-13), Boston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/109.jpg</image>
+    <lat>42.29358006</lat>
+    <long>-71.04446411</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 109_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 109_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 @ Savin Hill (Exits 14-15)</name>
+    <active>false</active>
+    <description>I-93 @ Savin Hill (Exits 14-15), Boston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/110.jpg</image>
+    <lat>42.30980748</lat>
+    <long>-71.05317593</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 110_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 110_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 @ Columbia Rd (Exit 15)</name>
+    <active>true</active>
+    <description>I-93 @ Columbia Rd (Exit 15), Boston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/111.jpg</image>
+    <lat>42.3225</lat>
+    <long>-71.054</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 111_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 111_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 @ I-95 split (Exit 1)</name>
+    <active>false</active>
+    <description>I-93 @ I-95 split (Exit 1), Canton</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/7.jpg</image>
+    <lat>42.20542389</lat>
+    <long>-71.13949181</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 7_I-93 NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 7_RTE 128 NB.jpg</static2_img>
+    <static2_direction>Northbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-95 @ Rte 1 (Exit 15)</name>
+    <active>false</active>
+    <description>I-95 @ Rte 1 (Exit 15), Westwood</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/8.jpg</image>
+    <lat>42.22907571</lat>
+    <long>-71.18236188</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 8_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 8_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 between Montvale Ave &amp; I-95 (Exits 36-37)</name>
+    <active>true</active>
+    <description>I-93 between Montvale Ave &amp; I-95 (Exits 36-37), Woburn</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/25.jpg</image>
+    <lat>42.490588</lat>
+    <long>-71.117493</long>
+    <static1_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 25_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 25_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Rte 3 between Exits 28 &amp; 29</name>
+    <active>true</active>
+    <description>Rte 3 between Exits 28 &amp; 29, Billerica</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/39.jpg</image>
+    <lat>42.575599</lat>
+    <long>-71.305348</long>
+    <static1_img>~\images\static_direction_images\CAM 39_NB.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\CAM 39_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Tobin Bridge SB to Boston and Rutherford Ave</name>
+    <active>false</active>
+    <description>Tobin Bridge SB to Boston and Rutherford Ave, Charlestown</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/202.jpg</image>
+    <lat>42.375649</lat>
+    <long>-71.056137</long>
+    <static1_img>~\images\static_direction_images\NB202.JPG.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\SB202.JPG.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Tobin Bridge NB Lower Deck into Chelsea</name>
+    <active>false</active>
+    <description>Tobin Bridge NB Lower Deck into Chelsea, Charlestown</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/203.jpg</image>
+    <lat>42.375649</lat>
+    <long>-71.056137</long>
+    <static1_img>~\images\static_direction_images\NB203.JPG.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\SB203.JPG.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Tobin Bridge NB Lower Deck to Rte 1 Beacon St exit</name>
+    <active>false</active>
+    <description>Tobin Bridge NB Lower Deck to Rte 1 Beacon St exit, Chelsea</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/204.jpg</image>
+    <lat>42.38966</lat>
+    <long>-71.042061</long>
+    <static1_img>~\images\static_direction_images\NB204.JPG.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\SB204.JPG.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-90 MassPike west of Exit 2</name>
+    <active>false</active>
+    <description>I-90 (MassPike) west of Exit 2, Lee</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/205.jpg</image>
+    <lat>42.297829</lat>
+    <long>-73.246365</long>
+    <static1_img>~\images\static_direction_images\WB205.JPG.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>~\images\static_direction_images\EB205.JPG.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-90 MassPike between Exits 2 and 3</name>
+    <active>true</active>
+    <description>I-90 (MassPike) between Exits 2 &amp; 3, Blandford</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/206.jpg</image>
+    <lat>42.223034</lat>
+    <long>-72.969046</long>
+    <static1_img>~\images\static_direction_images\WB206.JPG.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>~\images\static_direction_images\EB206.JPG.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-90 MassPike I-84 Interchange 9 tolls I-90 ramp</name>
+    <active>true</active>
+    <description>I-90 (MassPike) at I-84 (Interchange 9) tolls to I-90 ramps, Sturbridge</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/207.jpg</image>
+    <lat>42.124861</lat>
+    <long>-72.067866</long>
+    <static1_img>~\images\static_direction_images\WB207.JPG.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>~\images\static_direction_images\EB207.JPG.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-90 MassPike @ x11A (I-495) looking west</name>
+    <active>true</active>
+    <description>I-90 (MassPike) @ x11A (I-495) looking west, Westborough
+</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/208.jpg</image>
+    <lat>42.26463</lat>
+    <long>-71.569705</long>
+    <static1_img>~\images\static_direction_images\WB208.JPG.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>~\images\static_direction_images\WB208.JPG.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-90 MassPike Weston State Police Barracks east</name>
+    <active>true</active>
+    <description>I-90 (MassPike) @ Weston State Police Barracks looking east, Weston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/209.jpg</image>
+    <lat>42.333228</lat>
+    <long>-71.319788</long>
+    <static1_img>~\images\static_direction_images\WB209.JPG.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>~\images\static_direction_images\EB209.JPG.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-90 MassPike I-95 Interchange 15 tolls west</name>
+    <active>true</active>
+    <description>I-90 (MassPike) at I-95 (Interchange 15) tolls westbound, Newton
+</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/210.jpg</image>
+    <lat>42.339541</lat>
+    <long>-71.265006</long>
+    <static1_img>~\images\static_direction_images\WB210.JPG.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>~\images\static_direction_images\EB210.JPG.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-90 MassPike @ Allston-Brighton tolls</name>
+    <active>true</active>
+    <description>I-90 MassPike @ Allston-Brighton tolls, Allston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/212.jpg</image>
+    <lat>42.35789</lat>
+    <long>-71.12169</long>
+    <static1_img>~\images\static_direction_images\WB212.JPG.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>~\images\static_direction_images\EB212.JPG.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-90 MassPike @ x15 I-95 Tolls East</name>
+    <active>true</active>
+    <description>I-90 MassPike I-95 Interchange 15 tolls east, Weston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/211.jpg</image>
+    <lat>42.339541</lat>
+    <long>-71.265006</long>
+    <static1_img>~\images\static_direction_images\WB211.JPG.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>~\images\static_direction_images\EB211.JPG.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-90 MassPike EB @ Exit 24 A/B/C WB I-93 </name>
+    <active>false</active>
+    <description>I-90 (MassPike) eastbound at Exit 24 A/B/C and westbound from I-93 entrance, Boston
+</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/213.jpg</image>
+    <lat>42.346768</lat>
+    <long>-71.06295</long>
+    <static1_img>~\images\static_direction_images\WB213.JPG.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>~\images\static_direction_images\EB213.JPG.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-90 MassPike @ x24 to I-93</name>
+    <active>false</active>
+    <description>I-90 MassPike @ x24 to I-93, Boston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/214.jpg</image>
+    <lat>42.346436</lat>
+    <long>-71.061845</long>
+    <static1_img>~\images\static_direction_images\WB214.JPG.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>~\images\static_direction_images\EB214.JPG.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 near Bunker Hill College</name>
+    <active>true</active>
+    <description>I-93 near Bunker Hill College, Boston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/215.jpg</image>
+    <lat>42.385104</lat>
+    <long>-71.077225</long>
+    <static1_img>~\images\static_direction_images\NB215.JPG.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\SB215.JPG.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 at Boston Sand &amp; Gravel</name>
+    <active>true</active>
+    <description>I-93 at Boston Sand &amp; Gravel, Boston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/216.jpg</image>
+    <lat>42.372221</lat>
+    <long>-71.068824</long>
+    <static1_img>~\images\static_direction_images\NB216.JPG.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\SB216.JPG.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 on Zakim Bridge</name>
+    <active>true</active>
+    <description>I-93 @ Zakim Bridge, Boston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/217.jpg</image>
+    <lat>42.369455</lat>
+    <long>-71.064178</long>
+    <static1_img>~\images\static_direction_images\NB217.JPG.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\SB217.JPG.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 south of Boston, near E. Berkeley St.</name>
+    <active>false</active>
+    <description>I-93 south of Boston, near E. Berkeley St., Boston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/218.jpg</image>
+    <lat>42.341817</lat>
+    <long>-71.062961</long>
+    <static1_img>~\images\static_direction_images\NB218.JPG.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\SB218.JPG.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 south of Boston at Mass Ave</name>
+    <active>false</active>
+    <description>I-93 south of Boston at Mass Ave, Boston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/219.jpg</image>
+    <lat>42.335007</lat>
+    <long>-71.065546</long>
+    <static1_img>~\images\static_direction_images\NB219.JPG.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\SB219.JPG.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 SB prior to South Bay Mall</name>
+    <active>true</active>
+    <description>I-93 SB prior to South Bay Mall, Boston
+</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/220.jpg</image>
+    <lat>42.331811</lat>
+    <long>-71.062725</long>
+    <static1_img>~\images\static_direction_images\NB220.JPG.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\SB220.JPG.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 at South-Bay Mall</name>
+    <active>true</active>
+    <description>I-93 at South-Bay Mall, Boston</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/221.jpg</image>
+    <lat>42.330185</lat>
+    <long>-71.061373</long>
+    <static1_img>~\images\static_direction_images\NB221.JPG.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\SB221.JPG.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 SB On ramp from Purchase St. @ Congress St.</name>
+    <active>false</active>
+    <description>I-93 SB on ramp from Purchase St. @ Congress St., Boston
+</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/222.jpg</image>
+    <lat>42.353849</lat>
+    <long>-71.054673</long>
+    <static1_img>~\images\static_direction_images\NB222.JPG.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\SB222.JPG.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Cape Cod - Rte 25 South of Bournedale Road</name>
+    <active>true</active>
+    <description>Cape Cod - Route 25 South of Bournedale Road</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/227.jpg</image>
+    <lat>41.770431</lat>
+    <long>-70.585874</long>
+    <static1_img>~\images\static_direction_images\image00002-west.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>~\images\static_direction_images\image00003-east.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-93 SB @ Rte 24 (Exit 4)</name>
+    <active>true</active>
+    <description>I-93 SB @ Rte 24 (Exit 4) Randolph</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/3.jpg</image>
+    <lat>42.204012</lat>
+    <long>-71.07959</long>
+    <static1_img>http://www1.eot.state.ma.us/images/camlstbgno.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>http://www1.eot.state.ma.us/images/static_direction_images/CAM 3_SB.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Cape Cod - Bourne Rotary and Bourne Bridge</name>
+    <active>true</active>
+    <description>Cape Cod - Bourne Rotary and Bourne Bridge</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/229.jpg</image>
+    <lat>41.743556</lat>
+    <long>-70.586686</long>
+    <static1_img>~\images\static_direction_images\image00003.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\image00005.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Cape Cod - Rte 6 at Edge Hill Rd</name>
+    <active>true</active>
+    <description>Cape Cod - Route 6 at Edge Hill Rd</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/230.jpg</image>
+    <lat>41.76462</lat>
+    <long>-70.571323</long>
+    <static1_img>~\images\static_direction_images\image230-West.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>~\images\static_direction_images\image230-East.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Cape Cod - Rte 28 at Bourne Rotary</name>
+    <active>true</active>
+    <description>Cape Cod - Route 28 at Bourne Rotary</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/228.jpg</image>
+    <lat>41.741818</lat>
+    <long>-70.585995</long>
+    <static1_img>~\images\static_direction_images\image228-north.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\image228-south.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Cape Cod - Rte 6 @ Sagamore Bridge Connector</name>
+    <active>true</active>
+    <description>Cape Cod- Route 6 @ Sagamore Bridge Connector</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/224.jpg</image>
+    <lat>41.771637</lat>
+    <long>-70.543199</long>
+    <static1_img>~\images\static_direction_images\image224-east (1).jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>~\images\static_direction_images\image224-east.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Cape Cod - Rte 6 @ Rest Area</name>
+    <active>true</active>
+    <description>Cape Cod - Route 6 @ Rest Area, Sandwich</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/225.jpg</image>
+    <lat>41.739101</lat>
+    <long>-70.486214</long>
+    <static1_img>~\images\static_direction_images\image225-west.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>~\images\static_direction_images\image225-east.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>Cape Cod - Rte 25 North of Route 6</name>
+    <active>true</active>
+    <description>Cape Cod - Route 25 North of Route 6</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/226.jpg</image>
+    <lat>41.752376</lat>
+    <long>-70.592698</long>
+    <static1_img>~\images\static_direction_images\image226-north.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\image226-south.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-291 at I-90 (Exit 6)</name>
+    <active>false</active>
+    <description>I-291 at I-90 (Exit 6), Chicopee</description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/231.jpg</image>
+    <lat>42.159255</lat>
+    <long>-72.547582</long>
+    <static1_img>~\images\static_direction_images\image00002.jpg</static1_img>
+    <static1_direction>Westbound</static1_direction>
+    <static2_img>~\images\static_direction_images\image00001.jpg</static2_img>
+    <static2_direction>Eastbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-91 at I-291 (Exit 8)</name>
+    <active>true</active>
+    <description>I-91 Mm 8.3 Chic, Exit 8 - CCTV 134 </description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/232.jpg</image>
+    <lat>42.10651</lat>
+    <long>-72.601941</long>
+    <static1_img>~\images\static_direction_images\image00003.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\image00002.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-91 at I-391 (Exit 12)</name>
+    <active>true</active>
+    <description>I-91 Mm 6.3 Spfld, Exit 12 - CCTV 137 </description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/233.jpg</image>
+    <lat>42.134763</lat>
+    <long>-72.609296</long>
+    <static1_img>~\images\static_direction_images\image00003.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\image00002.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+  <Cam>
+    <name>I-91 Exit 14  </name>
+    <active>false</active>
+    <description>I-91 MM 11.6 W.Spfld, Exit 14 - CCTV 140 </description>
+    <image>http://www1.eot.state.ma.us/cam_updated_images/234.jpg</image>
+    <lat>42.162604</lat>
+    <long>-72.646065</long>
+    <static1_img>~\images\static_direction_images\image00001.jpg</static1_img>
+    <static1_direction>Northbound</static1_direction>
+    <static2_img>~\images\static_direction_images\image00003.jpg</static2_img>
+    <static2_direction>Southbound</static2_direction>
+  </Cam>
+</TrafficCams>

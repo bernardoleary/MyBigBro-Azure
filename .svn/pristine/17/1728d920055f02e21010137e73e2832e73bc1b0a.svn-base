@@ -1,0 +1,160 @@
+﻿angular.module('MyBigBroApp.controllers', []).
+    controller('mainController', function($scope, capturedImagesGeoMarkerService, webCamsService) {
+
+        // Google Maps default components
+        var mapOptions = {
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var infoWindow = new google.maps.InfoWindow();        
+
+        // Scope variables
+        $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        $scope.data = {};
+        $scope.data.startdatetime = '';
+        $scope.data.enddatetime = '';
+        $scope.markers = [];
+        $scope.data.markerdatetime = '';
+
+        // Draw our markers, first run through
+        drawMarkers();
+
+        // Get querystring values
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        };
+
+        // Function to draw our geomarkers with images
+        function drawMarkers() {
+            // Clear existing markers                   
+            for (var i = 0; i < $scope.markers.length; i++) {
+                $scope.markers[i].setMap(null);
+            }
+            $scope.markers = [];
+            // Get the device name     
+            if ($scope.data.devicename === undefined || $scope.data.devicename == "")
+                $scope.data.devicename = getParameterByName("devicename");
+            var devicename = $scope.data.devicename;
+            // Hardcoded count of markers and cameras to get by default
+            var markerCount = getParameterByName("markerCount") == "" ? 10 : getParameterByName("markerCount");
+            var cameraCount = getParameterByName("cameraCount") == "" ? 10 : getParameterByName("cameraCount");
+            // Create new markers
+            if ($scope.data.startdatetime == '' || $scope.data.enddatetime == '') { 
+                if (devicename === undefined || devicename == "") {
+                    capturedImagesGeoMarkerService.getCapturedImagesGeoMarkerTop(markerCount).success(function (response) {
+                        createMarkers(response);
+                    });
+                } else {
+                    capturedImagesGeoMarkerService.getCapturedImagesGeoMarkerTopAndDeviceName(markerCount, devicename).success(function (response) {
+                        createMarkers(response);
+                    });
+                    webCamsService.getNearestWebCams(cameraCount, devicename).success(function (response) {
+                        createCameraMarkers(response);
+                    });
+                }
+            } else {
+                // Create by date window
+                var startdatetimeVal = moment($scope.data.startdatetime).format("YYYY-MM-DD HH:MM");
+                var enddatetimeVal = moment($scope.data.enddatetime).format("YYYY-MM-DD HH:MM");
+                if (devicename === undefined || devicename == "") {
+                    capturedImagesGeoMarkerService.getCapturedImagesGeoMarkerForDateTimeWindow(startdatetimeVal, enddatetimeVal).success(function(response) {
+                        createMarkers(response);
+                    });
+                } else {
+                    capturedImagesGeoMarkerService.getCapturedImagesGeoMarkerForDateTimeWindowAndDeviceName(startdatetimeVal, enddatetimeVal, devicename).success(function (response) {
+                        createMarkers(response);
+                    });
+                    webCamsService.getNearestWebCams(cameraCount, devicename).success(function (response) {
+                        createCameraMarkers(response);
+                    });
+                }
+            }            
+        };
+
+        // Function set up the image markers on the map
+        function createMarkers(capturedImagesGeoMarker) {
+            for (var i = 0; i < capturedImagesGeoMarker.length; i++) {
+                createMarker(capturedImagesGeoMarker[i]);                
+            }
+            fitBounds();
+        }
+
+        // Function set up the camera markers on the map
+        function createCameraMarkers(camerasGeoMarker) {
+            for (var i = 0; i < camerasGeoMarker.length; i++) {
+                createCameraMarker(camerasGeoMarker[i]);
+            }
+            fitBounds();
+        }
+
+        // Function to set the bounds of the map
+        function fitBounds() {
+            var bounds = new google.maps.LatLngBounds();
+            for (i = 0; i < $scope.markers.length; i++) {
+                bounds.extend($scope.markers[i].getPosition());
+            }
+            $scope.map.fitBounds(bounds);
+        };
+
+        // Function to create a geomarker on the map
+        function createMarker(info) {
+            var marker = new google.maps.Marker({
+                map: $scope.map,
+                position: new google.maps.LatLng(info.GeoMarker.YCoord, info.GeoMarker.XCoord),
+                title: "This image captured at: " + info.GeoMarker.MarkerDateTime
+            });
+            marker.content = '<img width="100%" src="' + info.CapturedImage.Url + '" alt="Smile">';
+            google.maps.event.addListener(marker, 'click', function() {
+                $("#mapModal #mapModalTitle").html(marker.title);
+                $("#mapModal #mapModalBody").html(marker.content);
+                $('#mapModal').modal("show");                
+            });
+            $scope.markers.push(marker);
+        };
+
+        // Function to create a geomarker on the map
+        function createCameraMarker(info) {
+            var image = 'content/images/favicon.ico';
+            var marker = new google.maps.Marker({
+                map: $scope.map,
+                position: new google.maps.LatLng(info.YCoord, info.XCoord),
+                title: "Nearest known camera: " + info.Name,
+                icon: image
+            });
+            marker.content = '<img width="100%" src="' + info.Url + '" alt="Smile">';
+            google.maps.event.addListener(marker, 'click', function () {
+                $("#mapModal #mapModalTitle").html(marker.title);
+                $("#mapModal #mapModalBody").html(marker.content);
+                $('#mapModal').modal("show");
+            });
+            $scope.markers.push(marker);
+        };
+
+        // Event to enabled a popup with the image in it
+        $scope.openInfoWindow = function(e, selectedMarker) {
+            e.preventDefault();
+            google.maps.event.trigger(selectedMarker, 'click');
+        };
+
+        // Event to get start time DDL change
+        $scope.onStartTimeSet = function (newDate, oldDate) {
+            $scope.data.startdatetime = newDate;
+            console.log($scope.data.startdatetime);
+            drawMarkers();
+        };
+
+        // Event to end start time DDL change
+        $scope.onEndTimeSet = function (newDate, oldDate) {
+            $scope.data.enddatetime = newDate;
+            console.log($scope.data.enddatetime);
+            drawMarkers();
+        };
+
+        // Event to get start time DDL change
+        $scope.onDeviceNameChange = function ($event) {
+            drawMarkers();
+        };
+
+    });

@@ -1,0 +1,48 @@
+﻿using System;
+using System.Configuration;
+using System.IO;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
+using Infostructure.MyBigBro.Domain;
+
+namespace Infostructure.MyBigBro.ImageStorageServiceAgent
+{
+    public class AzureStorageServiceAgent : IStorageServiceAgent
+    {
+        public string PutImage(IWebCamImage webCamImage, out string key)
+        {
+            if (webCamImage.Data != null) // accept the file
+            {
+                // Azure credentials.
+                const string connectionString =
+                    "DefaultEndpointsProtocol=https;" +
+                    "AccountName=mybigbro;" +
+                    "AccountKey=ncotWSBXPHY/1gyOheTDz1isByTjEPYj3RtK35B8DUAo+NAd4pTocya6GyoLABsRKyyRLFQlD+KrxoCrrElGuA==;";
+
+                // Setup the filename.
+                string fileName = Guid.NewGuid() + ".jpg";
+                string url = null;
+
+                // Setup the Azure stuff.
+                CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);
+                CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+                var config = ConfigurationManager.AppSettings;
+                CloudBlobContainer container = blobClient.GetContainerReference(config["azureContainer"]);
+                CloudBlockBlob blockBlob = container.GetBlockBlobReference(fileName);
+
+                // Create or overwrite the "myblob" blob with contents from a local file.
+                using (var memStream = new MemoryStream(webCamImage.Data))
+                {
+                    blockBlob.UploadFromStream(memStream);
+                    url = config["azureRootUrl"] + "/" + config["azureContainer"] + "/" + fileName;
+                } 
+
+                // Return our result.
+                key = fileName;
+                return url;
+            }
+            key = null;
+            return null;
+        }
+    }
+}

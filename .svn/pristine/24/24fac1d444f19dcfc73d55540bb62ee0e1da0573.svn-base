@@ -1,0 +1,23 @@
+POST http://mybigbro.tv/api/geomarkers HTTP/1.1
+User-Agent: Fiddler
+Content-type: application/json
+Host: mybigbro.tv
+Content-Length: 100
+
+{
+"MarkerDateTime": "\/Date(1330848000000-0800)\/",
+"XCoord": 174.773064,
+"YCoord": -41.276291
+}
+HTTP/1.1 201 Created
+Date: Sun, 09 Jun 2013 01:10:12 GMT
+Server: Microsoft-IIS/6.0
+X-Powered-By: ASP.NET
+X-AspNet-Version: 4.0.30319
+Location: http://mybigbro.tv/api/geomarkers/2
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+Content-Length: 0
+Connection: Keep-Alive
+

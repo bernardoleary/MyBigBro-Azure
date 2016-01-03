@@ -1,0 +1,102 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing.Imaging;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Text;
+using System.Drawing;
+using System.Transactions;
+using Infostructure.MyBigBro.DataModel.DataAccess;
+using Infostructure.MyBigBro.DataModel.Models;
+using Infostructure.MyBigBro.Domain;
+using Infostructure.MyBigBro.ImageStorageServiceAgent;
+
+namespace Infostructure.MyBigBro.BusinessLogic.WebCam
+{
+    public class WebCamControl : IWebCamControl
+    {
+        private Infostructure.MyBigBro.Domain.IWebCamImage _webCamImage = null;
+        private Infostructure.MyBigBro.Domain.IWebCam _webCam = null;
+        private Infostructure.MyBigBro.ImageStorageServiceAgent.IStorageServiceAgent _storageServiceAgent = null;
+        private Infostructure.MyBigBro.DataModel.DataAccess.IMyBigBroRepository _myBigBroRepository = null;
+        private Infostructure.MyBigBro.Domain.ICapturedImage _capturedImage = null;
+
+        public IMyBigBroRepository MyBigBroRepository 
+        {
+            get { return _myBigBroRepository; }
+            set { _myBigBroRepository = value; }
+        }
+
+        public IWebCam WebCam
+        {
+            get { return _webCam; }
+            set { _webCam = value; }
+        }
+
+        public IStorageServiceAgent StorageServiceAgent
+        {
+            get { return _storageServiceAgent; }
+            set { _storageServiceAgent = value; }
+        }
+
+        public IWebCamImage WebCamImage
+        {
+            get { return _webCamImage; }
+            set { _webCamImage = value; }
+        }
+
+        public ICapturedImage CapturedImage
+        {
+            get { return _capturedImage; }
+            set { _capturedImage = value; }
+        }
+
+        // Pass the WebCamDataRequest in as a parameter as it is not really part of the context of the WebCam.
+        public void CaptureCurrentImage(IWebCamDataRequest webCamDataRequest)
+        {
+            // Capture the image and stream the data.
+            using (var response = webCamDataRequest.GetWebCamResponse(_webCam.Url))
+            {
+                using (var stream = webCamDataRequest.GetWebCamResponseStream(response))
+                {
+                    // Copy the data to the WebCamImage.
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        stream.CopyTo(memoryStream);
+                        _webCamImage.Data = memoryStream.ToArray();
+                    }
+                }
+            }
+        }
+
+        public int StoreCapturedImage()
+        {
+            // verify the image is loaded
+            if (_webCamImage.Data == null)
+                throw new NullReferenceException("The image has not yet been loaded.");
+
+            using (var trans = new TransactionScope())
+            {
+                // store the image
+                string key = null;
+                string fileName = _storageServiceAgent.PutImage(_webCamImage, out key);
+
+                // update the database
+                _capturedImage.DateTimeCaptured = DateTime.Now;
+                _capturedImage.Url = fileName;
+                _capturedImage.WebCamId = _webCam.Id;
+                _capturedImage.IsThumbnailed = false;
+                _capturedImage.Key = key;
+                _myBigBroRepository.Add(_capturedImage);
+                _myBigBroRepository.SaveChanges();
+
+                // commit the change
+                trans.Complete();
+
+                // Return the new image ID.
+                return _capturedImage.Id;
+            }
+        }
+    }
+}

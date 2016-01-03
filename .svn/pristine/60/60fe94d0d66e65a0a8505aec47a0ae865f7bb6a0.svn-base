@@ -1,0 +1,11 @@
+﻿angular.module('MyBigBroApp.services', []).
+    factory('capturedImagesGeoMarkerService', function($http) {
+        var capturedImagesGeoMarkerApi = {};
+        capturedImagesGeoMarkerApi.getCapturedImagesGeoMarker = function(startDateTime, endDateTime) {
+            return $http({
+                method: 'GET',
+                url: 'http://' + document.location.host + '/api/CapturedImagesGeoMarker?startDateTime=' + startDateTime + '&endDateTime=' + endDateTime
+            });
+        };
+        return capturedImagesGeoMarkerApi;
+    });

@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Infostructure.MyBigBro.Domain
+{
+    public class GeoMarkerDto : IGeoMarker
+    {
+        public int Id { get; set; }
+        public DateTime MarkerDateTime { get; set; }
+        public double XCoord { get; set; }
+        public double YCoord { get; set; }
+    }
+}

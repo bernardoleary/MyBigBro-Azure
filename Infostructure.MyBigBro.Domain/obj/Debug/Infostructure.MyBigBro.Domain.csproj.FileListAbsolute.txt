@@ -1,0 +1,5 @@
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain\bin\Debug\Infostructure.MyBigBro.Domain.dll
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain\bin\Debug\Infostructure.MyBigBro.Domain.pdb
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain\obj\Debug\Infostructure.MyBigBro.Domain.dll
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain\obj\Debug\Infostructure.MyBigBro.Domain.pdb
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain\obj\Debug\Infostructure.MyBigBro.Domain.csprojResolveAssemblyReference.cache

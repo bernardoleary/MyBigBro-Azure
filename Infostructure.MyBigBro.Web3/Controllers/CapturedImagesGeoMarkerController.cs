@@ -1,0 +1,74 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using Infostructure.MyBigBro.BusinessLogic.Services;
+using Infostructure.MyBigBro.DataModel.Models;
+using Infostructure.MyBigBro.Domain;
+
+namespace Infostructure.MyBigBro.Web3.Controllers
+{
+    public class CapturedImagesGeoMarkerController : ApiController
+    {
+        private IGeoMarkerService _geoMarkerService = null;
+
+        public CapturedImagesGeoMarkerController() {}
+
+
+        public CapturedImagesGeoMarkerController(IGeoMarkerService geoMarkerService)
+        {
+            _geoMarkerService = geoMarkerService;
+        }
+
+        // GET api/geomarker
+        public IEnumerable<CapturedImageGeoMarkerDetail> Get()
+        {
+            if (ModelState.IsValid)
+            {
+                // Refactor this so that it is encapsulated at the business logic layer.
+                var top = 0; // default to top 100
+                var queryString = Request.GetQueryNameValuePairs();
+                int.TryParse(queryString.FirstOrDefault(q => q.Key == "top").Value, out top);
+                var capturedImages = _geoMarkerService.GetMarkersWithImage(top == 0 ? 100 : top);
+                return capturedImages;
+            }
+            throw new HttpResponseException(HttpStatusCode.BadRequest);
+        }
+
+        // GET api/geomarker
+        public IEnumerable<CapturedImageGeoMarkerDetail> Get(string startDateTime, string endDateTime)
+        {
+            if (ModelState.IsValid)
+            {
+                // Refactor this so that it is encapsulated at the business logic layer.
+                DateTime startDateTimeStronglyTyped, endDateTimeStronglyTyped;
+                DateTime.TryParse(startDateTime, out startDateTimeStronglyTyped);
+                DateTime.TryParse(endDateTime, out endDateTimeStronglyTyped);
+                var capturedImages = _geoMarkerService.GetMarkersWithImageForTimeframe(startDateTimeStronglyTyped, endDateTimeStronglyTyped);
+                return capturedImages;
+            }
+            throw new HttpResponseException(HttpStatusCode.BadRequest);
+        }
+
+        // GET api/geomarker
+        public IEnumerable<CapturedImage> Get(int id)
+        {
+            if (ModelState.IsValid)
+            {
+                // Refactor this so that it is encapsulated at the business logic layer.
+                //var capturedImages = from capturedImage in _myBigBroRepository.Set<CapturedImage>()
+                //                     join capturedImageGeoMarker in _myBigBroRepository.Set<CapturedImageGeoMarker>() on
+                //                         capturedImage.Id equals capturedImageGeoMarker.CapturedImageId
+                //                     join geoMarker in _myBigBroRepository.Set<GeoMarker>() on
+                //                         capturedImageGeoMarker.GeoMarkerId equals geoMarker.Id
+                //                     where geoMarker.Id == id
+                //                     select capturedImage;
+                //return capturedImages;
+                return null;
+            }
+            throw new HttpResponseException(HttpStatusCode.BadRequest);
+        }
+    }
+}

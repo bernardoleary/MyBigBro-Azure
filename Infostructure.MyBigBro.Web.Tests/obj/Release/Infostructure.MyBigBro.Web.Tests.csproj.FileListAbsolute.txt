@@ -1,0 +1,6 @@
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Web.Tests\bin\Release\Infostructure.MyBigBro.Web.Tests.dll.config
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Web.Tests\bin\Release\Infostructure.MyBigBro.Web.Tests.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Web.Tests\bin\Release\Infostructure.MyBigBro.Web.Tests.pdb
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Web.Tests\obj\Release\Infostructure.MyBigBro.Web.Tests.csprojResolveAssemblyReference.cache
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Web.Tests\obj\Release\Infostructure.MyBigBro.Web.Tests.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Web.Tests\obj\Release\Infostructure.MyBigBro.Web.Tests.pdb

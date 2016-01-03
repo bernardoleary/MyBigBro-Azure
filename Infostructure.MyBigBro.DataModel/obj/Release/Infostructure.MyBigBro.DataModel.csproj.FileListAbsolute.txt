@@ -1,0 +1,10 @@
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel\bin\Release\Infostructure.MyBigBro.DataModel.dll.config
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel\bin\Release\Infostructure.MyBigBro.DataModel.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel\bin\Release\Infostructure.MyBigBro.DataModel.pdb
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel\bin\Release\Infostructure.MyBigBro.Domain.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel\bin\Release\Infostructure.MyBigBro.Domain.pdb
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel\obj\Release\Infostructure.MyBigBro.DataModel.csprojResolveAssemblyReference.cache
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel\obj\Release\Infostructure.MyBigBro.DataModel.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel\obj\Release\Infostructure.MyBigBro.DataModel.pdb
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel\bin\Release\EntityFramework.dll
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel\bin\Release\EntityFramework.xml

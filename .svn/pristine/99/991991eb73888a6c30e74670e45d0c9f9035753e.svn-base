@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using Infostructure.MyBigBro.Domain;
+
+namespace Infostructure.MyBigBro.BusinessLogic.Services
+{
+    public interface IGeoMarkerService
+    {
+        int ProcessGeoMarker(IGeoMarker geoMarker);
+        IEnumerable<CapturedImageGeoMarkerDetail> GetMarkersWithImage(int top);
+        IEnumerable<CapturedImageGeoMarkerDetail> GetMarkersWithImageForTimeframe(DateTime startDateTime, DateTime endDateTime);
+    }
+}

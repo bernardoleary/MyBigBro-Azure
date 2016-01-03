@@ -1,0 +1,5 @@
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain\bin\Release\Infostructure.MyBigBro.Domain.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain\bin\Release\Infostructure.MyBigBro.Domain.pdb
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain\obj\Release\Infostructure.MyBigBro.Domain.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain\obj\Release\Infostructure.MyBigBro.Domain.pdb
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain\obj\Release\Infostructure.MyBigBro.Domain.csprojResolveAssemblyReference.cache

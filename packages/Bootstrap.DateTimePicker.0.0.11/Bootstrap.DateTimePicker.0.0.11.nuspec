@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Bootstrap.DateTimePicker</id>
+    <version>0.0.11</version>
+    <title>bootstrap-datetimepicker</title>
+    <authors>tarruda,  Stefan Petre,  Andrew Rowls,  jdewit</authors>
+    <owners>tarruda,  Stefan Petre,  Andrew Rowls,  jdewit</owners>
+    <licenseUrl>https://github.com/tarruda/bootstrap-datetimepicker/blob/master/LICENSE</licenseUrl>
+    <projectUrl>http://tarruda.github.io/bootstrap-datetimepicker/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Date/time picker widget based on twitter bootstrap</description>
+    <releaseNotes>Community contributed features and bug fixes.
+
+ - Added window edge detection/handling +New
+ - Added support to set the picker display orientation as an attribute, allow the user to set if the picker should be rendered to the left or to the right of the input field. +New
+ - Added a "width" attribute to set the width for the picker element. +New
+ - Updated logic that reads value from input to use current date if the input cannot be parsed. +New
+ - Make the picker work with correct form markup +Fix
+ - Fixed extraneous tbody tags +Fix</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <language />
+    <tags>bootstrap date time picker</tags>
+    <dependencies>
+      <dependency id="Twitter.Bootstrap" />
+    </dependencies>
+  </metadata>
+</package>

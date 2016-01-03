@@ -1,0 +1,1 @@
+D:\WebApps\MyBigBro\Resources\AWSSDKAndSamples_1.5.5.1\Samples\AmazonS3Sample\AmazonS3Sample\bin\Debug\AmazonS3Sample.exe.config

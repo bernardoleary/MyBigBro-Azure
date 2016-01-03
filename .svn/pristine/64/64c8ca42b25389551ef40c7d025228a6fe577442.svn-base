@@ -1,0 +1,54 @@
+using System.Configuration;
+using Infostructure.MyBigBro.BusinessLogic.GeoSpatial;
+using Infostructure.MyBigBro.BusinessLogic.Services;
+using Infostructure.MyBigBro.BusinessLogic.WebCam;
+using Infostructure.MyBigBro.DataModel.DataAccess;
+using Infostructure.MyBigBro.ImageStorageServiceAgent;
+using Infostructure.MyBigBro.Web4.Controllers;
+using Microsoft.Practices.Unity;
+using System.Web.Http;
+using Unity.WebApi;
+
+namespace Infostructure.MyBigBro.Web4
+{
+    public static class UnityConfig
+    {
+        public static void RegisterComponents()
+        {
+			var container = new UnityContainer();
+
+            // Register repository.
+            container.RegisterType<IMyBigBroRepository, MyBigBroRepository>(
+                new InjectionConstructor(new MyBigBroContext(GetConnectionString())));
+
+            // Register services.     
+            container.RegisterType<ILocation, Location>();
+            container.RegisterType<IStorageServiceAgent, AzureStorageServiceAgent>();
+            container.RegisterType<ILocation, Location>();
+            container.RegisterType<IGeometry, Geometry>();
+            container.RegisterType<IWebCamControl, WebCamControl>();
+            container.RegisterType<IGeoMarkerService, GeoMarkerService>();
+            container.RegisterType<IFormsAuthenticationService, FormsAuthenticationService>();
+
+            // Register Web API controllers.
+            container.RegisterType<GeoMarkersController>();
+            container.RegisterType<CapturedImagesGeoMarkerController>();
+            container.RegisterType<WebCamsController>();
+            
+            GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
+        }
+
+        public static string GetConnectionString()
+        {
+            // Register database components.
+            var config = ConfigurationManager.ConnectionStrings;
+            var connectionString = "";
+#if DEBUG
+            connectionString = config["Infostructure.MyBigBro.Web.Properties.Settings.connectionStringLocal"].ConnectionString;
+#else
+            connectionString = config["Infostructure.MyBigBro.Web.Properties.Settings.connectionStringAzure"].ConnectionString;
+#endif
+            return connectionString;
+        }
+    }
+}

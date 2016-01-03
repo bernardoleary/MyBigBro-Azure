@@ -1,0 +1,51 @@
+﻿<RecentFiles>
+  <RecentFiles>
+    <File id="2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B/d:Services/f:AccountService.cs" caret="1266" fromTop="26" />
+    <File id="FA40C57C-B985-4E61-BE06-B901C7323D08/f:Global.asax.cs" caret="195" fromTop="7" />
+    <File id="2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B/d:WebCam/f:WebCamDataRequest.cs" caret="0" fromTop="0" />
+    <File id="8A861D82-8AAA-4A29-943D-F050DA005BC6/f:CapturedImageGeoMarkerDetail.cs" caret="171" fromTop="7" />
+    <File id="6B5B35F6-ED1A-47AC-977E-95C6C9A4E15E/d:UnitTests/f:TestGeoMarkerService.cs" caret="641" fromTop="19" />
+    <File id="2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B/d:Services/f:IAccountService.cs" caret="0" fromTop="0" />
+    <File id="2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B/d:WebCam/f:IWebCamControl.cs" caret="0" fromTop="0" />
+    <File id="2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B/d:WebCam/f:WebCamControl.cs" caret="1201" fromTop="10" />
+    <File id="2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B/d:GeoSpatial/f:ILocation.cs" caret="0" fromTop="0" />
+    <File id="2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B/d:GeoSpatial/f:Location.cs" caret="502" fromTop="14" />
+    <File id="FA40C57C-B985-4E61-BE06-B901C7323D08/d:Views/d:Login/f:Index.cshtml" caret="0" fromTop="0" />
+    <File id="FA40C57C-B985-4E61-BE06-B901C7323D08/f:Bootstrapper.cs" caret="1864" fromTop="20" />
+    <File id="FA40C57C-B985-4E61-BE06-B901C7323D08/d:Controllers/f:LoginController.cs" caret="603" fromTop="7" />
+    <File id="FA40C57C-B985-4E61-BE06-B901C7323D08/d:Views/d:Home/f:Index.cshtml" caret="1638" fromTop="17" />
+    <File id="FA40C57C-B985-4E61-BE06-B901C7323D08/d:Controllers/f:CapturedImagesGeoMarkerController.cs" caret="1826" fromTop="19" />
+    <File id="FA40C57C-B985-4E61-BE06-B901C7323D08/d:Controllers/f:GeoMarkersController.cs" caret="709" fromTop="21" />
+    <File id="2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B/d:Services/f:IGeoMarkerService.cs" caret="340" fromTop="11" />
+    <File id="FA40C57C-B985-4E61-BE06-B901C7323D08/d:Views/f:Web.config" caret="1329" fromTop="5" />
+    <File id="2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B/d:Services/f:GeoMarkerService.cs" caret="3658" fromTop="1" />
+    <File id="FA40C57C-B985-4E61-BE06-B901C7323D08/f:Web.config" caret="1352" fromTop="16" />
+  </RecentFiles>
+  <RecentEdits>
+    <File id="FF9767D7-F84B-44FF-ABF0-B668365CD83C/f:IStorageServiceAgent.cs" caret="328" fromTop="11" />
+    <File id="FF9767D7-F84B-44FF-ABF0-B668365CD83C/f:AwsStorageServiceAgent.cs" caret="1646" fromTop="18" />
+    <File id="2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B/d:WebCam/f:WebCamControl.cs" caret="3356" fromTop="20" />
+    <File id="6B5B35F6-ED1A-47AC-977E-95C6C9A4E15E/d:UnitTests/f:TestWebCamControl.cs" caret="3090" fromTop="13" />
+    <File id="3502B24B-EB0D-4D2C-A9EA-185BA20B7BDA/d:IntegrationTests/f:TestPutImage.cs" caret="1575" fromTop="16" />
+    <File id="755B0992-F18D-4232-B434-7F75BEACBEE7/d:Models/f:User.cs" caret="318" fromTop="5" />
+    <File id="8A861D82-8AAA-4A29-943D-F050DA005BC6/f:IUser.cs" caret="230" fromTop="8" />
+    <File id="8A861D82-8AAA-4A29-943D-F050DA005BC6/f:User.cs" caret="663" fromTop="29" />
+    <File id="5321A845-9C07-49B1-A07B-A58443873B4F/f:CreateDbObjects_Script_V5.sql" caret="742" fromTop="4" />
+    <File id="755B0992-F18D-4232-B434-7F75BEACBEE7/d:Models/f:WebCam.cs" caret="862" fromTop="17" />
+    <File id="755B0992-F18D-4232-B434-7F75BEACBEE7/d:Models/f:GeoMarker.cs" caret="826" fromTop="27" />
+    <File id="8A861D82-8AAA-4A29-943D-F050DA005BC6/f:ICredentials.cs" caret="39" fromTop="0" />
+    <File id="8A861D82-8AAA-4A29-943D-F050DA005BC6/d:Factory/f:DomainModelFactory.cs" caret="239" fromTop="9" />
+    <File id="8A861D82-8AAA-4A29-943D-F050DA005BC6/f:Credentials.cs" caret="216" fromTop="9" />
+    <File id="55A0E75F-F248-499D-8221-B9C4D1BAB9CD/d:UnitsTests/f:UnitTestDomainModelFactory.cs" caret="634" fromTop="22" />
+    <File id="2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B/d:Services/f:IAccountService.cs" caret="551" fromTop="14" />
+    <File id="2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B/d:Services/f:AccountService.cs" caret="459" fromTop="14" />
+    <File id="8A861D82-8AAA-4A29-943D-F050DA005BC6/f:CapturedImageGeoMarkerDetail.cs" caret="171" fromTop="7" />
+    <File id="2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B/d:Services/f:IGeoMarkerService.cs" caret="549" fromTop="13" />
+    <File id="6B5B35F6-ED1A-47AC-977E-95C6C9A4E15E/d:UnitTests/f:TestGeoMarkerService.cs" caret="3233" fromTop="19" />
+    <File id="FA40C57C-B985-4E61-BE06-B901C7323D08/d:Controllers/f:LoginController.cs" caret="603" fromTop="7" />
+    <File id="2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B/d:Services/f:GeoMarkerService.cs" caret="1305" fromTop="16" />
+    <File id="FA40C57C-B985-4E61-BE06-B901C7323D08/f:Bootstrapper.cs" caret="1314" fromTop="11" />
+    <File id="FA40C57C-B985-4E61-BE06-B901C7323D08/d:Controllers/f:CapturedImagesGeoMarkerController.cs" caret="2058" fromTop="18" />
+    <File id="FA40C57C-B985-4E61-BE06-B901C7323D08/d:Views/d:Home/f:Index.cshtml" caret="728" fromTop="16" />
+  </RecentEdits>
+</RecentFiles>

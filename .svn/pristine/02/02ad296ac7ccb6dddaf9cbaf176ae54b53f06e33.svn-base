@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Infostructure.MyBigBro.BusinessLogic.GeoSpatial;
+using Infostructure.MyBigBro.BusinessLogic.Services;
+using Infostructure.MyBigBro.BusinessLogic.WebCam;
+using Infostructure.MyBigBro.DataModel.DataAccess;
+using Infostructure.MyBigBro.DataModel.Models;
+using Infostructure.MyBigBro.Domain;
+using Infostructure.MyBigBro.ImageStorageServiceAgent;
+using Moq;
+using NUnit.Framework;
+
+namespace Infostructure.MyBigBro.BusinessLogic.Tests.UnitTests
+{
+    [TestFixture]
+    public class TestMyBigBroService
+    {
+        private Mock<IWebCamControl> webCamControl = null;
+        private Mock<ILocation> location = null;
+        private Mock<IGeoMarker> geoMarker = null;
+        private Mock<IWebCam> webCam1 = null;
+        private Mock<IWebCam> webCam2 = null;
+
+        [SetUp]
+        public void SetUpUnitTestsWebCamService()
+        {
+            webCamControl = new Mock<IWebCamControl>();
+            location = new Mock<ILocation>();
+            geoMarker = new Mock<IGeoMarker>();
+            webCam1 = new Mock<IWebCam>();
+            webCam2 = new Mock<IWebCam>();
+        }
+
+        [Test]
+        public void TestProcessGeoMarker()
+        {
+            // arrange
+            var myBigBroService = new MyBigBroService();
+            myBigBroService.WebCamControl = webCamControl.Object;
+            webCam1.SetupProperty(x => x.XCoord, 123.12);
+            webCam1.SetupProperty(y => y.YCoord, 123.12);
+            webCam2.SetupProperty(x => x.XCoord, 124.12);
+            webCam2.SetupProperty(y => y.YCoord, 124.12);
+            var webCamList = new List<IWebCam>();
+            webCamList.Add(webCam1.Object);
+            webCamList.Add(webCam2.Object);
+            location.Setup(x => x.GetWebCamsWithinWebCamRadiusOfVisibility(It.IsAny<Point>(), true)).Returns(webCamList);
+            myBigBroService.Location = location.Object;
+            geoMarker.SetupProperty(x => x.XCoord, 123.33);
+            geoMarker.SetupProperty(y => y.YCoord, 123.33);
+
+            // act
+            var result = myBigBroService.ProcessGeoMarker(geoMarker.Object);
+
+            // assert
+            Assert.NotNull(result);
+            Assert.AreEqual(result, 2);
+        }
+    }
+}

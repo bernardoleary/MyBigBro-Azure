@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="MyBigBroApp">
+<head>
+    <meta name="keywords" content="MyBigBro, Bernard OLeary" />
+    <meta name="description" content="MyBigBro created by Bernard OLeary" />
+    <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
+    <title>MyBigBro</title>
+    <link href="content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/css/amelia-bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/css/toaster.css" rel="stylesheet" />
+    <link href="content/css/loading-bar.min.css" rel="stylesheet" />
+    <link href="content/css/site.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+    <div id="page">
+        <header class="container" data-ng-controller="navigationController">
+            <div id="menu" class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button class="btn btn-success navbar-toggle" data-ng-click="navbarExpanded = !navbarExpanded">
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </button>
+                    <div id="logo">
+                        <a href='#/'>
+                            <h4>MyBigBro</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-collapse collapse" data-collapse="!navbarExpanded">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li data-ng-class="{'active':isActive('/map')}"><a href="#/map">Map</a></li>
+                        <li data-ng-class="{'active':isActive('/about')}"><a href="#/about">About</a></li>
+                        <li data-ng-class="{'active':isActive('/login')}"><a href="#/login">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section id="body" class="container">
+            <div data-ng-view=""></div>
+        </section>
+    </div>
+
+    <!-- 3rd party libraries -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-resource.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-animate.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.9.0/ui-bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.9.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="scripts/toaster.js"></script>
+    <script src="scripts/loading-bar.min.js"></script>
+
+    <!-- Load app main script -->
+    <script src="app/app.js"></script>
+    <script src="app/controllers/aboutController.js"></script>
+
+    <!-- Load services -->
+    <!--<script src="app/services/loginService.js"></script>-->
+    <!--<script src="app/services/mapService.js"></script>-->
+    <!--<script src="app/services/placesDataService.js"></script>-->
+    <!-- Load controllers -->
+    <!--<script src="app/controllers/aboutController.js"></script>-->
+    <!--<script src="app/controllers/loginController.js"></script>-->
+    <!--<script src="app/controllers/mapController.js"></script>-->
+
+    <!-- Load custom filters -->
+    <!--<script src="app/filters/placeNameCategoryFilter.js"></script>-->
+    <!-- Load custom directives -->
+    <!--<script src="app/directives/fsUnique.js"></script>-->
+</body>
+</html>
+

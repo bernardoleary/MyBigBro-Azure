@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+
+namespace Infostructure.MyBigBro.Domain
+{
+    //[KnownType(typeof(Infostructure.MyBigBro.Domain.ICapturedImage))]
+    //[KnownType(typeof(Infostructure.MyBigBro.Domain.IGeoMarker))]
+    public class CapturedImageGeoMarkerDetail : ICapturedImageGeoMarkerDetail
+    {
+        public IGeoMarker GeoMarker { get; set; }
+        public ICapturedImage CapturedImage { get; set; }
+    }
+}

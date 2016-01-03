@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Infostructure.MyBigBro.Web2.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="connectionStringLocal" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=ASUS-PC\SQLDEV2008R2;Initial Catalog=MyBigBro;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="connectionStringAzure" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Server=tcp:h5p8t6ildo.database.windows.net,1433;Database=mybigbro;User ID=mybigbro@h5p8t6ildo;Password=4Uckland;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

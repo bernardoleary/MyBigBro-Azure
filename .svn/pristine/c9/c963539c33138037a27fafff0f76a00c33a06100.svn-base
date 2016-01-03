@@ -1,0 +1,69 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Infostructure.MyBigBro.DataModel.DataAccess;
+using Infostructure.MyBigBro.DataModel.Models;
+using Infostructure.MyBigBro.Domain;
+
+namespace Infostructure.MyBigBro.BusinessLogic.GeoSpatial
+{
+    public class Location : ILocation
+    {
+        private Infostructure.MyBigBro.DataModel.DataAccess.IMyBigBroRepository _myBigBroRepository = null;
+
+        public IMyBigBroRepository MyBigBroRepository
+        {
+            get { return _myBigBroRepository; }
+            set { _myBigBroRepository = value; }
+        }
+
+        public int AppendGeoMarker(IGeoMarker geoMarker)
+        {
+            _myBigBroRepository.Add<GeoMarker>((GeoMarker)geoMarker);
+            _myBigBroRepository.SaveChanges();
+            return geoMarker.Id;
+        }
+
+        // get all of the webcams that will be able to see the user at their current location
+        public IList<IWebCam> GetWebCamsWithinWebCamRadiusOfVisibility(Point point, bool isDegrees = true)
+        {
+            // need to user Math.Pow instead of Math.Sqrt:
+            // http://stackoverflow.com/questions/1616235/using-sqrt-in-a-linq-ef-query
+            // http://www.ehow.com/how_7858322_convert-distances-degrees-meters.html
+            // Multiply the number of degrees by 111.325. This is the standard distance, in kilometers, of a degree. For example, if you have 2 degrees, this is 222.650 kilometers. To convert this to meters, multiply by 1,000. So, 2 degrees is 222,650 meters.
+            var webCamsAvailable = from webCam in _myBigBroRepository.Set<Infostructure.MyBigBro.DataModel.Models.WebCam>()
+                                   let distFromCam = Math.Pow(Math.Pow(point.XCoord - webCam.XCoord, 2) + Math.Pow(point.YCoord - webCam.YCoord, 2), 0.5)
+                                   where (isDegrees ? distFromCam * 111.325 * 1000 : distFromCam) <= webCam.RadiusOfVisibility
+                                   select webCam;
+            return webCamsAvailable.ToList<IWebCam>();
+        }
+
+        // get a true/false to as to whether any webcams will be able to see the user at their current location
+        public bool IsPointWithinWebCamRadiusOfVisibility(Point point, bool isDegrees = true)
+        {
+            return GetWebCamsWithinWebCamRadiusOfVisibility(point, isDegrees).Any();
+        }
+
+        // get all the webcams
+        public IList<IWebCam> GetWebCams()
+        {
+            // need to user Math.Pow instead of Math.Sqrt:
+            // http://stackoverflow.com/questions/1616235/using-sqrt-in-a-linq-ef-query
+            var webCamsAvailable = from webCam in _myBigBroRepository.Set<Infostructure.MyBigBro.DataModel.Models.WebCam>()
+                                   select webCam;
+            return webCamsAvailable.ToList<IWebCam>();
+        }
+
+        public int MapCapturedImageToGeoMarker(int capturedImageId, int geoMarkerId)
+        {
+            // Refactor this to remove the internal generation of "CapturedImageGeoMarker".
+            var capturedImageGeoMarker = new CapturedImageGeoMarker();
+            capturedImageGeoMarker.CapturedImageId = capturedImageId;
+            capturedImageGeoMarker.GeoMarkerId = geoMarkerId;
+            _myBigBroRepository.Add<CapturedImageGeoMarker>(capturedImageGeoMarker);
+            _myBigBroRepository.SaveChanges();
+            return capturedImageGeoMarker.Id;
+        }
+    }
+}

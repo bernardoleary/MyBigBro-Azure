@@ -1,0 +1,13 @@
+﻿using System;
+using System.Data.Objects.SqlClient;
+
+namespace Infostructure.MyBigBro.BusinessLogic.GeoSpatial
+{
+    public class Geometry : IGeometry
+    {
+        public double GetDistancePythagoras(double x1, double y1, double x2, double y2)
+        {
+            return SqlFunctions.SquareRoot(SqlFunctions.Square(x1 - x2) + SqlFunctions.Square(y1 - y2)).Value;
+        }
+    }
+}

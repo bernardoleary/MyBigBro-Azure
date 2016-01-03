@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Infostructure.MyBigBro.ImageStorageServiceAgent.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="awsBucket" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">mybigbro</Value>
+    </Setting>
+    <Setting Name="awsRootUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://s3-ap-southeast-2.amazonaws.com</Value>
+    </Setting>
+    <Setting Name="azureRootUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://mybigbro.blob.core.windows.net</Value>
+    </Setting>
+    <Setting Name="azureContainer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">images</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

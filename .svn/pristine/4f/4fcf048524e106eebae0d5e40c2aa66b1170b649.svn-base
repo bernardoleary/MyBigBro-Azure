@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Infostructure.MyBigBro.DataModel.Models;
+
+namespace Infostructure.MyBigBro.BusinessLogic.Services
+{
+    public interface IAccountService
+    {
+        bool ValidateUser(string userName, string password);
+        User GetUser(string userName);
+    }
+}

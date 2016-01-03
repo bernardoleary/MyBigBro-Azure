@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Work\MyBigBro\Published\TEST</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="app/app.js">
+      <publishTime>09/23/2014 21:07:17</publishTime>
+    </File>
+    <File Include="app/controllers/aboutController.js">
+      <publishTime>05/04/2014 19:18:56</publishTime>
+    </File>
+    <File Include="app/controllers/loginController.js">
+      <publishTime>04/04/2014 22:43:01</publishTime>
+    </File>
+    <File Include="app/controllers/mainController.js">
+      <publishTime>09/23/2014 21:14:26</publishTime>
+    </File>
+    <File Include="app/directives/blurAndFocusDirectives.js">
+      <publishTime>09/23/2014 20:58:54</publishTime>
+    </File>
+    <File Include="app/services/capturedImagesGeoMarkerService.js">
+      <publishTime>09/23/2014 20:38:45</publishTime>
+    </File>
+    <File Include="app/views/about.html">
+      <publishTime>03/24/2014 22:58:26</publishTime>
+    </File>
+    <File Include="app/views/login.html">
+      <publishTime>04/03/2014 22:04:03</publishTime>
+    </File>
+    <File Include="bin/AWSSDK.dll">
+      <publishTime>10/05/2012 14:09:14</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>02/24/2014 20:07:09</publishTime>
+    </File>
+    <File Include="bin/Infostructure.MyBigBro.BusinessLogic.dll">
+      <publishTime>09/24/2014 22:44:30</publishTime>
+    </File>
+    <File Include="bin/Infostructure.MyBigBro.BusinessLogic.pdb">
+      <publishTime>09/24/2014 22:44:30</publishTime>
+    </File>
+    <File Include="bin/Infostructure.MyBigBro.DataModel.dll">
+      <publishTime>09/24/2014 22:44:27</publishTime>
+    </File>
+    <File Include="bin/Infostructure.MyBigBro.DataModel.pdb">
+      <publishTime>09/24/2014 22:44:27</publishTime>
+    </File>
+    <File Include="bin/Infostructure.MyBigBro.Domain.dll">
+      <publishTime>09/24/2014 22:44:26</publishTime>
+    </File>
+    <File Include="bin/Infostructure.MyBigBro.Domain.pdb">
+      <publishTime>09/24/2014 22:44:26</publishTime>
+    </File>
+    <File Include="bin/Infostructure.MyBigBro.ImageStorageServiceAgent.dll">
+      <publishTime>09/24/2014 22:44:28</publishTime>
+    </File>
+    <File Include="bin/Infostructure.MyBigBro.ImageStorageServiceAgent.pdb">
+      <publishTime>09/24/2014 22:44:28</publishTime>
+    </File>
+    <File Include="bin/Infostructure.MyBigBro.Web4.dll">
+      <publishTime>09/24/2014 22:44:32</publishTime>
+    </File>
+    <File Include="bin/Infostructure.MyBigBro.Web4.pdb">
+      <publishTime>09/24/2014 22:44:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.Edm.dll">
+      <publishTime>08/15/2013 20:17:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.OData.dll">
+      <publishTime>08/15/2013 20:17:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.Services.Client.dll">
+      <publishTime>08/15/2013 20:17:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.Unity.Configuration.dll">
+      <publishTime>01/09/2014 21:47:37</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.Unity.dll">
+      <publishTime>01/09/2014 21:47:37</publishTime>
+    </File>
+    <File Include="bin/Microsoft.WindowsAzure.Storage.dll">
+      <publishTime>03/11/2014 20:31:52</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/08/2013 14:28:57</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/09/2014 21:34:20</publishTime>
+    </File>
+    <File Include="bin/System.Spatial.dll">
+      <publishTime>08/15/2013 20:17:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>01/09/2014 21:34:20</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>03/17/2014 21:38:32</publishTime>
+    </File>
+    <File Include="bin/Unity.WebApi.dll">
+      <publishTime>03/17/2014 22:02:27</publishTime>
+    </File>
+    <File Include="content/css/bootstrap-datetimepicker.css">
+      <publishTime>04/13/2014 21:48:36</publishTime>
+    </File>
+    <File Include="content/css/bootstrap-datetimepicker.min.css">
+      <publishTime>04/07/2014 21:25:58</publishTime>
+    </File>
+    <File Include="content/css/bootstrap-theme-yeti.css">
+      <publishTime>05/04/2014 20:31:13</publishTime>
+    </File>
+    <File Include="content/css/bootstrap-theme.css">
+      <publishTime>04/07/2014 21:39:33</publishTime>
+    </File>
+    <File Include="content/css/bootstrap-theme.css.map">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="content/css/bootstrap-theme.min.css">
+      <publishTime>04/07/2014 21:39:33</publishTime>
+    </File>
+    <File Include="content/css/bootstrap.css">
+      <publishTime>05/04/2014 20:11:25</publishTime>
+    </File>
+    <File Include="content/css/bootstrap.css.map">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="content/css/bootstrap.min.css">
+      <publishTime>04/07/2014 21:39:32</publishTime>
+    </File>
+    <File Include="content/css/datetimepicker.css">
+      <publishTime>04/18/2014 20:57:27</publishTime>
+    </File>
+    <File Include="content/css/jquery-simple-datetimepicker.css">
+      <publishTime>04/18/2014 20:47:52</publishTime>
+    </File>
+    <File Include="content/css/lightbox.css">
+      <publishTime>05/07/2014 20:35:57</publishTime>
+    </File>
+    <File Include="content/css/loading-bar.css">
+      <publishTime>04/03/2014 21:49:30</publishTime>
+    </File>
+    <File Include="content/css/loading-bar.min.css">
+      <publishTime>04/03/2014 21:49:30</publishTime>
+    </File>
+    <File Include="content/css/navbar.css">
+      <publishTime>05/07/2014 19:48:17</publishTime>
+    </File>
+    <File Include="content/css/site.css">
+      <publishTime>05/04/2014 20:07:52</publishTime>
+    </File>
+    <File Include="content/css/toaster.css">
+      <publishTime>04/03/2014 21:49:30</publishTime>
+    </File>
+    <File Include="content/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/07/2014 21:43:31</publishTime>
+    </File>
+    <File Include="content/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/07/2014 21:43:31</publishTime>
+    </File>
+    <File Include="content/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/07/2014 21:43:31</publishTime>
+    </File>
+    <File Include="content/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/07/2014 21:43:31</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>03/24/2014 21:21:13</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>09/24/2014 22:53:13</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/16/2014 20:01:58</publishTime>
+    </File>
+    <File Include="scripts/angular-animate.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-animate.min.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-animate.min.js.map">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-cookies.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-cookies.min.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-cookies.min.js.map">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-csp.css">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-google-maps.js">
+      <publishTime>04/04/2014 22:21:48</publishTime>
+    </File>
+    <File Include="scripts/angular-loader.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-loader.min.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-loader.min.js.map">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-mocks.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-resource.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-resource.min.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-resource.min.js.map">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-route.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-route.min.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-route.min.js.map">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-sanitize.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-sanitize.min.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-sanitize.min.js.map">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-scenario.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-touch.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-touch.min.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular-touch.min.js.map">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular.min.js">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/angular.min.js.map">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/bootstrap-datetimepicker.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/bootstrap-datetimepicker.min.js">
+      <publishTime>04/07/2014 21:26:14</publishTime>
+    </File>
+    <File Include="scripts/bootstrap.js">
+      <publishTime>04/07/2014 21:40:01</publishTime>
+    </File>
+    <File Include="scripts/bootstrap.min.js">
+      <publishTime>04/07/2014 21:40:01</publishTime>
+    </File>
+    <File Include="scripts/datetimepicker.js">
+      <publishTime>04/19/2014 21:15:56</publishTime>
+    </File>
+    <File Include="scripts/errors.json">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/jquery-simple-datetimepicker.js">
+      <publishTime>04/18/2014 20:38:01</publishTime>
+    </File>
+    <File Include="scripts/jquery.datetimepicker.js">
+      <publishTime>04/18/2014 20:36:17</publishTime>
+    </File>
+    <File Include="scripts/jquery.min.js">
+      <publishTime>05/11/2014 15:24:44</publishTime>
+    </File>
+    <File Include="scripts/lightbox.js">
+      <publishTime>05/07/2014 20:38:00</publishTime>
+    </File>
+    <File Include="scripts/loading-bar.js">
+      <publishTime>04/03/2014 21:51:21</publishTime>
+    </File>
+    <File Include="scripts/loading-bar.min.js">
+      <publishTime>04/03/2014 21:51:21</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.ar-ma.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.ar.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.bg.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.br.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.bs.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.ca.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.cs.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.cv.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.da.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.de.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.el.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.en-au.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.en-ca.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.en-gb.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.eo.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.es.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.et.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.eu.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.fa.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.fi.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.fr-ca.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.fr.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.gl.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.he.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.hi.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.hr.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.hu.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.id.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.is.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.it.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.ja.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.ka.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.ko.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.lt.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.lv.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.ml.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.mr.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.ms-my.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.nb.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.ne.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.nl.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.nn.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.pl.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.pt-BR.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.pt.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.ro.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.ru.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.sk.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.sl.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.sq.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.sv.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.th.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.tr.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.tzm-la.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.tzm.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.uk.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.uz.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.vn.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.zh-CN.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/locales/bootstrap-datetimepicker.zh-TW.js">
+      <publishTime>04/07/2014 21:25:00</publishTime>
+    </File>
+    <File Include="scripts/moment.js">
+      <publishTime>04/07/2014 21:54:12</publishTime>
+    </File>
+    <File Include="scripts/mybigbro-map.js">
+      <publishTime>04/16/2014 19:53:28</publishTime>
+    </File>
+    <File Include="scripts/mybigbro.js">
+      <publishTime>04/04/2014 21:31:51</publishTime>
+    </File>
+    <File Include="scripts/toaster.js">
+      <publishTime>04/03/2014 21:51:21</publishTime>
+    </File>
+    <File Include="scripts/ui-bootstrap-0.9.0.js">
+      <publishTime>04/03/2014 21:51:21</publishTime>
+    </File>
+    <File Include="scripts/ui-bootstrap-0.9.0.min.js">
+      <publishTime>04/03/2014 21:51:21</publishTime>
+    </File>
+    <File Include="scripts/ui-bootstrap-tpls-0.9.0.js">
+      <publishTime>04/03/2014 21:51:21</publishTime>
+    </File>
+    <File Include="scripts/ui-bootstrap-tpls-0.9.0.min.js">
+      <publishTime>04/03/2014 21:51:21</publishTime>
+    </File>
+    <File Include="scripts/ui-map.js">
+      <publishTime>04/04/2014 21:59:44</publishTime>
+    </File>
+    <File Include="scripts/underscore-min.js">
+      <publishTime>04/04/2014 22:26:33</publishTime>
+    </File>
+    <File Include="scripts/underscore-min.map">
+      <publishTime>04/04/2014 22:26:32</publishTime>
+    </File>
+    <File Include="scripts/underscore.js">
+      <publishTime>04/04/2014 22:26:33</publishTime>
+    </File>
+    <File Include="scripts/version.json">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="scripts/version.txt">
+      <publishTime>03/21/2014 13:39:46</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/24/2014 22:55:58</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

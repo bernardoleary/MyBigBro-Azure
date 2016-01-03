@@ -1,0 +1,102 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A691EA94-A01F-410D-B343-C9800666AD55}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infostructure.MyBigBro.BusinessLogic", "Infostructure.MyBigBro.BusinessLogic\Infostructure.MyBigBro.BusinessLogic.csproj", "{2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infostructure.MyBigBro.DataModel", "Infostructure.MyBigBro.DataModel\Infostructure.MyBigBro.DataModel.csproj", "{755B0992-F18D-4232-B434-7F75BEACBEE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infostructure.MyBigBro.ImageStorageServiceAgent", "Infostructure.MyBigBro.ImageStorageServiceAgent\Infostructure.MyBigBro.ImageStorageServiceAgent.csproj", "{FF9767D7-F84B-44FF-ABF0-B668365CD83C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infostructure.MyBigBro.Domain", "Infostructure.MyBigBro.Domain\Infostructure.MyBigBro.Domain.csproj", "{8A861D82-8AAA-4A29-943D-F050DA005BC6}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Infostructure.MyBigBro.Database", "Infostructure.MyBigBro.Database\Infostructure.MyBigBro.Database.sqlproj", "{5321A845-9C07-49B1-A07B-A58443873B4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infostructure.MyBigBro.Web4", "Infostructure.MyBigBro.Web4\Infostructure.MyBigBro.Web4.csproj", "{13858137-6D09-4654-B166-B73E056760AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{19CF1CED-2D9B-4214-B816-01C5AAE19EE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{C07A9199-352F-4A11-ABF0-010FF85B6C4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Functional Automated Tests", "Functional Automated Tests", "{E442EBE5-18B9-4FA4-BF53-8962E1B9F321}"
+	ProjectSection(SolutionItems) = preProject
+		Infostructure.MyBigBro.Web.Tests\FiddlerTests\GeoMarkers_Post.txt = Infostructure.MyBigBro.Web.Tests\FiddlerTests\GeoMarkers_Post.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Sources", "Data Sources", "{E4399499-9827-4CD7-A4ED-47D35286AFEB}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\CapturedImagesTruckGlenShift20140104.txt = Resources\CapturedImagesTruckGlenShift20140104.txt
+		Resources\data-conversion-tool_201409262232.xlsx = Resources\data-conversion-tool_201409262232.xlsx
+		Resources\data-conversion-tool_201410051432.xlsx = Resources\data-conversion-tool_201410051432.xlsx
+		Resources\data-conversion-tool_201411162134.xlsx = Resources\data-conversion-tool_201411162134.xlsx
+		Resources\data-conversion-tool_201411211902.xlsx = Resources\data-conversion-tool_201411211902.xlsx
+		Resources\data-conversion-tool_201411212106.xlsx = Resources\data-conversion-tool_201411212106.xlsx
+		Resources\hong-kong-20141116-2.txt = Resources\hong-kong-20141116-2.txt
+		Resources\hong-kong-20141116.csv = Resources\hong-kong-20141116.csv
+		Resources\hong-kong-20141116.txt = Resources\hong-kong-20141116.txt
+		Resources\jamcams-camera-list-201409241003.xml = Resources\jamcams-camera-list-201409241003.xml
+		Resources\nyctmc.org.html = Resources\nyctmc.org.html
+		Resources\sydney-camera-list-201409262229.csv = Resources\sydney-camera-list-201409262229.csv
+		Resources\TDOTCameraGeorss.xml = Resources\TDOTCameraGeorss.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{755B0992-F18D-4232-B434-7F75BEACBEE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{755B0992-F18D-4232-B434-7F75BEACBEE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{755B0992-F18D-4232-B434-7F75BEACBEE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{755B0992-F18D-4232-B434-7F75BEACBEE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF9767D7-F84B-44FF-ABF0-B668365CD83C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF9767D7-F84B-44FF-ABF0-B668365CD83C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF9767D7-F84B-44FF-ABF0-B668365CD83C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF9767D7-F84B-44FF-ABF0-B668365CD83C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A861D82-8AAA-4A29-943D-F050DA005BC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A861D82-8AAA-4A29-943D-F050DA005BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A861D82-8AAA-4A29-943D-F050DA005BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A861D82-8AAA-4A29-943D-F050DA005BC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5321A845-9C07-49B1-A07B-A58443873B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5321A845-9C07-49B1-A07B-A58443873B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5321A845-9C07-49B1-A07B-A58443873B4F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5321A845-9C07-49B1-A07B-A58443873B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5321A845-9C07-49B1-A07B-A58443873B4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5321A845-9C07-49B1-A07B-A58443873B4F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{13858137-6D09-4654-B166-B73E056760AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13858137-6D09-4654-B166-B73E056760AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13858137-6D09-4654-B166-B73E056760AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13858137-6D09-4654-B166-B73E056760AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19CF1CED-2D9B-4214-B816-01C5AAE19EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19CF1CED-2D9B-4214-B816-01C5AAE19EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19CF1CED-2D9B-4214-B816-01C5AAE19EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19CF1CED-2D9B-4214-B816-01C5AAE19EE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C07A9199-352F-4A11-ABF0-010FF85B6C4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C07A9199-352F-4A11-ABF0-010FF85B6C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C07A9199-352F-4A11-ABF0-010FF85B6C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C07A9199-352F-4A11-ABF0-010FF85B6C4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,29 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Infostructure.MyBigBro.Web.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="connectionStringHosting" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=kirk.techservers.net,2433;Network Library=DBMSSOCN;uid=mybigbro;pwd=4Uckland;database=MyBigBro&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=kirk.techservers.net,2433;Network Library=DBMSSOCN;uid=mybigbro;pwd=4Uckland;database=MyBigBro</Value>
+    </Setting>
+    <Setting Name="connectionStringAzure" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Server=tcp:h5p8t6ildo.database.windows.net,1433;Database=mybigbro;User ID=mybigbro@h5p8t6ildo;Password=4Uckland;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Server=tcp:h5p8t6ildo.database.windows.net,1433;Database=mybigbro;User ID=mybigbro@h5p8t6ildo;Password=4Uckland;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;</Value>
+    </Setting>
+    <Setting Name="connectionStringLocal" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=ASUS-PC\SQLDEV2008R2;Initial Catalog=MyBigBro;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=ASUS-PC\SQLDEV2008R2;Initial Catalog=MyBigBro;Integrated Security=True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

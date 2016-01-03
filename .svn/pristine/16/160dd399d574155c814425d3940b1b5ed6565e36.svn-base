@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="IntegrationTests.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <userSettings>
+        <IntegrationTests.Properties.Settings>
+            <setting name="connectionString" serializeAs="String">
+                <value>Data Source=NEC\SQLEXPRESS2008R2;Initial Catalog=MyBigBro;Integrated Security=True</value>
+            </setting>
+        </IntegrationTests.Properties.Settings>
+    </userSettings>
+</configuration>

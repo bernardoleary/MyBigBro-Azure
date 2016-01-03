@@ -1,0 +1,9 @@
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Database\bin\Release\Infostructure.MyBigBro.Database.dacpac
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Database\bin\Release\Infostructure.MyBigBro.Database.dll
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Database\bin\Release\Infostructure.MyBigBro.Database.pdb
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Database\obj\Release\Infostructure.MyBigBro.Database.dll
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Database\obj\Release\Infostructure.MyBigBro.Database.pdb
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Database\obj\Release\Model.xml
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Database\obj\Release\refactor.xml
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Database\obj\Release\postdeploy.sql
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Database\obj\Release\predeploy.sql

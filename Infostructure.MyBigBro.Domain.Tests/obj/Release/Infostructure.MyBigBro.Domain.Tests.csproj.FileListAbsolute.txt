@@ -1,0 +1,17 @@
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\bin\Release\Infostructure.MyBigBro.Domain.Tests.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\bin\Release\Infostructure.MyBigBro.Domain.Tests.pdb
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\bin\Release\Infostructure.MyBigBro.Domain.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\bin\Release\Microsoft.Practices.Unity.Configuration.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\bin\Release\Microsoft.Practices.Unity.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\bin\Release\Newtonsoft.Json.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\bin\Release\System.Net.Http.Formatting.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\bin\Release\Infostructure.MyBigBro.Domain.pdb
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\bin\Release\Microsoft.Practices.Unity.xml
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\bin\Release\Microsoft.Practices.Unity.Configuration.xml
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\bin\Release\Newtonsoft.Json.xml
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\bin\Release\System.Net.Http.Formatting.xml
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\obj\Release\Infostructure.MyBigBro.Domain.Tests.csprojResolveAssemblyReference.cache
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\obj\Release\Infostructure.MyBigBro.Domain.Tests.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\obj\Release\Infostructure.MyBigBro.Domain.Tests.pdb
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\bin\Release\EntityFramework.dll
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain.Tests\bin\Release\EntityFramework.xml

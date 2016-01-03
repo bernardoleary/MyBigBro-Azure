@@ -1,0 +1,15 @@
+using System.Collections.Generic;
+using Infostructure.MyBigBro.DataModel.Models;
+using Infostructure.MyBigBro.Domain;
+
+namespace Infostructure.MyBigBro.Web.Models
+{
+    public interface IMapper
+    {
+        GeoMarker GeoMarkerDtoToGeoMarker(IGeoMarker target);
+        GeoMarkerDto GeoMarkerToGeoMarkerDto(IGeoMarker target);
+        IEnumerable<WebCamDto> WebCamsToWebCamDtos(IEnumerable<IWebCam> target);
+        IEnumerable<GeoMarkerDto> GeoMarkersToGeoMarkerDtos(IEnumerable<IGeoMarker> target);
+        WebCamDto WebCamToWebCamDto(IWebCam target);
+    }
+}

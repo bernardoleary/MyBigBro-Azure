@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infostructure.MyBigBro.BusinessLogic", "Infostructure.MyBigBro.BusinessLogic\Infostructure.MyBigBro.BusinessLogic.csproj", "{2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infostructure.MyBigBro.DataModel", "Infostructure.MyBigBro.DataModel\Infostructure.MyBigBro.DataModel.csproj", "{755B0992-F18D-4232-B434-7F75BEACBEE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infostructure.MyBigBro.DataModel.Tests", "Infostructure.MyBigBro.DataModel.Tests\Infostructure.MyBigBro.DataModel.Tests.csproj", "{0E0D9DFD-F93A-4E96-9E15-84A5D9C81DE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infostructure.MyBigBro.Web", "Infostructure.MyBigBro.Web\Infostructure.MyBigBro.Web.csproj", "{FA40C57C-B985-4E61-BE06-B901C7323D08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infostructure.MyBigBro.ImageStorageServiceAgent", "Infostructure.MyBigBro.ImageStorageServiceAgent\Infostructure.MyBigBro.ImageStorageServiceAgent.csproj", "{FF9767D7-F84B-44FF-ABF0-B668365CD83C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infostructure.MyBigBro.ImageStorageServiceAgent.Tests", "Infostructure.MyBigBro.ImageStorageServiceAgent.Tests\Infostructure.MyBigBro.ImageStorageServiceAgent.Tests.csproj", "{3502B24B-EB0D-4D2C-A9EA-185BA20B7BDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infostructure.MyBigBro.Domain", "Infostructure.MyBigBro.Domain\Infostructure.MyBigBro.Domain.csproj", "{8A861D82-8AAA-4A29-943D-F050DA005BC6}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Infostructure.MyBigBro.Database", "Infostructure.MyBigBro.Database\Infostructure.MyBigBro.Database.sqlproj", "{5321A845-9C07-49B1-A07B-A58443873B4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infostructure.MyBigBro.BusinessLogic.Tests", "Infostructure.MyBigBro.BusinessLogic.Tests\Infostructure.MyBigBro.BusinessLogic.Tests.csproj", "{6B5B35F6-ED1A-47AC-977E-95C6C9A4E15E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infostructure.MyBigBro.Web.Tests", "Infostructure.MyBigBro.Web.Tests\Infostructure.MyBigBro.Web.Tests.csproj", "{DEE59CCF-5209-4AFB-A0B2-D86910A68825}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{755B0992-F18D-4232-B434-7F75BEACBEE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{755B0992-F18D-4232-B434-7F75BEACBEE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{755B0992-F18D-4232-B434-7F75BEACBEE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{755B0992-F18D-4232-B434-7F75BEACBEE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E0D9DFD-F93A-4E96-9E15-84A5D9C81DE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E0D9DFD-F93A-4E96-9E15-84A5D9C81DE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E0D9DFD-F93A-4E96-9E15-84A5D9C81DE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E0D9DFD-F93A-4E96-9E15-84A5D9C81DE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA40C57C-B985-4E61-BE06-B901C7323D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA40C57C-B985-4E61-BE06-B901C7323D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA40C57C-B985-4E61-BE06-B901C7323D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA40C57C-B985-4E61-BE06-B901C7323D08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF9767D7-F84B-44FF-ABF0-B668365CD83C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF9767D7-F84B-44FF-ABF0-B668365CD83C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF9767D7-F84B-44FF-ABF0-B668365CD83C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF9767D7-F84B-44FF-ABF0-B668365CD83C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3502B24B-EB0D-4D2C-A9EA-185BA20B7BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3502B24B-EB0D-4D2C-A9EA-185BA20B7BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3502B24B-EB0D-4D2C-A9EA-185BA20B7BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3502B24B-EB0D-4D2C-A9EA-185BA20B7BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A861D82-8AAA-4A29-943D-F050DA005BC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A861D82-8AAA-4A29-943D-F050DA005BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A861D82-8AAA-4A29-943D-F050DA005BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A861D82-8AAA-4A29-943D-F050DA005BC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5321A845-9C07-49B1-A07B-A58443873B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5321A845-9C07-49B1-A07B-A58443873B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5321A845-9C07-49B1-A07B-A58443873B4F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5321A845-9C07-49B1-A07B-A58443873B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5321A845-9C07-49B1-A07B-A58443873B4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5321A845-9C07-49B1-A07B-A58443873B4F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6B5B35F6-ED1A-47AC-977E-95C6C9A4E15E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B5B35F6-ED1A-47AC-977E-95C6C9A4E15E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B5B35F6-ED1A-47AC-977E-95C6C9A4E15E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B5B35F6-ED1A-47AC-977E-95C6C9A4E15E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEE59CCF-5209-4AFB-A0B2-D86910A68825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEE59CCF-5209-4AFB-A0B2-D86910A68825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEE59CCF-5209-4AFB-A0B2-D86910A68825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEE59CCF-5209-4AFB-A0B2-D86910A68825}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+	EndGlobalSection
+EndGlobal

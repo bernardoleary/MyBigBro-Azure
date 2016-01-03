@@ -1,0 +1,4168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml">
+  <title>TDOT DEVICE</title>
+  <subtitle>CAMERA</subtitle>
+  <link href="http://www.tdot.state.tn.us/tdotsmartway/" />
+  <author>
+    <name>TDOT IT</name>
+  </author>
+  <id>urn:uuid:80FCFAB6-E7BD-4433-BBCF-C58818333714</id>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam01.asp</link>
+    <id>urn:uuid:a46ed367-0a83-4c50-8627-9b4cd19a778f</id>
+    <summary>I-24 @ Georgia state line</summary>
+    <marker>34.98854958760810 -85.40328304164150</marker>
+    <offsetmarker>34.98854958760810 -85.40328304164150</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16101.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam02.asp</link>
+    <id>urn:uuid:d0096d26-7421-4ad8-8b16-510877f23049</id>
+    <summary>I-24 @ Welcome Center</summary>
+    <marker>34.99865017099180 -85.39716656608330</marker>
+    <offsetmarker>34.99865017099180 -85.39716656608330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16102.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam03.asp</link>
+    <id>urn:uuid:9d450e73-9072-4628-9e51-eb09e7ddaf42</id>
+    <summary>I-24 @ West of Cummings Road</summary>
+    <marker>35.006537 -85.395538</marker>
+    <offsetmarker>35.006537 -85.395538</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16103.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam04.asp</link>
+    <id>urn:uuid:0f56d34b-74bc-4c8c-878f-7ce30ed28b2e</id>
+    <summary>I-24 @ Cummings Rd</summary>
+    <marker>35.011960 -85.389148</marker>
+    <offsetmarker>35.011960 -85.389148</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16104.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam05.asp</link>
+    <id>urn:uuid:e31c3209-d1b3-4169-ac63-4789a7cbbe58</id>
+    <summary>I-24 @ Cummings Highway</summary>
+    <marker>35.018293 -85.383720</marker>
+    <offsetmarker>35.018293 -85.383720</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16105.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam06.asp</link>
+    <id>urn:uuid:cc55114c-4193-4e1f-afcf-b4c8316b3653</id>
+    <summary>I-24 East of Cummings Highway</summary>
+    <marker>35.02433313216660 -85.37803359485010</marker>
+    <offsetmarker>35.02433313216660 -85.37803359485010</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16106.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam07.asp</link>
+    <id>urn:uuid:b98e6b40-a62f-4f95-abd8-a9cb1b16a036</id>
+    <summary>I-24 @ Browns Ferry</summary>
+    <marker>35.027495 -85.363960</marker>
+    <offsetmarker>35.027495 -85.363960</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16107.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam08.asp</link>
+    <id>urn:uuid:2413fb5f-07dc-4d18-b054-cae4dbf22f26</id>
+    <summary>I-24 East of Browns Ferry</summary>
+    <marker>35.02946690806680 -85.35438342385840</marker>
+    <offsetmarker>35.02946690806680 -85.35438342385840</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16108.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam09.asp</link>
+    <id>urn:uuid:d1869043-25da-4d96-8990-ac7f0737b7af</id>
+    <summary>I-24 West of Lookout Creek</summary>
+    <marker>35.027553 -85.346743</marker>
+    <offsetmarker>35.027553 -85.346743</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16109.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam10.asp</link>
+    <id>urn:uuid:b3badb1c-dd45-477b-82d1-eb0f622ab2ec</id>
+    <summary>I-24 @ Moccasin Bend</summary>
+    <marker>35.01876680 -85.334183</marker>
+    <offsetmarker>35.01876680 -85.334183</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16110.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam11.asp</link>
+    <id>urn:uuid:7a46baea-811c-4a6d-b130-e0566ef6faa4</id>
+    <summary>I-24 East of Moccasin Bend</summary>
+    <marker>35.02389960 -85.324716</marker>
+    <offsetmarker>35.02389960 -85.324716</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16111.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam12.asp</link>
+    <id>urn:uuid:dbbeb3a2-5199-4e33-a6e0-0825b18ae13c</id>
+    <summary>I-24/US-27 Junction</summary>
+    <marker>35.032312 -85.319350</marker>
+    <offsetmarker>35.032312 -85.319350</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16112.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam13.asp</link>
+    <id>urn:uuid:d477df2e-3664-4278-9784-84952d56f90d</id>
+    <summary>I-24 East of Market Street</summary>
+    <marker>35.026050090525 -85.30309997988330</marker>
+    <offsetmarker>35.026050090525 -85.30309997988330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16113.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam14.asp</link>
+    <id>urn:uuid:e4bf5562-0b4b-4fd5-a9b7-523b2dc00acb</id>
+    <summary>I-24 @ Rossville Boulevard</summary>
+    <marker>35.018475 -85.294028</marker>
+    <offsetmarker>35.018475 -85.294028</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16114.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam15.asp</link>
+    <id>urn:uuid:898378fe-9af6-4295-b5f9-c7619c6ea843</id>
+    <summary>I-24 @ Westside Drive</summary>
+    <marker>35.01458358479180 -85.27140012070010</marker>
+    <offsetmarker>35.01458358479180 -85.27140012070010</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16115.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam16.asp</link>
+    <id>urn:uuid:f4aeec00-0173-4564-83ef-181b912f293d</id>
+    <summary>I-24 @ Old Ringgold Road</summary>
+    <marker>35.018190 -85.268560</marker>
+    <offsetmarker>35.018190 -85.268560</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16116.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam17.asp</link>
+    <id>urn:uuid:8b28a58d-2239-462d-896b-3533eca9d617</id>
+    <summary>I-24 West of Seminole Drive</summary>
+    <marker>35.02143330 -85.262867</marker>
+    <offsetmarker>35.02143330 -85.262867</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16117.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam18.asp</link>
+    <id>urn:uuid:b6b19c15-3d05-4500-bdc1-b7f288dfd821</id>
+    <summary>I-24 @ Seminole Drive</summary>
+    <marker>35.02066690 -85.259883</marker>
+    <offsetmarker>35.02066690 -85.259883</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16118.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam19.asp</link>
+    <id>urn:uuid:da0a9138-2669-4bd2-ab71-c2791f70bcb2</id>
+    <summary>I-24 @ Germantown Road</summary>
+    <marker>35.01358378595860 -85.25091631462480</marker>
+    <offsetmarker>35.01358378595860 -85.25091631462480</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16119.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam20.asp</link>
+    <id>urn:uuid:200afe65-709d-4c36-8071-8d6bdf080548</id>
+    <summary>I-24 @ Moore Road</summary>
+    <marker>35.00808288070810 -85.23653289076640</marker>
+    <offsetmarker>35.00808288070810 -85.23653289076640</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16120.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam21.asp</link>
+    <id>urn:uuid:3c93bb70-5e1b-485d-9d35-3cf64e5a8912</id>
+    <summary>I-24 @ Mcbrien Road</summary>
+    <marker>35.00479980 -85.226867</marker>
+    <offsetmarker>35.00479980 -85.226867</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16121.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam22.asp</link>
+    <id>urn:uuid:70296ba2-8c09-4165-8217-8f1d9dec9fe8</id>
+    <summary>I-24/I-75 Junction</summary>
+    <marker>35.00490042245020 -85.21521625427480</marker>
+    <offsetmarker>35.00490042245020 -85.21521625427480</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16122.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam23.asp</link>
+    <id>urn:uuid:7b7ab3db-c5ef-4420-afe4-bf443a643076</id>
+    <summary>I-24 @ Spring Creek Road</summary>
+    <marker>35.00400020116680 -85.21549989941660</marker>
+    <offsetmarker>35.00400020116680 -85.21549989941660</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16123.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam24.asp</link>
+    <id>urn:uuid:37ea4a3b-2abc-4330-85da-e1563f2aa60f</id>
+    <summary>US-27 West of Main St</summary>
+    <marker>35.03961680 -85.318367</marker>
+    <offsetmarker>35.03961680 -85.318367</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16124.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam25.asp</link>
+    <id>urn:uuid:f04d2f1c-480b-4625-8a2d-f86e934a2c4c</id>
+    <summary>US-27 West of Martin Luther King</summary>
+    <marker>35.04789980 -85.314533</marker>
+    <offsetmarker>35.04789980 -85.314533</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16125.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam26.asp</link>
+    <id>urn:uuid:f6e314cf-8454-48e1-a373-3a120a43415b</id>
+    <summary>US-27 @ Fourth Street</summary>
+    <marker>35.05455040 -85.3155</marker>
+    <offsetmarker>35.05455040 -85.3155</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16126.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam27.asp</link>
+    <id>urn:uuid:12400465-07a1-4db4-b38e-73e2d024efa3</id>
+    <summary>US-27 @ Manufacturers Road</summary>
+    <marker>35.06238380 -85.3180</marker>
+    <offsetmarker>35.06238380 -85.3180</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16127.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam28.asp</link>
+    <id>urn:uuid:8a9dc12f-70c5-4a65-9f4b-89bbc7028668</id>
+    <summary>US-27 @ Whitehall Road</summary>
+    <marker>35.07239990 -85.321533</marker>
+    <offsetmarker>35.07239990 -85.321533</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16128.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam29.asp</link>
+    <id>urn:uuid:798cb6c2-73bc-45f4-b051-86a4d5c0676d</id>
+    <summary>US-27 South of Signal Mtn Road</summary>
+    <marker>35.08208310 -85.323117</marker>
+    <offsetmarker>35.08208310 -85.323117</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16129.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam30.asp</link>
+    <id>urn:uuid:623ccc7b-f9bc-4cb5-b2d1-d71080be1801</id>
+    <summary>US-27 North of Signal Mtn Road</summary>
+    <marker>35.09153290 -85.324050</marker>
+    <offsetmarker>35.09153290 -85.324050</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16130.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam31.asp</link>
+    <id>urn:uuid:edd55767-8234-4452-9e02-1be269679613</id>
+    <summary>US-27 South of Morrison Springs</summary>
+    <marker>35.10090020 -85.316933</marker>
+    <offsetmarker>35.10090020 -85.316933</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16131.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam32.asp</link>
+    <id>urn:uuid:18c8f561-c503-4391-bacc-65db6647f689</id>
+    <summary>US-27 @ Morrison Springs Road</summary>
+    <marker>35.11228320 -85.306817</marker>
+    <offsetmarker>35.11228320 -85.306817</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16132.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam33.asp</link>
+    <id>urn:uuid:11053f0e-5531-4113-ac37-03283a180d12</id>
+    <summary>I-75 @ Ringgold Road</summary>
+    <marker>34.98974954737480 -85.20401629450820</marker>
+    <offsetmarker>34.98974954737480 -85.20401629450820</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16133.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam34.asp</link>
+    <id>urn:uuid:197e608d-b34f-4d58-a545-1425cec017b7</id>
+    <summary>I-75/I-24 Junction (Gore)</summary>
+    <marker>35.00169985918330 -85.21125025145850</marker>
+    <offsetmarker>35.00169985918330 -85.21125025145850</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16134.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam35.asp</link>
+    <id>urn:uuid:103a9d29-8a46-4001-94e5-9d2241e62d88</id>
+    <summary>I-75/I-24 Junction (Split)</summary>
+    <marker>35.00474954737480 -85.21133373566690</marker>
+    <offsetmarker>35.00474954737480 -85.21133373566690</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16135.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam36.asp</link>
+    <id>urn:uuid:91ef74d7-9fa0-4669-8eef-10b485f3ec4e</id>
+    <summary>I-75/I-24 Junction (Turnaround)</summary>
+    <marker>35.006725 -85.205180</marker>
+    <offsetmarker>35.006725 -85.205180</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16136.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam37.asp</link>
+    <id>urn:uuid:1d2bb554-4e75-4136-b568-c96886c26f0a</id>
+    <summary>I-75 South of East Brainerd Rd</summary>
+    <marker>35.01119995976660 -85.18861697847520</marker>
+    <offsetmarker>35.01119995976660 -85.18861697847520</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16137.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam38.asp</link>
+    <id>urn:uuid:75653aca-6c07-4803-aad5-196967309982</id>
+    <summary>I-75 @ East Brainerd Road</summary>
+    <marker>35.016867 -85.178837</marker>
+    <offsetmarker>35.016867 -85.178837</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16138.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam39.asp</link>
+    <id>urn:uuid:3f5ae9fc-36e5-4c49-b8c6-334e8c128b49</id>
+    <summary>I-75/SR-153 Junction</summary>
+    <marker>35.0258 -85.172867</marker>
+    <offsetmarker>35.0258 -85.172867</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16139.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam40.asp</link>
+    <id>urn:uuid:e91d55dd-f5b9-409a-a115-b543d71b584c</id>
+    <summary>I-75 @ Franks Road</summary>
+    <marker>35.03219975859990 -85.16633373566690</marker>
+    <offsetmarker>35.03219975859990 -85.16633373566690</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16140.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam41.asp</link>
+    <id>urn:uuid:2c069138-6385-4e1b-895f-39c5f73739be</id>
+    <summary>I-75 @ Shallowford Road</summary>
+    <marker>35.04280024140010 -85.15625025145850</marker>
+    <offsetmarker>35.04280024140010 -85.15625025145850</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16141.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam42.asp</link>
+    <id>urn:uuid:731f47a4-a3c2-410e-8294-23fa44a41fc6</id>
+    <summary>I-75 @ Standifer Gap Road</summary>
+    <marker>35.050933 -85.145317</marker>
+    <offsetmarker>35.050933 -85.145317</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16142.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam43.asp</link>
+    <id>urn:uuid:b5b89964-388c-4e2c-8396-5b3a1af11e3e</id>
+    <summary>I-75 @ Bonny Oaks Drive</summary>
+    <marker>35.05951620 -85.130383</marker>
+    <offsetmarker>35.05951620 -85.130383</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16143.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam44.asp</link>
+    <id>urn:uuid:d07c5928-ca81-4121-90c2-0d5faf5428b6</id>
+    <summary>I-75 North of Bonny Oaks Drive</summary>
+    <marker>35.066837 -85.124568</marker>
+    <offsetmarker>35.066837 -85.124568</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16144.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam45.asp</link>
+    <id>urn:uuid:5ce4401f-e5dd-4715-913f-e8ad7971e897</id>
+    <summary>I-75 @ Volkswagen Drive</summary>
+    <marker>35.0743 -85.112083</marker>
+    <offsetmarker>35.0743 -85.112083</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16145.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam46.asp</link>
+    <id>urn:uuid:2c0392e6-1460-4de9-8d23-3303ec1f7617</id>
+    <summary>I-75 North of Volkswagen Drive</summary>
+    <marker>35.076727 -85.102782</marker>
+    <offsetmarker>35.076727 -85.102782</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16146.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam47.asp</link>
+    <id>urn:uuid:f9d55d14-e228-43c5-bcef-bf3de0748efa</id>
+    <summary>I-75 South of Ooltewah exit</summary>
+    <marker>35.08114970 -85.083866</marker>
+    <offsetmarker>35.08114970 -85.083866</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16147.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam48.asp</link>
+    <id>urn:uuid:78499967-0b5d-4356-bc20-30b2a32a7aa5</id>
+    <summary>I-75 @ Ooltewah exit</summary>
+    <marker>35.08636690 -85.067167</marker>
+    <offsetmarker>35.08636690 -85.067167</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16148.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam49.asp</link>
+    <id>urn:uuid:2932d907-7604-488c-9ea7-0b6d5d188f60</id>
+    <summary>I-75 South of White Oak</summary>
+    <marker>35.10506640 -85.0515</marker>
+    <offsetmarker>35.10506640 -85.0515</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16149.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam50.asp</link>
+    <id>urn:uuid:9099d16d-de7f-4c82-8207-bdb88e777a5f</id>
+    <summary>I-75 @ Turnaround</summary>
+    <marker>35.11803360 -85.045717</marker>
+    <offsetmarker>35.11803360 -85.045717</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16150.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam51.asp</link>
+    <id>urn:uuid:ff477490-6cc4-4f37-8298-6bbc1ab42278</id>
+    <summary>I-75 @ Scenic Overlook</summary>
+    <marker>35.12691710 -85.034566</marker>
+    <offsetmarker>35.12691710 -85.034566</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16151.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam52.asp</link>
+    <id>urn:uuid:e00feaed-a861-4663-a4c8-8f2b5e4b339d</id>
+    <summary>I-75 @ Bradley Ridgecut</summary>
+    <marker>35.13048380 -85.0044</marker>
+    <offsetmarker>35.13048380 -85.0044</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16152.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam53.asp</link>
+    <id>urn:uuid:a4bfe0cf-0487-4430-8ede-3a5658e40dfd</id>
+    <summary>SR-153/I-75 Junction</summary>
+    <marker>35.02938340 -85.179833</marker>
+    <offsetmarker>35.02938340 -85.179833</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16153.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam54.asp</link>
+    <id>urn:uuid:7b7ddbe2-ca08-47c4-bc94-1e4c4beb8a42</id>
+    <summary>SR-153 @ Lee Highway</summary>
+    <marker>35.032233 -85.182816</marker>
+    <offsetmarker>35.032233 -85.182816</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16154.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam55.asp</link>
+    <id>urn:uuid:9ba90dbb-689f-4a2c-b6a4-541cdd5aba75</id>
+    <summary>SR-153 @ Airport/Shepherd Road</summary>
+    <marker>35.04243310 -85.186733</marker>
+    <offsetmarker>35.04243310 -85.186733</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16155.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam56.asp</link>
+    <id>urn:uuid:0718dfca-88a3-4968-895e-4aad28e70f06</id>
+    <summary>SR-153 @ Shallowford Road</summary>
+    <marker>35.05439950 -85.190550</marker>
+    <offsetmarker>35.05439950 -85.190550</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16156.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam57.asp</link>
+    <id>urn:uuid:283578da-da1e-4905-b0f7-ecbf1cfdef73</id>
+    <summary>SR-153 @ Jersey Pike</summary>
+    <marker>35.06538320 -85.194767</marker>
+    <offsetmarker>35.06538320 -85.194767</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16157.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam58.asp</link>
+    <id>urn:uuid:41794c13-a42b-4fc2-ae3c-6d3a9d76f171</id>
+    <summary>SR-153 @ Bonny Oaks Drive</summary>
+    <marker>35.07633370 -85.1997</marker>
+    <offsetmarker>35.07633370 -85.1997</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16158.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam59.asp</link>
+    <id>urn:uuid:e8d57275-dd3d-43c8-8efb-d79fa34ece17</id>
+    <summary>SR-153 @ Highway 58</summary>
+    <marker>35.081383 -85.204833</marker>
+    <offsetmarker>35.081383 -85.204833</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16159.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam60.asp</link>
+    <id>urn:uuid:f7dcaeb7-679a-4fb8-9fbb-2015a22bed08</id>
+    <summary>SR-153 @ Amnicola Highway</summary>
+    <marker>35.08998290 -85.2190</marker>
+    <offsetmarker>35.08998290 -85.2190</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16160.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam61.asp</link>
+    <id>urn:uuid:41ea06d3-f3b1-4267-8ae1-6d382494fb39</id>
+    <summary>SR-153 South of Chickamauga Dam</summary>
+    <marker>35.09478370 -85.225566</marker>
+    <offsetmarker>35.09478370 -85.225566</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16161.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam62.asp</link>
+    <id>urn:uuid:65a7d66b-18a1-4f1d-905f-a9c41fb37625</id>
+    <summary>SR-153 North of Chickamauga Dam</summary>
+    <marker>35.11006640 -85.229167</marker>
+    <offsetmarker>35.11006640 -85.229167</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16162.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam63.asp</link>
+    <id>urn:uuid:7dd99e99-5665-4122-a19a-f0c46663090b</id>
+    <summary>SR-153 South of Dupont Parkway</summary>
+    <marker>35.11486620 -85.2308</marker>
+    <offsetmarker>35.11486620 -85.2308</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16163.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam64.asp</link>
+    <id>urn:uuid:1c23e5db-149f-437e-969c-0596b4679782</id>
+    <summary>SR-153 @ Dupont Parkway</summary>
+    <marker>35.12096660 -85.238166</marker>
+    <offsetmarker>35.12096660 -85.238166</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16164.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam65.asp</link>
+    <id>urn:uuid:42a7d169-a730-4714-baae-e1e9a81b86e8</id>
+    <summary>SR-153 @ Hixson Pike</summary>
+    <marker>35.13105010 -85.244950</marker>
+    <offsetmarker>35.13105010 -85.244950</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16165.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam66.asp</link>
+    <id>urn:uuid:989d0126-7c90-43a1-adf4-ccd049392360</id>
+    <summary>SR-153 North of Gadd Road</summary>
+    <marker>35.14513380 -85.249350</marker>
+    <offsetmarker>35.14513380 -85.249350</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16166.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam67.asp</link>
+    <id>urn:uuid:f2ae2f24-a77e-4dcc-bb37-9c535a297e54</id>
+    <summary>SR-153 @ Grubb Road</summary>
+    <marker>35.157067 -85.248433</marker>
+    <offsetmarker>35.157067 -85.248433</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16167.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam68.asp</link>
+    <id>urn:uuid:8dc39e46-721a-4cb2-90d4-df62162db8f8</id>
+    <summary>SR-153 @ Pine Mar Drive</summary>
+    <marker>35.16878290 -85.247567</marker>
+    <offsetmarker>35.16878290 -85.247567</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16168.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam69.asp</link>
+    <id>urn:uuid:96b46ef4-d862-44cc-8035-b48bb635fa92</id>
+    <summary>SR-153 @ Dayton Boulevard</summary>
+    <marker>35.17798330 -85.247184</marker>
+    <offsetmarker>35.17798330 -85.247184</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16169.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam70.asp</link>
+    <id>urn:uuid:fce689b6-9d93-4fc4-83ed-886a7899ff63</id>
+    <summary>SR-153/US-27 Junction</summary>
+    <marker>35.18806680 -85.245867</marker>
+    <offsetmarker>35.18806680 -85.245867</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16170.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/Cam71.asp</link>
+    <id>urn:uuid:212371d3-a88b-4d68-aafe-0d53c274bae2</id>
+    <summary>I-75 North of Ooltewah exit</summary>
+    <marker>35.09335040 -85.057167</marker>
+    <offsetmarker>35.09335040 -85.057167</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16171.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam01.asp</link>
+    <id>urn:uuid:77408ed2-314f-4ec2-b238-0855fb2e31e8</id>
+    <summary>I-40/75 @ Turkey Creek</summary>
+    <marker>35.903056 -84.157222</marker>
+    <offsetmarker>35.903056 -84.157222</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16001.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam02.asp</link>
+    <id>urn:uuid:e57fe1b6-af98-4506-9f08-25bd7d96b619</id>
+    <summary>I-40/75 @ Lovell Rd</summary>
+    <marker>35.905833 -84.1450</marker>
+    <offsetmarker>35.905833 -84.1450</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16002.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam03.asp</link>
+    <id>urn:uuid:c499259c-99be-4f25-bfef-1a67f4519677</id>
+    <summary>I-40/75 @ Parkside Dr</summary>
+    <marker>35.908611 -84.132222</marker>
+    <offsetmarker>35.908611 -84.132222</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16003.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam04.asp</link>
+    <id>urn:uuid:1b4f3c7a-8379-4f49-be56-93cafadaae24</id>
+    <summary>I-40/75 @ Pellissippi Pky</summary>
+    <marker>35.913333 -84.111389</marker>
+    <offsetmarker>35.913333 -84.111389</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16004.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam05.asp</link>
+    <id>urn:uuid:0de1214c-657a-4c31-bee5-1cd5b2be33fa</id>
+    <summary>I-40/75 @ Park West</summary>
+    <marker>35.915556 -84.101111</marker>
+    <offsetmarker>35.915556 -84.101111</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16005.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam06.asp</link>
+    <id>urn:uuid:982b8e22-8ed7-4cd3-8a89-9b8e5aeb373c</id>
+    <summary>I-40/75 @ Cedar Bluff Rd</summary>
+    <marker>35.918056 -84.090278</marker>
+    <offsetmarker>35.918056 -84.090278</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16006.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam07.asp</link>
+    <id>urn:uuid:69f9e49b-36e3-458a-ba85-8f6a8ef61f6b</id>
+    <summary>I-40/75 @ Bridgewater Rd</summary>
+    <marker>35.920833 -84.076667</marker>
+    <offsetmarker>35.920833 -84.076667</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16007.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam08.asp</link>
+    <id>urn:uuid:41e4b10a-0d6b-43f8-b376-b6fe61d77a74</id>
+    <summary>I-40/75 @ Walker Springs Rd</summary>
+    <marker>35.923333 -84.065556</marker>
+    <offsetmarker>35.923333 -84.065556</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16008.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam09.asp</link>
+    <id>urn:uuid:4f5ea7ec-9c18-4f21-adae-a81051dd473c</id>
+    <summary>I-40/75 @ Gallaher View Rd</summary>
+    <marker>35.926389 -84.052222</marker>
+    <offsetmarker>35.926389 -84.052222</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16009.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam10.asp</link>
+    <id>urn:uuid:d04398de-868c-40b1-bbce-7f14e4c5391a</id>
+    <summary>I-40/75 @ West Hills</summary>
+    <marker>35.928889 -84.039167</marker>
+    <offsetmarker>35.928889 -84.039167</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16010.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam100.asp</link>
+    <id>urn:uuid:6045C953-77B0-445e-94F4-538C8738D917</id>
+    <summary>Rockwood Mountain: I-40 East at Mile Marker 341.3</summary>
+    <marker>35.885830 -84.690560</marker>
+    <offsetmarker>35.885830 -84.690560</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16100.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam101.asp</link>
+    <id>urn:uuid:FA8D783E-D058-4df6-AE5C-648B180F4F6E</id>
+    <summary>Rockwood Mountain: I-40 East at Mile Marker 341.6</summary>
+    <marker>35.885280 -84.684440</marker>
+    <offsetmarker>35.885280 -84.684440</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16101.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam11.asp</link>
+    <id>urn:uuid:97cfe48f-1939-4029-acff-41eaad1e6941</id>
+    <summary>I-40/75 @ Wesley Rd</summary>
+    <marker>35.932222 -84.025278</marker>
+    <offsetmarker>35.932222 -84.025278</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16011.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam12.asp</link>
+    <id>urn:uuid:48dbdfd9-6a32-42f1-83de-41a2365c114d</id>
+    <summary>I-40/75 @ Weisgarber Rd</summary>
+    <marker>35.934722 -84.015556</marker>
+    <offsetmarker>35.934722 -84.015556</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16012.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam13.asp</link>
+    <id>urn:uuid:795d2f5a-c31a-454c-9a13-8f4dc50ab281</id>
+    <summary>I-40/75 @ Papermill Rd</summary>
+    <marker>35.9419 -84.0017</marker>
+    <offsetmarker>35.9419 -84.0017</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16013.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam14.asp</link>
+    <id>urn:uuid:27ffe588-fda3-44a2-a859-4e38f2e87966</id>
+    <summary>I-40/75  East of Papermill Rd</summary>
+    <marker>35.948333 -83.991944</marker>
+    <offsetmarker>35.948333 -83.991944</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16014.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam15.asp</link>
+    <id>urn:uuid:7f952270-eb4c-4ed2-b7eb-362e209f13ff</id>
+    <summary>I-40/75 West of I-75/640</summary>
+    <marker>35.9525 -83.979167</marker>
+    <offsetmarker>35.9525 -83.979167</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16015.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam16.asp</link>
+    <id>urn:uuid:205f575b-f2f0-47a9-a966-3e5fb7994e63</id>
+    <summary>I-40/75 East of I-75/640</summary>
+    <marker>35.958610 -83.968056</marker>
+    <offsetmarker>35.958610 -83.968056</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16016.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam17.asp</link>
+    <id>urn:uuid:9c1bc425-803e-4a77-9cef-90efc297ceef</id>
+    <summary>I-40 @ Middlebrook Pk</summary>
+    <marker>35.960833 -83.955278</marker>
+    <offsetmarker>35.960833 -83.955278</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16017.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam18.asp</link>
+    <id>urn:uuid:8b373583-e994-420c-9d0e-8de2ff85a206</id>
+    <summary>I-40 @ Alcoa Hwy</summary>
+    <marker>35.963611 -83.946111</marker>
+    <offsetmarker>35.963611 -83.946111</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16018.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam19.asp</link>
+    <id>urn:uuid:8a6985b6-f756-4253-8eec-8e08d092e29c</id>
+    <summary>I-40 @ 17th St</summary>
+    <marker>35.9625 -83.94</marker>
+    <offsetmarker>35.9625 -83.94</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16019.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam20.asp</link>
+    <id>urn:uuid:94ff2df5-7d85-4c0b-bb2a-360148cea75c</id>
+    <summary>I-40 @ Western Av</summary>
+    <marker>35.965556 -83.932222</marker>
+    <offsetmarker>35.965556 -83.932222</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16020.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam21.asp</link>
+    <id>urn:uuid:d67d6175-a74d-4ed4-869f-532b9ed9dfda</id>
+    <summary>I-40 @ I-275</summary>
+    <marker>35.969167 -83.928056</marker>
+    <offsetmarker>35.969167 -83.928056</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16021.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam22.asp</link>
+    <id>urn:uuid:c12ccee1-d604-4282-bfad-41d979f61dbb</id>
+    <summary>I-40 @ 5th Ave</summary>
+    <marker>35.97610040 -83.9178</marker>
+    <offsetmarker>35.97610040 -83.9178</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16022.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam23.asp</link>
+    <id>urn:uuid:d31b3521-e61e-4472-897a-51c210ef156c</id>
+    <summary>I-40 @ Hall of Fame Dr</summary>
+    <marker>35.98388650 -83.918054</marker>
+    <offsetmarker>35.98388650 -83.918054</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16023.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam24.asp</link>
+    <id>urn:uuid:dd2d4710-2fac-45a5-ab26-4a610f7f2b06</id>
+    <summary>I-40 @ East of Hall of Fame</summary>
+    <marker>35.98721990 -83.915555</marker>
+    <offsetmarker>35.98721990 -83.915555</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16024.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam25.asp</link>
+    <id>urn:uuid:2a1f3022-f94a-447c-b787-2381afb376b8</id>
+    <summary>I-40 @ Cherry St</summary>
+    <marker>35.991667 -83.900556</marker>
+    <offsetmarker>35.991667 -83.900556</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16025.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam26.asp</link>
+    <id>urn:uuid:a29008b6-c6a7-42d8-85e3-995b0877bf32</id>
+    <summary>I-40 East of Cherry St</summary>
+    <marker>35.998611 -83.891111</marker>
+    <offsetmarker>35.998611 -83.891111</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16026.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam27.asp</link>
+    <id>urn:uuid:95616cc9-3fb1-4b74-b516-dccacbbe9eda</id>
+    <summary>I-40 West of Rutledge Pk</summary>
+    <marker>36.003333 -83.8825</marker>
+    <offsetmarker>36.003333 -83.8825</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16027.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam28.asp</link>
+    <id>urn:uuid:524fa741-6400-451c-83db-f3a471bbbdd9</id>
+    <summary>I-40 @ Rutledge Pk</summary>
+    <marker>36.0075 -83.874167</marker>
+    <offsetmarker>36.0075 -83.874167</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16028.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam29.asp</link>
+    <id>urn:uuid:a8099f35-1d55-48a4-b05f-60b25e5b8529</id>
+    <summary>I-40 @ I-640 (E. Termini)</summary>
+    <marker>36.012778 -83.862222</marker>
+    <offsetmarker>36.012778 -83.862222</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16029.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam30.asp</link>
+    <id>urn:uuid:de312fb4-7a1a-48a3-b0e1-c9c533a10254</id>
+    <summary>I-40 West of Asheville Hwy</summary>
+    <marker>36.012778 -83.851667</marker>
+    <offsetmarker>36.012778 -83.851667</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16030.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam31.asp</link>
+    <id>urn:uuid:d4a5a802-2980-4761-9c11-2371a711dfd1</id>
+    <summary>I-40 @ Asheville Hwy</summary>
+    <marker>36.010833 -83.841667</marker>
+    <offsetmarker>36.010833 -83.841667</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16031.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam32.asp</link>
+    <id>urn:uuid:969e12b7-e5d3-4bcd-a9dd-f844dc64975b</id>
+    <summary>I-40 East of Asheville Hwy</summary>
+    <marker>36.0075 -83.83</marker>
+    <offsetmarker>36.0075 -83.83</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16032.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam33.asp</link>
+    <id>urn:uuid:edb018d0-5b98-4cea-83bf-6842a54492ec</id>
+    <summary>I-75/640 North of I-40/75</summary>
+    <marker>35.962222 -83.974167</marker>
+    <offsetmarker>35.962222 -83.974167</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16033.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam34.asp</link>
+    <id>urn:uuid:ada9dcc9-390e-431b-beca-2cc2dcc0f353</id>
+    <summary>I-75/640 South of Western Ave</summary>
+    <marker>35.968889 -83.98</marker>
+    <offsetmarker>35.968889 -83.98</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16034.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam35.asp</link>
+    <id>urn:uuid:16431e36-a08f-4313-babd-01d398b1dc35</id>
+    <summary>I-75/640 @ Western Av</summary>
+    <marker>35.974167 -83.979444</marker>
+    <offsetmarker>35.974167 -83.979444</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16035.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam36.asp</link>
+    <id>urn:uuid:0e021da2-0c90-45b3-96b4-4bd0d1b8aef7</id>
+    <summary>I-75/640 North of Western Ave</summary>
+    <marker>35.981944 -83.979167</marker>
+    <offsetmarker>35.981944 -83.979167</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16036.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam37.asp</link>
+    <id>urn:uuid:82b2f3c1-8e04-48d1-a092-44176080239e</id>
+    <summary>I-75/640 @ Wilson Rd</summary>
+    <marker>35.988056 -83.973056</marker>
+    <offsetmarker>35.988056 -83.973056</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16037.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam38.asp</link>
+    <id>urn:uuid:17b24c32-0e3a-4422-ad9c-a5d96dd7cb59</id>
+    <summary>I-75/640 West of I-275</summary>
+    <marker>35.994167 -83.966389</marker>
+    <offsetmarker>35.994167 -83.966389</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16038.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam39.asp</link>
+    <id>urn:uuid:cd9aa157-60e9-4464-9863-d98b36aa4cad</id>
+    <summary>I-75/640 @ Clinton Hwy</summary>
+    <marker>35.998333 -83.960278</marker>
+    <offsetmarker>35.998333 -83.960278</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16039.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam40.asp</link>
+    <id>urn:uuid:ca59eb80-0224-4cdf-b3e2-0f47c12009b9</id>
+    <summary>I-640 East of I-75/275</summary>
+    <marker>36.002222 -83.955833</marker>
+    <offsetmarker>36.002222 -83.955833</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16040.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam41.asp</link>
+    <id>urn:uuid:cf03f2b4-e77d-49c2-84cc-de7641341e12</id>
+    <summary>I-640 @ Bruhin Rd</summary>
+    <marker>36.005833 -83.950833</marker>
+    <offsetmarker>36.005833 -83.950833</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16041.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam42.asp</link>
+    <id>urn:uuid:b4cc190f-79e9-488f-9c06-68b55c60267e</id>
+    <summary>I-640 @ The Hague</summary>
+    <marker>36.009444 -83.938056</marker>
+    <offsetmarker>36.009444 -83.938056</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16042.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam43.asp</link>
+    <id>urn:uuid:0aa5ed0f-c688-4216-bc39-134cb8e5b503</id>
+    <summary>I-640 @ Dutch Valley Rd</summary>
+    <marker>36.0150 -83.930833</marker>
+    <offsetmarker>36.0150 -83.930833</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16043.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam44.asp</link>
+    <id>urn:uuid:53f4e6da-7f55-469e-96be-70adde561592</id>
+    <summary>I-640 @ Broadway</summary>
+    <marker>36.019167 -83.922222</marker>
+    <offsetmarker>36.019167 -83.922222</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16044.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam45.asp</link>
+    <id>urn:uuid:b77b42b9-94cd-454c-94e5-4a014bae544a</id>
+    <summary>I-640 WB East of Broadway</summary>
+    <marker>36.023611 -83.910278</marker>
+    <offsetmarker>36.023611 -83.910278</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16045.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam46.asp</link>
+    <id>urn:uuid:5de9a294-793d-472e-92c0-a4f213468503</id>
+    <summary>I-640 EB East Of Broadway</summary>
+    <marker>36.023056 -83.91</marker>
+    <offsetmarker>36.023056 -83.91</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16046.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam47.asp</link>
+    <id>urn:uuid:5cebe10b-2d95-4e9c-a058-43c21cee5143</id>
+    <summary>I-640 WB West of Washington Pk</summary>
+    <marker>36.028889 -83.899167</marker>
+    <offsetmarker>36.028889 -83.899167</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16047.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam48.asp</link>
+    <id>urn:uuid:9b2320a6-b230-4ff9-b9bd-2e158c63b82a</id>
+    <summary>I-640 EB West of Washington Pk</summary>
+    <marker>36.028889 -83.897778</marker>
+    <offsetmarker>36.028889 -83.897778</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16048.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam49.asp</link>
+    <id>urn:uuid:c24a8d01-4568-43a6-9811-db958a4877b9</id>
+    <summary>I-640 @ Washington Pk</summary>
+    <marker>36.0325 -83.887222</marker>
+    <offsetmarker>36.0325 -83.887222</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16049.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam50.asp</link>
+    <id>urn:uuid:3f57fc94-f095-4090-b1e4-86f67cd4f1dd</id>
+    <summary>I-640 @ Millertown Pk</summary>
+    <marker>36.030278 -83.871111</marker>
+    <offsetmarker>36.030278 -83.871111</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16050.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam51.asp</link>
+    <id>urn:uuid:53e58c74-1da5-4659-a32a-55220c9ef3d0</id>
+    <summary>I-640 West of Millertown Pk</summary>
+    <marker>36.025833 -83.8625</marker>
+    <offsetmarker>36.025833 -83.8625</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16051.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam52.asp</link>
+    <id>urn:uuid:95e12ea9-0495-453b-8dd5-b51b37fe8635</id>
+    <summary>I-640 North of I-40</summary>
+    <marker>36.018333 -83.860556</marker>
+    <offsetmarker>36.018333 -83.860556</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16052.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam53.asp</link>
+    <id>urn:uuid:3b17e843-89bc-4d6f-b86e-e28f4bb62936</id>
+    <summary>Alcoa Hwy South of Cherokee Tr</summary>
+    <marker>35.9311 -83.9489</marker>
+    <offsetmarker>35.9311 -83.9489</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16053.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam54.asp</link>
+    <id>urn:uuid:f50572ca-2653-4ff0-a83c-07b7a99c74c4</id>
+    <summary>Alcoa Hwy @ Cherokee Tr</summary>
+    <marker>35.9372 -83.9484</marker>
+    <offsetmarker>35.9372 -83.9484</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16054.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam55.asp</link>
+    <id>urn:uuid:cbe1dbb7-9722-4fda-a7f8-3cb2bafbd1b0</id>
+    <summary>Alcoa Hwy South of Cumberland Ave</summary>
+    <marker>35.943333 -83.949444</marker>
+    <offsetmarker>35.943333 -83.949444</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16055.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam56.asp</link>
+    <id>urn:uuid:acccdd59-5625-40b2-83d7-63478a23fbc4</id>
+    <summary>Alcoa Hwy @ Cumberland Ave</summary>
+    <marker>35.952186 -83.942150</marker>
+    <offsetmarker>35.952186 -83.942150</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16056.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam57.asp</link>
+    <id>urn:uuid:8e68103a-fce9-4679-bf91-682107c4a83d</id>
+    <summary>Alcoa Hwy South of I-40</summary>
+    <marker>35.955556 -83.945278</marker>
+    <offsetmarker>35.955556 -83.945278</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16057.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam58.asp</link>
+    <id>urn:uuid:b84f1eed-3b3c-41e4-bd52-1e673ad7ec8d</id>
+    <summary>I-275 @ Baxter Av</summary>
+    <marker>35.9750 -83.933611</marker>
+    <offsetmarker>35.9750 -83.933611</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16058.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam59.asp</link>
+    <id>urn:uuid:4ed84569-3f24-4abb-a53f-c283d16f9b48</id>
+    <summary>I-275 @ Woodland Av</summary>
+    <marker>35.983889 -83.939722</marker>
+    <offsetmarker>35.983889 -83.939722</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16059.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam60.asp</link>
+    <id>urn:uuid:f61594b3-4c97-4724-80a2-148dbbfe3c29</id>
+    <summary>I-275 North of Woodland Av</summary>
+    <marker>35.984167 -83.947222</marker>
+    <offsetmarker>35.984167 -83.947222</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16060.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam61.asp</link>
+    <id>urn:uuid:c38f3f97-aa45-479d-98c3-86dfd61ed631</id>
+    <summary>I-275 @ Heiskell Av</summary>
+    <marker>35.994167 -83.9525</marker>
+    <offsetmarker>35.994167 -83.9525</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16061.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam62.asp</link>
+    <id>urn:uuid:e4bb4701-c41a-4fa8-9ffc-b6f119272a75</id>
+    <summary>I-75/640 @ I-275</summary>
+    <marker>35.999444 -83.956111</marker>
+    <offsetmarker>35.999444 -83.956111</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16062.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam63.asp</link>
+    <id>urn:uuid:196e11e0-7e14-40ed-8dfd-428b90592408</id>
+    <summary>I-75 North of  I-640</summary>
+    <marker>36.003889 -83.962222</marker>
+    <offsetmarker>36.003889 -83.962222</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16063.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam64.asp</link>
+    <id>urn:uuid:12ea9f74-7930-47db-8a66-dc9ac01062f2</id>
+    <summary>I-75 @ Merchant Dr</summary>
+    <marker>36.010556 -83.972222</marker>
+    <offsetmarker>36.010556 -83.972222</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16064.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam65.asp</link>
+    <id>urn:uuid:3bd61270-361b-484e-a41b-31614bf1528b</id>
+    <summary>I-75 North of Merchant Dr</summary>
+    <marker>36.0150 -83.980833</marker>
+    <offsetmarker>36.0150 -83.980833</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16065.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam66.asp</link>
+    <id>urn:uuid:fd2c7c73-e69f-4aed-ade3-f13bdd7b2d6f</id>
+    <summary>I-75 South of Callahan Rd</summary>
+    <marker>36.018056 -83.988889</marker>
+    <offsetmarker>36.018056 -83.988889</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16066.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam67.asp</link>
+    <id>urn:uuid:de47ac1d-4ff9-425d-826d-ea185c738adf</id>
+    <summary>I-140 @ Westland Dr</summary>
+    <marker>35.886389 -84.104167</marker>
+    <offsetmarker>35.886389 -84.104167</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16067.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam68.asp</link>
+    <id>urn:uuid:fe9f9416-62da-45f9-8ce0-db361d1e94a8</id>
+    <summary>I-140 @ Fox Rd</summary>
+    <marker>35.892778 -84.114722</marker>
+    <offsetmarker>35.892778 -84.114722</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16068.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam69.asp</link>
+    <id>urn:uuid:f8b4a1de-4eda-49cb-87ec-ba0fdd27d8db</id>
+    <summary>I-140 @ Kingston Pk</summary>
+    <marker>35.903333 -84.118889</marker>
+    <offsetmarker>35.903333 -84.118889</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16069.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam70.asp</link>
+    <id>urn:uuid:1a0da3e6-bdde-42d8-a055-da03f10405ff</id>
+    <summary>I-140 @ I-40/75</summary>
+    <marker>35.910833 -84.121944</marker>
+    <offsetmarker>35.910833 -84.121944</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16070.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam71.asp</link>
+    <id>urn:uuid:32772769-f255-4971-b47a-cc81f199d51b</id>
+    <summary>SR 162 @ Mabry Hood Rd</summary>
+    <marker>35.918333 -84.1250</marker>
+    <offsetmarker>35.918333 -84.1250</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16071.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam72.asp</link>
+    <id>urn:uuid:4a4c4dbf-0975-4131-bfce-2e5616aca666</id>
+    <summary>SR 162 @ Dutchtown Rd</summary>
+    <marker>35.925556 -84.133056</marker>
+    <offsetmarker>35.925556 -84.133056</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16072.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam74.asp</link>
+    <id>urn:uuid:8a705233-f7e9-47cb-8a6b-daba91ac4a2b</id>
+    <summary>Hall of Fame Dr @ Summit Hill Dr</summary>
+    <marker>35.96971840 -83.915835</marker>
+    <offsetmarker>35.96971840 -83.915835</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16074.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam75.asp</link>
+    <id>urn:uuid:A13D2626-A5CF-4595-84E1-AF3843E9CFD1</id>
+    <summary>I-275 @ Woodlawn Ave.</summary>
+    <marker>35.981117 -83.938033</marker>
+    <offsetmarker>35.981117 -83.938033</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16075.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam95.asp</link>
+    <id>urn:uuid:F667E296-D41D-46ec-B932-9B78A83A6279</id>
+    <summary>I-40 East of Holston River Bridge</summary>
+    <marker>36.0090 -83.816667</marker>
+    <offsetmarker>36.0090 -83.816667</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16095.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam97.asp</link>
+    <id>urn:uuid:CAE5783E-772F-4804-8309-C0F2FFADB536</id>
+    <summary>I-40 West of Strawplains Pk.</summary>
+    <marker>36.003417 -83.7881</marker>
+    <offsetmarker>36.003417 -83.7881</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16097.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_1.asp</link>
+    <id>urn:uuid:8C502DFA-00E9-4c40-95F4-DEB3C7922EDC</id>
+    <summary>I-40/ I-55 e/o 7th St.</summary>
+    <marker>35.1612 -90.1662</marker>
+    <offsetmarker>35.1612 -90.1662</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160001.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_10.asp</link>
+    <id>urn:uuid:D4AEC580-2FC6-44ca-B551-7B6B368ABB6C</id>
+    <summary>I-40 @ TN end MS. River bridge</summary>
+    <marker>35.1531 -90.058233</marker>
+    <offsetmarker>35.1531 -90.058233</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160010.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_100.asp</link>
+    <id>urn:uuid:73EB229D-470A-4b63-AA6F-D9F51A893113</id>
+    <summary>I-240 @ Mt. Moriah</summary>
+    <marker>35.083867 -89.892933</marker>
+    <offsetmarker>35.083867 -89.892933</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160100.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_101.asp</link>
+    <id>urn:uuid:B8964898-80F5-42af-AC69-5E9996F2287D</id>
+    <summary>I-240 @ SR 385</summary>
+    <marker>35.0841 -89.8796</marker>
+    <offsetmarker>35.0841 -89.8796</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160101.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_102.asp</link>
+    <id>urn:uuid:63564A5E-BB07-4e61-8928-81F97136C652</id>
+    <summary>SR 385 @ I-240</summary>
+    <marker>35.0834 -89.8771</marker>
+    <offsetmarker>35.0834 -89.8771</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160102.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_103.asp</link>
+    <id>urn:uuid:6766896B-B7E1-4d0a-9A04-533BC5C317F0</id>
+    <summary>I-240 e/o SR385</summary>
+    <marker>35.089617 -89.8707</marker>
+    <offsetmarker>35.089617 -89.8707</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160103.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_104.asp</link>
+    <id>urn:uuid:042DCCD7-BB28-479f-9CDF-BBBF39906A52</id>
+    <summary>I-240 @ Poplar</summary>
+    <marker>35.103450 -89.870483</marker>
+    <offsetmarker>35.103450 -89.870483</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160104.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_105.asp</link>
+    <id>urn:uuid:CAF6C532-A1CE-484f-B3EF-C8B09D5C1C0A</id>
+    <summary>I-240 e/o Poplar</summary>
+    <marker>35.117167 -89.869517</marker>
+    <offsetmarker>35.117167 -89.869517</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160105.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_106.asp</link>
+    <id>urn:uuid:5D832E3A-A608-4a4f-B913-89D25CFA3AB9</id>
+    <summary>I-240 @ Walnut Grove</summary>
+    <marker>35.1308 -89.867250</marker>
+    <offsetmarker>35.1308 -89.867250</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160106.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_107.asp</link>
+    <id>urn:uuid:282AFBE5-0D36-4fbc-A59E-E9EF250B3B28</id>
+    <summary>I-240 e/o Walnut Grove</summary>
+    <marker>35.1405 -89.8704</marker>
+    <offsetmarker>35.1405 -89.8704</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160107.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_108.asp</link>
+    <id>urn:uuid:EDCBDF06-106E-47ce-8FEB-B773A451F4B9</id>
+    <summary>SR 385 @ Ridgeway</summary>
+    <marker>35.074483 -89.861633</marker>
+    <offsetmarker>35.074483 -89.861633</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160108.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_109.asp</link>
+    <id>urn:uuid:6EB23014-2972-48f5-8555-1ECF89ED930C</id>
+    <summary>SR 385 @ Kirby</summary>
+    <marker>35.067183 -89.843983</marker>
+    <offsetmarker>35.067183 -89.843983</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160109.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_11.asp</link>
+    <id>urn:uuid:291DE6D6-7776-472e-B6D5-918C8DA8100F</id>
+    <summary>I-40 @ Riverside Dr. </summary>
+    <marker>35.1533 -90.051483</marker>
+    <offsetmarker>35.1533 -90.051483</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160011.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_110.asp</link>
+    <id>urn:uuid:EB4FAFE6-B57B-43cb-8879-27D4E752E048</id>
+    <summary>SR 385 w/o Riverdale Rd.</summary>
+    <marker>35.058817 -89.835250</marker>
+    <offsetmarker>35.058817 -89.835250</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160110.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_111.asp</link>
+    <id>urn:uuid:F83C7E98-2E1B-4144-8BFC-C01F70069A8D</id>
+    <summary>SR 385 @ Riverdale</summary>
+    <marker>35.054817 -89.8296</marker>
+    <offsetmarker>35.054817 -89.8296</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160111.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_112.asp</link>
+    <id>urn:uuid:984B4732-D108-4687-9BFB-40DA33B16664</id>
+    <summary>SR 385 @ Winchester </summary>
+    <marker>35.052330 -89.8103</marker>
+    <offsetmarker>35.052330 -89.8103</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160112.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_113.asp</link>
+    <id>urn:uuid:9339564A-B3EC-4d67-8BE7-B1EAE9A4965B</id>
+    <summary>SR 385 w/o Hacks Cross Rd.</summary>
+    <marker>35.043967 -89.807983</marker>
+    <offsetmarker>35.043967 -89.807983</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160113.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_114.asp</link>
+    <id>urn:uuid:999B4328-3556-45fc-A94A-9A1C9585FD05</id>
+    <summary>SR 385 @ Hacks Cross Rd.</summary>
+    <marker>35.037550 -89.796750</marker>
+    <offsetmarker>35.037550 -89.796750</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160114.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_115.asp</link>
+    <id>urn:uuid:0407480C-E7CE-4976-BCA1-FD4F523E8CD7</id>
+    <summary>SR 385 w/o Forest Hill-Irene</summary>
+    <marker>35.0307 -89.782733</marker>
+    <offsetmarker>35.0307 -89.782733</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160115.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_12.asp</link>
+    <id>urn:uuid:2497076B-0F8F-47c5-8C06-C7C210C8DF2C</id>
+    <summary>I-40  @ Danny Thomas Blvd</summary>
+    <marker>35.1515 -90.042033</marker>
+    <offsetmarker>35.1515 -90.042033</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160012.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_13.asp</link>
+    <id>urn:uuid:14DEEFDC-64C1-4945-92E7-9F386877DD6C</id>
+    <summary>I-40 w/o I-240 Midtown Jct</summary>
+    <marker>35.149967 -90.029850</marker>
+    <offsetmarker>35.149967 -90.029850</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160013.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_14.asp</link>
+    <id>urn:uuid:26381F2C-337E-466d-800E-747E9A70E081</id>
+    <summary>I-55 @ Mound City</summary>
+    <marker>35.147467 -90.130767</marker>
+    <offsetmarker>35.147467 -90.130767</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160014.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_15.asp</link>
+    <id>urn:uuid:BA2ECDB4-8405-4b3b-8090-8393710F21B0</id>
+    <summary>I-55 @ weigh station</summary>
+    <marker>35.1406 -90.105950</marker>
+    <offsetmarker>35.1406 -90.105950</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160015.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_16.asp</link>
+    <id>urn:uuid:88EE2480-83B0-48f3-8D84-C4C1B927E220</id>
+    <summary>I-55 n/o MS River</summary>
+    <marker>35.135283 -90.086417</marker>
+    <offsetmarker>35.135283 -90.086417</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160016.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_17.asp</link>
+    <id>urn:uuid:05614716-C86A-41e7-91D2-B56C4B10E6CD</id>
+    <summary>I-55 N. end MS River bridge</summary>
+    <marker>35.132750 -90.082467</marker>
+    <offsetmarker>35.132750 -90.082467</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160017.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_18.asp</link>
+    <id>urn:uuid:0624A568-93A7-4341-943C-905D6475160A</id>
+    <summary>I55 on MS River bridge</summary>
+    <marker>35.129867 -90.0788</marker>
+    <offsetmarker>35.129867 -90.0788</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160018.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_2.asp</link>
+    <id>urn:uuid:BF117A56-F59D-40f2-B07B-8D7B9905A62F</id>
+    <summary>I-40 /I-55 @ Ingram Blvd.</summary>
+    <marker>35.157533 -90.156683</marker>
+    <offsetmarker>35.157533 -90.156683</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160002.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_20.asp</link>
+    <id>urn:uuid:68C65D9A-ED79-4c47-B0D6-C0C0CBAE5A6B</id>
+    <summary>I-55 S. end MS. River bridge</summary>
+    <marker>35.125417 -90.073083</marker>
+    <offsetmarker>35.125417 -90.073083</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160020.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_21.asp</link>
+    <id>urn:uuid:020F095A-78F9-42a9-ABDF-2AA2CDE52D09</id>
+    <summary>I-55 @ Crump Blvd/ Riverside</summary>
+    <marker>35.1246 -90.066783</marker>
+    <offsetmarker>35.1246 -90.066783</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160021.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_22.asp</link>
+    <id>urn:uuid:DBDDA347-3364-4ec8-9AC4-4912A03C4F8B</id>
+    <summary>I-55 @ McLemore</summary>
+    <marker>35.116167 -90.072417</marker>
+    <offsetmarker>35.116167 -90.072417</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160022.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_23.asp</link>
+    <id>urn:uuid:F27E9DBE-E54B-4983-8AAC-24D355412533</id>
+    <summary>I-55 @ S. Prkwy</summary>
+    <marker>35.107883 -90.075817</marker>
+    <offsetmarker>35.107883 -90.075817</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160023.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_24.asp</link>
+    <id>urn:uuid:56D9AEE4-A06C-4a6c-BEBB-432CF7C5AC97</id>
+    <summary>I-55 n/o Mallory</summary>
+    <marker>35.097650 -90.076167</marker>
+    <offsetmarker>35.097650 -90.076167</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160024.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_25.asp</link>
+    <id>urn:uuid:FDE6A10D-C3F3-4dff-9F1F-D0F74EEC782F</id>
+    <summary>I-55 s/o Mound City</summary>
+    <marker>35.145367 -90.121117</marker>
+    <offsetmarker>35.145367 -90.121117</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160025.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_26.asp</link>
+    <id>urn:uuid:90012BF2-7591-4595-981D-9B7302AFC674</id>
+    <summary>I-40 @ College Blvd</summary>
+    <marker>35.159967 -90.225817</marker>
+    <offsetmarker>35.159967 -90.225817</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160026.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_27.asp</link>
+    <id>urn:uuid:CD58CBCC-DF14-4721-B646-2F284A369826</id>
+    <summary>I-40 e/o College Blvd.</summary>
+    <marker>35.165833 -90.206650</marker>
+    <offsetmarker>35.165833 -90.206650</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160027.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_28.asp</link>
+    <id>urn:uuid:219E8E70-008D-4838-BA6E-9D45B7784434</id>
+    <summary>I-40 / I-55 Western Jct.</summary>
+    <marker>35.171617 -90.192767</marker>
+    <offsetmarker>35.171617 -90.192767</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160028.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_29.asp</link>
+    <id>urn:uuid:4D8D764A-121E-4c32-A4C4-3A5A93A2AEAE</id>
+    <summary>I-55 s/o Marion Weigh Sta.</summary>
+    <marker>35.183167 -90.196717</marker>
+    <offsetmarker>35.183167 -90.196717</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160029.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_3.asp</link>
+    <id>urn:uuid:BBD91EAC-BDC5-4ce5-A802-2CF283C86E7A</id>
+    <summary>I-40 @ I-40/I-55 Eastern Jct.</summary>
+    <marker>35.154817 -90.148050</marker>
+    <offsetmarker>35.154817 -90.148050</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160003.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_30.asp</link>
+    <id>urn:uuid:0FCBF5CB-3A73-4536-B5D2-40DC8BFE5FC8</id>
+    <summary>I-55 @ Marion weigh station</summary>
+    <marker>35.193033 -90.2003</marker>
+    <offsetmarker>35.193033 -90.2003</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160030.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_31.asp</link>
+    <id>urn:uuid:93527D05-905A-40b1-99D1-1DAAE77800B9</id>
+    <summary>I-40/ I-55 @ Missouri St.</summary>
+    <marker>35.167367 -90.182133</marker>
+    <offsetmarker>35.167367 -90.182133</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/images/Camunavailable.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_32.asp</link>
+    <id>urn:uuid:1254F246-0862-4d9a-8E10-218EC0013E41</id>
+    <summary>I-40/ 240 Midtown Jct.</summary>
+    <marker>35.149883 -90.022717</marker>
+    <offsetmarker>35.149883 -90.022717</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160032.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_33.asp</link>
+    <id>urn:uuid:B7B600E6-1561-41ce-9AFA-CF80277670D3</id>
+    <summary>I-40 @ Jackson Ave. midtown</summary>
+    <marker>35.157950 -90.019833</marker>
+    <offsetmarker>35.157950 -90.019833</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160033.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_34.asp</link>
+    <id>urn:uuid:199E01DA-AA90-46ca-A598-DA900EF24DAA</id>
+    <summary>I-40 @ Chelsea Ave.</summary>
+    <marker>35.172167 -90.018217</marker>
+    <offsetmarker>35.172167 -90.018217</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160034.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_35.asp</link>
+    <id>urn:uuid:D2D13CEA-1FF3-4c4d-AB82-C3C7775A0B3C</id>
+    <summary>I-40 e/o Chelsa Ave.</summary>
+    <marker>35.182717 -90.017533</marker>
+    <offsetmarker>35.182717 -90.017533</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160035.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_36.asp</link>
+    <id>urn:uuid:EB948E82-552F-42e8-925F-085AC8C809BE</id>
+    <summary>I-40 @ 240/51 ramp (SR300)</summary>
+    <marker>35.191733 -90.0164</marker>
+    <offsetmarker>35.191733 -90.0164</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160036.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_37.asp</link>
+    <id>urn:uuid:754B8451-8E6B-475b-9587-E83938481429</id>
+    <summary>240/51 ramp (sr300) at US 51</summary>
+    <marker>35.199267 -90.030167</marker>
+    <offsetmarker>35.199267 -90.030167</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160037.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_38.asp</link>
+    <id>urn:uuid:C53FFDED-0E8D-476c-B743-4F6A895B3762</id>
+    <summary>I-40 @ Watkins </summary>
+    <marker>35.191583 -90.007533</marker>
+    <offsetmarker>35.191583 -90.007533</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160038.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_39.asp</link>
+    <id>urn:uuid:81702C23-4653-4070-9E6F-9FB5F03489EF</id>
+    <summary>I-40 w/o Hollywood</summary>
+    <marker>35.1922 -89.988467</marker>
+    <offsetmarker>35.1922 -89.988467</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160039.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_4.asp</link>
+    <id>urn:uuid:EF16AF98-6E21-4fc7-8B26-5D15F39E9C8C</id>
+    <summary>I-40 w/o Mound City Rd.</summary>
+    <marker>35.156350 -90.137050</marker>
+    <offsetmarker>35.156350 -90.137050</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160004.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_40.asp</link>
+    <id>urn:uuid:8F251D3C-A587-4a21-AC8D-4A952C94910F</id>
+    <summary>I-40 @ Hollywood</summary>
+    <marker>35.1915 -89.975183</marker>
+    <offsetmarker>35.1915 -89.975183</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160040.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_41.asp</link>
+    <id>urn:uuid:44BC9B6B-F4AB-4972-A340-1507CEAB961A</id>
+    <summary>I-40 @ Warford</summary>
+    <marker>35.190250 -89.956183</marker>
+    <offsetmarker>35.190250 -89.956183</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160041.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_42.asp</link>
+    <id>urn:uuid:7806118D-5AEF-4e99-8D11-888A08300EC1</id>
+    <summary>I-40 w/o SR 14, Austin Peay</summary>
+    <marker>35.189917 -89.942733</marker>
+    <offsetmarker>35.189917 -89.942733</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160042.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_43.asp</link>
+    <id>urn:uuid:CF81B2F9-0A82-4f9f-9932-1093C2F9EBD1</id>
+    <summary>I-40 @ SR 14, Austin Peay</summary>
+    <marker>35.192967 -89.9267</marker>
+    <offsetmarker>35.192967 -89.9267</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160043.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_44.asp</link>
+    <id>urn:uuid:EBED3C2D-CCB5-42d5-A8AD-7129C40349FE</id>
+    <summary>I-40 e/o SR14, Austin Peay</summary>
+    <marker>35.1880 -89.916833</marker>
+    <offsetmarker>35.1880 -89.916833</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160044.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_45.asp</link>
+    <id>urn:uuid:10633575-CE7F-4347-ACA5-233472D7E40E</id>
+    <summary>I-40 w/o Covington Pike</summary>
+    <marker>35.175983 -89.9080</marker>
+    <offsetmarker>35.175983 -89.9080</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160045.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_46.asp</link>
+    <id>urn:uuid:ADC23C56-C41F-4ca6-83C5-CC4D0C582B89</id>
+    <summary>I-40 @ Covington Pike</summary>
+    <marker>35.168617 -89.902367</marker>
+    <offsetmarker>35.168617 -89.902367</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160046.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_47.asp</link>
+    <id>urn:uuid:7E40916E-4A05-4295-A4FE-536DBB65F6DB</id>
+    <summary>I-40 @ Summer</summary>
+    <marker>35.1578 -89.894417</marker>
+    <offsetmarker>35.1578 -89.894417</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160047.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_48.asp</link>
+    <id>urn:uuid:B513B4CF-69A3-4e0a-AEF5-173FB42E83CC</id>
+    <summary>I-40 @ Sam Cooper Blvd</summary>
+    <marker>35.151467 -89.885283</marker>
+    <offsetmarker>35.151467 -89.885283</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160048.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_49.asp</link>
+    <id>urn:uuid:845F2039-F81A-47ba-B16A-897A345C6917</id>
+    <summary>I-240 @ Sam Cooper</summary>
+    <marker>35.152067 -89.882850</marker>
+    <offsetmarker>35.152067 -89.882850</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160049.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_5.asp</link>
+    <id>urn:uuid:022F0B07-3FA9-42e6-9CCB-4E3CFC8E9AF5</id>
+    <summary>I-40 @ Mound City Rd</summary>
+    <marker>35.157033 -90.127083</marker>
+    <offsetmarker>35.157033 -90.127083</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160005.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_50.asp</link>
+    <id>urn:uuid:D821105E-E807-4d5a-8F6C-56ED41D672E2</id>
+    <summary>I-40 e/o I-240/ Sam Cooper</summary>
+    <marker>35.158267 -89.877783</marker>
+    <offsetmarker>35.158267 -89.877783</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160050.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_51.asp</link>
+    <id>urn:uuid:7C658803-7AA8-4429-8DAE-2B12925F7CE2</id>
+    <summary>I-40 @ Sycamore View</summary>
+    <marker>35.165233 -89.860917</marker>
+    <offsetmarker>35.165233 -89.860917</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160051.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_52.asp</link>
+    <id>urn:uuid:3E49B556-092E-475d-9BC0-CB63B73AA33E</id>
+    <summary>I-40 e/o Sycamore View</summary>
+    <marker>35.170067 -89.848333</marker>
+    <offsetmarker>35.170067 -89.848333</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160052.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_53.asp</link>
+    <id>urn:uuid:BE6BE2F8-C323-4eec-A7A6-22F9A8A21FEA</id>
+    <summary>I-40 @ Whitten Rd.</summary>
+    <marker>35.174883 -89.836267</marker>
+    <offsetmarker>35.174883 -89.836267</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160053.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_54.asp</link>
+    <id>urn:uuid:82B6E3D0-25AB-4763-9468-CDA0EBE58A89</id>
+    <summary>I-40  e/o Whiten Rd.</summary>
+    <marker>35.181150 -89.822767</marker>
+    <offsetmarker>35.181150 -89.822767</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160054.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_55.asp</link>
+    <id>urn:uuid:D8F1BF1F-E971-4515-8B19-004AFC5A7878</id>
+    <summary>I-40  @ Appling Rd.</summary>
+    <marker>35.185233 -89.813283</marker>
+    <offsetmarker>35.185233 -89.813283</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160055.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_56.asp</link>
+    <id>urn:uuid:B3B57593-ED5D-4770-8169-DA9D5BB5B2DD</id>
+    <summary>I-40 e/o Appling Rd.</summary>
+    <marker>35.190017 -89.8030</marker>
+    <offsetmarker>35.190017 -89.8030</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160056.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_57.asp</link>
+    <id>urn:uuid:D329AE21-7E51-464f-AA01-46DACA987D3E</id>
+    <summary>I-40 @ SR177, Germantown Rd.</summary>
+    <marker>35.194467 -89.792833</marker>
+    <offsetmarker>35.194467 -89.792833</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160057.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_58.asp</link>
+    <id>urn:uuid:6BF69E0C-3007-42ba-AEC6-22109AE4F18F</id>
+    <summary>I-40 e/o Germantown Rd.</summary>
+    <marker>35.199783 -89.781083</marker>
+    <offsetmarker>35.199783 -89.781083</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160058.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_59.asp</link>
+    <id>urn:uuid:505E5037-2097-4122-BE1A-D1026AAA6BB0</id>
+    <summary>I-40 @ US 64, Stage Rd</summary>
+    <marker>35.204117 -89.772350</marker>
+    <offsetmarker>35.204117 -89.772350</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160059.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_6.asp</link>
+    <id>urn:uuid:D349F08E-5D62-4156-8F19-E85A06E0A7FE</id>
+    <summary>I-40 w/o Weigh Station</summary>
+    <marker>35.153083 -90.1067</marker>
+    <offsetmarker>35.153083 -90.1067</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160006.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_60.asp</link>
+    <id>urn:uuid:076B4796-2D09-46c6-A13F-97E8422E9522</id>
+    <summary>I-40 e/o US 64, Stage Rd.</summary>
+    <marker>35.212333 -89.755983</marker>
+    <offsetmarker>35.212333 -89.755983</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160060.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_61.asp</link>
+    <id>urn:uuid:78D6DB74-B7B1-4a73-AE59-B9823EB7796D</id>
+    <summary>I-40 @ Canada Rd.</summary>
+    <marker>35.219433 -89.743033</marker>
+    <offsetmarker>35.219433 -89.743033</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160061.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_62.asp</link>
+    <id>urn:uuid:03A8D124-A028-4d95-A65A-59850C50DA57</id>
+    <summary>Sam Cooper w/o Highland</summary>
+    <marker>35.1480 -89.950683</marker>
+    <offsetmarker>35.1480 -89.950683</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160062.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_63.asp</link>
+    <id>urn:uuid:B94A0717-5BB6-41e5-B8B0-8BF8AF273AC8</id>
+    <summary>Sam Cooper e/o Highland</summary>
+    <marker>35.1470 -89.937250</marker>
+    <offsetmarker>35.1470 -89.937250</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160063.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_64.asp</link>
+    <id>urn:uuid:273EE628-77B7-4181-B5F2-76EC2AB47D7F</id>
+    <summary>Sam Cooper e/o Graham</summary>
+    <marker>35.146117 -89.922083</marker>
+    <offsetmarker>35.146117 -89.922083</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160064.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_65.asp</link>
+    <id>urn:uuid:99CB4E3D-3904-4afb-9158-1AA22B544098</id>
+    <summary>Sam Cooper @ Perkins</summary>
+    <marker>35.145983 -89.905517</marker>
+    <offsetmarker>35.145983 -89.905517</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160065.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_66.asp</link>
+    <id>urn:uuid:4B461A71-43AB-487b-96A5-C9DFA1F63CAF</id>
+    <summary>Sam Cooper @ I-40/I-240</summary>
+    <marker>35.1486 -89.888550</marker>
+    <offsetmarker>35.1486 -89.888550</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160066.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_67.asp</link>
+    <id>urn:uuid:7D6BD803-BF4C-4d75-B4F8-7B3E96115EDD</id>
+    <summary>I-55 s/o South Pkwy.</summary>
+    <marker>35.102017 -90.076467</marker>
+    <offsetmarker>35.102017 -90.076467</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160067.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_69.asp</link>
+    <id>urn:uuid:D13658C4-7BA4-4b90-8C1D-B6899A72E9A3</id>
+    <summary>I-55 s/o Mallory</summary>
+    <marker>35.0796 -90.0690</marker>
+    <offsetmarker>35.0796 -90.0690</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/images/Camunavailable.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_7.asp</link>
+    <id>urn:uuid:950C042D-3A5A-4e1e-A4DE-D1D68B71035C</id>
+    <summary>I-40 @ Weigh Station</summary>
+    <marker>35.1525 -90.097733</marker>
+    <offsetmarker>35.1525 -90.097733</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160007.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_70.asp</link>
+    <id>urn:uuid:AC25D568-BFD1-4565-9FD2-6FC5F8B6FFB6</id>
+    <summary>I-55 @ US 61, 3rd St</summary>
+    <marker>35.079250 -90.057483</marker>
+    <offsetmarker>35.079250 -90.057483</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160070.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_71.asp</link>
+    <id>urn:uuid:FA850F2A-59D6-40f1-BA2B-FB42C52FB06E</id>
+    <summary>I-55 South of US 61, 3rd St.</summary>
+    <marker>35.078267 -90.051083</marker>
+    <offsetmarker>35.078267 -90.051083</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160071.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_72.asp</link>
+    <id>urn:uuid:FF0AFC62-D268-4cf2-B322-9905ECFA38F5</id>
+    <summary>I-55 n/o I-55/240 Jct</summary>
+    <marker>35.0754 -90.038617</marker>
+    <offsetmarker>35.0754 -90.038617</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160072.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_73.asp</link>
+    <id>urn:uuid:D19A58C4-0213-4b37-A517-A0736A3CF83C</id>
+    <summary>I-55 SB. @ I-55/240</summary>
+    <marker>35.072633 -90.027817</marker>
+    <offsetmarker>35.072633 -90.027817</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160073.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_74.asp</link>
+    <id>urn:uuid:3AE216A3-A711-444a-8882-AB0A027E16D6</id>
+    <summary>I-55 NB. @ I-55/240</summary>
+    <marker>35.071783 -90.025583</marker>
+    <offsetmarker>35.071783 -90.025583</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160074.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_75.asp</link>
+    <id>urn:uuid:E64BD529-8F64-41c6-8ED8-CDE796F085CE</id>
+    <summary>I-55 @ Brooks/ US 51</summary>
+    <marker>35.0637 -90.024067</marker>
+    <offsetmarker>35.0637 -90.024067</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160075.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_76.asp</link>
+    <id>urn:uuid:1C210D9E-1585-4fac-801A-FEFF50E8B1C3</id>
+    <summary>I-55 s/o Brooks Rd.</summary>
+    <marker>35.057883 -90.015567</marker>
+    <offsetmarker>35.057883 -90.015567</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160076.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_77.asp</link>
+    <id>urn:uuid:1DA911DC-6717-4b11-B686-2575DE7EA69F</id>
+    <summary>I-55 s/o Winchester Rd.</summary>
+    <marker>35.046983 -90.008050</marker>
+    <offsetmarker>35.046983 -90.008050</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160077.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_78.asp</link>
+    <id>urn:uuid:E7D92D20-E538-4fa3-9954-C5383C4FDBA7</id>
+    <summary>I-55 n/o Shelby Dr.</summary>
+    <marker>35.0378 -90.002750</marker>
+    <offsetmarker>35.0378 -90.002750</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160078.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_79.asp</link>
+    <id>urn:uuid:3063C3E3-955E-4139-9B5E-702BBF0AEC28</id>
+    <summary>I-55 @ Shelby Dr. </summary>
+    <marker>35.026550 -90.002367</marker>
+    <offsetmarker>35.026550 -90.002367</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160079.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_8.asp</link>
+    <id>urn:uuid:DCBE92E9-7222-464d-BD82-0BD22E7DDDE1</id>
+    <summary>I-40 e/o Weigh Station</summary>
+    <marker>35.152950 -90.078317</marker>
+    <offsetmarker>35.152950 -90.078317</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160008.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_80.asp</link>
+    <id>urn:uuid:6601F3A7-484F-433d-A7CC-1FF253D85B8E</id>
+    <summary>I-55 @ Holmes Rd.</summary>
+    <marker>35.011383 -90.002367</marker>
+    <offsetmarker>35.011383 -90.002367</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160080.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_81.asp</link>
+    <id>urn:uuid:8DF4AAF8-38BF-44c7-B043-29E68281CEFC</id>
+    <summary>I-55 @ MS/TN State Line</summary>
+    <marker>35.001083 -90.002283</marker>
+    <offsetmarker>35.001083 -90.002283</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160081.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_82.asp</link>
+    <id>urn:uuid:45DCCD1D-810F-4de5-9D11-C43EC053C607</id>
+    <summary>I-240 n/o Union Ave</summary>
+    <marker>35.1421 -90.022467</marker>
+    <offsetmarker>35.1421 -90.022467</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160082.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_83.asp</link>
+    <id>urn:uuid:731CEEBF-176A-458d-846B-B2A471F1E0B4</id>
+    <summary>I-240 @ Union</summary>
+    <marker>35.137883 -90.024367</marker>
+    <offsetmarker>35.137883 -90.024367</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160083.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_84.asp</link>
+    <id>urn:uuid:02B47B40-77ED-41da-9154-EA0815A88004</id>
+    <summary>I-240 @ Lamar Av.</summary>
+    <marker>35.129750 -90.0235</marker>
+    <offsetmarker>35.129750 -90.0235</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160084.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_85.asp</link>
+    <id>urn:uuid:60F53C85-58F8-4563-8F52-F423B28041AF</id>
+    <summary>I-240 s/o Lamar Ave.</summary>
+    <marker>35.123283 -90.025717</marker>
+    <offsetmarker>35.123283 -90.025717</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160085.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_86.asp</link>
+    <id>urn:uuid:830F95F5-DF74-405e-929F-88CCA561E0C0</id>
+    <summary>I-240 n/o South Parkway</summary>
+    <marker>35.117783 -90.026267</marker>
+    <offsetmarker>35.117783 -90.026267</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160086.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_87.asp</link>
+    <id>urn:uuid:83F74C48-1F2C-4f9e-A744-DA8A62B2E9BF</id>
+    <summary>I-240 @ South Parkway</summary>
+    <marker>35.1101 -90.0294</marker>
+    <offsetmarker>35.1101 -90.0294</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160087.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_88.asp</link>
+    <id>urn:uuid:E0937311-7A9F-45e8-9039-592439E5B93E</id>
+    <summary>I-240 s/o South Parkway</summary>
+    <marker>35.1012 -90.029350</marker>
+    <offsetmarker>35.1012 -90.029350</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160088.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_89.asp</link>
+    <id>urn:uuid:6E2C7234-E318-4ee3-A931-E0C01D6A792D</id>
+    <summary>I-240 n/o Norris Rd.</summary>
+    <marker>35.089217 -90.025267</marker>
+    <offsetmarker>35.089217 -90.025267</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160089.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_9.asp</link>
+    <id>urn:uuid:772AA78D-DE85-49ac-A735-5ACC2BAA43B2</id>
+    <summary>I-40 @ AR end MS. River bridge</summary>
+    <marker>35.153050 -90.065150</marker>
+    <offsetmarker>35.153050 -90.065150</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160009.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_90.asp</link>
+    <id>urn:uuid:BE77530C-E055-4327-9072-2E66223EEBD2</id>
+    <summary>I-240 @ Norris, n/o I-55 Jct.</summary>
+    <marker>35.083250 -90.025783</marker>
+    <offsetmarker>35.083250 -90.025783</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160090.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_91.asp</link>
+    <id>urn:uuid:1328A8FE-8E41-4ba7-9DC5-1164A47FCEFA</id>
+    <summary>I-240 @ Millbranch</summary>
+    <marker>35.073050 -90.007950</marker>
+    <offsetmarker>35.073050 -90.007950</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160091.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_92.asp</link>
+    <id>urn:uuid:E69BEAFB-2876-4c69-A757-F665F5E7BD5C</id>
+    <summary>I-240 @ Airways Blvd.</summary>
+    <marker>35.076450 -89.991517</marker>
+    <offsetmarker>35.076450 -89.991517</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160092.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_93.asp</link>
+    <id>urn:uuid:F48DCF0C-9CA3-4f3d-8AD2-D6CCD8369906</id>
+    <summary>I-240 e/o Airways Blvd.</summary>
+    <marker>35.076417 -89.974883</marker>
+    <offsetmarker>35.076417 -89.974883</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160093.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_94.asp</link>
+    <id>urn:uuid:DB29A5B6-E679-4541-A23D-0F22D7173641</id>
+    <summary>I-240 @ US 78, Lamar</summary>
+    <marker>35.0807 -89.956417</marker>
+    <offsetmarker>35.0807 -89.956417</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160094.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_95.asp</link>
+    <id>urn:uuid:2EA2C74A-CF7C-4610-984F-7CCD0A018B3B</id>
+    <summary>I-240 e/o US 78, Lamar</summary>
+    <marker>35.081533 -89.943633</marker>
+    <offsetmarker>35.081533 -89.943633</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160095.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_96.asp</link>
+    <id>urn:uuid:46BF6280-DA1A-457f-A3D1-A8621A276C80</id>
+    <summary>I-240 @ Getwell</summary>
+    <marker>35.079617 -89.931133</marker>
+    <offsetmarker>35.079617 -89.931133</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160096.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_97.asp</link>
+    <id>urn:uuid:C5BE04EB-45E5-4950-BCAA-F8E083581C64</id>
+    <summary>I-240 e/o Getwell</summary>
+    <marker>35.0786 -89.923550</marker>
+    <offsetmarker>35.0786 -89.923550</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160097.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_98.asp</link>
+    <id>urn:uuid:8B74BB69-0ED2-4242-B013-B91B8A5E029F</id>
+    <summary>I-240 w/o Perkins</summary>
+    <marker>35.077817 -89.916850</marker>
+    <offsetmarker>35.077817 -89.916850</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160098.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvmemp/CCTV_99.asp</link>
+    <id>urn:uuid:65FF4BFA-3ABA-4314-8514-DA058AE6BD69</id>
+    <summary>I-240 @ Perkins</summary>
+    <marker>35.078017 -89.907083</marker>
+    <offsetmarker>35.078017 -89.907083</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvmemp/live/cam160099.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam01.asp</link>
+    <id>urn:uuid:29f71d6a-3fbf-494b-9fad-df522205c8b7</id>
+    <summary>I-40 east of Elm Hill Pk</summary>
+    <marker>36.1430245110 -86.7367267870</marker>
+    <offsetmarker>36.1430245110 -86.7367267870</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_001.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam02.asp</link>
+    <id>urn:uuid:02412242-7265-44e1-9f10-80cda066e552</id>
+    <summary>I-40 @ Fesslers Ln</summary>
+    <marker>36.1474833960 -86.7446716770</marker>
+    <offsetmarker>36.1474833960 -86.7446716770</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_002.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam03.asp</link>
+    <id>urn:uuid:cb3a9367-c403-4d43-bee0-7ec191a023fd</id>
+    <summary>I-40 west of Fesslers Ln</summary>
+    <marker>36.153495 -86.7594</marker>
+    <offsetmarker>36.153495 -86.7594</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_003.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam04.asp</link>
+    <id>urn:uuid:f4d4d849-23fb-4234-9861-476b15a207ca</id>
+    <summary>I-24 east of Silliman Evans Bridge</summary>
+    <marker>36.157627 -86.758662</marker>
+    <offsetmarker>36.157627 -86.758662</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_004.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam05.asp</link>
+    <id>urn:uuid:93ec62e6-eb85-449b-94f8-bcd6def2e003</id>
+    <summary>I-24 west of Silliman Evans Bridge</summary>
+    <marker>36.160183 -86.758847</marker>
+    <offsetmarker>36.160183 -86.758847</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_005.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam06.asp</link>
+    <id>urn:uuid:7c842bda-98e8-4d8a-8988-1e531cc6df97</id>
+    <summary>I-24 @ Ellington Pkwy</summary>
+    <marker>36.170406 -86.766443</marker>
+    <offsetmarker>36.170406 -86.766443</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_006.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam07.asp</link>
+    <id>urn:uuid:b057e721-e98d-473e-a660-ca3d5558a05b</id>
+    <summary>I-24 west of Ellington Pkwy</summary>
+    <marker>36.173856 -86.769557</marker>
+    <offsetmarker>36.173856 -86.769557</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_007.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam08.asp</link>
+    <id>urn:uuid:8504eead-1480-477f-8bfc-56ee0d77dd02</id>
+    <summary>I-24 east of I-65 Jct</summary>
+    <marker>36.187914 -86.774412</marker>
+    <offsetmarker>36.187914 -86.774412</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_008.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam09.asp</link>
+    <id>urn:uuid:df34596b-3fae-49d4-a9c2-1c018d538a9c</id>
+    <summary>I-65 @ I-24 (North Loop)</summary>
+    <marker>36.192344 -86.774781</marker>
+    <offsetmarker>36.192344 -86.774781</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_009.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam10.asp</link>
+    <id>urn:uuid:3b749196-a0b0-4076-8510-a4bbf3e5a716</id>
+    <summary>I-65 @ Fern Ave</summary>
+    <marker>36.198861 -86.775283</marker>
+    <offsetmarker>36.198861 -86.775283</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_010.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam100.asp</link>
+    <id>urn:uuid:7b2465a2-21c2-475c-9ce5-78d368f78f14</id>
+    <summary>I-40 east of Old Hickory Blvd (Bellevue)</summary>
+    <marker>36.1173166670 -86.9144666670</marker>
+    <offsetmarker>36.1173166670 -86.9144666670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_100.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam101.asp</link>
+    <id>urn:uuid:30f99cb9-c07e-40a1-9d74-666493772428</id>
+    <summary>I- 40 west of Charlotte Pk</summary>
+    <marker>36.126850 -86.9021666670</marker>
+    <offsetmarker>36.126850 -86.9021666670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_101.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam102.asp</link>
+    <id>urn:uuid:582c9655-6955-4e8d-98e2-c81e1b56ab27</id>
+    <summary>I-40 west of American Rd</summary>
+    <marker>36.143460 -86.883607</marker>
+    <offsetmarker>36.143460 -86.883607</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_102.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam103.asp</link>
+    <id>urn:uuid:217e2318-119c-4002-bd3e-024330f038e2</id>
+    <summary>I-40 @ American Rd</summary>
+    <marker>36.1489166670 -86.8749833330</marker>
+    <offsetmarker>36.1489166670 -86.8749833330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_103.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam105.asp</link>
+    <id>urn:uuid:fac5a016-5ed4-42a4-a8b6-c34905bb030b</id>
+    <summary>I-40 @ Briley Pkwy</summary>
+    <marker>36.1533833330 -86.8564333330</marker>
+    <offsetmarker>36.1533833330 -86.8564333330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_105.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam106.asp</link>
+    <id>urn:uuid:2f8cda55-0038-43ec-a00e-799865fdb06e</id>
+    <summary>I- 40 east of Briley Pkwy (Hermitage)</summary>
+    <marker>36.1428333330 -86.6854166670</marker>
+    <offsetmarker>36.1428333330 -86.6854166670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_106.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam107.asp</link>
+    <id>urn:uuid:d0977402-279a-46ff-8db5-e708d0e843a7</id>
+    <summary>I-40 west of Donelson Pk</summary>
+    <marker>36.1423166670 -86.6771666670</marker>
+    <offsetmarker>36.1423166670 -86.6771666670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_107.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam108.asp</link>
+    <id>urn:uuid:7f2fc504-c2c7-4bf0-b734-493320ca6912</id>
+    <summary>I-40 @ Donelson Pk</summary>
+    <marker>36.1416666670 -86.6668666670</marker>
+    <offsetmarker>36.1416666670 -86.6668666670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_108.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam109.asp</link>
+    <id>urn:uuid:181e6bdc-f90e-4e56-a592-f7d5603a4daf</id>
+    <summary>I-40 east of Donelson Pk</summary>
+    <marker>36.1416166670 -86.6530833330</marker>
+    <offsetmarker>36.1416166670 -86.6530833330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_109.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam11.asp</link>
+    <id>urn:uuid:e7d158d0-5bc5-475c-926e-d5681aa39d91</id>
+    <summary>I-65 @ Trinity Ln</summary>
+    <marker>36.206060 -86.775864</marker>
+    <offsetmarker>36.206060 -86.775864</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_011.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam110.asp</link>
+    <id>urn:uuid:7a07e714-e0e9-44ce-a3f3-e230b6f66bc2</id>
+    <summary>I-40 @ Stewarts Ferry Pk</summary>
+    <marker>36.1556833330 -86.6300166670</marker>
+    <offsetmarker>36.1556833330 -86.6300166670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_110.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam111.asp</link>
+    <id>urn:uuid:e43a8ae0-176d-4562-b1bd-92b1155fa36c</id>
+    <summary>I-40 west of Central Pk</summary>
+    <marker>36.1643833330 -86.6160</marker>
+    <offsetmarker>36.1643833330 -86.6160</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_111.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam112.asp</link>
+    <id>urn:uuid:ab001199-1008-439e-b390-224c67351215</id>
+    <summary>I-40 @ Central Pk</summary>
+    <marker>36.169350 -86.6067166670</marker>
+    <offsetmarker>36.169350 -86.6067166670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_112.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam113.asp</link>
+    <id>urn:uuid:2fae6a92-3975-4b7e-9829-2273a7fe8c3f</id>
+    <summary>I-40 @ Old Hickory Blvd (Hermitage)</summary>
+    <marker>36.1705166670 -86.6017166670</marker>
+    <offsetmarker>36.1705166670 -86.6017166670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_113.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam114.asp</link>
+    <id>urn:uuid:f803d4c4-cc96-4eca-8735-a3df384e7fdf</id>
+    <summary>I-40 @ New Hope Rd</summary>
+    <marker>36.1698833330 -86.585150</marker>
+    <offsetmarker>36.1698833330 -86.585150</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_114.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam115.asp</link>
+    <id>urn:uuid:2d1e57cf-a10f-4dc3-b8f2-5b3418ed8a75</id>
+    <summary>I-40 @ Wilson County Line</summary>
+    <marker>36.168950 -86.5684</marker>
+    <offsetmarker>36.168950 -86.5684</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_115.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam116.asp</link>
+    <id>urn:uuid:f9895fd2-eac3-48a3-834f-5ef4baf1db04</id>
+    <summary>Vietnam Veterans west of I-65 Jct</summary>
+    <marker>36.3112166670 -86.6852833330</marker>
+    <offsetmarker>36.3112166670 -86.6852833330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_116.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam117.asp</link>
+    <id>urn:uuid:ed92b977-55d9-4e4f-adca-425ccc24c23c</id>
+    <summary>Vietnam Veterans @ Gallatin Pk</summary>
+    <marker>36.3135333330 -86.6558</marker>
+    <offsetmarker>36.3135333330 -86.6558</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_117.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam118.asp</link>
+    <id>urn:uuid:ec79ff91-60dd-4dd8-ad11-8a24f620bd09</id>
+    <summary>Vietnam Veterans east of Gallatin Pk</summary>
+    <marker>36.3191166670 -86.6404</marker>
+    <offsetmarker>36.3191166670 -86.6404</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_118.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam119.asp</link>
+    <id>urn:uuid:f42d7bf2-2f66-432f-8bf2-e41d5a5bb7b4</id>
+    <summary>Vietnam Veterans east of New Shackle Island</summary>
+    <marker>36.330050 -86.6288333330</marker>
+    <offsetmarker>36.330050 -86.6288333330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_119.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam12.asp</link>
+    <id>urn:uuid:3fc4488e-56df-4f72-a7f0-e49d88a62328</id>
+    <summary>I-65 @ I-24 Junction, n/o Trinity Ln</summary>
+    <marker>36.221566 -86.772538</marker>
+    <offsetmarker>36.221566 -86.772538</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_012.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam120.asp</link>
+    <id>urn:uuid:dba4693b-630f-4846-92ee-1bd5425fbf39</id>
+    <summary>Briley Pkwy north of White Bridge Rd</summary>
+    <marker>36.1593 -86.8647666670</marker>
+    <offsetmarker>36.1593 -86.8647666670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_120.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam121.asp</link>
+    <id>urn:uuid:2c639ef2-1584-4ba9-8888-654d6c88b234</id>
+    <summary>Briley Pkwy @ Centennial Blvd</summary>
+    <marker>36.1681 -86.8698666670</marker>
+    <offsetmarker>36.1681 -86.8698666670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_121.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam122.asp</link>
+    <id>urn:uuid:5128105e-9364-41db-a513-836d584e7d1f</id>
+    <summary>Briley Pkwy north of Centennial Blvd</summary>
+    <marker>36.1783333330 -86.8706</marker>
+    <offsetmarker>36.1783333330 -86.8706</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_122.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam123.asp</link>
+    <id>urn:uuid:40615d0b-54e3-46eb-8d08-6c3ce32d1c26</id>
+    <summary>Briley Pkwy @ County Hospital Road</summary>
+    <marker>36.1863333330 -86.8625166670</marker>
+    <offsetmarker>36.1863333330 -86.8625166670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_123.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam124.asp</link>
+    <id>urn:uuid:323e2e02-b969-4260-9638-1abb847f2e40</id>
+    <summary>Briley Pkwy south of Ashland City Hwy</summary>
+    <marker>36.1979833330 -86.8674166670</marker>
+    <offsetmarker>36.1979833330 -86.8674166670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_124.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam125.asp</link>
+    <id>urn:uuid:c061066d-0ea1-4744-8914-29f618912d00</id>
+    <summary>Briley Pkwy @ Ashland City Hwy</summary>
+    <marker>36.2108666670 -86.872450</marker>
+    <offsetmarker>36.2108666670 -86.872450</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_125.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam126.asp</link>
+    <id>urn:uuid:1f0d064b-7e0c-4ae9-b328-7c39751048f2</id>
+    <summary>Briley Pkwy north of Ashland City Hwy</summary>
+    <marker>36.2221833330 -86.870850</marker>
+    <offsetmarker>36.2221833330 -86.870850</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_126.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam127.asp</link>
+    <id>urn:uuid:8643b3bf-41a6-495f-a572-9fff994788c4</id>
+    <summary>Briley Pkwy east of Eatons Creek</summary>
+    <marker>36.228150 -86.8588</marker>
+    <offsetmarker>36.228150 -86.8588</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_127.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam128.asp</link>
+    <id>urn:uuid:4c059f0d-d9f8-4505-9e76-8aa5618a8187</id>
+    <summary>Briley Pkwy west of Clarksville Pk</summary>
+    <marker>36.2279 -86.8465666670</marker>
+    <offsetmarker>36.2279 -86.8465666670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_128.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam129.asp</link>
+    <id>urn:uuid:d40cc2c9-b4f5-423a-ac71-5e45fd5a2087</id>
+    <summary>Briley Pkwy at Clarksville Pk</summary>
+    <marker>36.23 -86.840750</marker>
+    <offsetmarker>36.23 -86.840750</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_129.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam13.asp</link>
+    <id>urn:uuid:757d4f31-5ee8-41de-931a-9f582ec8a9bb</id>
+    <summary>I-65 south of Dickerson Pk</summary>
+    <marker>36.229702 -86.772248</marker>
+    <offsetmarker>36.229702 -86.772248</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_013.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam130.asp</link>
+    <id>urn:uuid:653fe1e9-19b2-486a-9d5c-df5b9796ff0c</id>
+    <summary>Briley Pkwy east of Clarksville Pk</summary>
+    <marker>36.230050 -86.8292833330</marker>
+    <offsetmarker>36.230050 -86.8292833330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_130.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam131.asp</link>
+    <id>urn:uuid:074edaf0-025c-41ba-99f3-e0da391a38ca</id>
+    <summary>Briley Pkwy @ Whites Creek Pk</summary>
+    <marker>36.234250 -86.8145666670</marker>
+    <offsetmarker>36.234250 -86.8145666670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_131.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam132.asp</link>
+    <id>urn:uuid:c061b57c-4afb-4329-913d-695c40d93960</id>
+    <summary>Briley Pkwy east of Whites Creek Pk</summary>
+    <marker>36.2342833330 -86.8009666670</marker>
+    <offsetmarker>36.2342833330 -86.8009666670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_132.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam133.asp</link>
+    <id>urn:uuid:e607f01b-4af6-4fce-bef9-986425031c94</id>
+    <summary>Briley Pkwy west of I-24</summary>
+    <marker>36.236950 -86.7949333330</marker>
+    <offsetmarker>36.236950 -86.7949333330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_133.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam134.asp</link>
+    <id>urn:uuid:c642f881-ba08-43e9-bcb4-a8058082ba2e</id>
+    <summary>Briley Pkwy @ Elm Hill Pk</summary>
+    <marker>36.1495166670 -86.6909</marker>
+    <offsetmarker>36.1495166670 -86.6909</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_134.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam135.asp</link>
+    <id>urn:uuid:f5a13350-82d9-44c6-baf1-151852b185a6</id>
+    <summary>Briley Pkwy south of Lebanon Pk</summary>
+    <marker>36.157650 -86.6928333330</marker>
+    <offsetmarker>36.157650 -86.6928333330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_135.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam136.asp</link>
+    <id>urn:uuid:56e47b87-a9b8-459d-a988-a47dccc8086d</id>
+    <summary>Briley Pkwy @ Lebanon Pk</summary>
+    <marker>36.1711166670 -86.6882166670</marker>
+    <offsetmarker>36.1711166670 -86.6882166670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_136.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam137.asp</link>
+    <id>urn:uuid:6b18d340-7e62-4ee1-bc37-19cd56d67bac</id>
+    <summary>Briley Pkwy north of Lebanon Pk</summary>
+    <marker>36.176350 -86.6939</marker>
+    <offsetmarker>36.176350 -86.6939</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_137.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam138.asp</link>
+    <id>urn:uuid:b1aadb88-90fb-4a2b-9e48-f5b9d5f9227a</id>
+    <summary>Briley Pkwy south of Lebanon Pk</summary>
+    <marker>36.1821166670 -86.6953333330</marker>
+    <offsetmarker>36.1821166670 -86.6953333330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_138.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam139.asp</link>
+    <id>urn:uuid:ee28bf3c-2345-4198-aa9b-8c100f7aa7d1</id>
+    <summary>Briley Pkwy @ Two Rivers Pkwy</summary>
+    <marker>36.1893833330 -86.6879166670</marker>
+    <offsetmarker>36.1893833330 -86.6879166670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_139.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam14.asp</link>
+    <id>urn:uuid:7bd78b0b-3050-431d-a6b1-5d5629b1be64</id>
+    <summary>I-65 @ Dickerson Pk</summary>
+    <marker>36.237753 -86.758705</marker>
+    <offsetmarker>36.237753 -86.758705</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_014.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam140.asp</link>
+    <id>urn:uuid:1c98c083-8054-41fb-a683-ea52071bcc84</id>
+    <summary>Briley Pkwy @ Opry Mills Dr</summary>
+    <marker>36.1968833330 -86.6882</marker>
+    <offsetmarker>36.1968833330 -86.6882</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_140.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam141.asp</link>
+    <id>urn:uuid:0cff3641-7170-41c6-a844-915fb0d20f69</id>
+    <summary>Briley Pkwy @ McGavock Pk</summary>
+    <marker>36.217150 -86.6921333330</marker>
+    <offsetmarker>36.217150 -86.6921333330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_141.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam142.asp</link>
+    <id>urn:uuid:3ab32ff3-30d4-461b-a7b0-7717cc79e776</id>
+    <summary>Briley Pkwy north of McGavock Pk</summary>
+    <marker>36.2295833330 -86.6982833330</marker>
+    <offsetmarker>36.2295833330 -86.6982833330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_142.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam143.asp</link>
+    <id>urn:uuid:7a170add-70ec-41e7-97b5-c0c9c11898b6</id>
+    <summary>Briley Pkwy east of Cumberland River</summary>
+    <marker>36.235550 -86.710050</marker>
+    <offsetmarker>36.235550 -86.710050</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_143.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam144.asp</link>
+    <id>urn:uuid:e41f6245-d9f0-4c2b-ac88-586940d43bfc</id>
+    <summary>Briley Pkwy east of Gallatin Pk</summary>
+    <marker>36.2340333330 -86.7204333330</marker>
+    <offsetmarker>36.2340333330 -86.7204333330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_144.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam145.asp</link>
+    <id>urn:uuid:8948e9e4-6090-4eaa-a227-74a8d657528d</id>
+    <summary>Briley Pkwy west Gallatin Pk</summary>
+    <marker>36.2373333330 -86.7296833330</marker>
+    <offsetmarker>36.2373333330 -86.7296833330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_145.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam146.asp</link>
+    <id>urn:uuid:2598DCBB-29F1-4c37-9BB1-E3ABCA830C54</id>
+    <summary>I-65 @ Concord Rd</summary>
+    <marker>35.9974333330 -86.7973833330</marker>
+    <offsetmarker>35.9974333330 -86.7973833330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_146.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam147.asp</link>
+    <id>urn:uuid:119ee21b-0872-487f-a95d-dffb235a2cb1</id>
+    <summary>I-24 east of Old Hickory Blvd (Antioch)</summary>
+    <marker>36.00318333 -86.60758333</marker>
+    <offsetmarker>36.00318333 -86.60758333</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_147.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam148.asp</link>
+    <id>urn:uuid:bd1c4620-0571-41f0-a61e-c49c333a6259</id>
+    <summary>I-24 west of Old Hickory Blvd (North)</summary>
+    <marker>36.293020 -86.810760</marker>
+    <offsetmarker>36.293020 -86.810760</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_148.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam15.asp</link>
+    <id>urn:uuid:1d01013b-d0e0-4459-a6b5-e49ecf64f9a3</id>
+    <summary>I-65 @ Briley Pkwy</summary>
+    <marker>36.2416 -86.7520</marker>
+    <offsetmarker>36.2416 -86.7520</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_015.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam16.asp</link>
+    <id>urn:uuid:12540880-553B-4350-AA0A-9902A1373B57</id>
+    <summary>I-65 north of Briley Pkwy</summary>
+    <marker>36.249817 -86.740979</marker>
+    <offsetmarker>36.249817 -86.740979</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_016.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam17.asp</link>
+    <id>urn:uuid:3c512214-bcc6-4ecc-a947-88fb8b2dfef3</id>
+    <summary>I-65 @ Old Hickory Blvd (Madison)</summary>
+    <marker>36.263865 -86.736711</marker>
+    <offsetmarker>36.263865 -86.736711</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_017.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam18.asp</link>
+    <id>urn:uuid:01a306ea-b5a7-4198-8771-74808695e8e4</id>
+    <summary>I-65 north of Old Hickory Blvd (Madison)</summary>
+    <marker>36.278269 -86.734689</marker>
+    <offsetmarker>36.278269 -86.734689</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_018.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam19.asp</link>
+    <id>urn:uuid:15f93507-45ad-4438-ac22-7c8d1b370c28</id>
+    <summary>I-65 south of Vietnam Vets Blvd</summary>
+    <marker>36.291384 -86.722102</marker>
+    <offsetmarker>36.291384 -86.722102</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_019.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam20.asp</link>
+    <id>urn:uuid:12277e38-2e0b-4aa4-989d-88179c48e0ac</id>
+    <summary>I-65 @ Vietnam Vets Blvd</summary>
+    <marker>36.303439 -86.706986</marker>
+    <offsetmarker>36.303439 -86.706986</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_020.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam21.asp</link>
+    <id>urn:uuid:a68bab99-7093-488b-9c41-a300fabcadc4</id>
+    <summary>I-65 @ Rivergate Pkwy</summary>
+    <marker>36.308338 -86.702918</marker>
+    <offsetmarker>36.308338 -86.702918</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_021.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam22.asp</link>
+    <id>urn:uuid:b12cb956-6256-4236-9449-9cab6915fe28</id>
+    <summary>I-65 south of Long Hollow Pk</summary>
+    <marker>36.316986 -86.702072</marker>
+    <offsetmarker>36.316986 -86.702072</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_022.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam23.asp</link>
+    <id>urn:uuid:8b73cc57-2134-41b3-8c97-fceec82a0dd8</id>
+    <summary>Vietnam Vets Blvd @ Conference Dr</summary>
+    <marker>36.307784 -86.695145</marker>
+    <offsetmarker>36.307784 -86.695145</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_023.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam24.asp</link>
+    <id>urn:uuid:cedf7b82-c552-42a5-a787-2576f32ba726</id>
+    <summary>I-40 west of 2nd/4th Ave</summary>
+    <marker>36.150212 -86.768924</marker>
+    <offsetmarker>36.150212 -86.768924</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_024.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam25.asp</link>
+    <id>urn:uuid:bccf5f30-ee84-40f6-84db-4154abda9662</id>
+    <summary>I-65 @ I-40 South Loop</summary>
+    <marker>36.147571 -86.778208</marker>
+    <offsetmarker>36.147571 -86.778208</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_025.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam26.asp</link>
+    <id>urn:uuid:89fd6263-5b07-4b14-b0cb-e34502b3326b</id>
+    <summary>I-40 east of Broadway</summary>
+    <marker>36.152342 -86.787783</marker>
+    <offsetmarker>36.152342 -86.787783</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_026.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam27.asp</link>
+    <id>urn:uuid:ead1d733-5a60-4219-81f2-045ce457058b</id>
+    <summary>I-40 west of Church St</summary>
+    <marker>36.159157 -86.793111</marker>
+    <offsetmarker>36.159157 -86.793111</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_027.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam28.asp</link>
+    <id>urn:uuid:8BD1F6FB-588E-4234-AD0A-423E13D5A812</id>
+    <summary>I-40 west of Charlotte Ave</summary>
+    <marker>36.167626 -86.796328</marker>
+    <offsetmarker>36.167626 -86.796328</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_028.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam29.asp</link>
+    <id>urn:uuid:884e33e1-6a71-4c3b-b4e8-524decf9d12f</id>
+    <summary>I-440 Parkway @ I-40 </summary>
+    <marker>36.156260 -86.823793</marker>
+    <offsetmarker>36.156260 -86.823793</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_029.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam30.asp</link>
+    <id>urn:uuid:a219587f-06f6-4a73-99fa-5bbb7236803b</id>
+    <summary>I-40 west of Jefferson St</summary>
+    <marker>36.166742 -86.817315</marker>
+    <offsetmarker>36.166742 -86.817315</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_030.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam31.asp</link>
+    <id>urn:uuid:bfe60aeb-9b74-4336-b851-03a1d55d1be2</id>
+    <summary>I-65 @ I-40 (West Loop)</summary>
+    <marker>36.172362 -86.800392</marker>
+    <offsetmarker>36.172362 -86.800392</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_031.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam32.asp</link>
+    <id>urn:uuid:006f2e9b-4bba-47bb-aed0-93b1330ec98f</id>
+    <summary>I-65 @ Rosa L. Parks Blvd</summary>
+    <marker>36.184460 -86.798704</marker>
+    <offsetmarker>36.184460 -86.798704</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_032.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam33.asp</link>
+    <id>urn:uuid:dba46505-b645-47e9-926e-28ea792153d8</id>
+    <summary>I-65 @ Cumberland River</summary>
+    <marker>36.192340 -86.784771</marker>
+    <offsetmarker>36.192340 -86.784771</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_033.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam34.asp</link>
+    <id>urn:uuid:f318726d-b253-4b99-ba9f-982fedbce7cb</id>
+    <summary>Ellington Parkway north of Spring St</summary>
+    <marker>36.177920 -86.763572</marker>
+    <offsetmarker>36.177920 -86.763572</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_034.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam35.asp</link>
+    <id>urn:uuid:db884521-f7fb-4c1a-8b77-9dd0ebbcabc2</id>
+    <summary>Ellington Parkway north of Cleveland St</summary>
+    <marker>36.186738 -86.757965</marker>
+    <offsetmarker>36.186738 -86.757965</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_035.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam36.asp</link>
+    <id>urn:uuid:f6da5a53-6aa7-43fc-84c2-ac8936b8250a</id>
+    <summary>Ellington Parkway south of Trinity Ln</summary>
+    <marker>36.198028 -86.752291</marker>
+    <offsetmarker>36.198028 -86.752291</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_036.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam37.asp</link>
+    <id>urn:uuid:8749e2d8-aecd-4327-b17d-8c593bcaafdd</id>
+    <summary>Ellington Parkway @ Trinity Ln</summary>
+    <marker>36.204758 -86.750496</marker>
+    <offsetmarker>36.204758 -86.750496</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_037.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam38.asp</link>
+    <id>urn:uuid:a7c49792-6e1f-4e53-bd4a-43d5f3430cca</id>
+    <summary>Ellington Parkway @ Ben Allen Rd</summary>
+    <marker>36.221883 -86.747038</marker>
+    <offsetmarker>36.221883 -86.747038</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_038.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam39.asp</link>
+    <id>urn:uuid:94c9a724-13c0-4166-bf57-2b025890e831</id>
+    <summary>Ellington Parkway north of Broadmoor Dr</summary>
+    <marker>36.231723 -86.747936</marker>
+    <offsetmarker>36.231723 -86.747936</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_039.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam40.asp</link>
+    <id>urn:uuid:7c6dbf6a-7bb0-4113-bb90-b6fe3d21f60b</id>
+    <summary>Ellington Parkway @ Briley Pkwy</summary>
+    <marker>36.238454 -86.738536</marker>
+    <offsetmarker>36.238454 -86.738536</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_040.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam41.asp</link>
+    <id>urn:uuid:6f770780-7a6e-4104-8dda-6429575f905d</id>
+    <summary>I-24 west of I-65 Jct</summary>
+    <marker>36.229423 -86.782108</marker>
+    <offsetmarker>36.229423 -86.782108</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_041.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam42.asp</link>
+    <id>urn:uuid:6da08754-9eb0-40ac-9304-9f75213395dd</id>
+    <summary>I-24 @ Briley Pkwy (West)</summary>
+    <marker>36.237261 -86.786597</marker>
+    <offsetmarker>36.237261 -86.786597</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_042.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam43.asp</link>
+    <id>urn:uuid:e78cf5ba-2731-49df-9400-2fa4c13685ad</id>
+    <summary>Briley Pkwy @ Brick Church Pk</summary>
+    <marker>36.237602 -86.780101</marker>
+    <offsetmarker>36.237602 -86.780101</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_043.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam44.asp</link>
+    <id>urn:uuid:355ea1d3-1830-4bf4-9b61-93c2ad60ac7f</id>
+    <summary>Briley Pkwy west of Dickerson Pk</summary>
+    <marker>36.241180 -86.762780</marker>
+    <offsetmarker>36.241180 -86.762780</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_044.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam45.asp</link>
+    <id>urn:uuid:806e1cff-9f6d-4fe1-81b1-3f57b2b7b24c</id>
+    <summary>I-24 @ Shelby</summary>
+    <marker>36.166464 -86.764131</marker>
+    <offsetmarker>36.166464 -86.764131</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_045.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam46.asp</link>
+    <id>urn:uuid:7ed7a0ab-cf00-42a3-9baf-1d2be0a1e184</id>
+    <summary>I-65 north of Rosa Parks Blvd</summary>
+    <marker>36.188828 -86.793499</marker>
+    <offsetmarker>36.188828 -86.793499</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_046.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam47.asp</link>
+    <id>urn:uuid:9f604602-a1eb-4dad-a11c-db12832a0b4f</id>
+    <summary>I-65 @ Wedgewood Ave</summary>
+    <marker>36.133791 -86.774843</marker>
+    <offsetmarker>36.133791 -86.774843</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_047.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam48.asp</link>
+    <id>urn:uuid:bb6c4192-81da-41f8-bd89-d27b00e3b250</id>
+    <summary>I-24 west of Briley Pkwy (West)</summary>
+    <marker>36.252256 -86.786001</marker>
+    <offsetmarker>36.252256 -86.786001</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_048.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam49.asp</link>
+    <id>urn:uuid:093f1d1a-4486-493f-a15a-9d3ec9f66f6d</id>
+    <summary>Vietnam Veterans Blvd e/o Conference Dr</summary>
+    <marker>36.311638 -86.684519</marker>
+    <offsetmarker>36.311638 -86.684519</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_049.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam50.asp</link>
+    <id>urn:uuid:216a9ed4-e9a2-497d-a0ef-8d332bfc3787</id>
+    <summary>I-65 north of Long Hollow Pk</summary>
+    <marker>36.328719 -86.707597</marker>
+    <offsetmarker>36.328719 -86.707597</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_050.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam51.asp</link>
+    <id>urn:uuid:609b0e9b-2152-4832-965d-56849912b86f</id>
+    <summary>I-40 @ White Bridge Rd</summary>
+    <marker>36.152789 -86.856912</marker>
+    <offsetmarker>36.152789 -86.856912</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_051.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam52.asp</link>
+    <id>urn:uuid:f89eb840-e8fd-43ec-9d9c-ddf2e023f883</id>
+    <summary>I-40 east of Charlotte Pk</summary>
+    <marker>36.1397333330 -86.8874333330</marker>
+    <offsetmarker>36.1397333330 -86.8874333330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_052.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam53.asp</link>
+    <id>urn:uuid:4d0ae46d-4eaf-4cbf-837c-096c3df8e034</id>
+    <summary>I-65 @ I-440 Jct</summary>
+    <marker>36.1146049410 -86.7741226340</marker>
+    <offsetmarker>36.1146049410 -86.7741226340</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_053.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam54.asp</link>
+    <id>urn:uuid:2186de83-d5ac-4bb2-927a-f0e328e8a6f6</id>
+    <summary>I-65 @ Harding Pl</summary>
+    <marker>36.082970 -86.762873</marker>
+    <offsetmarker>36.082970 -86.762873</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_054.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam55.asp</link>
+    <id>urn:uuid:1aaa6ec8-191d-4254-89ca-eb33b9439d80</id>
+    <summary>I-24 @ Harding Pl</summary>
+    <marker>36.086293 -86.701457</marker>
+    <offsetmarker>36.086293 -86.701457</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_055.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam56.asp</link>
+    <id>urn:uuid:bc18a6db-5ba3-4362-8f53-80f76dc4244d</id>
+    <summary>I-24 @ I-440 Jct</summary>
+    <marker>36.126249 -86.726823</marker>
+    <offsetmarker>36.126249 -86.726823</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_056.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam57.asp</link>
+    <id>urn:uuid:0fa56dea-37a3-48e2-ae39-621ce19aad77</id>
+    <summary>I-40 west of Spence Ln</summary>
+    <marker>36.140561 -86.722785</marker>
+    <offsetmarker>36.140561 -86.722785</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_057.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam58.asp</link>
+    <id>urn:uuid:8987450f-9d08-4d11-a06d-0d358724ca40</id>
+    <summary>I-40 @ I-24 Jct</summary>
+    <marker>36.1381767350 -86.7286169040</marker>
+    <offsetmarker>36.1381767350 -86.7286169040</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_058.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam59.asp</link>
+    <id>urn:uuid:2ceed12e-081b-44f3-b5db-e38d841693cb</id>
+    <summary>I-40 west of Stewarts Ferry Pk</summary>
+    <marker>36.145885 -86.645548</marker>
+    <offsetmarker>36.145885 -86.645548</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_059.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam60.asp</link>
+    <id>urn:uuid:DB2F6CD8-CAFD-4a4e-82B0-F9A3EA8B0EC2</id>
+    <summary>Briley Pkwy @ I-65</summary>
+    <marker>36.240392 -86.750314</marker>
+    <offsetmarker>36.240392 -86.750314</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_060.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam61.asp</link>
+    <id>urn:uuid:1EAB7594-39C4-48de-B733-824E7BA17A64</id>
+    <summary>Briley Pkwy east of I-65</summary>
+    <marker>36.2398 -86.7434</marker>
+    <offsetmarker>36.2398 -86.7434</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_061.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam62.asp</link>
+    <id>urn:uuid:817E370F-C60C-48fb-A3B8-C0C493319A1D</id>
+    <summary>I-40 @ Briley Pkwy</summary>
+    <marker>36.144677 -86.698947</marker>
+    <offsetmarker>36.144677 -86.698947</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_062.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam63.asp</link>
+    <id>urn:uuid:2F5B8557-F5E3-4168-B010-26723B8B8616</id>
+    <summary>I-440 east of I-40 Jct</summary>
+    <marker>36.148475 -86.822153</marker>
+    <offsetmarker>36.148475 -86.822153</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_063.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam64.asp</link>
+    <id>urn:uuid:70C4C590-C6D5-45cc-9F40-05B1A88FCCCC</id>
+    <summary>I-440 @ Murphy Rd</summary>
+    <marker>36.13964670 -86.823205</marker>
+    <offsetmarker>36.13964670 -86.823205</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_064.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam65.asp</link>
+    <id>urn:uuid:491B110E-77A6-43fe-A64B-622BFE5474ED</id>
+    <summary>I-440 east of West End Ave</summary>
+    <marker>36.132803 -86.819150</marker>
+    <offsetmarker>36.132803 -86.819150</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_065.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam66.asp</link>
+    <id>urn:uuid:E075160C-42A7-46e0-8B69-A3494423724F</id>
+    <summary>I-440 west of 21st Ave</summary>
+    <marker>36.124375 -86.81297170</marker>
+    <offsetmarker>36.124375 -86.81297170</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_066.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam67.asp</link>
+    <id>urn:uuid:A6498AFB-678C-4bea-9F61-A3FF4E88BD2D</id>
+    <summary>I-440 @ 21st Ave</summary>
+    <marker>36.12303170 -86.80537830</marker>
+    <offsetmarker>36.12303170 -86.80537830</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_067.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam68.asp</link>
+    <id>urn:uuid:63D30268-C90E-4ea7-BAA8-0259CBF11A4B</id>
+    <summary>I-440 @ Belmont Overpass</summary>
+    <marker>36.115955 -86.798365</marker>
+    <offsetmarker>36.115955 -86.798365</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_068.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam69.asp</link>
+    <id>urn:uuid:0C55B846-D5B2-45e1-A98C-03F793279554</id>
+    <summary>I-440 west of I-65 Jct</summary>
+    <marker>36.116055 -86.787163</marker>
+    <offsetmarker>36.116055 -86.787163</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_069.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam70.asp</link>
+    <id>urn:uuid:87A31E75-9A5F-4774-9514-1BF2CE4165ED</id>
+    <summary>I-440 @ I-65 Jct</summary>
+    <marker>36.1152583680 -86.7742712550</marker>
+    <offsetmarker>36.1152583680 -86.7742712550</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_070.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam71.asp</link>
+    <id>urn:uuid:54F96CA2-EC57-4198-BCF7-6FCA6E868ECA</id>
+    <summary>I-440 east of I-65</summary>
+    <marker>36.121852 -86.763138</marker>
+    <offsetmarker>36.121852 -86.763138</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_071.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam72.asp</link>
+    <id>urn:uuid:C0BF57CB-3629-4ddb-91A7-56AF7ABA8F86</id>
+    <summary>I-440 @ Nolensville Pk</summary>
+    <marker>36.12329170 -86.751115</marker>
+    <offsetmarker>36.12329170 -86.751115</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_072.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam73.asp</link>
+    <id>urn:uuid:96CFD060-9C30-4bae-BB5F-8C9B98161024</id>
+    <summary>I-440 west of I-24</summary>
+    <marker>36.12415830 -86.74051670</marker>
+    <offsetmarker>36.12415830 -86.74051670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_073.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam74.asp</link>
+    <id>urn:uuid:960CD6D4-C789-44aa-8248-294789751D23</id>
+    <summary>I-40 @ 46th Ave</summary>
+    <marker>36.153735 -86.83903170</marker>
+    <offsetmarker>36.153735 -86.83903170</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_074.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam75.asp</link>
+    <id>urn:uuid:9538F051-DC23-42b3-AFF2-2D8169150FC0</id>
+    <summary>I-40 @ 28th Ave</summary>
+    <marker>36.164481 -86.819334</marker>
+    <offsetmarker>36.164481 -86.819334</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_075.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam76.asp</link>
+    <id>urn:uuid:A187663B-3F78-4561-8BF0-125A361C60CC</id>
+    <summary>I-65 south of Armory Dr</summary>
+    <marker>36.094023 -86.762115</marker>
+    <offsetmarker>36.094023 -86.762115</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_076.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam77.asp</link>
+    <id>urn:uuid:7B200BE4-4525-4c1c-B09C-06B90BEC69EA</id>
+    <summary>I-65 @ Armory Dr</summary>
+    <marker>36.101903 -86.764583</marker>
+    <offsetmarker>36.101903 -86.764583</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_077.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam78.asp</link>
+    <id>urn:uuid:FC13F7A6-472D-430e-879B-3354C1B5F82B</id>
+    <summary>I-65 @ Craighead</summary>
+    <marker>36.126225 -86.772308</marker>
+    <offsetmarker>36.126225 -86.772308</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_078.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam79.asp</link>
+    <id>urn:uuid:7B3D68D2-323C-41ac-9FCA-4CE9B15E9A29</id>
+    <summary>I-65 north of Wedgewood Ave</summary>
+    <marker>36.138890 -86.775548</marker>
+    <offsetmarker>36.138890 -86.775548</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_079.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam80.asp</link>
+    <id>urn:uuid:1BEF1370-F039-444f-9735-13E69585C148</id>
+    <summary>I-40 @ Arlington Overpass</summary>
+    <marker>36.140427 -86.731820</marker>
+    <offsetmarker>36.140427 -86.731820</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_080.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam81.asp</link>
+    <id>urn:uuid:4B0BB6B4-AEC2-4daf-9E0C-FB1689E4F238</id>
+    <summary>I-24 @ Briley Pkwy - (Antioch)</summary>
+    <marker>36.109242 -86.722533</marker>
+    <offsetmarker>36.109242 -86.722533</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_081.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam82.asp</link>
+    <id>urn:uuid:AD415E2F-5FF3-4208-BA56-48CB08E4369C</id>
+    <summary> I-65 north of Concord Rd</summary>
+    <marker>36.0047833330 -86.7900166670</marker>
+    <offsetmarker>36.0047833330 -86.7900166670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_082.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam83.asp</link>
+    <id>urn:uuid:cf2fe627-c08b-4621-8264-74868c87775a</id>
+    <summary>I-65 @ Harpeth River</summary>
+    <marker>36.0137166670 -86.7850333330</marker>
+    <offsetmarker>36.0137166670 -86.7850333330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_083.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam84.asp</link>
+    <id>urn:uuid:e291b31e-214b-4d2c-b4dc-431ebc8e9239</id>
+    <summary>I-65 south of Old Hickory Blvd (Brentwood)</summary>
+    <marker>36.0279833330 -86.783850</marker>
+    <offsetmarker>36.0279833330 -86.783850</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_084.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam85.asp</link>
+    <id>urn:uuid:7810d45a-2839-4650-996e-7143ebd6f32d</id>
+    <summary>I- 65 @ Old Hickory Blvd (Brentwood)</summary>
+    <marker>36.0382833330 -86.7833666670</marker>
+    <offsetmarker>36.0382833330 -86.7833666670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_085.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam86.asp</link>
+    <id>urn:uuid:4cdc6584-1b48-4187-8090-0a4470feb8c3</id>
+    <summary>I-65 north of Old Hickory Blvd (Brentwood)</summary>
+    <marker>36.0479833330 -86.7755666670</marker>
+    <offsetmarker>36.0479833330 -86.7755666670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_086.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam87.asp</link>
+    <id>urn:uuid:532b8caf-0171-477d-a987-07de1601b848</id>
+    <summary>I-65 south of Hogan Rd</summary>
+    <marker>36.0585333330 -86.7727</marker>
+    <offsetmarker>36.0585333330 -86.7727</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_087.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam88.asp</link>
+    <id>urn:uuid:96733dab-eba1-433b-a88e-d75ac02b736f</id>
+    <summary>I-65 south of Harding Pl</summary>
+    <marker>36.073650 -86.7694</marker>
+    <offsetmarker>36.073650 -86.7694</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_088.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam89.asp</link>
+    <id>urn:uuid:085A66B8-66B6-40c2-B15C-C7BF76FFDD7E</id>
+    <summary>I-24 west of Harding Pl</summary>
+    <marker>36.099167 -86.710374</marker>
+    <offsetmarker>36.099167 -86.710374</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_089.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam90.asp</link>
+    <id>urn:uuid:6464664a-367b-424e-84ec-9ba98c86fce5</id>
+    <summary>I- 24 east of Harding Pl</summary>
+    <marker>36.0776 -86.6952166670</marker>
+    <offsetmarker>36.0776 -86.6952166670</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_090.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam91.asp</link>
+    <id>urn:uuid:6cf3031c-b33f-46f5-8667-377125c2a8b2</id>
+    <summary>I-24 @ Haywood Ln</summary>
+    <marker>36.0694333330 -86.6898833330</marker>
+    <offsetmarker>36.0694333330 -86.6898833330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_091.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam92.asp</link>
+    <id>urn:uuid:46888b7d-815f-4432-a2b6-d0745a61ce4e</id>
+    <summary>I-24 east of Haywood Ln</summary>
+    <marker>36.0589 -86.6782</marker>
+    <offsetmarker>36.0589 -86.6782</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_092.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam93.asp</link>
+    <id>urn:uuid:3E9DD334-B6F6-4cfb-86F9-C6E5C7ED2663</id>
+    <summary>I-24 west of Bell Rd</summary>
+    <marker>36.052133 -86.670089</marker>
+    <offsetmarker>36.052133 -86.670089</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_093.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam94.asp</link>
+    <id>urn:uuid:cfa7daef-f85c-448d-b0ca-34b87d754106</id>
+    <summary>I-24 @ Hickory Hollow Pkwy</summary>
+    <marker>36.0400333330 -86.6492333330</marker>
+    <offsetmarker>36.0400333330 -86.6492333330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_094.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam95.asp</link>
+    <id>urn:uuid:11a18770-0151-417e-a37a-d469de0b66da</id>
+    <summary>I-24 east of Hickory Hollow Pkwy</summary>
+    <marker>36.0326 -86.6404833330</marker>
+    <offsetmarker>36.0326 -86.6404833330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_095.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam96.asp</link>
+    <id>urn:uuid:40bd7dee-4954-4e8c-9fe1-12c1a1b90811</id>
+    <summary> I-40 @ Bellevue</summary>
+    <marker>36.0815666670 -86.956150</marker>
+    <offsetmarker>36.0815666670 -86.956150</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_096.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam97.asp</link>
+    <id>urn:uuid:02bba18f-88ed-457c-be22-d4e684c2c92a</id>
+    <summary>I-40 east of Bellevue</summary>
+    <marker>36.0903 -86.9398</marker>
+    <offsetmarker>36.0903 -86.9398</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_097.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam98.asp</link>
+    <id>urn:uuid:c7089a64-24be-457e-b62f-27aa0faf518d</id>
+    <summary>I-40 west of Sawyer Brown</summary>
+    <marker>36.0964 -86.9370333330</marker>
+    <offsetmarker>36.0964 -86.9370333330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_098.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam99.asp</link>
+    <id>urn:uuid:53dc55f7-7da8-4dbc-86a5-b05257e79ca9</id>
+    <summary>I-40 west of Old Hickory Blvd (Bellevue)</summary>
+    <marker>36.1075 -86.9282333330</marker>
+    <offsetmarker>36.1075 -86.9282333330</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/CCTV_099.JPG</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam201.asp</link>
+    <id>urn:uuid:3BFD043D-B79A-461B-BE48-DB9AFD979281</id>
+    <summary>I-40 West of SR 840 - Dickson Co.</summary>
+    <marker>36.012135 -87.376864</marker>
+    <offsetmarker>36.012135 -87.376864</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/cctv_201.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam202.asp</link>
+    <id>urn:uuid:0B6030F4-DF5C-4F1A-BF23-C542EE0C306F</id>
+    <summary>I-40 @ SR 840 - Dickson Co.</summary>
+    <marker>36.022093 -87.264826</marker>
+    <offsetmarker>36.022093 -87.264826</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/cctv_202.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam301.asp</link>
+    <id>urn:uuid:82A9C7C8-1F5A-4E1C-B5E9-674009863C05</id>
+    <summary>I-40 east of SR 840 - Wilson Co.</summary>
+    <marker>36.193337 -86.247536</marker>
+    <offsetmarker>36.193337 -86.247536</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/cctv_301.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvnash/cam302.asp</link>
+    <id>urn:uuid:CA6C7980-6E11-4FD4-80E4-F3C33352B903</id>
+    <summary>I-40 @ SR 840 Junction - Wilson Co.</summary>
+    <marker>36.183416 -86.352273</marker>
+    <offsetmarker>36.183416 -86.352273</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvnash/live/cctv_302.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam202.asp</link>
+    <id>urn:uuid:D2BA84E8-15E5-44AB-B936-2C858C06B375</id>
+    <summary>I-75 @ 83.9 Mile Marker</summary>
+    <marker>35.860055 -84.25868</marker>
+    <offsetmarker>35.860055 -84.25868</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16202.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam203.asp</link>
+    <id>urn:uuid:CC91FE2E-6DBA-4BB0-943E-18A9DC151C4C</id>
+    <summary>I-75 @ 84.6 Mile Marker</summary>
+    <marker>35.869472 -84.256012</marker>
+    <offsetmarker>35.869472 -84.256012</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16203.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam204.asp</link>
+    <id>urn:uuid:A510FE2F-9A0D-45BC-B4E3-AB3401D6AB32</id>
+    <summary>I-40 @ 366.8 Mile Marker</summary>
+    <marker>35.87061 -84.275763</marker>
+    <offsetmarker>35.87061 -84.275763</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16204.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam205.asp</link>
+    <id>urn:uuid:12953C03-AF18-40C3-910D-815BD29A75A3</id>
+    <summary>I-40 @ 369.2 Mile Marker</summary>
+    <marker>35.878366 -84.237554</marker>
+    <offsetmarker>35.878366 -84.237554</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16205.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam206.asp</link>
+    <id>urn:uuid:8B9A19B1-6FF6-4FEA-8F1E-3A30E2536479</id>
+    <summary>SR-115 @ 14.4 Mile Marker</summary>
+    <marker>35.793171 -83.993211</marker>
+    <offsetmarker>35.793171 -83.993211</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16206.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam207.asp</link>
+    <id>urn:uuid:7C8B8B7F-9F55-4F8F-964A-5DA2C4774775</id>
+    <summary>SR-115 @ 17.7 Mile Marker</summary>
+    <marker>35.836344 -83.970519</marker>
+    <offsetmarker>35.836344 -83.970519</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16207.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam208.asp</link>
+    <id>urn:uuid:C3FD3835-A0E3-4353-8E8A-BA105562AFEA</id>
+    <summary>I-140 @ 9.8 Mile Marker</summary>
+    <marker>35.845808 -83.992847</marker>
+    <offsetmarker>35.845808 -83.992847</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16208.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam209.asp</link>
+    <id>urn:uuid:64CB87FF-95EA-4DD1-A51A-6C17DCC52790</id>
+    <summary>SR-115 @ 19.2 Mile Marker</summary>
+    <marker>35.856708 -83.959989</marker>
+    <offsetmarker>35.856708 -83.959989</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16209.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam210.asp</link>
+    <id>urn:uuid:9EECD4B4-8DC7-4019-8EA1-15FB5CA3B72A</id>
+    <summary>SR-115 @ 19.9 Mile Marker</summary>
+    <marker>35.866484 -83.959346</marker>
+    <offsetmarker>35.866484 -83.959346</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16210.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam211.asp</link>
+    <id>urn:uuid:DC31FF82-971B-49BA-BEA6-8FB172FD766B</id>
+    <summary>I-40 @ 406.0 Mile Marker</summary>
+    <marker>35.983706 -83.633666</marker>
+    <offsetmarker>35.983706 -83.633666</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16211.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam212.asp</link>
+    <id>urn:uuid:2EF942D8-3ED2-4CD2-A990-73B1513E025E</id>
+    <summary>I-40 @ 407.5 Mile Marker</summary>
+    <marker>35.98289 -83.608419</marker>
+    <offsetmarker>35.98289 -83.608419</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16212.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam213.asp</link>
+    <id>urn:uuid:4216EA42-6BF0-46DF-A0FA-D229B018A8DE</id>
+    <summary>I-40 @ 408.9 Mile Marker</summary>
+    <marker>35.986777 -83.582247</marker>
+    <offsetmarker>35.986777 -83.582247</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16213.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam214.asp</link>
+    <id>urn:uuid:5247B2C6-A535-4115-AE44-71C400EE68EF</id>
+    <summary>I-40 @ 412.2 Mile Marker</summary>
+    <marker>36.008149 -83.530378</marker>
+    <offsetmarker>36.008149 -83.530378</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16214.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam215.asp</link>
+    <id>urn:uuid:FB020436-3517-4C79-BE1F-5C3FCF2D4D11</id>
+    <summary>I-40 @ 420.1 Mile Marker</summary>
+    <marker>36.057691 -83.403754</marker>
+    <offsetmarker>36.057691 -83.403754</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16215.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam216.asp</link>
+    <id>urn:uuid:001BC414-FBA0-4DE1-8CA8-7A2B991C5518</id>
+    <summary>I-40 @ 422.3 Mile Marker</summary>
+    <marker>36.059622 -83.375218</marker>
+    <offsetmarker>36.059622 -83.375218</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16216.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam217.asp</link>
+    <id>urn:uuid:40AAC4E8-87FC-4C39-A2CD-7234D383FDCB</id>
+    <summary>I-81 @ 000.0 Mile Marker</summary>
+    <marker>36.069255 -83.386724</marker>
+    <offsetmarker>36.069255 -83.386724</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16217.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam218.asp</link>
+    <id>urn:uuid:7D2F2EDC-B67C-41CD-B995-525F7507DB1D</id>
+    <summary>I-81 @ 53.0 Mile Marker</summary>
+    <marker>36.42264 -82.576704</marker>
+    <offsetmarker>36.42264 -82.576704</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16218.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam219.asp</link>
+    <id>urn:uuid:46333156-6553-48D0-887E-545B6BDA17F8</id>
+    <summary>I-81 @ 54.8 Mile Marker</summary>
+    <marker>36.441677 -82.555387</marker>
+    <offsetmarker>36.441677 -82.555387</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16219.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam220.asp</link>
+    <id>urn:uuid:0A175724-F592-4C2A-AB04-35AFDF80664B</id>
+    <summary>I-81 @ 56.8 Mile Marker</summary>
+    <marker>36.45388 -82.522275</marker>
+    <offsetmarker>36.45388 -82.522275</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16220.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam221.asp</link>
+    <id>urn:uuid:5A546185-695D-4A1B-8EC7-DF82D2FE482E</id>
+    <summary>I-81 @ 59.3 Mile Marker</summary>
+    <marker>36.475705 -82.489447</marker>
+    <offsetmarker>36.475705 -82.489447</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16221.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvknox/cam222.asp</link>
+    <id>urn:uuid:3D43F940-8C90-4C42-814B-E9782382DB74</id>
+    <summary>I-81 @ 61.4 Mile Marker</summary>
+    <marker>36.495048 -82.459905</marker>
+    <offsetmarker>36.495048 -82.459905</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvknox/live/cam16222.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam72.asp</link>
+    <id>urn:uuid:80BE4CC9-2365-41AE-A961-D5D1D419EC31</id>
+    <summary>I-75 North of White Oak Mtn.</summary>
+    <marker>35.137733 -84.993167</marker>
+    <offsetmarker>35.137733 -84.993167</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16172.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam73.asp</link>
+    <id>urn:uuid:F2C90334-D7B5-4B68-B2BF-32B2A3FA3FAE</id>
+    <summary>I-75 Southbound South of Highway 64</summary>
+    <marker>35.141367 -84.989583</marker>
+    <offsetmarker>35.141367 -84.989583</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16173.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam74.asp</link>
+    <id>urn:uuid:19A16877-8A51-481A-8F95-C4433044F3F9</id>
+    <summary>I-75 Northbound South of Highway 64</summary>
+    <marker>35.14435 -84.974683</marker>
+    <offsetmarker>35.14435 -84.974683</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16174.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam75.asp</link>
+    <id>urn:uuid:EC3EDA5A-90F1-44B2-A42A-3E6B167E4694</id>
+    <summary>I-75 South of Highway 64</summary>
+    <marker>35.148883 -84.957617</marker>
+    <offsetmarker>35.148883 -84.957617</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16175.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam76.asp</link>
+    <id>urn:uuid:64C09341-4C96-459A-88FC-925FA121E419</id>
+    <summary>I-75 @ Highway 64</summary>
+    <marker>35.15224 -84.94665</marker>
+    <offsetmarker>35.15224 -84.94665</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16176.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam77.asp</link>
+    <id>urn:uuid:EE528C64-ED99-4C34-BE46-0A23BDED9686</id>
+    <summary>I-75 North of Highway 64</summary>
+    <marker>35.166283 -84.928417</marker>
+    <offsetmarker>35.166283 -84.928417</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16177.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam78.asp</link>
+    <id>urn:uuid:054D46BF-730C-42B3-BD2C-5F932997946F</id>
+    <summary>I-75 South of SR-60</summary>
+    <marker>35.185017 -84.906817</marker>
+    <offsetmarker>35.185017 -84.906817</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16178.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam79.asp</link>
+    <id>urn:uuid:AB27E1AE-C5D3-43FF-9D41-B853FC3ACCDE</id>
+    <summary>I-75 @ SR-60</summary>
+    <marker>35.195413 -84.883271</marker>
+    <offsetmarker>35.195413 -84.883271</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16001.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam80.asp</link>
+    <id>urn:uuid:94680311-71CB-4327-A774-D005B7CC6464</id>
+    <summary>I-75 South OF PAUL HUFF</summary>
+    <marker>35.206743 -84.870725</marker>
+    <offsetmarker>35.206743 -84.870725</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16002.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam81.asp</link>
+    <id>urn:uuid:F645B0E3-EB95-4584-A155-83F50E03B769</id>
+    <summary>I-75 @ PAUL HUFF PKWY</summary>
+    <marker>35.212185 -84.866314</marker>
+    <offsetmarker>35.212185 -84.866314</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16003.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam82.asp</link>
+    <id>urn:uuid:239F9C24-A501-46DC-B0C1-0CD3C610C36C</id>
+    <summary>I-75 North OF PAUL HUFF</summary>
+    <marker>35.228434 -84.854974</marker>
+    <offsetmarker>35.228434 -84.854974</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16004.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam83.asp</link>
+    <id>urn:uuid:B197B5EF-E493-4422-A7C9-0648BB3220E4</id>
+    <summary>I-75 South OF CHARLESTON</summary>
+    <marker>35.267231 -84.827091</marker>
+    <offsetmarker>35.267231 -84.827091</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16005.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam84.asp</link>
+    <id>urn:uuid:2E6B20BC-4F1E-490A-B72C-81FFF3039D8E</id>
+    <summary>I- 75 NB @ CHARLESTON</summary>
+    <marker>35.281865 -84.817825</marker>
+    <offsetmarker>35.281865 -84.817825</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16006.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam85.asp</link>
+    <id>urn:uuid:CDEC9627-2059-4C03-9F7B-E0A980FB19C8</id>
+    <summary>I-75 NB North OF CHARLESTON</summary>
+    <marker>35.304115 -84.807881</marker>
+    <offsetmarker>35.304115 -84.807881</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16007.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam86.asp</link>
+    <id>urn:uuid:49D25349-2814-4DD9-8476-955F2D7A499B</id>
+    <summary>I-75 South OF LAMONTVILLE RD</summary>
+    <marker>35.319399 -84.793327</marker>
+    <offsetmarker>35.319399 -84.793327</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16008.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam87.asp</link>
+    <id>urn:uuid:F3CC187D-F07C-4F0B-B03B-C762087A1CBF</id>
+    <summary>I-75 South OF COUNTY RD 28</summary>
+    <marker>35.327666 -84.764506</marker>
+    <offsetmarker>35.327666 -84.764506</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16009.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam88.asp</link>
+    <id>urn:uuid:D83478F2-11D1-48F1-B9CB-F94A1C692E8A</id>
+    <summary>I-75 North OF COUNTY RD 28</summary>
+    <marker>35.332906 -84.755949</marker>
+    <offsetmarker>35.332906 -84.755949</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16010.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam89.asp</link>
+    <id>urn:uuid:360D2A64-1D8A-43E0-BA4C-D58469FBB3E1</id>
+    <summary>I-75 NB @ RICEVILLE</summary>
+    <marker>35.391225 -84.718509</marker>
+    <offsetmarker>35.391225 -84.718509</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16011.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam90.asp</link>
+    <id>urn:uuid:804B4289-871F-4C4A-B457-3C331883228F</id>
+    <summary>I-75 SB @ CHARLESTON</summary>
+    <marker>35.289096 -84.815758</marker>
+    <offsetmarker>35.289096 -84.815758</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16021.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam91.asp</link>
+    <id>urn:uuid:0176B084-2DC2-4160-8280-3E80B1CA2101</id>
+    <summary>I-75 SB North OF CHARLESTON</summary>
+    <marker>35.304576 -84.808821</marker>
+    <offsetmarker>35.304576 -84.808821</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16020.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam92.asp</link>
+    <id>urn:uuid:C7FC6099-5429-47B2-BAFC-9193746354C8</id>
+    <summary>I-75 @ HIWASSEE RIVER</summary>
+    <marker>35.317110 -84.798114</marker>
+    <offsetmarker>35.317110 -84.798114</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16019.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam93.asp</link>
+    <id>urn:uuid:333D723A-8438-4421-9136-80788EC85811</id>
+    <summary>I-75 @ LAMONTVILLE/CALHOUN</summary>
+    <marker>35.325062 -84.782747</marker>
+    <offsetmarker>35.325062 -84.782747</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16018.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam94.asp</link>
+    <id>urn:uuid:5EB732E2-0156-4C91-ADF1-A4DD2A227731</id>
+    <summary>I-75 North OF LAMONTVILLE RD</summary>
+    <marker>35.326393 -84.774667</marker>
+    <offsetmarker>35.326393 -84.774667</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16017.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam95.asp</link>
+    <id>urn:uuid:FADB6544-66E5-40D8-B668-A82B37020444</id>
+    <summary>I-75 North OF COUNTY RD 29</summary>
+    <marker>35.339873 -84.753463</marker>
+    <offsetmarker>35.339873 -84.753463</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16016.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam96.asp</link>
+    <id>urn:uuid:C2D9D29D-04D5-41B7-8A6E-7D8C60D04A40</id>
+    <summary>I-75 South OF RICEVILLE</summary>
+    <marker>35.375993 -84.733956</marker>
+    <offsetmarker>35.375993 -84.733956</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16015.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam97.asp</link>
+    <id>urn:uuid:B20DBE53-E16A-44FA-BDDF-D1528AA8DDA7</id>
+    <summary>I-75 SB @ RICEVILLE</summary>
+    <marker>35.393283 -84.719591</marker>
+    <offsetmarker>35.393283 -84.719591</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16014.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam98.asp</link>
+    <id>urn:uuid:4B9940A9-A353-4DD6-BE64-946BCA103C68</id>
+    <summary>I-75 North OF RICEVILLE</summary>
+    <marker>35.398527 -84.714178</marker>
+    <offsetmarker>35.398527 -84.714178</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16013.jpg</imageurl>
+  </entry>
+  <entry>
+    <title>CAMERA</title>
+    <link>http://www.tdot.state.tn.us/cctv/cctvchatt/cam99.asp</link>
+    <id>urn:uuid:6E647491-97C0-4A78-BEC3-837E2A2D9B7C</id>
+    <summary>I-75 South OF REST AREA</summary>
+    <marker>35.419135 -84.696351</marker>
+    <offsetmarker>35.419135 -84.696351</offsetmarker>
+    <imageurl>http://www.tdot.state.tn.us/cctv/cctvchatt/live/cam16012.jpg</imageurl>
+  </entry>
+</feed>

@@ -1,0 +1,15 @@
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel.Tests\bin\Release\Infostructure.MyBigBro.DataModel.Tests.dll.config
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel.Tests\bin\Release\Infostructure.MyBigBro.DataModel.Tests.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel.Tests\bin\Release\Infostructure.MyBigBro.DataModel.Tests.pdb
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel.Tests\bin\Release\Infostructure.MyBigBro.DataModel.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel.Tests\bin\Release\Infostructure.MyBigBro.Domain.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel.Tests\bin\Release\Moq.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel.Tests\bin\Release\Infostructure.MyBigBro.DataModel.pdb
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel.Tests\bin\Release\Infostructure.MyBigBro.Domain.pdb
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel.Tests\bin\Release\Moq.pdb
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel.Tests\bin\Release\Moq.xml
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel.Tests\obj\Release\Infostructure.MyBigBro.DataModel.Tests.csprojResolveAssemblyReference.cache
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel.Tests\obj\Release\Infostructure.MyBigBro.DataModel.Tests.dll
+d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel.Tests\obj\Release\Infostructure.MyBigBro.DataModel.Tests.pdb
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel.Tests\bin\Release\EntityFramework.dll
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel.Tests\bin\Release\EntityFramework.xml

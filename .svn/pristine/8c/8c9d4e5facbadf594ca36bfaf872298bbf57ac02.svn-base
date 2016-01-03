@@ -1,0 +1,61 @@
+﻿﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using Infostructure.MyBigBro.DataModel.Models;
+using Infostructure.MyBigBro.Domain;
+
+namespace Infostructure.MyBigBro.Web.Models
+{
+    public class Mapper : IMapper
+    {
+        public IEnumerable<GeoMarkerDto> GeoMarkersToGeoMarkerDtos(IEnumerable<IGeoMarker> target)
+        {
+            return target.Select(GeoMarkerToGeoMarkerDto).ToList();
+        }
+
+        public GeoMarker GeoMarkerDtoToGeoMarker(IGeoMarker target)
+        {
+            var result = new GeoMarker
+                             {
+                                 Id = target.Id,
+                                 MarkerDateTime = target.MarkerDateTime,
+                                 XCoord = target.XCoord,
+                                 YCoord = target.YCoord
+                             };
+            return result;
+        }
+
+        public GeoMarkerDto GeoMarkerToGeoMarkerDto(IGeoMarker target)
+        {
+            var result = new GeoMarkerDto
+            {
+                Id = target.Id,
+                MarkerDateTime = target.MarkerDateTime,
+                XCoord = target.XCoord,
+                YCoord = target.YCoord
+            };
+            return result;
+        }
+
+        public IEnumerable<WebCamDto> WebCamsToWebCamDtos(IEnumerable<IWebCam> target)
+        {
+            return target.Select(WebCamToWebCamDto).ToList();
+        }
+
+        public WebCamDto WebCamToWebCamDto(IWebCam target)
+        {
+            var result = new WebCamDto
+                             {
+                                 Id = target.Id,
+                                 Name = target.Name,
+                                 RadiusOfVisibility = target.RadiusOfVisibility,
+                                 Url = target.Url,
+                                 XCoord = target.XCoord,
+                                 YCoord = target.YCoord
+                             };
+            return result;
+        }
+    }
+}

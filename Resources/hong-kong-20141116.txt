@@ -1,0 +1,181 @@
+Camera, Image File Name, Description, Image Location - Easting Coordinate* Image Location - Northing Coordinate* URL
+H106F, H106F.JPG, Connaught Road Central near Exchange Square, 834060 816365 http://tdcctv.data.one.gov.hk/H106F.JPG
+H107F, H107F.JPG, Pedder Street, 834251 815825 http://tdcctv.data.one.gov.hk/H107F.JPG
+H108F, H108F.JPG, Queen's Road Central near Ice House Street, 834307 815670 http://tdcctv.data.one.gov.hk/H108F.JPG
+H109F, H109F.JPG, Queen's Road Central near Garden Road, 834701 815639 http://tdcctv.data.one.gov.hk/H109F.JPG
+H110F, H110F.JPG, Connaught Road Central near Shun Tak Centre, 833974 816414 http://tdcctv.data.one.gov.hk/H110F.JPG
+H130F, H130F.JPG, Pok Fu Lam Road near Pokfield Road, 831648 815857 http://tdcctv.data.one.gov.hk/H130F.JPG
+H132F2, H132F2.JPG, Pok Fu Lam Road near Smithfield Road, 831530 815440 http://tdcctv.data.one.gov.hk/H132F2.JPG
+H138F, H138F.JPG, Cotton Tree Drive near Murray Building, 834462 815412 http://tdcctv.data.one.gov.hk/H138F.JPG
+H201F, H201F.JPG, Hennessy Road near Arsenal Street, 835400 815422 http://tdcctv.data.one.gov.hk/H201F.JPG
+H203F, H203F.JPG, Yee Wo Street near Hennessy Road, 837091 815679 http://tdcctv.data.one.gov.hk/H203F.JPG
+H204F, H204F.JPG, Fleming Road near Harbour Road, 836013 815756 http://tdcctv.data.one.gov.hk/H204F.JPG
+H207F, H207F.JPG, Cross Harbour Tunnel Hong Kong Side, 836809 815849 http://tdcctv.data.one.gov.hk/H207F.JPG
+H209F, H209F.JPG, Queen's Road East near Stubbs Road, 836391 815128 http://tdcctv.data.one.gov.hk/H209F.JPG
+H210F, H210F.JPG, Aberdeen Tunnel - Wan Chai Side, 836502 815130 http://tdcctv.data.one.gov.hk/H210F.JPG
+H214F, H214F.JPG, Harcourt Road near Red Cross Headquarter, 835893 815674 http://tdcctv.data.one.gov.hk/H214F.JPG
+H215F, H215F.JPG, Gloucester Road near Wan Chai Interchange, 836636 815850 http://tdcctv.data.one.gov.hk/H215F.JPG
+H216F, H216F.JPG, Canal Road Flyover near Time Square, 836711 815628 http://tdcctv.data.one.gov.hk/H216F.JPG
+H222F, H222F.JPG, Gloucester Road near Sun Hung Kai Center, 836118 815632 http://tdcctv.data.one.gov.hk/H222F.JPG
+H305F, H305F.JPG, Causeway Road near Hing Fat Street, 837753 815881 http://tdcctv.data.one.gov.hk/H305F.JPG
+H307F, H307F.JPG, King's Road near Tin Chong Street, 838176 816841 http://tdcctv.data.one.gov.hk/H307F.JPG
+H401F, H401F.JPG, Wong Chuk Hang Road near Aberdeen Tunnel, 835637 812448 http://tdcctv.data.one.gov.hk/H401F.JPG
+H422F1, H422F1.JPG, Wong Chuk Hang Road near Aberdeen Technical School, 834650 812183 http://tdcctv.data.one.gov.hk/H422F1.JPG
+H422F2, H422F2.JPG, Ap Lei Chau Bridge Road near Aberdeen Police Station, 834633 812095 http://tdcctv.data.one.gov.hk/H422F2.JPG
+H429F, H429F.JPG, Aberdeen Praya Road near Fish Market, 833545 812189 http://tdcctv.data.one.gov.hk/H429F.JPG
+H801F, H801F.JPG, Island Eastern Corridor near Ka Wah Centre, 839132 817250 http://tdcctv.data.one.gov.hk/H801F.JPG
+H802F, H802F.JPG, Island Eastern Corridor near Hoi Yu Street, 839855 816912 http://tdcctv.data.one.gov.hk/H802F.JPG
+H803F, H803F.JPG, Island Eastern Corridor near Quarry Bay Park, 840787 816596 http://tdcctv.data.one.gov.hk/H803F.JPG
+H903F, H903F.JPG, Morrison Hill Road near Sports Road, 836673 815230 http://tdcctv.data.one.gov.hk/H903F.JPG
+H904F, H904F.JPG, Canal Road Flyover near Gloucester Road, 836679 815711 http://tdcctv.data.one.gov.hk/H904F.JPG
+TC551F, TC551F.JPG, Kap Shui Mun Bridge, 823592 822667 http://tdcctv.data.one.gov.hk/TC551F.JPG
+TC573F, TC573F.JPG, Lantau Link near Toll Plaza, 822215 822108 http://tdcctv.data.one.gov.hk/TC573F.JPG
+SM933F, SM933F.JPG, Shing Mun Tunnel Road, 837023 826509 http://tdcctv.data.one.gov.hk/SM933F.JPG
+SM934F, SM934F.JPG, Shing Mun Tunnel Shatin Side, 835189 826867 http://tdcctv.data.one.gov.hk/SM934F.JPG
+ST106F, ST106F.JPG, Sha Tin Wai Road/Sha Lek Highway Slip Road, 838649 826523 http://tdcctv.data.one.gov.hk/ST106F.JPG
+ST109F, ST109F.JPG, Tai Chung Kiu Road near Ravana Garden, 839016 827761 http://tdcctv.data.one.gov.hk/ST109F.JPG
+ST112F, ST112F.JPG, Mei Tin Rd nr Che Kung Miu Rd Rbt, 836584 825780 http://tdcctv.data.one.gov.hk/ST112F.JPG
+ST114F, ST114F.JPG, Tai Po Road - Shatin Section, 837674 827277 http://tdcctv.data.one.gov.hk/ST114F.JPG
+ST115F, ST115F.JPG, Fo Tan Road, 838338 827859 http://tdcctv.data.one.gov.hk/ST115F.JPG
+ST117F, ST117F.JPG, Sai Sha Road near Ma On Shan Sports Ground, 841439 831310 http://tdcctv.data.one.gov.hk/ST117F.JPG
+ST119F, ST119F.JPG, Sai Sha Road/Kam Ying Road, 842843 831980 http://tdcctv.data.one.gov.hk/ST119F.JPG
+TH101F, TH101F.JPG, Tolo Highway near Ma Liu Shui Interchange, 839951 830304 http://tdcctv.data.one.gov.hk/TH101F.JPG
+TH110F, TH110F.JPG, Tolo Highway near HK Science Park, 838284 833227 http://tdcctv.data.one.gov.hk/TH110F.JPG
+TH114F, TH114F.JPG, Tolo Highway near Island House Interchange, 836304 833974 http://tdcctv.data.one.gov.hk/TH114F.JPG
+RT115F, RT115F.JPG, Lung Mun Road near Wu Chui Road, 813942 826353 http://tdcctv.data.one.gov.hk/RT115F.JPG
+RT116F, RT116F.JPG, Wong Chu Road near Lung Mun Road, 814689 827701 http://tdcctv.data.one.gov.hk/RT116F.JPG
+TC604F, TC604F.JPG, Ting Kau Bridge, 826493 824541 http://tdcctv.data.one.gov.hk/TC604F.JPG
+TC612F, TC612F.JPG, Tuen Mun Road to Ting Kau Bridge, 825761 825704 http://tdcctv.data.one.gov.hk/TC612F.JPG
+TR101F, TR101F.JPG, Tuen Mun Road - Chai Wan Kok, 828593 826093 http://tdcctv.data.one.gov.hk/TR101F.JPG
+TR105F, TR105F.JPG, Tuen Mun Road - Ting Kau Section, 826026 825793 http://tdcctv.data.one.gov.hk/TR105F.JPG
+TR108F, TR108F.JPG, Tuen Mun Road - Sham Tseng Interchange, 824330 825576 http://tdcctv.data.one.gov.hk/TR108F.JPG
+TR114F, TR114F.JPG, Tuen Mun Road - Tai Lam Kok Section, 820053 824313 http://tdcctv.data.one.gov.hk/TR114F.JPG
+TR119F, TR119F.JPG, Tuen Mun Road - Sam Shing Hui, 816113 827041 http://tdcctv.data.one.gov.hk/TR119F.JPG
+TC104F, TC104F.JPG, Tsing Kwai Highway Near Container Port 4, 831612 822223 http://tdcctv.data.one.gov.hk/TC104F.JPG
+BC101F, BC101F.JPG, San Tin Highway near Fairview Park, 823794 837083 http://tdcctv.data.one.gov.hk/BC101F.JPG
+BC102F, BC102F.JPG, San Tin Highway near Mai Po, 824754 839245 http://tdcctv.data.one.gov.hk/BC102F.JPG
+BC103F, BC103F.JPG, San Sham Road Roundabout, 826465 840287 http://tdcctv.data.one.gov.hk/BC103F.JPG
+FH104F, FH104F.JPG, Fanling Highway near Kwu Tung, 827827 840497 http://tdcctv.data.one.gov.hk/FH104F.JPG
+FH106F, FH106F.JPG, Fanling Highway near Sheung Shui Roundabout, 830869 840072 http://tdcctv.data.one.gov.hk/FH106F.JPG
+FH107F, FH107F.JPG, Fanling Highway near Pak Wo Road, 831274 839862 http://tdcctv.data.one.gov.hk/FH107F.JPG
+NH101F, NH101F.JPG, Jockey Club Road near Fanling Highway, 833149 838713 http://tdcctv.data.one.gov.hk/NH101F.JPG
+NH109F, NH109F.JPG, Jockey Club Road near Ma Sik Road, 831857 840099 http://tdcctv.data.one.gov.hk/NH109F.JPG
+NH113F, NH113F.JPG, San Wan Road near Lung Sum Avenue, 831083 840385 http://tdcctv.data.one.gov.hk/NH113F.JPG
+NH115F, NH115F.JPG, Sha Tau Kok Road near Ma Sik Road, 833194 840146 http://tdcctv.data.one.gov.hk/NH115F.JPG
+TP102F, TP102F.JPG, Yuen Shin Road near Ting Kok Road, 836303 835283 http://tdcctv.data.one.gov.hk/TP102F.JPG
+TP105F, TP105F.JPG, Tai Po Tai Wo Road near Nam Wan Road, 835765 834669 http://tdcctv.data.one.gov.hk/TP105F.JPG
+TP112F, TP112F.JPG, Tai Po Tai Wo Road near Tai Po Road- Tai Wo, 834416 834785 http://tdcctv.data.one.gov.hk/TP112F.JPG
+TP114F, TP114F.JPG, Nam Wan Road near Kwong Fuk Road, 835744 834126 http://tdcctv.data.one.gov.hk/TP114F.JPG
+K101F, K101F.JPG, Salisbury Road near Nathan Road, 835792 817332 http://tdcctv.data.one.gov.hk/K101F.JPG
+K102F, K102F.JPG, Salisbury Road near Chatham Road, 836094 817392 http://tdcctv.data.one.gov.hk/K102F.JPG
+K104F, K104F.JPG, Canton Road near China HK City, 835403 817905 http://tdcctv.data.one.gov.hk/K104F.JPG
+K106F, K106F.JPG, Chatham Road near Austin Road, 836292 818257 http://tdcctv.data.one.gov.hk/K106F.JPG
+K107F, K107F.JPG, Cross Harbour Tunnel Kowloon Side, 836663 818254 http://tdcctv.data.one.gov.hk/K107F.JPG
+K108F, K108F.JPG, Jordan Road near Ferry Street, 835241 818565 http://tdcctv.data.one.gov.hk/K108F.JPG
+K109F, K109F.JPG, Chatham Road near Princess Margaret Road, 836431 818558 http://tdcctv.data.one.gov.hk/K109F.JPG
+K111F, K111F.JPG, Waterloo Road / Ferry Street, 835268 819288 http://tdcctv.data.one.gov.hk/K111F.JPG
+K112F, K112F.JPG, Waterloo Road near Tung Fong Street, 835746 819346 http://tdcctv.data.one.gov.hk/K112F.JPG
+K123F, K123F.JPG, Princess Margaret Road near King's Park, 836386 819050 http://tdcctv.data.one.gov.hk/K123F.JPG
+K209F, K209F.JPG, Boundary Street near Tai Hang Tung Road, 835803 820822 http://tdcctv.data.one.gov.hk/K209F.JPG
+K221F, K221F.JPG, Cherry Street near Hoi Wang Road, 834872 819932 http://tdcctv.data.one.gov.hk/K221F.JPG
+K305F, K305F.JPG, Cheung Sha Wan Road near Kwong Cheung Street, 833671 822192 http://tdcctv.data.one.gov.hk/K305F.JPG
+K325F, K325F.JPG, Kwai Chung Road near Mei Fo Sun Chuen, 832615 821975 http://tdcctv.data.one.gov.hk/K325F.JPG
+K404F, K404F.JPG, Kai Tak Tunnel Kowloon City Side, 837362 819479 http://tdcctv.data.one.gov.hk/K404F.JPG
+K405F, K405F.JPG, Ma Tau Wai Road near Farm Road, 837368 820335 http://tdcctv.data.one.gov.hk/K405F.JPG
+K408F, K408F.JPG, Princess Margaret Road/Pui Ching Road, 836431 819862 http://tdcctv.data.one.gov.hk/K408F.JPG
+K409F, K409F.JPG, Princess Margaret Road/Argyle Street, 836338 820335 http://tdcctv.data.one.gov.hk/K409F.JPG
+K502F, K502F.JPG, Waterloo Road/Cornwall Street, 836493 822345 http://tdcctv.data.one.gov.hk/K502F.JPG
+K505F, K505F.JPG, Lung Cheung Road/Chuk Yuen Road, 837065 822685 http://tdcctv.data.one.gov.hk/K505F.JPG
+K506F, K506F.JPG, Prince Edward Rd W Flyover nr Olympic Garden, 837767 821018 http://tdcctv.data.one.gov.hk/K506F.JPG
+K508F, K508F.JPG, Lung Cheung Road/Po Kong Village Road, 838507 822544 http://tdcctv.data.one.gov.hk/K508F.JPG
+K521F, K521F.JPG, Prince Edward Road East near San Po Kong, 838268 821504 http://tdcctv.data.one.gov.hk/K521F.JPG
+K602F, K602F.JPG, Lei Yue Mun Road near Cha Kwo Ling Road, 841675 818988 http://tdcctv.data.one.gov.hk/K602F.JPG
+K607F, K607F.JPG, Sau Mau Ping Road near Hip Wo Street, 841327 820562 http://tdcctv.data.one.gov.hk/K607F.JPG
+K613F, K613F.JPG, Kai Cheung Road near Wang Chiu Road, 839535 820747 http://tdcctv.data.one.gov.hk/K613F.JPG
+K614F, K614F.JPG, Lung Cheung Road/Clear Water Bay Road, 839495 821701 http://tdcctv.data.one.gov.hk/K614F.JPG
+K621F, K621F.JPG, Kwun Tong Road near Kai Yip Estate, 839923 821103 http://tdcctv.data.one.gov.hk/K621F.JPG
+K627F, K627F.JPG, Clear Water Bay Road near Fei Ngo Shan Road, 840990 821665 http://tdcctv.data.one.gov.hk/K627F.JPG
+K802F, K802F.JPG, Ching Cheung Road near Caritas Medical Center, 833946 822627 http://tdcctv.data.one.gov.hk/K802F.JPG
+K804F, K804F.JPG, Lung Cheung Road near Chak On Estate, 834977 822541 http://tdcctv.data.one.gov.hk/K804F.JPG
+K809F2, K809F2.JPG, Kwun Tong Road near Kowloon Bay MTR Station, 840175 820079 http://tdcctv.data.one.gov.hk/K809F2.JPG
+K810F, K810F.JPG, Kwun Tong Road near Ngua Tau Kok MTR Station, 840743 819523 http://tdcctv.data.one.gov.hk/K810F.JPG
+K811F, K811F.JPG, Tseung Kwan O Road near Tsui Ping South Estate, 842195 819230 http://tdcctv.data.one.gov.hk/K811F.JPG
+K812F, K812F.JPG, Kwun Tong Bypass near Laguna City, 841658 818874 http://tdcctv.data.one.gov.hk/K812F.JPG
+K813F, K813F.JPG, Kwun Tong Bypass near Lai Yip Street, 840416 819283 http://tdcctv.data.one.gov.hk/K813F.JPG
+K814F, K814F.JPG, Kwun Tong Bypass near Kai Cheung Road, 839093 820705 http://tdcctv.data.one.gov.hk/K814F.JPG
+K816F, K816F.JPG, West Kowloon Corridor near Nam Cheong Estate, 834690 820692 http://tdcctv.data.one.gov.hk/K816F.JPG
+K911F, K911F.JPG, West Kowloon Hwy - Yau Ma Tei Interchange N, 834613 819573 http://tdcctv.data.one.gov.hk/K911F.JPG
+K914F, K914F.JPG, West Kowloon Highway near Lai Wan Interchange, 832783 821350 http://tdcctv.data.one.gov.hk/K914F.JPG
+TK101F, TK101F.JPG, Po Lam Road North near Po Hong Road, 843959 820807 http://tdcctv.data.one.gov.hk/TK101F.JPG
+TK105F, TK105F.JPG, Po Shun Road near Tseung Kwan O Swimming Pool, 844972 819827 http://tdcctv.data.one.gov.hk/TK105F.JPG
+TK110F, TK110F.JPG, Chui Ling Road near Po Shun Road, 844372 818516 http://tdcctv.data.one.gov.hk/TK110F.JPG
+TK904F, TK904F.JPG, Tseung Kwan O Tunnel - Tseung Kwan O Side, 844296 820178 http://tdcctv.data.one.gov.hk/TK904F.JPG
+NL121F, NL121F.JPG, North Lantau Highway near Sunny Bay, 820149 820655 http://tdcctv.data.one.gov.hk/NL121F.JPG
+NL124F, NL124F.JPG, North Lantau Highway near Siu Ho Wan, 817086 819027 http://tdcctv.data.one.gov.hk/NL124F.JPG
+NL126F, NL126F.JPG, North Lantau Highway near Pak Mong, 814546 817693 http://tdcctv.data.one.gov.hk/NL126F.JPG
+NL128F, NL128F.JPG, North Lantau Highway near Tung Chung, 812639 816709 http://tdcctv.data.one.gov.hk/NL128F.JPG
+PB106F, PB106F.JPG, Penny's Bay Highway, 821740 820686 http://tdcctv.data.one.gov.hk/PB106F.JPG
+TC560F, TC560F.JPG, Tsing Ma Bridge, 825674 823558 http://tdcctv.data.one.gov.hk/TC560F.JPG
+TR103F, TR103F.JPG, Tuen Mun Road - Yau Kom Tau Section, 827366 825737 http://tdcctv.data.one.gov.hk/TR103F.JPG
+TR107F, TR107F.JPG, Tuen Mun Road - Sham Tseng Section, 825046 825201 http://tdcctv.data.one.gov.hk/TR107F.JPG
+TR111F, TR111F.JPG, Tuen Mun Road - near Tsing Lung Tau, 822317 825036 http://tdcctv.data.one.gov.hk/TR111F.JPG
+TR116F, TR116F.JPG, Tuen Mun Road - Siu Lam Section, 818125 825508 http://tdcctv.data.one.gov.hk/TR116F.JPG
+SM936F, SM936F.JPG, Cheung Pei Shan Road, 831216 826537 http://tdcctv.data.one.gov.hk/SM936F.JPG
+TC101F, TC101F.JPG, Cheung Tsing Bridge, 829564 823296 http://tdcctv.data.one.gov.hk/TC101F.JPG
+TC302F, TC302F.JPG, Cheung Tsing Highway near Kam Chuk Kok, 827593 822839 http://tdcctv.data.one.gov.hk/TC302F.JPG
+TW102F, TW102F.JPG, Kwai Chung Road near Container Terminal, 831675 822441 http://tdcctv.data.one.gov.hk/TW102F.JPG
+TW103F, TW103F.JPG, Tsuen Wan Road near Tsuen Tsing Interchange, 830393 824630 http://tdcctv.data.one.gov.hk/TW103F.JPG
+TW105F, TW105F.JPG, Kwai Tsing Road near Tsing Yi Bridge, 830749 824045 http://tdcctv.data.one.gov.hk/TW105F.JPG
+TW108F, TW108F.JPG, Kwai Chung Road near Kwai Hing MTR Station, 831610 824699 http://tdcctv.data.one.gov.hk/TW108F.JPG
+TW109F, TW109F.JPG, Castle Peak Road near Wo Yi Hop Road, 831993 825116 http://tdcctv.data.one.gov.hk/TW109F.JPG
+TW112F, TW112F.JPG, Wo Yi Hop Road near Lei Shu Road, 832091 825877 http://tdcctv.data.one.gov.hk/TW112F.JPG
+TW116F, TW116F.JPG, Texaco Road Flyover near Sha Tsui Road, 830553 825335 http://tdcctv.data.one.gov.hk/TW116F.JPG
+TW117F, TW117F.JPG, Castle Peak Road near Texaco Road North, 830770 825684 http://tdcctv.data.one.gov.hk/TW117F.JPG
+TW120F, TW120F.JPG, Tsuen Wan Road near Tai Chung Road, 829235 825713 http://tdcctv.data.one.gov.hk/TW120F.JPG
+TW121F, TW121F.JPG, Tsing Kwai Highway/Cheung Tsing Tunnel, 829296 823288 http://tdcctv.data.one.gov.hk/TW121F.JPG
+H421F, H421F.JPG, Aberdeen Tunnel - Aberdeen Side, 836325 812440 http://tdcctv.data.one.gov.hk/H421F.JPG
+K202F, K202F.JPG, Argyle Street near Yim Po Fong Street, 835820 820088 http://tdcctv.data.one.gov.hk/K202F.JPG
+K205F, K205F.JPG, Nathan Road near Lai Chi Kok Road, 835420 820347 http://tdcctv.data.one.gov.hk/K205F.JPG
+ST701F, ST701F.JPG, Tolo Highway near Sha Tin Sewage Treatment Works, 839872 830033 http://tdcctv.data.one.gov.hk/ST701F.JPG
+ST703F, ST703F.JPG, Tai Po Road near MTR Racecourse Station, 838936 828954 http://tdcctv.data.one.gov.hk/ST703F.JPG
+ST712F1, ST712F1.JPG, Tate's Cairn Highway near Shatin Hospital, 839906 828893 http://tdcctv.data.one.gov.hk/ST712F1.JPG
+ST714F, ST714F.JPG, Tate's Cairn Highway near Tai Shek Kwu, 839712 827856 http://tdcctv.data.one.gov.hk/ST714F.JPG
+ST715F, ST715F.JPG, Sha Lek Highway near Prince Wales Hospital, 838818 826517 http://tdcctv.data.one.gov.hk/ST715F.JPG
+ST721F, ST721F.JPG, Shatin Road near Yuen Chau Kok Park, 838811 827270 http://tdcctv.data.one.gov.hk/ST721F.JPG
+ST725F, ST725F.JPG, Lion Rock Tunnel Road near Sun Tin Wai Estate, 837361 825546 http://tdcctv.data.one.gov.hk/ST725F.JPG
+ST731F, ST731F.JPG, Ma On Shan Bypass near Heng On Estate, 841532 830528 http://tdcctv.data.one.gov.hk/ST731F.JPG
+ST732F, ST732F.JPG, Ma On Shan Bypass near Yiu On Estate, 842035 830893 http://tdcctv.data.one.gov.hk/ST732F.JPG
+SW109F, SW109F.JPG, Yuen Long Highway near Hung Tin Road, 818100 832003 http://tdcctv.data.one.gov.hk/SW109F.JPG
+SW111F, SW111F.JPG, Yuen Long Highway near Tong Yan San Tsuen Interchange, 819442 833173 http://tdcctv.data.one.gov.hk/SW111F.JPG
+SW112F, SW112F.JPG, Yuen Long Highway near Shap Pat Heung, 821421 832797 http://tdcctv.data.one.gov.hk/SW112F.JPG
+SW113F, SW113F.JPG, Yuen Long Highway near Pok Oi Interchange, 822114 833747 http://tdcctv.data.one.gov.hk/SW113F.JPG
+TI101F, TI101F.JPG, Castle Peak Road near Hung Shui Kiu, 818090 832902 http://tdcctv.data.one.gov.hk/TI101F.JPG
+TM101F, TM101F.JPG, Wu Chui Road near Wu King Road, 814526 826116 http://tdcctv.data.one.gov.hk/TM101F.JPG
+TM103F, TM103F.JPG, Lung Mun Road near Tuen Mun Recreation and Sports Centre, 814447 827250 http://tdcctv.data.one.gov.hk/TM103F.JPG
+TM118F, TM118F.JPG, Pui To Road near Tuen Mun Park, 815352 828319 http://tdcctv.data.one.gov.hk/TM118F.JPG
+TR704F, TR704F.JPG, Tuen Mun Road near Tsing Yin Street, 815621 828752 http://tdcctv.data.one.gov.hk/TR704F.JPG
+YL101F, YL101F.JPG, Long Tin Road near Long Ping Road, 819746 834085 http://tdcctv.data.one.gov.hk/YL101F.JPG
+YL106F, YL106F.JPG, Castle Peak Road nearYuen Long, 821368 833929 http://tdcctv.data.one.gov.hk/YL106F.JPG
+YL111F, YL111F.JPG, Castle Peak Road near Pok Oi Interchange, 821917 833889 http://tdcctv.data.one.gov.hk/YL111F.JPG
+BC702F, BC702F.JPG, Castle Peak Road near Mai Po, 824086 838533 http://tdcctv.data.one.gov.hk/BC702F.JPG
+TP113F, TP113F.JPG, Fanling Highway near Hong Lok Yuen Road, 833366 835885 http://tdcctv.data.one.gov.hk/TP113F.JPG
+FH706F, FH706F.JPG, Fanling Highway near MTR Fanling Station, 832352 839113 http://tdcctv.data.one.gov.hk/FH706F.JPG
+ST922F, ST922F.JPG, Lion Rock Tunnel Road near Hung Mui Kuk Road, 836845 825101 http://tdcctv.data.one.gov.hk/ST922F.JPG
+SW103F, SW103F.JPG, Kong Sham Western Highway near Ha Tsuen, 815876 834298 http://tdcctv.data.one.gov.hk/SW103F.JPG
+SW108F, SW108F.JPG, Yuen Long Highway near Tan Kwai Tsuen, 817746 831659 http://tdcctv.data.one.gov.hk/SW108F.JPG
+TL102F, TL102F.JPG, Tai Lam Tunnel - Yuen Long Side, 824319 830139 http://tdcctv.data.one.gov.hk/TL102F.JPG
+TL103F, TL103F.JPG, Tai Lam Tunnel - Ting Kau Side, 824981 826211 http://tdcctv.data.one.gov.hk/TL103F.JPG
+TS102F, TS102F.JPG, Nam Wan Tunnel- Stonecutters Bridge side, 829111 821664 http://tdcctv.data.one.gov.hk/TS102F.JPG
+TS104F, TS104F.JPG, Tsing Sha Highway near Lai Chi Kok, 832851 822646 http://tdcctv.data.one.gov.hk/TS104F.JPG
+TS105F, TS105F.JPG, Sha Tin Heights Tunnel - Sha Tin Side, 835713 825356 http://tdcctv.data.one.gov.hk/TS105F.JPG
+TW701F, TW701F.JPG, Cheung Pei Shan Road near Mei Wan Street, 829717 826375 http://tdcctv.data.one.gov.hk/TW701F.JPG
+H702F, H702F.JPG, Western Harbour Crossing Hong Kong Side, 832629 816766 http://tdcctv.data.one.gov.hk/H702F.JPG
+H703F, H703F.JPG, Connaught Road West, 832480 816741 http://tdcctv.data.one.gov.hk/H703F.JPG
+K901F, K901F.JPG, Western Harbour Crossing Kowloon Side, 834394 818348 http://tdcctv.data.one.gov.hk/K901F.JPG
+K931F, K931F.JPG, Tate's Cairn Tunnel Kowloon Side, 839086 822485 http://tdcctv.data.one.gov.hk/K931F.JPG
+K952F, K952F.JPG, Eastern Harbour Crossing Kowloon Side, 842183 818178 http://tdcctv.data.one.gov.hk/K952F.JPG
+ST942F, ST942F.JPG, Tate's Cairn Tunnel Shatin Side, 839632 826938 http://tdcctv.data.one.gov.hk/ST942F.JPG
+K121F, K121F.JPG, Canton Road near Salisbury Road, 835512 817290 http://tdcctv.data.one.gov.hk/K121F.JPG
+TL101F, TL101F.JPG, Tsing Long Highway near Ko Po San Tsuen, 823996 833151 http://tdcctv.data.one.gov.hk/TL101F.JPG
+TR706F, TR706F.JPG, Tuen Mun Road near MTR Siu Hong Station, 815928 830243 http://tdcctv.data.one.gov.hk/TR706F.JPG
+TS101F, TS101F.JPG, Nam Wan Tunnel - Sai Tso Wan Side, 827720 822707 http://tdcctv.data.one.gov.hk/TS101F.JPG

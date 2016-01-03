@@ -1,0 +1,82 @@
+﻿using System.IO;
+using System.Text;
+using Infostructure.MyBigBro.BusinessLogic.WebCam;
+using Infostructure.MyBigBro.DataModel.DataAccess;
+using Infostructure.MyBigBro.DataModel.Models;
+using Infostructure.MyBigBro.Domain;
+using Infostructure.MyBigBro.ImageStorageServiceAgent;
+using Moq;
+using NUnit.Framework;
+
+namespace UnitTests.Infostructure.MyBigBro.BusinessLogic
+{
+    [TestFixture]
+    public class TestWebCamControl
+    {
+        private string dummyImageData = @"blahblahblah";
+        private Mock<IWebCamImage> webCamImage = null;
+        private Mock<IWebCam> webCam = null;
+        private Mock<IStorageServiceAgent> storageServiceAgent = null;
+        private Mock<IWebCamDataRequest> webCamDataRequest = null;
+        private Mock<IMyBigBroRepository> myBigBroRepository = null;
+
+        [SetUp]
+        public void SetUpUnitTestsWebCamService()
+        {
+            webCamImage = new Mock<IWebCamImage>();
+            webCam = new Mock<IWebCam>();
+            storageServiceAgent = new Mock<IStorageServiceAgent>();
+            webCamDataRequest = new Mock<IWebCamDataRequest>();
+            myBigBroRepository = new Mock<IMyBigBroRepository>();
+        }
+
+        [Test]
+        public void TestCaptureCurrentImage()
+        {
+            // arrange
+            var webCamControl = new WebCamControl(storageServiceAgent.Object, myBigBroRepository.Object);
+            string key = null;
+            webCam.SetupProperty(x => x.Url, "Dummy URL - should this be validated?");
+            webCamControl.WebCam = webCam.Object;
+            storageServiceAgent.Setup(x => x.PutImage(It.IsAny<IWebCamImage>(), out key)).Returns(string.Empty);
+            webCamControl.StorageServiceAgent = storageServiceAgent.Object;
+            webCamImage.SetupProperty(x => x.Data, Encoding.ASCII.GetBytes(dummyImageData));
+            webCamControl.WebCamImage = webCamImage.Object;
+            webCamDataRequest.Setup(x => x.GetWebCamResponse(It.IsAny<string>())).Returns(new WebCamWebResponse());
+            webCamDataRequest.Setup(x => x.GetWebCamResponseStream(It.IsAny<WebCamWebResponse>())).Returns(new MemoryStream(Encoding.ASCII.GetBytes(dummyImageData)));
+
+            // act
+            webCamControl.CaptureCurrentImage(webCamDataRequest.Object);
+
+            // assert
+            Assert.NotNull(webCamControl.WebCamImage.Data);
+            Assert.AreEqual(webCamControl.WebCamImage.Data.Length, dummyImageData.Length);
+        }
+
+        [Test]
+        public void TestStoreCapturedImage()
+        {
+            // arrange
+            var webCamControl = new WebCamControl(storageServiceAgent.Object, myBigBroRepository.Object);
+            string key = null;
+            webCam.SetupProperty(x => x.Id, 14);
+            webCamControl.WebCam = webCam.Object;  
+            webCamImage.SetupProperty(x => x.Data, Encoding.ASCII.GetBytes(dummyImageData));
+            webCamControl.WebCamImage = webCamImage.Object;
+            storageServiceAgent.Setup(x => x.PutImage(It.IsAny<IWebCamImage>(), out key)).Returns("test.file");
+            webCamControl.StorageServiceAgent = storageServiceAgent.Object;
+            myBigBroRepository.Setup(x => x.Add(It.IsAny<ICapturedImage>()));
+            myBigBroRepository.Setup(x => x.SaveChanges()).Returns(1);
+            webCamControl.MyBigBroRepository = myBigBroRepository.Object;
+            webCamControl.CapturedImage = new CapturedImage();
+
+            // act
+            webCamControl.StoreCapturedImage();
+
+            // assert
+            Assert.NotNull(webCamControl.CapturedImage);
+            Assert.AreEqual(webCamControl.CapturedImage.Url, "test.file");
+            Assert.AreEqual(webCamControl.CapturedImage.WebCamId, 14);
+        }
+    }
+}

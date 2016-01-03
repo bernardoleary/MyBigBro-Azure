@@ -1,0 +1,1 @@
+D:\WebApps\MyBigBro\Infostructure.MyBigBro.Web\obj\Debug\Infostructure.MyBigBro.Web.csprojResolveAssemblyReference.cache

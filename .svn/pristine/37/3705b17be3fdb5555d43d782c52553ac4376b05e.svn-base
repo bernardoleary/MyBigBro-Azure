@@ -1,0 +1,18 @@
+﻿﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using Infostructure.MyBigBro.DataModel.Models;
+﻿using Infostructure.MyBigBro.Domain;
+
+namespace Infostructure.MyBigBro.Web.Models
+{
+    public class GeoMarkerDto : IGeoMarker
+    {
+        public int Id { get; set; }
+        public DateTime MarkerDateTime { get; set; }
+        public double XCoord { get; set; }
+        public double YCoord { get; set; }
+        public int? CapturedImageId { get; set; }
+    }
+}

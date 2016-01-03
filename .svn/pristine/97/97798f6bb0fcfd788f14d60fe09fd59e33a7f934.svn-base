@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Infostructure.MyBigBro.DataModel.DataAccess;
+
+namespace Infostructure.MyBigBro.BusinessLogic.Services
+{
+    public class AccountService : IAccountService
+    {
+        private Infostructure.MyBigBro.DataModel.DataAccess.IMyBigBroRepository _myBigBroRepository = null;
+
+        public IMyBigBroRepository MyBigBroRepository 
+        {
+            get { return _myBigBroRepository; }
+            set { _myBigBroRepository = value; }
+        }
+
+        public bool ValidateUser(string userName, string password)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DataModel.Models.User GetUser(string userName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DataModel.Models.User CreateUser(DataModel.Models.User user)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

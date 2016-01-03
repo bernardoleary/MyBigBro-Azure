@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Infostructure.MyBigBro.BusinessLogic.GeoSpatial;
+using Infostructure.MyBigBro.BusinessLogic.Services;
+using Infostructure.MyBigBro.BusinessLogic.WebCam;
+using Infostructure.MyBigBro.DataModel.DataAccess;
+using Infostructure.MyBigBro.DataModel.Models;
+using Infostructure.MyBigBro.Domain;
+using Infostructure.MyBigBro.ImageStorageServiceAgent;
+using Moq;
+using NUnit.Framework;
+using User = Infostructure.MyBigBro.DataModel.Models.User;
+
+namespace Infostructure.MyBigBro.BusinessLogic.Tests.UnitTests
+{
+    [TestFixture]
+    public class TestAccountService
+    {
+        private Mock<IMyBigBroRepository> repository = null;
+        private IAccountService accountService = null;
+        private ICredentials credentials = null;
+
+        [SetUp]
+        public void SetUpTestAccountService()
+        {
+            // arrange
+            repository = new Mock<IMyBigBroRepository>();
+            repository.Setup(r => r.Set<User>()).Returns(new List<User>()
+            {
+                new User() {Id = 0, UserName = "test1", Password = "test2"},
+                new User() {Id = 2, UserName = "test3", Password = "test4"}
+            }.AsQueryable());
+            accountService = new AccountService { MyBigBroRepository = repository.Object };
+        }
+
+        [Test]
+        public void TestValidateUserSuccess()
+        {
+            // arrange
+            credentials = new Credentials { UserName = "test1", Password = "test2" };
+
+            // act
+            var user = accountService.ValidateUser(credentials);
+
+            // assert
+            Assert.NotNull(user);
+            Assert.AreEqual(user.UserName, credentials.UserName);
+        }
+
+        [Test]
+        public void TestValidateUserFailure()
+        {
+            // arrange
+            credentials = new Credentials { UserName = "test111", Password = "test222" };
+
+            // act
+            var user = accountService.ValidateUser(credentials);
+
+            // assert
+            Assert.IsNull(user);
+        }
+    }
+}

@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Infostructure.MyBigBro.DataModel.DataAccess;
+using Infostructure.MyBigBro.DataModel.Models;
+using Moq;
+using NUnit.Framework;
+
+namespace Infostructure.MyBigBro.DataModel.Tests.UnitTests
+{
+    [TestFixture]
+    public class UnitTestDbContext
+    {
+        [Test]
+        public void TestSetWrapper()
+        {
+            // arrange
+            var mockContext = new Mock<IDbContext>();
+            mockContext.Setup(x => x.SetWrapper<WebCam>()).Returns(new List<WebCam>()
+            {
+                new WebCam() {Id = 0, Name = "bernard", XCoord = 12.45, YCoord = 23.56},
+                new WebCam() {Id = 2, Name = "bernard2", XCoord = 77.9, YCoord = 23.56}
+            }.AsQueryable());
+
+            // act
+            var items = mockContext.Object.SetWrapper<WebCam>().ToList();
+
+            // assert
+            Assert.AreEqual(2, items.Count());
+            Assert.AreEqual("bernard", items[0].Name);
+            Assert.AreEqual("bernard2", items[1].Name);
+        }
+    }
+}

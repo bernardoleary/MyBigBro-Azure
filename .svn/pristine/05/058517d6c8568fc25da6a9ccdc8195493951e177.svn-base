@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13858137-6D09-4654-B166-B73E056760AB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infostructure.MyBigBro.Web4</RootNamespace>
+    <AssemblyName>Infostructure.MyBigBro.Web4</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.4.2.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.Unity, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Web.PageInspector.Loader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Unity.WebApi">
+      <HintPath>..\packages\Unity.WebAPI.5.1\lib\net45\Unity.WebApi.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="app\controllers\loginController.js" />
+    <Content Include="app\controllers\aboutController.js" />
+    <Content Include="app\controllers\mainController.js" />
+    <Content Include="app\directives\blurAndFocusDirectives.js" />
+    <Content Include="app\services\capturedImagesGeoMarkerService.js" />
+    <Content Include="app\views\login.html" />
+    <Content Include="app\views\about.html" />
+    <Content Include="content\css\bootstrap-datetimepicker.css" />
+    <Content Include="content\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="content\css\bootstrap-theme-yeti.css" />
+    <Content Include="content\css\bootstrap-theme.css" />
+    <Content Include="content\css\bootstrap-theme.min.css" />
+    <Content Include="content\css\bootstrap.css" />
+    <Content Include="content\css\bootstrap.min.css" />
+    <Content Include="content\css\datetimepicker.css" />
+    <Content Include="content\css\jquery-simple-datetimepicker.css" />
+    <Content Include="content\css\lightbox.css" />
+    <Content Include="content\css\loading-bar.css" />
+    <Content Include="content\css\loading-bar.min.css" />
+    <Content Include="content\css\navbar.css" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="scripts\angular-google-maps.js" />
+    <Content Include="scripts\bootstrap-datetimepicker.js" />
+    <Content Include="scripts\bootstrap-datetimepicker.min.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\datetimepicker.js" />
+    <Content Include="scripts\jquery-simple-datetimepicker.js" />
+    <Content Include="scripts\jquery.datetimepicker.js" />
+    <Content Include="scripts\lightbox.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.ar-ma.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.ar.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.bg.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.br.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.bs.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.ca.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.cs.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.cv.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.da.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.de.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.el.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.en-au.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.en-ca.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.en-gb.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.eo.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.es.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.et.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.eu.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.fa.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.fi.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.fr-ca.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.fr.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.gl.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.he.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.hi.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.hr.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.hu.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.id.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.is.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.it.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.ja.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.ka.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.ko.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.lt.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.lv.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.ml.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.mr.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.ms-my.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.nb.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.ne.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.nl.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.nn.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.pl.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.pt-BR.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.pt.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.ro.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.ru.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.sk.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.sl.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.sq.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.sv.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.th.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.tr.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.tzm-la.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.tzm.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.uk.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.uz.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.vn.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.zh-CN.js" />
+    <Content Include="scripts\locales\bootstrap-datetimepicker.zh-TW.js" />
+    <Content Include="scripts\moment.js" />
+    <Content Include="scripts\mybigbro-map.js" />
+    <Content Include="scripts\mybigbro.js" />
+    <Content Include="content\css\site.css" />
+    <Content Include="content\css\toaster.css" />
+    <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="scripts\angular-animate.js" />
+    <Content Include="scripts\angular-animate.min.js" />
+    <Content Include="scripts\angular-cookies.js" />
+    <Content Include="scripts\angular-cookies.min.js" />
+    <Content Include="scripts\angular-csp.css" />
+    <Content Include="scripts\angular-loader.js" />
+    <Content Include="scripts\angular-loader.min.js" />
+    <Content Include="scripts\angular-mocks.js" />
+    <Content Include="scripts\angular-resource.js" />
+    <Content Include="scripts\angular-resource.min.js" />
+    <Content Include="scripts\angular-route.js" />
+    <Content Include="scripts\angular-route.min.js" />
+    <Content Include="scripts\angular-sanitize.js" />
+    <Content Include="scripts\angular-sanitize.min.js" />
+    <Content Include="scripts\angular-scenario.js" />
+    <Content Include="scripts\angular-touch.js" />
+    <Content Include="scripts\angular-touch.min.js" />
+    <Content Include="scripts\angular.js" />
+    <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\loading-bar.js" />
+    <Content Include="scripts\loading-bar.min.js" />
+    <Content Include="scripts\toaster.js" />
+    <Content Include="scripts\ui-bootstrap-0.9.0.js" />
+    <Content Include="scripts\ui-bootstrap-0.9.0.min.js" />
+    <Content Include="scripts\ui-bootstrap-tpls-0.9.0.js" />
+    <Content Include="scripts\ui-bootstrap-tpls-0.9.0.min.js" />
+    <Content Include="scripts\ui-map.js" />
+    <Content Include="scripts\underscore-min.js" />
+    <Content Include="scripts\underscore.js" />
+    <Content Include="scripts\version.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CapturedImagesGeoMarkerController.cs" />
+    <Compile Include="Controllers\GeoMarkersController.cs" />
+    <Compile Include="Controllers\WebCamsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="scripts\angular-animate.min.js.map" />
+    <Content Include="scripts\angular-cookies.min.js.map" />
+    <Content Include="scripts\angular-loader.min.js.map" />
+    <Content Include="scripts\angular-resource.min.js.map" />
+    <Content Include="scripts\angular-route.min.js.map" />
+    <Content Include="scripts\angular-sanitize.min.js.map" />
+    <Content Include="scripts\angular-touch.min.js.map" />
+    <Content Include="scripts\angular.min.js.map" />
+    <Content Include="scripts\errors.json" />
+    <Content Include="scripts\version.json" />
+    <Content Include="content\css\bootstrap-theme.css.map" />
+    <Content Include="content\css\bootstrap.css.map" />
+    <Content Include="scripts\underscore-min.map" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Properties\PublishProfiles\mybigbro - web4 - PROD.pubxml" />
+    <None Include="Properties\PublishProfiles\mybigbro - web4 - TEST.pubxml" />
+    <Content Include="scripts\jquery.min.js" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infostructure.MyBigBro.BusinessLogic\Infostructure.MyBigBro.BusinessLogic.csproj">
+      <Project>{2BD41ECD-71C0-4D02-AABA-0CAF3F561B7B}</Project>
+      <Name>Infostructure.MyBigBro.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infostructure.MyBigBro.DataModel\Infostructure.MyBigBro.DataModel.csproj">
+      <Project>{755B0992-F18D-4232-B434-7F75BEACBEE7}</Project>
+      <Name>Infostructure.MyBigBro.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infostructure.MyBigBro.Domain\Infostructure.MyBigBro.Domain.csproj">
+      <Project>{8A861D82-8AAA-4A29-943D-F050DA005BC6}</Project>
+      <Name>Infostructure.MyBigBro.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infostructure.MyBigBro.ImageStorageServiceAgent\Infostructure.MyBigBro.ImageStorageServiceAgent.csproj">
+      <Project>{FF9767D7-F84B-44FF-ABF0-B668365CD83C}</Project>
+      <Name>Infostructure.MyBigBro.ImageStorageServiceAgent</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58072</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58000/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Text;
+
+namespace Infostructure.MyBigBro.BusinessLogic.WebCam
+{
+    public class WebCamWebResponse : WebResponse
+    {
+        private WebRequest _webRequest = null;
+
+        public WebCamWebResponse(WebRequest webRequest)
+        {
+            _webRequest = webRequest;
+        }
+
+        public override System.IO.Stream GetResponseStream()
+        {
+            var response = _webRequest.GetResponse();
+            return response.GetResponseStream();
+        }
+
+        public WebCamWebResponse()
+        {
+            
+        }
+    }
+}
