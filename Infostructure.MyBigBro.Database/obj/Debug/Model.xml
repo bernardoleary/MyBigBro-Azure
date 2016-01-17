@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="Infostructure.MyBigBro.Database.dll" />
-			<Metadata Name="FileName" Value="D:\WEBAPPS\MYBIGBRO\INFOSTRUCTURE.MYBIGBRO.DATABASE\OBJ\DEBUG\INFOSTRUCTURE.MYBIGBRO.DATABASE.DLL" />
+			<Metadata Name="FileName" Value="C:\SOURCE\MYBIGBRO\AZURE\INFOSTRUCTURE.MYBIGBRO.DATABASE\OBJ\DEBUG\INFOSTRUCTURE.MYBIGBRO.DATABASE.DLL" />
 			<Metadata Name="AssemblyName" Value="Infostructure.MyBigBro.Database" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="D:\WebApps\MyBigBro\Infostructure.MyBigBro.Database\obj\Debug\Infostructure.MyBigBro.Database.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\obj\Debug\Infostructure.MyBigBro.Database.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>

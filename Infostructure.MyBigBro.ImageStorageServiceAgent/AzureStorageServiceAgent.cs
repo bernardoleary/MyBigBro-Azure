@@ -17,7 +17,7 @@ namespace Infostructure.MyBigBro.ImageStorageServiceAgent
                 const string connectionString =
                     "DefaultEndpointsProtocol=https;" +
                     "AccountName=mybigbro;" +
-                    "AccountKey=ncotWSBXPHY/1gyOheTDz1isByTjEPYj3RtK35B8DUAo+NAd4pTocya6GyoLABsRKyyRLFQlD+KrxoCrrElGuA==;";
+                    "AccountKey={sensitive};";
 
                 // Setup the filename.
                 string fileName = Guid.NewGuid() + ".jpg";

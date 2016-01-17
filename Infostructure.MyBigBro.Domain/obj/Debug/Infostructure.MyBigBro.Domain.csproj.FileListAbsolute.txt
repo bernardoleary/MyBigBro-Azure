@@ -3,3 +3,8 @@ D:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain\bin\Debug\Infostructure.MyBigB
 D:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain\obj\Debug\Infostructure.MyBigBro.Domain.dll
 D:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain\obj\Debug\Infostructure.MyBigBro.Domain.pdb
 D:\WebApps\MyBigBro\Infostructure.MyBigBro.Domain\obj\Debug\Infostructure.MyBigBro.Domain.csprojResolveAssemblyReference.cache
+C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Domain\bin\Debug\Infostructure.MyBigBro.Domain.dll
+C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Domain\bin\Debug\Infostructure.MyBigBro.Domain.pdb
+C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Domain\obj\Debug\Infostructure.MyBigBro.Domain.dll
+C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Domain\obj\Debug\Infostructure.MyBigBro.Domain.pdb
+C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Domain\obj\Debug\Infostructure.MyBigBro.Domain.csprojResolveAssemblyReference.cache

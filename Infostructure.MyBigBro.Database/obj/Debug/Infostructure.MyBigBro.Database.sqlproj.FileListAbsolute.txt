@@ -7,3 +7,12 @@ D:\WebApps\MyBigBro\Infostructure.MyBigBro.Database\obj\Debug\Model.xml
 D:\WebApps\MyBigBro\Infostructure.MyBigBro.Database\obj\Debug\refactor.xml
 D:\WebApps\MyBigBro\Infostructure.MyBigBro.Database\obj\Debug\postdeploy.sql
 D:\WebApps\MyBigBro\Infostructure.MyBigBro.Database\obj\Debug\predeploy.sql
+C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\bin\Debug\Infostructure.MyBigBro.Database.dacpac
+C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\bin\Debug\Infostructure.MyBigBro.Database.dll
+C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\bin\Debug\Infostructure.MyBigBro.Database.pdb
+C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\obj\Debug\Model.xml
+C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\obj\Debug\refactor.xml
+C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\obj\Debug\postdeploy.sql
+C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\obj\Debug\predeploy.sql
+C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\obj\Debug\Infostructure.MyBigBro.Database.dll
+C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\obj\Debug\Infostructure.MyBigBro.Database.pdb

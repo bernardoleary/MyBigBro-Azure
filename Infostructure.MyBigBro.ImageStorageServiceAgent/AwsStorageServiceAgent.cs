@@ -14,8 +14,8 @@ namespace Infostructure.MyBigBro.ImageStorageServiceAgent
             if (webCamImage.Data != null) // accept the file
             {
                 // AWS credentials.
-                const string accessKey = "0ZV8G8G2DZECXBZ3E4R2";
-                const string secretKey = "MvlIzQTgIZUE/p0taHu5By8hnrCY2zIGPUBmpX1Q";
+                const string accessKey = "{sensitive}";
+                const string secretKey = "{sensitive}";
 
                 // Setup the filename.
                 string fileName = Guid.NewGuid() + ".jpg";
