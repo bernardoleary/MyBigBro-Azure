@@ -38,12 +38,6 @@ namespace Infostructure.MyBigBro.DataModel.Models
             set;
         }
 
-        public bool TagOnInstagram
-        {
-            get;
-            set;
-        }
-
         //[ForeignKey("User.Id")]
         //public int UserId
         //{

@@ -9,6 +9,5 @@ namespace Infostructure.MyBigBro.Domain
         double XCoord { get; set; }
         double YCoord { get; set; }
         int DeviceId { get; set; }
-        bool TagOnInstagram { get; set; }
     }
 }
