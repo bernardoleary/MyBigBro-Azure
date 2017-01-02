@@ -8,3 +8,7 @@ C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Domain\bin\Debug\Infostructure.M
 C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Domain\obj\Debug\Infostructure.MyBigBro.Domain.dll
 C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Domain\obj\Debug\Infostructure.MyBigBro.Domain.pdb
 C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Domain\obj\Debug\Infostructure.MyBigBro.Domain.csprojResolveAssemblyReference.cache
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Domain\bin\Debug\Infostructure.MyBigBro.Domain.dll
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Domain\bin\Debug\Infostructure.MyBigBro.Domain.pdb
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Domain\obj\Debug\Infostructure.MyBigBro.Domain.dll
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Domain\obj\Debug\Infostructure.MyBigBro.Domain.pdb

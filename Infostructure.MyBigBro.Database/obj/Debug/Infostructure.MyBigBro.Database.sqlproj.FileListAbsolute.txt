@@ -16,3 +16,8 @@ C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\obj\Debug\postdeploy.sq
 C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\obj\Debug\predeploy.sql
 C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\obj\Debug\Infostructure.MyBigBro.Database.dll
 C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\obj\Debug\Infostructure.MyBigBro.Database.pdb
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\bin\Debug\Infostructure.MyBigBro.Database.dacpac
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\bin\Debug\Infostructure.MyBigBro.Database.dll
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\bin\Debug\Infostructure.MyBigBro.Database.pdb
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\obj\Debug\Infostructure.MyBigBro.Database.dll
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.Database\obj\Debug\Infostructure.MyBigBro.Database.pdb

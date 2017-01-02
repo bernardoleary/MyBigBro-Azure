@@ -13,11 +13,16 @@ namespace Infostructure.MyBigBro.ImageStorageServiceAgent
         {
             if (webCamImage.Data != null) // accept the file
             {
+                // Config
+                var config = ConfigurationManager.AppSettings;
+                var azureAccountName = config["azureAccountName"];
+                var azureAccountKey = config["azureAccountKey"];
+
                 // Azure credentials.
-                const string connectionString =
+                string connectionString =
                     "DefaultEndpointsProtocol=https;" +
-                    "AccountName=mybigbro;" +
-                    "AccountKey={sensitive};";
+                    "AccountName=" + azureAccountName + ";" +
+                    "AccountKey=" + azureAccountKey + ";";
 
                 // Setup the filename.
                 string fileName = Guid.NewGuid() + ".jpg";
@@ -26,7 +31,6 @@ namespace Infostructure.MyBigBro.ImageStorageServiceAgent
                 // Setup the Azure stuff.
                 CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);
                 CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-                var config = ConfigurationManager.AppSettings;
                 CloudBlobContainer container = blobClient.GetContainerReference(config["azureContainer"]);
                 CloudBlockBlob blockBlob = container.GetBlockBlobReference(fileName);
 

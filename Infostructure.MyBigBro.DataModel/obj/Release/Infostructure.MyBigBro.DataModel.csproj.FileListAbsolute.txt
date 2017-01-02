@@ -8,3 +8,13 @@ d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel\obj\Release\Infostructure.M
 d:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel\obj\Release\Infostructure.MyBigBro.DataModel.pdb
 D:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel\bin\Release\EntityFramework.dll
 D:\WebApps\MyBigBro\Infostructure.MyBigBro.DataModel\bin\Release\EntityFramework.xml
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\bin\Release\Infostructure.MyBigBro.DataModel.dll.config
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\bin\Release\Infostructure.MyBigBro.DataModel.dll
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\bin\Release\Infostructure.MyBigBro.DataModel.pdb
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\bin\Release\EntityFramework.dll
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\bin\Release\Infostructure.MyBigBro.Domain.dll
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\bin\Release\Infostructure.MyBigBro.Domain.pdb
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\bin\Release\EntityFramework.xml
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\obj\Release\Infostructure.MyBigBro.DataModel.csprojResolveAssemblyReference.cache
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\obj\Release\Infostructure.MyBigBro.DataModel.dll
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\obj\Release\Infostructure.MyBigBro.DataModel.pdb

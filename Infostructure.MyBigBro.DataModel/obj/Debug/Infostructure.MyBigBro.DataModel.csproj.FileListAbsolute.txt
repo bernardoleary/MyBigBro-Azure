@@ -18,3 +18,13 @@ C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\bin\Debug\EntityFramew
 C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\obj\Debug\Infostructure.MyBigBro.DataModel.csprojResolveAssemblyReference.cache
 C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\obj\Debug\Infostructure.MyBigBro.DataModel.dll
 C:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\obj\Debug\Infostructure.MyBigBro.DataModel.pdb
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\obj\Debug\Infostructure.MyBigBro.DataModel.csprojResolveAssemblyReference.cache
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\obj\Debug\Infostructure.MyBigBro.DataModel.dll
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\obj\Debug\Infostructure.MyBigBro.DataModel.pdb
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\bin\Debug\Infostructure.MyBigBro.DataModel.dll.config
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\bin\Debug\Infostructure.MyBigBro.DataModel.dll
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\bin\Debug\Infostructure.MyBigBro.DataModel.pdb
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\bin\Debug\EntityFramework.dll
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\bin\Debug\Infostructure.MyBigBro.Domain.dll
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\bin\Debug\Infostructure.MyBigBro.Domain.pdb
+D:\Source\MyBigBro\Azure\Infostructure.MyBigBro.DataModel\bin\Debug\EntityFramework.xml
