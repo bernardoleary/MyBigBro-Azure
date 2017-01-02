@@ -10,6 +10,10 @@ namespace Infostructure.MyBigBro.Domain
         public double YCoord { get; set; }
         public int DeviceId { get; set; }
         public string DeviceName { get; set; }
-        public bool TagOnInstagram { get; set; }
+        // =================================================================
+        // Commenting because somehow this addition has broken the solution.
+        // TODO: Figure out what the problem is.
+        // =================================================================
+        //public bool TagOnInstagram { get; set; }
     }
 }
