@@ -16,7 +16,7 @@ For the complete architecture, migration details, and diagrams, see [**Modernisa
 
 | Container | Service | Technology | Host Port | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| `mybigbro-web-ui` | `web-ui` | `nginx:1.27-alpine` + AngularJS SPA | `http://localhost:8080` | Serves the web map UI and reverse-proxies `/api/*` and `/healthz` to `api-service:8080` |
+| `mybigbro-web-ui` | `web-ui` | `nginx:1.27-alpine` + AngularJS + OpenStreetMap (Leaflet) | `http://localhost:8080` | Serves the OpenStreetMap web UI and reverse-proxies `/api/*` and `/healthz` to `api-service:8080` |
 | `mybigbro-api` | `api-service` | `.NET 10` ASP.NET Core Web API | `http://localhost:5080` | Exposes REST endpoints (`/api/geomarkers`, `/api/webcams`, `/api/geomarkers/capturedimages`, `/healthz`) |
 | `mybigbro-capture-worker` | `capture-worker` | `.NET 10` Worker Service | *(Internal)* | Polls `public.capture_job` (`FOR UPDATE SKIP LOCKED`), fetches live CCTV frames, and uploads blobs |
 | `mybigbro-postgres` | `postgres-db` | `postgis/postgis:17-3.5-alpine` | `localhost:5433` | PostgreSQL 17 + PostGIS 3.5 database (`mybigbro`) with 105 seeded NZTA traffic cameras |

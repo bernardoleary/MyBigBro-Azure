@@ -1,14 +1,15 @@
 angular.module('MyBigBroApp.controllers', []).
     controller('mainController', function($scope, capturedImagesGeoMarkerService, webCamsService) {
 
-        // Google Maps default components
-        var mapOptions = {
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var infoWindow = new google.maps.InfoWindow();        
+        // OpenStreetMap + Leaflet default map setup (centered on Auckland by default)
+        var map = L.map('map').setView([-36.8485, 174.7633], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
 
         // Scope variables
-        $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        $scope.map = map;
         $scope.data = {};
         $scope.data.startdatetime = '';
         $scope.data.enddatetime = '';
@@ -24,25 +25,28 @@ angular.module('MyBigBroApp.controllers', []).
             var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
                 results = regex.exec(location.search);
             return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-        };
+        }
 
         // Function to draw our geomarkers with images
         function drawMarkers() {
-            // Clear existing markers                   
+            // Clear existing markers
             for (var i = 0; i < $scope.markers.length; i++) {
-                $scope.markers[i].setMap(null);
+                $scope.map.removeLayer($scope.markers[i]);
             }
             $scope.markers = [];
-            // Get the device name     
-            if ($scope.data.devicename === undefined || $scope.data.devicename == "")
+
+            // Get the device name
+            if ($scope.data.devicename === undefined || $scope.data.devicename === "") {
                 $scope.data.devicename = getParameterByName("deviceName");
+            }
             var devicename = $scope.data.devicename;
-            // Hardcoded count of markers and cameras to get by default: 10 for markers, 0 for cameras
-            var markerCount = getParameterByName("markerCount") == "" ? 10 : getParameterByName("markerCount");
-            var cameraCount = getParameterByName("cameraCount") == "" ? 0 : getParameterByName("cameraCount");
+
+            // Default count of markers to retrieve
+            var markerCount = getParameterByName("markerCount") === "" ? 10 : getParameterByName("markerCount");
+
             // Create new markers
-            if ($scope.data.startdatetime == '' || $scope.data.enddatetime == '') { 
-                if (devicename === undefined || devicename == "") {
+            if ($scope.data.startdatetime === '' || $scope.data.enddatetime === '') {
+                if (devicename === undefined || devicename === "") {
                     capturedImagesGeoMarkerService.getCapturedImagesGeoMarkerTop(markerCount).success(function (response) {
                         createMarkers(response);
                     });
@@ -55,7 +59,7 @@ angular.module('MyBigBroApp.controllers', []).
                 // Create by date window
                 var startdatetimeVal = moment($scope.data.startdatetime).format("YYYY-MM-DD HH:MM");
                 var enddatetimeVal = moment($scope.data.enddatetime).format("YYYY-MM-DD HH:MM");
-                if (devicename === undefined || devicename == "") {
+                if (devicename === undefined || devicename === "") {
                     capturedImagesGeoMarkerService.getCapturedImagesGeoMarkerForDateTimeWindow(startdatetimeVal, enddatetimeVal).success(function (response) {
                         createMarkers(response);
                     });
@@ -64,10 +68,10 @@ angular.module('MyBigBroApp.controllers', []).
                         createMarkers(response);
                     });
                 }
-            }            
-        };
+            }
+        }
 
-        // Function set up the image markers on the map
+        // Function to set up the image markers on the map
         function createMarkers(capturedImagesGeoMarker) {
             for (var i = 0; i < capturedImagesGeoMarker.length; i++) {
                 createMarker(capturedImagesGeoMarker[i]);
@@ -75,7 +79,7 @@ angular.module('MyBigBroApp.controllers', []).
             fitBounds();
         }
 
-        // Function set up the camera markers on the map
+        // Function to set up the camera markers on the map
         function createCameraMarkers(camerasGeoMarker) {
             for (var i = 0; i < camerasGeoMarker.length; i++) {
                 createCameraMarker(camerasGeoMarker[i]);
@@ -83,70 +87,74 @@ angular.module('MyBigBroApp.controllers', []).
             fitBounds();
         }
 
-        // Function to set the bounds of the map
+        // Function to fit the map bounds to visible markers
         function fitBounds() {
-            var bounds = new google.maps.LatLngBounds();
-            for (i = 0; i < $scope.markers.length; i++) {
-                bounds.extend($scope.markers[i].getPosition());
+            if ($scope.markers.length === 0) {
+                return;
             }
-            $scope.map.fitBounds(bounds);
-        };
+            var group = L.featureGroup($scope.markers);
+            $scope.map.fitBounds(group.getBounds(), { padding: [40, 40], maxZoom: 15 });
+        }
 
-        // Function to create a geomarker on the map
+        // Function to create a geomarker on the OpenStreetMap layer
         function createMarker(info) {
-            var marker = new google.maps.Marker({
-                map: $scope.map,
-                position: new google.maps.LatLng(info.GeoMarker.YCoord, info.GeoMarker.XCoord),
-                title: "This image captured " + moment(info.GeoMarker.MarkerDateTime).format('MMMM Do YYYY, h:mm:ss a')
-            });
-            marker.content = '<img width="100%" src="' + info.CapturedImage.Url + '" alt="Smile">';
-            google.maps.event.addListener(marker, 'click', function() {
-                $("#mapModal #mapModalTitle").html(marker.title);
-                $("#mapModal #mapModalBody").html(marker.content);
-                $('#mapModal').modal("show");                
-            });
-            $scope.markers.push(marker);
-        };
-
-        // Function to create a geomarker on the map
-        function createCameraMarker(info) {
-            var image = 'content/images/favicon.ico';
-            var marker = new google.maps.Marker({
-                map: $scope.map,
-                position: new google.maps.LatLng(info.YCoord, info.XCoord),
-                title: "Nearest known camera: " + info.Name,
-                icon: image
-            });
-            marker.content = '<img width="100%" src="' + info.Url + '" alt="Smile">';
-            google.maps.event.addListener(marker, 'click', function () {
+            var title = "This image captured " + moment(info.GeoMarker.MarkerDateTime).format('MMMM Do YYYY, h:mm:ss a');
+            var content = '<img width="100%" src="' + info.CapturedImage.Url + '" alt="Smile">';
+            var marker = L.marker([info.GeoMarker.YCoord, info.GeoMarker.XCoord], {
+                title: title
+            }).addTo($scope.map);
+            marker.title = title;
+            marker.content = content;
+            marker.on('click', function() {
                 $("#mapModal #mapModalTitle").html(marker.title);
                 $("#mapModal #mapModalBody").html(marker.content);
                 $('#mapModal').modal("show");
             });
             $scope.markers.push(marker);
-        };
+        }
 
-        // Event to enabled a popup with the image in it
+        // Function to create a camera marker on the OpenStreetMap layer
+        function createCameraMarker(info) {
+            var cameraIcon = L.icon({
+                iconUrl: 'content/images/favicon.ico',
+                iconSize: [24, 24],
+                iconAnchor: [12, 12]
+            });
+            var title = "Nearest known camera: " + info.Name;
+            var content = '<img width="100%" src="' + info.Url + '" alt="Smile">';
+            var marker = L.marker([info.YCoord, info.XCoord], {
+                title: title,
+                icon: cameraIcon
+            }).addTo($scope.map);
+            marker.title = title;
+            marker.content = content;
+            marker.on('click', function () {
+                $("#mapModal #mapModalTitle").html(marker.title);
+                $("#mapModal #mapModalBody").html(marker.content);
+                $('#mapModal').modal("show");
+            });
+            $scope.markers.push(marker);
+        }
+
+        // Event to enable a popup modal with the captured image
         $scope.openInfoWindow = function(e, selectedMarker) {
             e.preventDefault();
-            google.maps.event.trigger(selectedMarker, 'click');
+            selectedMarker.fire('click');
         };
 
         // Event to get start time DDL change
         $scope.onStartTimeSet = function (newDate, oldDate) {
             $scope.data.startdatetime = newDate;
-            console.log($scope.data.startdatetime);
             drawMarkers();
         };
 
-        // Event to end start time DDL change
+        // Event to get end time DDL change
         $scope.onEndTimeSet = function (newDate, oldDate) {
             $scope.data.enddatetime = newDate;
-            console.log($scope.data.enddatetime);
             drawMarkers();
         };
 
-        // Event to get start time DDL change
+        // Event to handle device name search
         $scope.onDeviceNameChange = function ($event) {
             drawMarkers();
         };

@@ -1,4 +1,4 @@
-﻿angular.module('MyBigBroApp', [
+angular.module('MyBigBroApp', [
     'ngRoute',
     'ngResource',
     'MyBigBroApp.controllers',
@@ -6,6 +6,5 @@
     'ui.bootstrap.datetimepicker',
     'ui.bootstrap',
     'toaster',
-    'chieffancypants.loadingBar',
-    'google-maps'
+    'chieffancypants.loadingBar'
 ]);

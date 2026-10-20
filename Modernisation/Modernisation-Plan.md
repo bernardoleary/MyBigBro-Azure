@@ -611,3 +611,15 @@ Following the `.NET 10` and PostgreSQL/PostGIS modernisation, all obsolete and s
 - **Removed Obsolete Projects**: `BoostrapTest1/`, `BootstrapTest2/`, `Infostructure.MyBigBro.Database/` (superseded by `docker/postgres/01-init-schema.sql` and `02-seed-webcams.sql`), `Resources/` (legacy zip archives and keys), and duplicate `Infostructure.MyBigBro.*.Tests/` folders (consolidated into `UnitTests` and `IntegrationTests`).
 - **Removed Legacy .NET Framework Configuration & Boilerplate**: `packages.config`, `app.config`, `Web.config`, `Web.Debug.config`, `Web.Release.config`, `Global.asax*`, `App_Start/UnityConfig.cs`, `App_Start/WebApiConfig.cs`, `Properties/AssemblyInfo.cs`, and `Properties/PublishProfiles/`.
 - **Removed Unused Web UI & Controller Files**: Empty `DeviceController.cs`, unused `angular-1.3.0-beta.3/` directory and archive, tutorial placeholder controllers/views (`aboutController.js`, `loginController.js`, `about.html`, `login.html`, `blurAndFocusDirectives.js`), legacy pre-Angular map scripts (`mybigbro.js`, `mybigbro-map.js`, `ui-map.js`), and unused CSS/locale assets.
+
+---
+
+## 10. Map Provider Modernisation: Google Maps $\rightarrow$ OpenStreetMap (Leaflet)
+
+To eliminate proprietary API key requirements and legacy Google Maps JS API (`sensor=false`) warnings, the web frontend in [`Infostructure.MyBigBro.Web4`](file:///home/bernard/Source/MyBigBro-Azure/Infostructure.MyBigBro.Web4) was migrated from Google Maps (`angular-google-maps.js`) to **OpenStreetMap** rendered with **Leaflet 1.9.4**:
+- **[`index.html`](file:///home/bernard/Source/MyBigBro-Azure/Infostructure.MyBigBro.Web4/index.html)**: Replaced `maps.googleapis.com/maps/api/js` and `scripts/angular-google-maps.js` with `leaflet.css` and `leaflet.js` (v1.9.4), and upgraded CDN script references to `https://`.
+- **[`app/app.js`](file:///home/bernard/Source/MyBigBro-Azure/Infostructure.MyBigBro.Web4/app/app.js)**: Removed the legacy `'google-maps'` AngularJS module dependency and deleted `scripts/angular-google-maps.js`.
+- **[`app/controllers/mainController.js`](file:///home/bernard/Source/MyBigBro-Azure/Infostructure.MyBigBro.Web4/app/controllers/mainController.js)**:
+  - Replaced `google.maps.Map` with `L.map('map')` and `L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')`.
+  - Replaced `google.maps.Marker` and `google.maps.event.addListener` with `L.marker([lat, lng])` and `marker.on('click', ...)` to open the `#mapModal` dialog displaying the captured CCTV image.
+  - Replaced `google.maps.LatLngBounds` with `L.featureGroup($scope.markers).getBounds()` and `map.fitBounds(...)`.
