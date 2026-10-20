@@ -104,12 +104,12 @@ namespace Infostructure.MyBigBro.CaptureWorker
                         _logger.LogWarning(httpEx,
                             "Live CCTV feed {Url} unreachable; using fallback frame for WebCam {Id} ({Name}).",
                             webCam.Url, webCam.Id, webCam.Name);
-                        webCamControl.WebCamImage.Data = MinimalJpegBytes;
+                        webCamControl.WebCamImage.Data = GetFallbackJpegBytes();
                     }
 
                     if (webCamControl.WebCamImage.Data == null || webCamControl.WebCamImage.Data.Length == 0)
                     {
-                        webCamControl.WebCamImage.Data = MinimalJpegBytes;
+                        webCamControl.WebCamImage.Data = GetFallbackJpegBytes();
                     }
 
                     webCamControl.CapturedImage = new CapturedImage();
@@ -138,6 +138,16 @@ namespace Infostructure.MyBigBro.CaptureWorker
             }
 
             return true;
+        }
+
+        private static byte[] GetFallbackJpegBytes()
+        {
+            var fallbackPath = System.IO.Path.Combine(AppContext.BaseDirectory, "fallback-webcam.jpg");
+            if (System.IO.File.Exists(fallbackPath))
+            {
+                return System.IO.File.ReadAllBytes(fallbackPath);
+            }
+            return MinimalJpegBytes;
         }
     }
 }

@@ -16,11 +16,13 @@ COPY Infostructure.MyBigBro.DataModel/ Infostructure.MyBigBro.DataModel/
 COPY Infostructure.MyBigBro.ImageStorageServiceAgent/ Infostructure.MyBigBro.ImageStorageServiceAgent/
 COPY Infostructure.MyBigBro.BusinessLogic/ Infostructure.MyBigBro.BusinessLogic/
 COPY Infostructure.MyBigBro.CaptureWorker/ Infostructure.MyBigBro.CaptureWorker/
+COPY Data/harbourbridge.jpg /src/Data/harbourbridge.jpg
 
 RUN dotnet publish Infostructure.MyBigBro.CaptureWorker/Infostructure.MyBigBro.CaptureWorker.csproj \
     -c Release \
     -o /app/publish \
-    /p:UseAppHost=false
+    /p:UseAppHost=false && \
+    cp /src/Data/harbourbridge.jpg /app/publish/fallback-webcam.jpg
 
 # Stage 2: Runtime (.NET 10 Runtime on Ubuntu 24.04 Noble)
 FROM mcr.microsoft.com/dotnet/runtime:10.0-noble AS runtime
