@@ -7,7 +7,6 @@
     <!-- Optional theme -->
     <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
     <link href="content/css/bootstrap.css" rel="stylesheet" />
-    <link href="content/css/bootstrap-datetimepicker.css" rel="stylesheet" />
     <link href="content/css/toaster.css" rel="stylesheet" />
     <link href="content/css/loading-bar.min.css" rel="stylesheet" />
     <link href="content/css/site.css" rel="stylesheet" />
@@ -39,7 +38,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-animate.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.9.0/ui-bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.9.0/ui-bootstrap-tpls.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
     <script src="scripts/jquery.min.js"></script>
     <script src='scripts/underscore.js'></script>
@@ -55,8 +53,6 @@
     <script src="app/services/capturedImagesGeoMarkerService.js"></script>   
     <script src="app/services/webCamsService.js"></script> 
     <script src="app/controllers/mainController.js"></script>
-    <script src="app/controllers/aboutController.js"></script>
-    <script src="app/controllers/loginController.js"></script>
 
 </head>
     <body>
@@ -66,8 +62,6 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                        <!-- Not sure why this won't work -->
-                        <!--<h4 class="modal-title" id="mapModalLabel">{{ data.markerdatetime }}</h4>-->
                         <h4 class="modal-title" id="mapModalTitle"></h4>
                     </div>
                     <div class="modal-body" id="mapModalBody">

@@ -1,4 +1,4 @@
-﻿angular.module('MyBigBroApp.controllers', []).
+angular.module('MyBigBroApp.controllers', []).
     controller('mainController', function($scope, capturedImagesGeoMarkerService, webCamsService) {
 
         // Google Maps default components
@@ -50,10 +50,6 @@
                     capturedImagesGeoMarkerService.getCapturedImagesGeoMarkerTopAndDeviceName(markerCount, devicename).success(function (response) {
                         createMarkers(response);
                     });
-                    // Disabled camera rendering for the time being.
-                    //webCamsService.getNearestWebCams(cameraCount, devicename).success(function (response) {
-                    //    createCameraMarkers(response);
-                    //});
                 }
             } else {
                 // Create by date window
@@ -67,10 +63,6 @@
                     capturedImagesGeoMarkerService.getCapturedImagesGeoMarkerForDateTimeWindowAndDeviceName(startdatetimeVal, enddatetimeVal, devicename).success(function (response) {
                         createMarkers(response);
                     });
-                    // Disabled camera rendering for the time being.
-                    //webCamsService.getNearestWebCams(cameraCount, devicename).success(function (response) {
-                    //    createCameraMarkers(response);
-                    //});
                 }
             }            
         };

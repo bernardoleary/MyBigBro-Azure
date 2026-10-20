@@ -4,10 +4,6 @@
     <AssemblyName>Infostructure.MyBigBro.Web4</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="Global.asax.cs" />
-    <Compile Remove="App_Start\**" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Infostructure.MyBigBro.BusinessLogic\Infostructure.MyBigBro.BusinessLogic.csproj" />
     <ProjectReference Include="..\Infostructure.MyBigBro.DataModel\Infostructure.MyBigBro.DataModel.csproj" />
     <ProjectReference Include="..\Infostructure.MyBigBro.Domain\Infostructure.MyBigBro.Domain.csproj" />

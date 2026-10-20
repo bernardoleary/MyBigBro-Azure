@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Infostructure.MyBigBro.BusinessLogic.Services;
-using Infostructure.MyBigBro.BusinessLogic.WebCam;
 using Infostructure.MyBigBro.DataModel.DataAccess;
 using Infostructure.MyBigBro.DataModel.Models;
 using Infostructure.MyBigBro.Domain;
@@ -14,16 +13,13 @@ namespace Infostructure.MyBigBro.Web4.Controllers
     public class GeoMarkersController : ControllerBase
     {
         private readonly IMyBigBroRepository _myBigBroRepository;
-        private readonly IWebCamControl _webCamControl;
         private readonly IGeoMarkerService _geoMarkerService;
 
         public GeoMarkersController(
             IMyBigBroRepository myBigBroRepository,
-            IWebCamControl webCamControl,
             IGeoMarkerService geoMarkerService)
         {
             _myBigBroRepository = myBigBroRepository;
-            _webCamControl = webCamControl;
             _geoMarkerService = geoMarkerService;
         }
 
@@ -45,16 +41,6 @@ namespace Infostructure.MyBigBro.Web4.Controllers
         // GET api/geomarkers/5
         [HttpGet("api/geomarkers/{id:int}", Name = "GetGeoMarkerById")]
         public ActionResult<GeoMarker> Get(int id)
-        {
-            var result = _myBigBroRepository.Set<GeoMarker>().FirstOrDefault(x => x.Id == id);
-            if (result == null)
-                return NotFound();
-            return result;
-        }
-
-        // GET api/geomarkers/5/test
-        [HttpGet("api/geomarkers/{id:int}/test")]
-        public ActionResult<GeoMarker> Test(int id)
         {
             var result = _myBigBroRepository.Set<GeoMarker>().FirstOrDefault(x => x.Id == id);
             if (result == null)

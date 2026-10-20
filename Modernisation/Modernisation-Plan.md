@@ -600,4 +600,14 @@ networks:
      curl -s "http://localhost:8080/api/webcams/nearest?deviceName=linux-test-device"
      curl -s "http://localhost:8080/api/geomarkers/capturedimages?top=10&deviceName=linux-test-device"
      ```
-   - **Web UI**: Open `http://localhost:8080` in a browser and verify the AngularJS Google Maps UI renders markers and captured webcam images.
+   - **Web UI**: Open `http://localhost:8080` in a browser and verify the map UI renders markers and captured webcam images.
+
+---
+
+## 9. Codebase Cleanup & Repository Hygiene Summary
+
+Following the `.NET 10` and PostgreSQL/PostGIS modernisation, all obsolete and superfluous legacy artifacts were removed from the repository:
+- **Removed Legacy VCS, IDE & Package Caches**: `$tf/`, `.svn/`, `.vs/`, `.nuget/`, `packages/`, `_ReSharper.Infostructure.MyBigBro.Web/`, `wrap/`, `UpgradeLog.htm`, `.suo`, `.vspscc`, `.vssscc`, `.user` files, and tracked `bin/`/`obj/` build outputs.
+- **Removed Obsolete Projects**: `BoostrapTest1/`, `BootstrapTest2/`, `Infostructure.MyBigBro.Database/` (superseded by `docker/postgres/01-init-schema.sql` and `02-seed-webcams.sql`), `Resources/` (legacy zip archives and keys), and duplicate `Infostructure.MyBigBro.*.Tests/` folders (consolidated into `UnitTests` and `IntegrationTests`).
+- **Removed Legacy .NET Framework Configuration & Boilerplate**: `packages.config`, `app.config`, `Web.config`, `Web.Debug.config`, `Web.Release.config`, `Global.asax*`, `App_Start/UnityConfig.cs`, `App_Start/WebApiConfig.cs`, `Properties/AssemblyInfo.cs`, and `Properties/PublishProfiles/`.
+- **Removed Unused Web UI & Controller Files**: Empty `DeviceController.cs`, unused `angular-1.3.0-beta.3/` directory and archive, tutorial placeholder controllers/views (`aboutController.js`, `loginController.js`, `about.html`, `login.html`, `blurAndFocusDirectives.js`), legacy pre-Angular map scripts (`mybigbro.js`, `mybigbro-map.js`, `ui-map.js`), and unused CSS/locale assets.
