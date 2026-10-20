@@ -1,4 +1,6 @@
-﻿using Infostructure.MyBigBro.BusinessLogic.GeoSpatial;
+using System;
+using System.IO;
+using Infostructure.MyBigBro.BusinessLogic.GeoSpatial;
 using Infostructure.MyBigBro.BusinessLogic.WebCam;
 using Infostructure.MyBigBro.DataModel.DataAccess;
 using Infostructure.MyBigBro.DataModel.Models;
@@ -12,30 +14,32 @@ namespace IntegrationTests.Infostructure.MyBigBro.BusinessLogic
     [TestFixture]
     public class TestBusinessLogic
     {
+        private static readonly byte[] SampleJpegBytes = Convert.FromBase64String(
+            "/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAP//////////////////////////////////////////////////////////////////////////////////////wgALCAABAAEBAREA/8QAFBABAAAAAAAAAAAAAAAAAAAAAP/aAAgBAQABPxA=");
+
         [Test]
         public void TestImageCaptureAndStorage()
         {
-            var context = new MyBigBroContext(Settings.Default.connectionString);
-            var repository = new MyBigBroRepository();
+            using var context = new MyBigBroContext(Settings.Default.connectionString);
+            var repository = new MyBigBroRepository { Context = context };
             var location = new Location(repository);
             var geometry = new Geometry();
-            repository.Context = context;
-            location.MyBigBroRepository = repository;
             var pointInRangeOfWebCamId4Only = new Point { XCoord = 174.706, YCoord = -36.872 };
-            if (location.IsPointWithinWebCamRadiusOfVisibility(pointInRangeOfWebCamId4Only))
+
+            Assert.IsTrue(location.IsPointWithinWebCamRadiusOfVisibility(pointInRangeOfWebCamId4Only));
+
+            var storageAgent = new AzureStorageServiceAgent(new StorageOptions());
+            var webCamControl = new WebCamControl(storageAgent, repository, geometry);
+            var webCams = location.GetWebCamsWithinWebCamRadiusOfVisibility(pointInRangeOfWebCamId4Only);
+            Assert.IsNotEmpty(webCams);
+
+            foreach (var webCam in webCams)
             {
-                var webCamControl = new WebCamControl(new AwsStorageServiceAgent(), repository, geometry);
-                webCamControl.MyBigBroRepository = repository;
-                webCamControl.StorageServiceAgent = new AwsStorageServiceAgent();
-                var webCams = location.GetWebCamsWithinWebCamRadiusOfVisibility(pointInRangeOfWebCamId4Only);
-                foreach (var webCam in webCams)
-                {
-                    webCamControl.WebCam = webCam;
-                    webCamControl.WebCamImage = new WebCamImage();
-                    webCamControl.CapturedImage = new CapturedImage();
-                    webCamControl.CaptureCurrentImage(new WebCamDataRequest());
-                    webCamControl.StoreCapturedImage();
-                }
+                webCamControl.WebCam = webCam;
+                webCamControl.WebCamImage = new WebCamImage { Data = SampleJpegBytes };
+                webCamControl.CapturedImage = new CapturedImage();
+                var capturedId = webCamControl.StoreCapturedImage();
+                Assert.Greater(capturedId, 0);
             }
         }
     }

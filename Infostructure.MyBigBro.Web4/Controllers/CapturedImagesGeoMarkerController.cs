@@ -1,119 +1,108 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
 using Infostructure.MyBigBro.BusinessLogic.Services;
-using Infostructure.MyBigBro.DataModel.Models;
 using Infostructure.MyBigBro.Domain;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Infostructure.MyBigBro.Web4.Controllers
 {
-    public class CapturedImagesGeoMarkerController : ApiController
+    [ApiController]
+    public class CapturedImagesGeoMarkerController : ControllerBase
     {
-        private IGeoMarkerService _geoMarkerService = null;
-
-        public CapturedImagesGeoMarkerController() {}
-
+        private readonly IGeoMarkerService _geoMarkerService;
 
         public CapturedImagesGeoMarkerController(IGeoMarkerService geoMarkerService)
         {
             _geoMarkerService = geoMarkerService;
         }
 
-        // GET api/geomarker/capturedimages
+        // Unified GET endpoint supporting all query parameter combinations:
+        // - GET /api/geomarkers/capturedimages
+        // - GET /api/geomarkers/capturedimages?top=...
+        // - GET /api/geomarkers/capturedimages?top=...&deviceName=...
+        // - GET /api/geomarkers/capturedimages?startDateTime=...&endDateTime=...
+        // - GET /api/geomarkers/capturedimages?startDateTime=...&endDateTime=...&deviceName=...
+        [HttpGet("api/geomarkers/capturedimages")]
+        [HttpGet("api/geomarker/capturedimages")]
+        public IEnumerable<CapturedImageGeoMarkerDetail> GetCapturedImages(
+            [FromQuery] int? top = null,
+            [FromQuery] string startDateTime = null,
+            [FromQuery] string endDateTime = null,
+            [FromQuery] string deviceName = null)
+        {
+            if (!string.IsNullOrWhiteSpace(startDateTime) && !string.IsNullOrWhiteSpace(endDateTime))
+            {
+                if (!string.IsNullOrWhiteSpace(deviceName))
+                {
+                    return Get(startDateTime, endDateTime, deviceName).ToList();
+                }
+                return Get(startDateTime, endDateTime).ToList();
+            }
+
+            if (top.HasValue)
+            {
+                if (!string.IsNullOrWhiteSpace(deviceName))
+                {
+                    return Get(top.Value, deviceName).ToList();
+                }
+                return Get(top.Value).ToList();
+            }
+
+            if (!string.IsNullOrWhiteSpace(deviceName))
+            {
+                return Get(100, deviceName).ToList();
+            }
+
+            return Get().ToList();
+        }
+
+        // GET api/geomarkers/capturedimages/count?deviceName=...
+        [HttpGet("api/geomarkers/capturedimages/count")]
+        [HttpGet("api/geomarker/capturedimages/count")]
+        public int GetCount([FromQuery] string deviceName)
+        {
+            return Get(deviceName);
+        }
+
+        [NonAction]
         public IEnumerable<CapturedImageGeoMarkerDetail> Get()
         {
-            if (ModelState.IsValid)
-            {
-                // We return the top 100 images by default
-                var capturedImages = _geoMarkerService.GetMarkersWithImage(100);
-                return capturedImages;
-            }
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+            return _geoMarkerService.GetMarkersWithImage(100);
         }
 
-        // GET api/geomarker/capturedimages?top=...
+        [NonAction]
         public IEnumerable<CapturedImageGeoMarkerDetail> Get(int top)
         {
-            if (ModelState.IsValid)
-            {
-                var capturedImages = _geoMarkerService.GetMarkersWithImage(top);
-                return capturedImages;
-            }
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+            return _geoMarkerService.GetMarkersWithImage(top);
         }
 
-        // GET api/geomarker/capturedimages?top=...&deviceName=...
+        [NonAction]
         public IEnumerable<CapturedImageGeoMarkerDetail> Get(int top, string deviceName)
         {
-            if (ModelState.IsValid)
-            {
-                var capturedImages = _geoMarkerService.GetMarkersWithImage(top, deviceName);
-                return capturedImages;
-            }
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+            return _geoMarkerService.GetMarkersWithImage(top, deviceName);
         }
 
-        // GET api/geomarker/capturedimages/count?deviceName=...
+        [NonAction]
         public int Get(string deviceName)
         {
-            if (ModelState.IsValid)
-            {
-                var countOfCapturedImages = _geoMarkerService.GetCountOfMarkersWithImage(deviceName);
-                return countOfCapturedImages;
-            }
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+            return _geoMarkerService.GetCountOfMarkersWithImage(deviceName);
         }
 
-        // GET api/geomarker/capturedimages?startDateTime=...&endDateTime=...&deviceName=...
+        [NonAction]
         public IEnumerable<CapturedImageGeoMarkerDetail> Get(string startDateTime, string endDateTime, string deviceName)
         {
-            if (ModelState.IsValid)
-            {
-                // Get all within a specific timeframe
-                DateTime startDateTimeStronglyTyped, endDateTimeStronglyTyped;
-                DateTime.TryParse(startDateTime, out startDateTimeStronglyTyped);
-                DateTime.TryParse(endDateTime, out endDateTimeStronglyTyped);
-                var capturedImages = _geoMarkerService.GetMarkersWithImageForTimeframe(startDateTimeStronglyTyped, endDateTimeStronglyTyped, deviceName);
-                return capturedImages;
-            }
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+            DateTime.TryParse(startDateTime, out var startDateTimeStronglyTyped);
+            DateTime.TryParse(endDateTime, out var endDateTimeStronglyTyped);
+            return _geoMarkerService.GetMarkersWithImageForTimeframe(startDateTimeStronglyTyped, endDateTimeStronglyTyped, deviceName);
         }
 
-        // GET api/geomarker/capturedimages?startDateTime=...&endDateTime=...
+        [NonAction]
         public IEnumerable<CapturedImageGeoMarkerDetail> Get(string startDateTime, string endDateTime)
         {
-            if (ModelState.IsValid)
-            {
-                // Get all within a specific timeframe
-                DateTime startDateTimeStronglyTyped, endDateTimeStronglyTyped;
-                DateTime.TryParse(startDateTime, out startDateTimeStronglyTyped);
-                DateTime.TryParse(endDateTime, out endDateTimeStronglyTyped);
-                var capturedImages = _geoMarkerService.GetMarkersWithImageForTimeframe(startDateTimeStronglyTyped, endDateTimeStronglyTyped);
-                return capturedImages;
-            }
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+            DateTime.TryParse(startDateTime, out var startDateTimeStronglyTyped);
+            DateTime.TryParse(endDateTime, out var endDateTimeStronglyTyped);
+            return _geoMarkerService.GetMarkersWithImageForTimeframe(startDateTimeStronglyTyped, endDateTimeStronglyTyped);
         }
-
-        // GET api/geomarker
-        //public IEnumerable<CapturedImage> Get(int id)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        // Refactor this so that it is encapsulated at the business logic layer.
-        //        //var capturedImages = from capturedImage in _myBigBroRepository.Set<CapturedImage>()
-        //        //                     join capturedImageGeoMarker in _myBigBroRepository.Set<CapturedImageGeoMarker>() on
-        //        //                         capturedImage.Id equals capturedImageGeoMarker.CapturedImageId
-        //        //                     join geoMarker in _myBigBroRepository.Set<GeoMarker>() on
-        //        //                         capturedImageGeoMarker.GeoMarkerId equals geoMarker.Id
-        //        //                     where geoMarker.Id == id
-        //        //                     select capturedImage;
-        //        //return capturedImages;
-        //        return null;
-        //    }
-        //    throw new HttpResponseException(HttpStatusCode.BadRequest);
-        //}
     }
 }

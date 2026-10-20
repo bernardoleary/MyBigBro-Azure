@@ -1,7 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.IO;
-using System.Net;
+using System;
 using Infostructure.MyBigBro.Domain;
 using Infostructure.MyBigBro.ImageStorageServiceAgent;
 using NUnit.Framework;
@@ -11,50 +8,26 @@ namespace IntegrationTests.Infostructure.MyBigBro.ImageStorageAgent
     [TestFixture]
     public class UnitTestsServiceAgent
     {
+        private static readonly byte[] SampleJpegBytes = Convert.FromBase64String(
+            "/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAP//////////////////////////////////////////////////////////////////////////////////////wgALCAABAAEBAREA/8QAFBABAAAAAAAAAAAAAAAAAAAAAP/aAAgBAQABPxA=");
+
         [Test]
         public void TestPutImage()
         {
-            // arrange - get an image
-            var request = WebRequest.Create("http://www.rta.nsw.gov.au/trafficreports/cameras/camera_images/harbourbridge.jpg");
-            Stream stream = null;
-            IWebCamImage webCamImageData = null;
-            string key = null;
-            using (var response = request.GetResponse())
-            {
-                stream = response.GetResponseStream();
-                var image = Image.FromStream(stream);
-                webCamImageData = new WebCamImage { Data = ImageToByteArray(image) };
+            // arrange
+            var webCamImageData = new WebCamImage { Data = SampleJpegBytes };
+            var base64StringImage = Convert.ToBase64String(SampleJpegBytes);
+            Assert.IsNotEmpty(base64StringImage);
 
-                // Temp - collecting data
-                var base64StringImage = ImageToByteString(image);
+            // act
+            var agent = new ConfigurableStorageServiceAgent(
+                Microsoft.Extensions.Options.Options.Create(new StorageOptions()));
+            var output = agent.PutImage(webCamImageData, out var key);
 
-            }            
-
-            // act - load the stream into an image     
-            //var agent = new AwsStorageServiceAgent();
-            var agent = new AzureStorageServiceAgent();
-            var output = agent.PutImage(webCamImageData, out key);
-
-            // assert - if greater than zero, something happened
+            // assert
             Assert.Greater(output.Length, 0);
             Assert.Greater(key.Length, 0);
             Assert.Greater(output.Length, key.Length);
-        }
-
-        private byte[] ImageToByteArray(System.Drawing.Image image)
-        {
-            MemoryStream ms = new MemoryStream();
-            image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-            return ms.ToArray();
-        }
-
-        private string ImageToByteString(System.Drawing.Image image)
-        {
-            using (var ms = new MemoryStream())
-            {
-                image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                return Convert.ToBase64String(ms.ToArray());
-            }
         }
     }
 }

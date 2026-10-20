@@ -1,0 +1,14 @@
+**/.git
+**/.svn
+**/.vs
+**/$tf
+**/_ReSharper*
+**/bin
+**/obj
+packages/
+wrap/
+BoostrapTest1/
+BootstrapTest2/
+*.suo
+*.user
+*.zip

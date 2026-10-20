@@ -1,0 +1,129 @@
+name: mybigbro
+
+services:
+  postgres-db:
+    image: postgis/postgis:17-3.5-alpine
+    container_name: mybigbro-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-mybigbro}
+      POSTGRES_USER: ${POSTGRES_USER:-mybigbro}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-mybigbro_dev_pwd}
+    ports:
+      - "${POSTGRES_PORT:-5433}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/postgres:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER:-mybigbro} -d $${POSTGRES_DB:-mybigbro}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - mybigbro-net
+
+  azurite-blob:
+    image: mcr.microsoft.com/azure-storage/azurite:latest
+    container_name: mybigbro-azurite
+    restart: unless-stopped
+    command: "azurite-blob --blobHost 0.0.0.0 --blobPort 10000 --location /data"
+    ports:
+      - "10000:10000"
+    volumes:
+      - azuritedata:/data
+    networks:
+      - mybigbro-net
+
+  s3-storage:
+    image: adobe/s3mock:latest
+    container_name: mybigbro-s3
+    restart: unless-stopped
+    environment:
+      initialBuckets: "mybigbro"
+      retainFilesOnExit: "true"
+      root: "/s3data"
+    ports:
+      - "9090:9090"
+    volumes:
+      - s3data:/s3data
+    networks:
+      - mybigbro-net
+
+  api-service:
+    build:
+      context: .
+      dockerfile: docker/api/Dockerfile
+    container_name: mybigbro-api
+    restart: unless-stopped
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+      azurite-blob:
+        condition: service_started
+      s3-storage:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__MyBigBroPostgres: "Host=postgres-db;Port=5432;Database=${POSTGRES_DB:-mybigbro};Username=${POSTGRES_USER:-mybigbro};Password=${POSTGRES_PASSWORD:-mybigbro_dev_pwd}"
+      CaptureWorker__UseAsyncQueue: "true"
+      Storage__Provider: "${STORAGE_PROVIDER:-Azure}"
+      Storage__AzureConnectionString: "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://azurite-blob:10000/devstoreaccount1;"
+      Storage__AzureContainer: "images"
+      Storage__PublicRootUrl: "${STORAGE_PUBLIC_ROOT_URL:-http://localhost:10000/devstoreaccount1}"
+      Storage__AwsServiceUrl: "http://s3-storage:9090"
+      Storage__AwsBucket: "mybigbro"
+      Storage__AwsAccessKey: "${AWS_ACCESS_KEY_ID:-mock-access-key}"
+      Storage__AwsSecretKey: "${AWS_SECRET_ACCESS_KEY:-mock-secret-key}"
+    ports:
+      - "5080:8080"
+    networks:
+      - mybigbro-net
+
+  capture-worker:
+    build:
+      context: .
+      dockerfile: docker/worker/Dockerfile
+    container_name: mybigbro-capture-worker
+    restart: unless-stopped
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+      azurite-blob:
+        condition: service_started
+      s3-storage:
+        condition: service_started
+    environment:
+      DOTNET_ENVIRONMENT: Production
+      ConnectionStrings__MyBigBroPostgres: "Host=postgres-db;Port=5432;Database=${POSTGRES_DB:-mybigbro};Username=${POSTGRES_USER:-mybigbro};Password=${POSTGRES_PASSWORD:-mybigbro_dev_pwd}"
+      Storage__Provider: "${STORAGE_PROVIDER:-Azure}"
+      Storage__AzureConnectionString: "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://azurite-blob:10000/devstoreaccount1;"
+      Storage__AzureContainer: "images"
+      Storage__PublicRootUrl: "${STORAGE_PUBLIC_ROOT_URL:-http://localhost:10000/devstoreaccount1}"
+      Storage__AwsServiceUrl: "http://s3-storage:9090"
+      Storage__AwsBucket: "mybigbro"
+      Storage__AwsAccessKey: "${AWS_ACCESS_KEY_ID:-mock-access-key}"
+      Storage__AwsSecretKey: "${AWS_SECRET_ACCESS_KEY:-mock-secret-key}"
+    networks:
+      - mybigbro-net
+
+  web-ui:
+    build:
+      context: .
+      dockerfile: docker/web-ui/Dockerfile
+    container_name: mybigbro-web-ui
+    restart: unless-stopped
+    depends_on:
+      - api-service
+    ports:
+      - "8080:80"
+    networks:
+      - mybigbro-net
+
+volumes:
+  pgdata:
+  azuritedata:
+  s3data:
+
+networks:
+  mybigbro-net:
+    driver: bridge

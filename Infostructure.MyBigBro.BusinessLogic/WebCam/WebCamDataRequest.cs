@@ -1,5 +1,4 @@
-﻿using System.IO;
-using System.Net;
+using System.IO;
 
 namespace Infostructure.MyBigBro.BusinessLogic.WebCam
 {
@@ -8,7 +7,7 @@ namespace Infostructure.MyBigBro.BusinessLogic.WebCam
     {
         public WebCamWebResponse GetWebCamResponse(string url)
         {
-            return new WebCamWebResponse(WebRequest.Create(url));
+            return new WebCamWebResponse(url);
         }
 
         public Stream GetWebCamResponseStream(WebCamWebResponse response)

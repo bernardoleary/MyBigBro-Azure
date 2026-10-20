@@ -1,14 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Transactions;
 using Infostructure.MyBigBro.BusinessLogic.GeoSpatial;
 using Infostructure.MyBigBro.BusinessLogic.WebCam;
 using Infostructure.MyBigBro.DataModel.DataAccess;
 using Infostructure.MyBigBro.DataModel.Models;
 using Infostructure.MyBigBro.Domain;
-
-//using Microsoft.Practices.Unity;
 
 namespace Infostructure.MyBigBro.BusinessLogic.Services
 {
@@ -17,6 +14,9 @@ namespace Infostructure.MyBigBro.BusinessLogic.Services
         private IWebCamControl _webCamControl = null;
         private ILocation _location = null;
         private IMyBigBroRepository _myBigBroRepository = null;
+
+        public bool UseAsyncCaptureQueue { get; set; } =
+            string.Equals(Environment.GetEnvironmentVariable("CaptureWorker__UseAsyncQueue"), "true", StringComparison.OrdinalIgnoreCase);
 
         public IWebCamControl WebCamControl
         {
@@ -38,7 +38,6 @@ namespace Infostructure.MyBigBro.BusinessLogic.Services
 
         public GeoMarkerService() {}
 
-        //[InjectionConstructor]
         public GeoMarkerService(
             IWebCamControl webCamControl,
             ILocation location,
@@ -50,12 +49,11 @@ namespace Infostructure.MyBigBro.BusinessLogic.Services
         }
         
         // Returns the number of webcams that can see us at our current location.
-        // Is this method doing too much?
         public int ProcessGeoMarker(IGeoMarkerDto geoMarkerDto)
         {
             IEnumerable<IDevice> devices = null; 
                 
-            // Get devices or create the device if it does not exit and then get it
+            // Get devices or create the device if it does not exist and then get it
             devices = GetDevices(geoMarkerDto.DeviceName);
             if (!devices.Any())
             {
@@ -79,7 +77,10 @@ namespace Infostructure.MyBigBro.BusinessLogic.Services
             };
 
             // Process
-            return ProcessGeoMarker(geoMarker);
+            var count = ProcessGeoMarker(geoMarker);
+            geoMarkerDto.Id = geoMarker.Id;
+            geoMarkerDto.DeviceId = deviceId;
+            return count;
         }
 
         // Get the Device if it exists
@@ -92,13 +93,12 @@ namespace Infostructure.MyBigBro.BusinessLogic.Services
         }
 
         // Returns the number of webcams that can see us at our current location.
-        // Is this method doing too much?
         public int ProcessGeoMarker(IGeoMarker geoMarker)
         {
             // Add the GeoMarker to the database and get the ID.
             var geoMarkerId = _location.AppendGeoMarker(geoMarker);
 
-            // Get the list of webcams that we might be able to see us at our current location.
+            // Get the list of webcams that might be able to see us at our current location.
             var webCamsWithinWebCamRadiusOfVisibility = 
                 _location.GetWebCamsWithinWebCamRadiusOfVisibility(new Point
                                                                     {
@@ -107,16 +107,24 @@ namespace Infostructure.MyBigBro.BusinessLogic.Services
                                                                     });
 
             // If there are any webcams that can see us...
-            if (webCamsWithinWebCamRadiusOfVisibility.Count > 0)
+            if (webCamsWithinWebCamRadiusOfVisibility != null && webCamsWithinWebCamRadiusOfVisibility.Count > 0)
             {
                 foreach (var webCam in webCamsWithinWebCamRadiusOfVisibility)
                 {
-                    using (var trans = new TransactionScope())
+                    if (UseAsyncCaptureQueue)
                     {
-                        // Capture and add the image to the DB.
-                        // Future modification - only capture an image if one has not been recently (within seconds) captured for that webcam.
-                        // Future modification - remove this internal dependency on WebCamImage (make a factory?).
-                        // Future modification - remove this internal dependency on AwsStorageServiceAgent (could be done using the IoC container?).
+                        var job = new CaptureJob
+                        {
+                            GeoMarkerId = geoMarkerId,
+                            WebCamId = webCam.Id,
+                            Status = "PENDING",
+                            CreatedAt = DateTime.UtcNow
+                        };
+                        _myBigBroRepository.Add(job);
+                        _myBigBroRepository.SaveChanges();
+                    }
+                    else
+                    {
                         _webCamControl.WebCam = webCam;
                         _webCamControl.WebCamImage = new WebCamImage();
                         _webCamControl.CaptureCurrentImage(new WebCamDataRequest());
@@ -124,17 +132,13 @@ namespace Infostructure.MyBigBro.BusinessLogic.Services
                         var capturedImageId = _webCamControl.StoreCapturedImage();
 
                         // Map the image to the GeoMarker
-                        // Refactor this method so that it takes a complex type, rather than two primitives.
                         _location.MapCapturedImageToGeoMarker(capturedImageId, geoMarkerId);
-
-                        // commit the change
-                        trans.Complete();
                     }
                 }
             }
 
-            // Return the count of images collected.
-            return webCamsWithinWebCamRadiusOfVisibility.Count;
+            // Return the count of images collected / queued.
+            return webCamsWithinWebCamRadiusOfVisibility?.Count ?? 0;
         }
 
         // Get the last n geomarkers where an image has been captured, or all
@@ -180,44 +184,41 @@ namespace Infostructure.MyBigBro.BusinessLogic.Services
                 join device in _myBigBroRepository.Set<Device>() on
                     geoMarker.DeviceId equals device.Id
                 where device.DeviceName == deviceName
-                select new CapturedImageGeoMarkerDetail {CapturedImage = capturedImage, GeoMarker = geoMarker})
-                .Count();
+                select new {capturedImage.Id}).Count();
             return countOfCapturedImages;
         }
 
+        // Get the geomarkers where an image has been captured for a specific time period
         public IEnumerable<CapturedImageGeoMarkerDetail> GetMarkersWithImageForTimeframe(DateTime startDateTime, DateTime endDateTime)
         {
             var capturedImagesGeoMarkersDetail = (from geoMarker in _myBigBroRepository.Set<GeoMarker>()
                 join capturedImageGeoMarker in
-                    _myBigBroRepository.Set<CapturedImageGeoMarker>() on geoMarker.Id
-                    equals
+                    _myBigBroRepository.Set<CapturedImageGeoMarker>() on geoMarker.Id equals
                     capturedImageGeoMarker.GeoMarkerId
                 join capturedImage in _myBigBroRepository.Set<CapturedImage>() on
                     capturedImageGeoMarker.CapturedImageId equals capturedImage.Id
-                select
-                    new CapturedImageGeoMarkerDetail
-                    {CapturedImage = capturedImage, GeoMarker = geoMarker})
-                .OrderByDescending(q => q.CapturedImage.Id)
-                .Where(t => t.GeoMarker.MarkerDateTime > startDateTime && t.GeoMarker.MarkerDateTime < endDateTime);
+                where geoMarker.MarkerDateTime > startDateTime && geoMarker.MarkerDateTime < endDateTime
+                select new CapturedImageGeoMarkerDetail {CapturedImage = capturedImage, GeoMarker = geoMarker})
+                .OrderByDescending(q => q.CapturedImage.Id);
             return capturedImagesGeoMarkersDetail;
         }
 
+        // Get the geomarkers where an image has been captured for a specific time period and deviceName
         public IEnumerable<CapturedImageGeoMarkerDetail> GetMarkersWithImageForTimeframe(DateTime startDateTime, DateTime endDateTime, string deviceName)
         {
             var capturedImagesGeoMarkersDetail = (from geoMarker in _myBigBroRepository.Set<GeoMarker>()
                 join capturedImageGeoMarker in
-                    _myBigBroRepository.Set<CapturedImageGeoMarker>() on geoMarker.Id
-                    equals
+                    _myBigBroRepository.Set<CapturedImageGeoMarker>() on geoMarker.Id equals
                     capturedImageGeoMarker.GeoMarkerId
                 join capturedImage in _myBigBroRepository.Set<CapturedImage>() on
                     capturedImageGeoMarker.CapturedImageId equals capturedImage.Id
                 join device in _myBigBroRepository.Set<Device>() on
                     geoMarker.DeviceId equals device.Id
-                where device.DeviceName == deviceName
-                select
-                    new CapturedImageGeoMarkerDetail {CapturedImage = capturedImage, GeoMarker = geoMarker})
-                .OrderByDescending(q => q.CapturedImage.Id)
-                .Where(t => t.GeoMarker.MarkerDateTime > startDateTime && t.GeoMarker.MarkerDateTime < endDateTime);
+                where geoMarker.MarkerDateTime > startDateTime &&
+                      geoMarker.MarkerDateTime < endDateTime &&
+                      device.DeviceName == deviceName
+                select new CapturedImageGeoMarkerDetail {CapturedImage = capturedImage, GeoMarker = geoMarker})
+                .OrderByDescending(q => q.CapturedImage.Id);
             return capturedImagesGeoMarkersDetail;
         }
 

@@ -1,26 +1,24 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
 using Infostructure.MyBigBro.BusinessLogic.Services;
 using Infostructure.MyBigBro.BusinessLogic.WebCam;
 using Infostructure.MyBigBro.DataModel.DataAccess;
 using Infostructure.MyBigBro.DataModel.Models;
 using Infostructure.MyBigBro.Domain;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Infostructure.MyBigBro.Web4.Controllers
 {
-    public class GeoMarkersController : ApiController
+    [ApiController]
+    public class GeoMarkersController : ControllerBase
     {
-        private IMyBigBroRepository _myBigBroRepository = null;
-        private IWebCamControl _webCamControl = null;
-        private IGeoMarkerService _geoMarkerService = null;
+        private readonly IMyBigBroRepository _myBigBroRepository;
+        private readonly IWebCamControl _webCamControl;
+        private readonly IGeoMarkerService _geoMarkerService;
 
-        public GeoMarkersController() {}
-
-        public GeoMarkersController(IMyBigBroRepository myBigBroRepository,
+        public GeoMarkersController(
+            IMyBigBroRepository myBigBroRepository,
             IWebCamControl webCamControl,
             IGeoMarkerService geoMarkerService)
         {
@@ -30,68 +28,63 @@ namespace Infostructure.MyBigBro.Web4.Controllers
         }
 
         // GET api/geomarkers
+        [HttpGet("api/geomarkers")]
         public IEnumerable<GeoMarker> Get()
         {
-            if (ModelState.IsValid)
-            {
-                var result = _myBigBroRepository.Set<GeoMarker>();
-                return result;
-            }
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+            return _myBigBroRepository.Set<GeoMarker>().ToList();
         }
 
         // GET api/geomarkers/latest?deviceName=...
-        [ActionName("GetLatest")]
-        public GeoMarker GetLatest(string deviceName)
+        [HttpGet("api/geomarkers/latest")]
+        public ActionResult<GeoMarker> GetLatest([FromQuery] string deviceName)
         {
-            if (ModelState.IsValid)
-            {
-                var latestGeoMarker = _geoMarkerService.GetLatestGeoMarkerForDevice(deviceName);
-                return latestGeoMarker as GeoMarker;
-            }
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+            var latestGeoMarker = _geoMarkerService.GetLatestGeoMarkerForDevice(deviceName);
+            return Ok(latestGeoMarker as GeoMarker);
         }
 
         // GET api/geomarkers/5
-        public GeoMarker Get(int id)
+        [HttpGet("api/geomarkers/{id:int}", Name = "GetGeoMarkerById")]
+        public ActionResult<GeoMarker> Get(int id)
         {
-            if (ModelState.IsValid)
-            {
-                var result = _myBigBroRepository.Set<GeoMarker>().FirstOrDefault(x => x.Id == id);
-                return result;
-            }
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+            var result = _myBigBroRepository.Set<GeoMarker>().FirstOrDefault(x => x.Id == id);
+            if (result == null)
+                return NotFound();
+            return result;
         }
 
         // GET api/geomarkers/5/test
-        public GeoMarker Test(int id)
+        [HttpGet("api/geomarkers/{id:int}/test")]
+        public ActionResult<GeoMarker> Test(int id)
         {
-            if (ModelState.IsValid)
-            {
-                var result = _myBigBroRepository.Set<GeoMarker>().FirstOrDefault(x => x.Id == id);
-                return result;
-            }
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+            var result = _myBigBroRepository.Set<GeoMarker>().FirstOrDefault(x => x.Id == id);
+            if (result == null)
+                return NotFound();
+            return result;
         }
 
         // POST api/geomarkers
-        public HttpResponseMessage Post(GeoMarkerDto value)
+        [HttpPost("api/geomarkers")]
+        public IActionResult Post([FromBody] GeoMarkerDto value)
         {
-            if (ModelState.IsValid)
+            if (value == null || !ModelState.IsValid)
             {
-                // Refeactor this to use the IoC container, as soon as I fugure out how it works!
-                _geoMarkerService.ProcessGeoMarker(value);
-
-                // Created.
-                var response = new HttpResponseMessage(HttpStatusCode.Created);
-
-                // Advise where the new GeoMarker is.
-                string uri = Url.Route(null, new { id = value.Id });
-                response.Headers.Location = new Uri(Request.RequestUri, uri);
-
-                return response;
+                return BadRequest(ModelState);
             }
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+
+            if (value.MarkerDateTime == default)
+            {
+                value.MarkerDateTime = DateTime.UtcNow;
+            }
+
+            var matchedWebCams = _geoMarkerService.ProcessGeoMarker(value);
+            var locationUri = $"/api/geomarkers/{value.Id}";
+            return Created(locationUri, new
+            {
+                Id = value.Id,
+                DeviceId = value.DeviceId,
+                DeviceName = value.DeviceName,
+                MatchedWebCams = matchedWebCams
+            });
         }
     }
 }

@@ -1,95 +1,72 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Web.Http;
 using Infostructure.MyBigBro.BusinessLogic.Services;
 using Infostructure.MyBigBro.BusinessLogic.WebCam;
 using Infostructure.MyBigBro.DataModel.DataAccess;
 using Infostructure.MyBigBro.DataModel.Models;
 using Infostructure.MyBigBro.Domain;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Infostructure.MyBigBro.Web4.Controllers
 {
-    public class WebCamsController : ApiController
+    [ApiController]
+    public class WebCamsController : ControllerBase
     {
-        private IMyBigBroRepository _myBigBroRepository = null;
-        private IWebCamControl _webCamControl = null;
-        private IGeoMarkerService _geoMarkerService = null;
+        private readonly IMyBigBroRepository _myBigBroRepository;
+        private readonly IWebCamControl _webCamControl;
+        private readonly IGeoMarkerService _geoMarkerService;
 
-        public WebCamsController() {}
-
-        public WebCamsController(IMyBigBroRepository myBigBroRepository, IWebCamControl webCamControl, IGeoMarkerService geoMarkerService)
+        public WebCamsController(
+            IMyBigBroRepository myBigBroRepository,
+            IWebCamControl webCamControl,
+            IGeoMarkerService geoMarkerService)
         {
             _myBigBroRepository = myBigBroRepository;
             _webCamControl = webCamControl;
             _geoMarkerService = geoMarkerService;
         }
 
-        // GET api/webcam
+        // GET api/webcams
+        [HttpGet("api/webcams")]
+        [HttpGet("api/webcam")]
         public IEnumerable<WebCam> Get()
         {
-            if (ModelState.IsValid)
-            {
-                var result = _myBigBroRepository.Set<WebCam>();
-                return result;
-            }
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+            return _myBigBroRepository.Set<WebCam>().ToList();
         }
 
-        // GET api/webcam/5
-        public WebCam Get(int id)
+        // GET api/webcams/5
+        [HttpGet("api/webcams/{id:int}")]
+        [HttpGet("api/webcam/{id:int}")]
+        public ActionResult<WebCam> Get(int id)
         {
-            if (ModelState.IsValid)
-            {
-                var result = _myBigBroRepository.Set<WebCam>().FirstOrDefault(x => x.Id == id);
-                return result;
-            }
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+            var result = _myBigBroRepository.Set<WebCam>().FirstOrDefault(x => x.Id == id);
+            if (result == null)
+                return NotFound();
+            return result;
         }
 
-        // GET api/webcam/nearest?deviceName=...
-        [ActionName("GetNearest")]
-        public WebCamExtendedInfo GetNearest(string deviceName)
+        // GET api/webcams/nearest?deviceName=...
+        [HttpGet("api/webcams/nearest")]
+        [HttpGet("api/webcam/nearest")]
+        public ActionResult<WebCamExtendedInfo> GetNearest([FromQuery] string deviceName)
         {
-            if (ModelState.IsValid)
-            {
-                var latestGeoMarker = _geoMarkerService.GetLatestGeoMarkerForDevice(deviceName);
-                // If there's no such device, or no geomarkers for it, return null
-                if (latestGeoMarker == null)
-                    return null;
-                var nearestWebCam = _webCamControl.GetNearestWebCam(latestGeoMarker);
-                return (WebCamExtendedInfo)nearestWebCam;
-            }
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+            var latestGeoMarker = _geoMarkerService.GetLatestGeoMarkerForDevice(deviceName);
+            if (latestGeoMarker == null)
+                return Ok(null);
+            var nearestWebCam = _webCamControl.GetNearestWebCam(latestGeoMarker);
+            return (WebCamExtendedInfo)nearestWebCam;
         }
 
-        // GET api/webcam/nearestmany?top=...&deviceName=...
-        [ActionName("GetNearestMany")]
-        public IEnumerable<WebCamExtendedInfo> GetNearestMany(int top, string deviceName)
+        // GET api/webcams/nearestmany?top=...&deviceName=...
+        [HttpGet("api/webcams/nearestmany")]
+        [HttpGet("api/webcam/nearestmany")]
+        public ActionResult<IEnumerable<WebCamExtendedInfo>> GetNearestMany([FromQuery] int top, [FromQuery] string deviceName)
         {
-            if (ModelState.IsValid)
-            {
-                var latestGeoMarker = _geoMarkerService.GetLatestGeoMarkerForDevice(deviceName);
-                // If there's no such device, or no geomarkers for it, return null
-                if (latestGeoMarker == null)
-                    return null;
-                var nearestWebCams = _webCamControl.GetNearestWebCams(top, latestGeoMarker);
-                return (IEnumerable<WebCamExtendedInfo>)nearestWebCams;
-            }
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+            var latestGeoMarker = _geoMarkerService.GetLatestGeoMarkerForDevice(deviceName);
+            if (latestGeoMarker == null)
+                return Ok(null);
+            var nearestWebCams = _webCamControl.GetNearestWebCams(top, latestGeoMarker);
+            return Ok(nearestWebCams.Cast<WebCamExtendedInfo>().ToList());
         }
-
-        /*
-        private void EmailException(Exception ex)
-        {
-            using (var mail = new System.Net.Mail.SmtpClient())
-            {
-                mail.Credentials = new System.Net.NetworkCredential("info@mybigbro.tv", "teevee");
-                mail.Host = "mail.mybigbro.tv";
-                mail.Send(new MailMessage("info@mybigbro.tv", "bernard.oleary@gmail.com", "MyBigBro",
-                                          ex.Message + Environment.NewLine + ex.StackTrace));
-            }
-        }
-         * */
     }
 }

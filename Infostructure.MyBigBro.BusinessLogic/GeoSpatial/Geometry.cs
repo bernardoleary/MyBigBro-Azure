@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data.Objects.SqlClient;
+using System;
 
 namespace Infostructure.MyBigBro.BusinessLogic.GeoSpatial
 {
@@ -7,8 +6,12 @@ namespace Infostructure.MyBigBro.BusinessLogic.GeoSpatial
     {
         public double GetDistancePythagoras(double x1, double y1, double x2, double y2)
         {
-            //return SqlFunctions.SquareRoot(SqlFunctions.Square(x1 - x2) + SqlFunctions.Square(y1 - y2)).Value;
-            return distance(y1, x1, y2, x2, 'K');
+            return Math.Sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+        }
+
+        public double GetDistanceGeodesic(double x1, double y1, double x2, double y2, char unit = 'K')
+        {
+            return distance(y1, x1, y2, x2, unit);
         }
 
         //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -65,6 +68,5 @@ namespace Infostructure.MyBigBro.BusinessLogic.GeoSpatial
         private double rad2deg(double rad) {
             return (rad / Math.PI * 180.0);
         }
-
     }
 }

@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Infostructure.MyBigBro.Web4.Controllers
 {
-    public class DeviceController : ApiController
+    [ApiController]
+    [Route("api/[controller]")]
+    public class DeviceController : ControllerBase
     {
     }
 }

@@ -1,10 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Data.Objects.SqlClient;
 using System.IO;
 using System.Linq;
-using System.Net.Sockets;
-using System.Transactions;
 using Infostructure.MyBigBro.BusinessLogic.GeoSpatial;
 using Infostructure.MyBigBro.DataModel.DataAccess;
 using Infostructure.MyBigBro.Domain;
@@ -91,27 +88,21 @@ namespace Infostructure.MyBigBro.BusinessLogic.WebCam
             if (_webCamImage.Data == null)
                 throw new NullReferenceException("The image has not yet been loaded.");
 
-            using (var trans = new TransactionScope())
-            {
-                // store the image
-                string key = null;
-                string fileName = _storageServiceAgent.PutImage(_webCamImage, out key);
+            // store the image in blob/object storage outside any DB transaction
+            string key = null;
+            string fileName = _storageServiceAgent.PutImage(_webCamImage, out key);
 
-                // update the database
-                _capturedImage.DateTimeCaptured = DateTime.Now;
-                _capturedImage.Url = fileName;
-                _capturedImage.WebCamId = _webCam.Id;
-                _capturedImage.IsThumbnailed = false;
-                _capturedImage.Key = key;
-                _myBigBroRepository.Add(_capturedImage);
-                _myBigBroRepository.SaveChanges();
+            // update the database
+            _capturedImage.DateTimeCaptured = DateTime.UtcNow;
+            _capturedImage.Url = fileName;
+            _capturedImage.WebCamId = _webCam.Id;
+            _capturedImage.IsThumbnailed = false;
+            _capturedImage.Key = key;
+            _myBigBroRepository.Add(_capturedImage);
+            _myBigBroRepository.SaveChanges();
 
-                // commit the change
-                trans.Complete();
-
-                // Return the new image ID.
-                return _capturedImage.Id;
-            }
+            // Return the new image ID.
+            return _capturedImage.Id;
         }
 
         public IWebCamExtendedInfo GetNearestWebCam(IGeoMarker geoMarker)
@@ -121,8 +112,7 @@ namespace Infostructure.MyBigBro.BusinessLogic.WebCam
                 from webCam in _myBigBroRepository.Set<Infostructure.MyBigBro.DataModel.Models.WebCam>()
                 select new WebCamExtendedInfo
                 {
-                    //_geometry.GetDistancePythagoras(webCam.XCoord, webCam.YCoord, geoMarker.XCoord, geoMarker.YCoord)
-                    Distance = SqlFunctions.SquareRoot(SqlFunctions.Square(webCam.XCoord - geoMarker.XCoord) + SqlFunctions.Square(webCam.YCoord - geoMarker.YCoord)).Value, 
+                    Distance = Math.Sqrt((webCam.XCoord - geoMarker.XCoord) * (webCam.XCoord - geoMarker.XCoord) + (webCam.YCoord - geoMarker.YCoord) * (webCam.YCoord - geoMarker.YCoord)),
                     Id = webCam.Id,
                     Name = webCam.Name,
                     RadiusOfVisibility = webCam.RadiusOfVisibility,
@@ -134,7 +124,7 @@ namespace Infostructure.MyBigBro.BusinessLogic.WebCam
             // Get the min distance
             var minDistance = webCamsWithDistanceFromGeoMarker.Min(cam => cam.Distance);
 
-            // Select the camera with mon distance
+            // Select the camera with min distance
             var webCamWithMinDistanceFromGeoMarker =
                 from webCam in webCamsWithDistanceFromGeoMarker
                 where webCam.Distance == minDistance
@@ -147,14 +137,12 @@ namespace Infostructure.MyBigBro.BusinessLogic.WebCam
         public IEnumerable<IWebCamExtendedInfo> GetNearestWebCams(int top, IGeoMarker geoMarker)
         {
             // Generate distances for all camera locations from this point
-            // Need to do this using a loop as LINQ won't accept the "GetDistancePythagoras" otherwise.
             var webCamsWithDistanceFromGeoMarker = new List<WebCamExtendedInfo>();
             foreach (var webCam in _myBigBroRepository.Set<Infostructure.MyBigBro.DataModel.Models.WebCam>())
             {
                 webCamsWithDistanceFromGeoMarker.Add(new WebCamExtendedInfo()
                 {
                     Distance = _geometry.GetDistancePythagoras(webCam.XCoord, webCam.YCoord, geoMarker.XCoord, geoMarker.YCoord),
-                    //Distance = SqlFunctions.SquareRoot(SqlFunctions.Square(webCam.XCoord - geoMarker.XCoord) + SqlFunctions.Square(webCam.YCoord - geoMarker.YCoord)).Value,
                     Id = webCam.Id,
                     Name = webCam.Name,
                     RadiusOfVisibility = webCam.RadiusOfVisibility,
@@ -164,16 +152,13 @@ namespace Infostructure.MyBigBro.BusinessLogic.WebCam
                 });
             }
 
-            // Get the min distance
-            var minDistance = webCamsWithDistanceFromGeoMarker.Min(cam => cam.Distance);
-
-            // Select the camera with mon distance
+            // Select the cameras ordered by distance
             var webCamWithMinDistanceFromGeoMarker =
                 from webCam in webCamsWithDistanceFromGeoMarker
                 orderby webCam.Distance
                 select webCam;
 
-            // Return it
+            // Return top N
             return webCamWithMinDistanceFromGeoMarker.Take(top);
         }
     }

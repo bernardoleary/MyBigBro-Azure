@@ -1,4 +1,4 @@
-﻿using Infostructure.MyBigBro.BusinessLogic.GeoSpatial;
+using Infostructure.MyBigBro.BusinessLogic.GeoSpatial;
 using Infostructure.MyBigBro.DataModel.DataAccess;
 using IntegrationTests.Properties;
 using NUnit.Framework;
@@ -11,35 +11,31 @@ namespace IntegrationTests.Infostructure.MyBigBro.BusinessLogic
         [Test]
         public void TestIsPointWithinWebCamRadiusOfVisibility()
         {
-            //Arrange
-            var pointInRangeOfId0Only = new Point { XCoord = 1, YCoord = 1 };
-            var pointInRangeOfId2Only = new Point { XCoord = 9, YCoord = 9 };
-            var pointInRangeOfId1AndId2 = new Point { XCoord = 4, YCoord = 4 };
-            var pointNotInRange = new Point { XCoord = 100, YCoord = 100 };
-            var repository = new MyBigBroRepository() { Context = new MyBigBroContext(Settings.Default.connectionString) };
+            //Arrange (using seeded NZTA webcam coordinates in PostgreSQL)
+            var pointInRangeOfBondSt = new Point { XCoord = 174.746, YCoord = -36.869 };
+            var pointInRangeOfGtNorthRd = new Point { XCoord = 174.706, YCoord = -36.872 };
+            var pointNotInRange = new Point { XCoord = 0.0, YCoord = 0.0 };
+            using var context = new MyBigBroContext(Settings.Default.connectionString);
+            var repository = new MyBigBroRepository() { Context = context };
             var location = new Location(repository);
 
             //Act
-            var pointInRangeOfId0OnlyResult = location.IsPointWithinWebCamRadiusOfVisibility(pointInRangeOfId0Only);
-            var pointInRangeOfId2OnlyResult = location.IsPointWithinWebCamRadiusOfVisibility(pointInRangeOfId2Only);
-            var pointInRangeOfId1AndId2Result = location.IsPointWithinWebCamRadiusOfVisibility(pointInRangeOfId1AndId2);
-            var pointNotInRangeResult = location.IsPointWithinWebCamRadiusOfVisibility(pointNotInRange);
+            var inRange1 = location.IsPointWithinWebCamRadiusOfVisibility(pointInRangeOfBondSt);
+            var inRange2 = location.IsPointWithinWebCamRadiusOfVisibility(pointInRangeOfGtNorthRd);
+            var notInRange = location.IsPointWithinWebCamRadiusOfVisibility(pointNotInRange);
 
             //Assert
-            Assert.IsTrue(pointInRangeOfId0OnlyResult);
-            Assert.IsTrue(pointInRangeOfId2OnlyResult);
-            Assert.IsTrue(pointInRangeOfId1AndId2Result);
-            Assert.IsFalse(pointNotInRangeResult);
+            Assert.IsTrue(inRange1);
+            Assert.IsTrue(inRange2);
+            Assert.IsFalse(notInRange);
         }
 
         [Test]
         public void TestGetWebCams()
         {
             //Arrange
-            string connectionString =
-                //"Server=tcp:lcjoa99y8j.database.windows.net,1433;Database=bernardtest;User ID=bernardtest@lcjoa99y8j;Password=4Uckland;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;";
-                Settings.Default.connectionString;
-            var repository = new MyBigBroRepository() { Context = new MyBigBroContext(Settings.Default.connectionString) };
+            using var context = new MyBigBroContext(Settings.Default.connectionString);
+            var repository = new MyBigBroRepository() { Context = context };
             var location = new Location(repository);
 
             //Act

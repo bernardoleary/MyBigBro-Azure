@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+  <PropertyGroup>
+    <RootNamespace>Infostructure.MyBigBro.CaptureWorker</RootNamespace>
+    <AssemblyName>Infostructure.MyBigBro.CaptureWorker</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infostructure.MyBigBro.BusinessLogic\Infostructure.MyBigBro.BusinessLogic.csproj" />
+    <ProjectReference Include="..\Infostructure.MyBigBro.DataModel\Infostructure.MyBigBro.DataModel.csproj" />
+    <ProjectReference Include="..\Infostructure.MyBigBro.Domain\Infostructure.MyBigBro.Domain.csproj" />
+    <ProjectReference Include="..\Infostructure.MyBigBro.ImageStorageServiceAgent\Infostructure.MyBigBro.ImageStorageServiceAgent.csproj" />
+  </ItemGroup>
+</Project>
