@@ -1,177 +1,207 @@
 <!DOCTYPE html>
 <html ng-app="MyBigBroApp">
 <head>
+    <meta charset="utf-8" />
     <title>My Big Bro</title>
     <link rel="shortcut icon" type="image/x-icon" href="/content/images/favicon.ico">
 
-    <!-- Optional theme -->
     <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
-    <link href="content/css/bootstrap.css" rel="stylesheet" />
-    <link href="content/css/toaster.css" rel="stylesheet" />
-    <link href="content/css/loading-bar.min.css" rel="stylesheet" />
-    <link href="content/css/site.css" rel="stylesheet" />
-    <link href="content/css/datetimepicker.css" rel="stylesheet" />
-    <link href="content/css/navbar.css" rel="stylesheet" />
-    <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    
+
+    <link href="content/css/bootstrap.css?v=3" rel="stylesheet" />
+    <link href="content/css/toaster.css?v=3" rel="stylesheet" />
+    <link href="content/css/loading-bar.min.css?v=3" rel="stylesheet" />
+    <link href="content/css/datetimepicker.css?v=3" rel="stylesheet" />
+    <link href="content/css/navbar.css?v=3" rel="stylesheet" />
+    <link href="content/css/site.css?v=3" rel="stylesheet" />
+    <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
     <style>
-        
-         html,body {width:100%;height:100%;margin:0;padding:0;}
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
         #map {
             display: block;
-            position:absolute;
-            height:auto;
-            bottom:0;
-            top:0;
-            left:0;
-            right:0;
-            margin-top:50px; /* adjust top margin to your header height */
+            position: absolute;
+            bottom: 0;
+            top: 50px;
+            left: 0;
+            right: 0;
             z-index: 1;
         }
 
+        .navbar-fixed-top {
+            z-index: 1030;
+        }
+
+        .dropdown-menu {
+            padding: 6px;
+            min-width: 260px;
+            z-index: 1040;
+        }
+
+        .datetimepicker {
+            width: 250px;
+            padding: 4px;
+        }
+
+        .datetimepicker table {
+            width: 100%;
+        }
+
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], .ng-cloak {
+            display: none !important;
+        }
     </style>
-    
-    <!-- 3rd party libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-animate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.9.0/ui-bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.9.0/ui-bootstrap-tpls.min.js"></script>
+
+    <!-- Load jQuery first so Bootstrap and AngularJS bind to full jQuery -->
+    <script src="scripts/jquery.min.js?v=3"></script>
+    <script src="scripts/bootstrap.js?v=3"></script>
+    <script src="scripts/moment.js?v=3"></script>
+    <script src="scripts/underscore.js?v=3"></script>
+
+    <!-- AngularJS 1.2.x & modules -->
+    <script src="scripts/angular.min.js?v=3"></script>
+    <script src="scripts/angular-route.min.js?v=3"></script>
+    <script src="scripts/angular-resource.min.js?v=3"></script>
+    <script src="scripts/angular-animate.min.js?v=3"></script>
+    <script src="scripts/toaster.js?v=3"></script>
+    <script src="scripts/loading-bar.min.js?v=3"></script>
+    <script src="scripts/datetimepicker.js?v=3"></script>
+
+    <!-- OpenStreetMap / Leaflet -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script src="scripts/jquery.min.js"></script>
-    <script src="scripts/underscore.js"></script>
-    <script src="scripts/toaster.js"></script>
-    <script src="scripts/loading-bar.min.js"></script>
-    <script src="scripts/moment.js"></script>
-    <script src="scripts/bootstrap.js"></script>
-    <script src="scripts/datetimepicker.js"></script>
 
-    <!-- Load app main script -->
-    <script src="app/app.js"></script>
-    <script src="app/services/capturedImagesGeoMarkerService.js"></script>   
-    <script src="app/services/webCamsService.js"></script> 
-    <script src="app/controllers/mainController.js"></script>
-
+    <!-- Application scripts -->
+    <script src="app/app.js?v=3"></script>
+    <script src="app/services/capturedImagesGeoMarkerService.js?v=3"></script>
+    <script src="app/services/webCamsService.js?v=3"></script>
+    <script src="app/controllers/mainController.js?v=3"></script>
 </head>
-    <body>
-        <!-- Modal Map -->
-        <div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="mapModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="mapModalTitle"></h4>
-                    </div>
-                    <div class="modal-body" id="mapModalBody">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
+<body data-ng-controller="mainController" ng-cloak>
+    <!-- Modal Map -->
+    <div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="mapModalTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="mapModalTitle"></h4>
+                </div>
+                <div class="modal-body" id="mapModalBody">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-        <!-- Modal About -->
-        <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="myModalLabel">About My Big Bro</h4>
-                    </div>
-                    <div class="modal-body" id="divAbout">
-                        <p>
-                            Use "My Big Bro" to track yourself on your city's or region's network of CCTV traffic webcams.
-                        </p>
-                        <p>
-                            New York, London, Hong Kong, Singapore, Tennessee, Boston, New Zealand, Sydney...and more to come!
-                        </p>
-                        <p>
-                            My Big Bro captures and stores images of you from publicly available CCTV cameras as you move through your city.
-                        </p>
-                        <p>
-                            <strong>You will need a copy of the My Big Bro app to make use of this service - <a href="https://play.google.com/store/apps/details?id=com.infostructure.mybigbro" target="_blank">click here.</a></strong>
-                        </p>
-                        <p>
-                            Take a look at the My Big Bro "How To" video to get an overview as to how the app works - <a href="https://www.youtube.com/watch?v=o52_4ArtdyY" target="_blank">click here.</a></strong>
-                        </p>
-                        <p>
-                            Tweet me on <a href="https://twitter.com/mybigbrotv" target="_blank">@mybigbrotv</a> or email <a href="mailto:bro@mybigbro.tv" target="_blank">bro@mybigbro.tv</a> if you have any questions or suggestions.
-                        </p>
-                        <p>
-                            More cameras are being added all the time - contact me anytime with your ideas, I'd love to hear them!
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
+    </div>
+
+    <!-- Modal About -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">About My Big Bro</h4>
+                </div>
+                <div class="modal-body" id="divAbout">
+                    <p>
+                        Use "My Big Bro" to track yourself on your city's or region's network of CCTV traffic webcams.
+                    </p>
+                    <p>
+                        New York, London, Hong Kong, Singapore, Tennessee, Boston, New Zealand, Sydney...and more to come!
+                    </p>
+                    <p>
+                        My Big Bro captures and stores images of you from publicly available CCTV cameras as you move through your city.
+                    </p>
+                    <p>
+                        <strong>You will need a copy of the My Big Bro app to make use of this service - <a href="https://play.google.com/store/apps/details?id=com.infostructure.mybigbro" target="_blank">click here.</a></strong>
+                    </p>
+                    <p>
+                        Take a look at the My Big Bro "How To" video to get an overview as to how the app works - <a href="https://www.youtube.com/watch?v=o52_4ArtdyY" target="_blank">click here.</a>
+                    </p>
+                    <p>
+                        Tweet me on <a href="https://twitter.com/mybigbrotv" target="_blank">@mybigbrotv</a> or email <a href="mailto:bro@mybigbro.tv" target="_blank">bro@mybigbro.tv</a> if you have any questions or suggestions.
+                    </p>
+                    <p>
+                        More cameras are being added all the time - contact me anytime with your ideas, I'd love to hear them!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-        <!-- Header -->
-        <header class="container" data-ng-controller="mainController">
-            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-                <div class="container">
-                    <!-- Toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <img style="max-width:100px;" src="/content/images/ic_launcher_48x48.png">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>                        
-                        <a class="navbar-brand" href="#" data-toggle="modal" data-target="#aboutModal" title="About">What is My Big Bro?</a>
-                    </div>
-                    <div class="collapse navbar-collapse">
-                        <!-- The date window that we are searching within -->
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" data-toggle="dropdown" title="Select a start date/time to search from.">Start Date/Time: {{ data.startdatetime | date:'yyyy-MM-dd HH:mm' }} <strong class="caret"></strong></a>
-                                <div class="dropdown-menu">
-                                    <datetimepicker id="datetimepickerStart"
-                                                    data-ng-model="data.startdatetime"
-                                                    data-datetimepicker-config="{ dropdownSelector: '.dropdown-toggle' }"
-                                                    data-on-set-time="onStartTimeSet"                                                    >
-                                    </datetimepicker>
-                                </div>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" data-toggle="dropdown" title="Select an end date/time to search to.">End Date/Time: {{ data.enddatetime | date:'yyyy-MM-dd HH:mm' }} <strong class="caret"></strong></a>
-                                <div class="dropdown-menu">
-                                    <datetimepicker id="datetimepickerEnd"
-                                                    data-ng-model="data.enddatetime"
-                                                    data-datetimepicker-config="{ dropdownSelector: '.dropdown-toggle' }"
-                                                    data-on-set-time="onEndTimeSet">
-                                    </datetimepicker>
-                                </div>
-                            </li>
-                        </ul>
-                        <form class="navbar-form" role="search">
-                            <div class="form-group">
-                                <input type="text" class="form-control" ng-model="data.devicename" placeholder="Device Name" title="You can search of both a device name and a date range.">
+    </div>
+
+    <!-- Header -->
+    <header class="container">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <img style="max-width:100px; float:left; margin-right:8px;" src="/content/images/ic_launcher_48x48.png" alt="My Big Bro">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" data-toggle="modal" data-target="#aboutModal" title="About">What is My Big Bro?</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <!-- Date/time search window -->
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" id="dropdownStart" role="button" data-toggle="dropdown" href="#" title="Select a start date/time to search from.">
+                                Start Date/Time: {{ (data.startdatetime | date:'yyyy-MM-dd HH:mm') || 'All' }} <strong class="caret"></strong>
+                            </a>
+                            <div class="dropdown-menu" role="menu" aria-labelledby="dropdownStart">
+                                <datetimepicker id="datetimepickerStart"
+                                                data-ng-model="data.startdatetime"
+                                                data-datetimepicker-config="{ dropdownSelector: '#dropdownStart' }"
+                                                data-on-set-time="onStartTimeSet">
+                                </datetimepicker>
                             </div>
-                            <button type="button" class="btn btn-default" ng-click="onDeviceNameChange($event)" title="Type in your device name and hit search.">Search</button>
-                        </form>
-                    </div>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" id="dropdownEnd" role="button" data-toggle="dropdown" href="#" title="Select an end date/time to search to.">
+                                End Date/Time: {{ (data.enddatetime | date:'yyyy-MM-dd HH:mm') || 'All' }} <strong class="caret"></strong>
+                            </a>
+                            <div class="dropdown-menu" role="menu" aria-labelledby="dropdownEnd">
+                                <datetimepicker id="datetimepickerEnd"
+                                                data-ng-model="data.enddatetime"
+                                                data-datetimepicker-config="{ dropdownSelector: '#dropdownEnd' }"
+                                                data-on-set-time="onEndTimeSet">
+                                </datetimepicker>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left" role="search" ng-submit="onDeviceNameChange($event)">
+                        <div class="form-group">
+                            <input type="text" class="form-control" ng-model="data.devicename" placeholder="Device Name" title="You can search by both a device name and a date range.">
+                        </div>
+                        <button type="button" class="btn btn-default" ng-click="onDeviceNameChange($event)" title="Type in your device name and hit search.">Search</button>
+                        <button type="button" class="btn btn-link" ng-click="onResetFilters($event)" title="Clear date and device filters.">Reset</button>
+                    </form>
                 </div>
-            </nav>
-        </header>
-        <section id="body">
-            <div id="map"></div>
-        </section>
-        
-        <!-- This bit of script to stop the DDL from retracting needs to go at the bottom, or it loads too early -->
-        <script language="javascript">
-            $('.dropdown-toggle').dropdown();
-            $('.dropdown-menu').find('form').click(function (e) {
-                e.stopPropagation();
-            });
-        </script>
+            </div>
+        </nav>
+    </header>
 
-    </body>
+    <section id="body">
+        <div id="map"></div>
+    </section>
+
+    <script type="text/javascript">
+        $(document).on('click', '.dropdown-menu', function (e) {
+            e.stopPropagation();
+        });
+    </script>
+</body>
 </html>
-

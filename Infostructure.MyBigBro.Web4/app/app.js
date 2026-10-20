@@ -4,7 +4,6 @@ angular.module('MyBigBroApp', [
     'MyBigBroApp.controllers',
     'MyBigBroApp.services',
     'ui.bootstrap.datetimepicker',
-    'ui.bootstrap',
     'toaster',
     'chieffancypants.loadingBar'
 ]);

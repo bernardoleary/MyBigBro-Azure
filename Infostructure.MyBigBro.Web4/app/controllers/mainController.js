@@ -8,6 +8,10 @@ angular.module('MyBigBroApp.controllers', []).
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
+        setTimeout(function () {
+            map.invalidateSize();
+        }, 100);
+
         // Scope variables
         $scope.map = map;
         $scope.data = {};
@@ -45,7 +49,7 @@ angular.module('MyBigBroApp.controllers', []).
             var markerCount = getParameterByName("markerCount") === "" ? 10 : getParameterByName("markerCount");
 
             // Create new markers
-            if ($scope.data.startdatetime === '' || $scope.data.enddatetime === '') {
+            if (!$scope.data.startdatetime || !$scope.data.enddatetime) {
                 if (devicename === undefined || devicename === "") {
                     capturedImagesGeoMarkerService.getCapturedImagesGeoMarkerTop(markerCount).success(function (response) {
                         createMarkers(response);
@@ -56,9 +60,9 @@ angular.module('MyBigBroApp.controllers', []).
                     });
                 }
             } else {
-                // Create by date window
-                var startdatetimeVal = moment($scope.data.startdatetime).format("YYYY-MM-DD HH:MM");
-                var enddatetimeVal = moment($scope.data.enddatetime).format("YYYY-MM-DD HH:MM");
+                // Create by date window (using ISO-8601 UTC format for API query)
+                var startdatetimeVal = moment($scope.data.startdatetime).format("YYYY-MM-DDTHH:mm:ss");
+                var enddatetimeVal = moment($scope.data.enddatetime).format("YYYY-MM-DDTHH:mm:ss");
                 if (devicename === undefined || devicename === "") {
                     capturedImagesGeoMarkerService.getCapturedImagesGeoMarkerForDateTimeWindow(startdatetimeVal, enddatetimeVal).success(function (response) {
                         createMarkers(response);
@@ -73,6 +77,9 @@ angular.module('MyBigBroApp.controllers', []).
 
         // Function to set up the image markers on the map
         function createMarkers(capturedImagesGeoMarker) {
+            if (!capturedImagesGeoMarker || !capturedImagesGeoMarker.length) {
+                return;
+            }
             for (var i = 0; i < capturedImagesGeoMarker.length; i++) {
                 createMarker(capturedImagesGeoMarker[i]);
             }
@@ -81,6 +88,9 @@ angular.module('MyBigBroApp.controllers', []).
 
         // Function to set up the camera markers on the map
         function createCameraMarkers(camerasGeoMarker) {
+            if (!camerasGeoMarker || !camerasGeoMarker.length) {
+                return;
+            }
             for (var i = 0; i < camerasGeoMarker.length; i++) {
                 createCameraMarker(camerasGeoMarker[i]);
             }
@@ -92,6 +102,7 @@ angular.module('MyBigBroApp.controllers', []).
             if ($scope.markers.length === 0) {
                 return;
             }
+            $scope.map.invalidateSize();
             var group = L.featureGroup($scope.markers);
             $scope.map.fitBounds(group.getBounds(), { padding: [40, 40], maxZoom: 15 });
         }
@@ -156,6 +167,20 @@ angular.module('MyBigBroApp.controllers', []).
 
         // Event to handle device name search
         $scope.onDeviceNameChange = function ($event) {
+            if ($event) {
+                $event.preventDefault();
+            }
+            drawMarkers();
+        };
+
+        // Event to reset date and device filters
+        $scope.onResetFilters = function ($event) {
+            if ($event) {
+                $event.preventDefault();
+            }
+            $scope.data.startdatetime = '';
+            $scope.data.enddatetime = '';
+            $scope.data.devicename = '';
             drawMarkers();
         };
 
