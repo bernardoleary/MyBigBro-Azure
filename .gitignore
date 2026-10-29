@@ -257,3 +257,18 @@ paket-files/
 
 # Visual Studio Code
 .vscode/
+
+# Environment and deployment secrets & state
+.env
+.env.*
+deploy/*.env
+deploy/*.credentials
+deploy/.db_password
+deploy/.suffix
+deploy/.*
+deployment/*.env
+deployment/*.credentials
+deployment/.*
+
+# Database tool scratch files
+*.session.sql

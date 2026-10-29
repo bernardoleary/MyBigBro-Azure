@@ -114,6 +114,8 @@ services:
     restart: unless-stopped
     depends_on:
       - api-service
+    environment:
+      API_UPSTREAM: "api-service:8080"
     ports:
       - "8080:80"
     networks:

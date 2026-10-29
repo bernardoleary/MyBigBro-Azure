@@ -42,7 +42,9 @@ namespace Infostructure.MyBigBro.ImageStorageServiceAgent
                 }
 
                 string rootUrl = (_options.PublicRootUrl ?? "http://localhost:10000/devstoreaccount1").TrimEnd('/');
-                string url = $"{rootUrl}/{_options.AzureContainer}/{fileName}";
+                string url = rootUrl.EndsWith("/" + _options.AzureContainer, StringComparison.OrdinalIgnoreCase)
+                    ? $"{rootUrl}/{fileName}"
+                    : $"{rootUrl}/{_options.AzureContainer}/{fileName}";
                 key = fileName;
                 return url;
             }

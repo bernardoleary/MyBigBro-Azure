@@ -110,7 +110,11 @@ angular.module('MyBigBroApp.controllers', []).
         // Function to create a geomarker on the OpenStreetMap layer
         function createMarker(info) {
             var title = "This image captured " + moment(info.GeoMarker.MarkerDateTime).format('MMMM Do YYYY, h:mm:ss a');
-            var content = '<img width="100%" src="' + info.CapturedImage.Url + '" alt="Smile">';
+            var rawUrl = (info.CapturedImage && info.CapturedImage.Url) ? info.CapturedImage.Url : '';
+            var imageUrl = rawUrl ? rawUrl.replace('/images/images/', '/images/') : '';
+            var content = imageUrl
+                ? '<div class="text-center"><img class="img-responsive img-thumbnail" style="max-height: 480px; margin: 0 auto;" src="' + imageUrl + '" alt="Traffic camera capture" onerror="this.onerror=null; this.parentElement.innerHTML=\'<div class=\\\'alert alert-warning\\\'>Captured image could not be loaded from storage.</div>\';"></div>'
+                : '<div class="alert alert-info">No image available for this marker.</div>';
             var marker = L.marker([info.GeoMarker.YCoord, info.GeoMarker.XCoord], {
                 title: title
             }).addTo($scope.map);
@@ -132,7 +136,11 @@ angular.module('MyBigBroApp.controllers', []).
                 iconAnchor: [12, 12]
             });
             var title = "Nearest known camera: " + info.Name;
-            var content = '<img width="100%" src="' + info.Url + '" alt="Smile">';
+            var rawUrl = info.Url || '';
+            var imageUrl = rawUrl ? rawUrl.replace('/images/images/', '/images/') : '';
+            var content = imageUrl
+                ? '<div class="text-center"><img class="img-responsive img-thumbnail" style="max-height: 480px; margin: 0 auto;" src="' + imageUrl + '" alt="Live camera feed" onerror="this.onerror=null; this.parentElement.innerHTML=\'<div class=\\\'alert alert-warning\\\'>Live camera image currently unavailable.</div>\';"></div>'
+                : '<div class="alert alert-info">No live image available for this camera.</div>';
             var marker = L.marker([info.YCoord, info.XCoord], {
                 title: title,
                 icon: cameraIcon
