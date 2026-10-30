@@ -251,12 +251,16 @@ if [[ "${SKIP_DB_INIT}" != "true" ]]; then
     info "Executing schema initialisation (01-init-schema.sql)..."
     if command -v psql &>/dev/null; then
         PGPASSWORD="${POSTGRES_PASSWORD}" psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f "${REPO_ROOT}/docker/postgres/01-init-schema.sql" >/dev/null
-        info "Seeding 105 NZTA traffic webcams (02-seed-webcams.sql)..."
+        info "Seeding 105 legacy NZTA traffic webcams (02-seed-webcams.sql)..."
         PGPASSWORD="${POSTGRES_PASSWORD}" psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f "${REPO_ROOT}/docker/postgres/02-seed-webcams.sql" >/dev/null
+        info "Seeding 310 refreshed NZTA traffic webcams (03-seed-webcams-refreshed.sql)..."
+        PGPASSWORD="${POSTGRES_PASSWORD}" psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f "${REPO_ROOT}/docker/postgres/03-seed-webcams-refreshed.sql" >/dev/null
     elif command -v docker &>/dev/null; then
         docker run --rm -v "${REPO_ROOT}/docker/postgres:/sql" -e PGPASSWORD="${POSTGRES_PASSWORD}" postgres:16-alpine psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f /sql/01-init-schema.sql >/dev/null
-        info "Seeding 105 NZTA traffic webcams (02-seed-webcams.sql)..."
+        info "Seeding 105 legacy NZTA traffic webcams (02-seed-webcams.sql)..."
         docker run --rm -v "${REPO_ROOT}/docker/postgres:/sql" -e PGPASSWORD="${POSTGRES_PASSWORD}" postgres:16-alpine psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f /sql/02-seed-webcams.sql >/dev/null
+        info "Seeding 310 refreshed NZTA traffic webcams (03-seed-webcams-refreshed.sql)..."
+        docker run --rm -v "${REPO_ROOT}/docker/postgres:/sql" -e PGPASSWORD="${POSTGRES_PASSWORD}" postgres:16-alpine psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f /sql/03-seed-webcams-refreshed.sql >/dev/null
     else
         warn "Neither 'psql' nor 'docker' is available locally. Skipping database seeding."
     fi
