@@ -93,12 +93,11 @@ From the root of the repository, execute:
 ### What the Script Automates:
 
 1. **Prerequisite & Provider Registration**: Automatically installs the `containerapp` CLI extension and registers `Microsoft.App`, `Microsoft.DBforPostgreSQL`, and `Microsoft.Storage`.
-2. **Resource Group & Storage**: Creates `rg-mybigbro` and Azure Storage Account with the `images` container configured for public image access.
-3. **PostgreSQL Flexible Server with PostGIS**:
-   - Provisions a `Standard_B1ms` server.
-   - Sets server parameter `azure.extensions = 'POSTGIS'`.
-   - Allows Azure internal traffic through the firewall.
-   - Executes `docker/postgres/01-init-schema.sql` (schema & indexes) and `docker/postgres/02-seed-webcams.sql` (105 NZTA traffic cameras) using `az postgres flexible-server execute`.
+2. **Resource Group & Storage Discovery**: Discovers and reuses existing `rg-mybigbro` and Azure Storage Account (`stbigbro<suffix>`) if available; otherwise provisions them and ensures both `images` (public CCTV images) and `database` (rehydration SQL scripts) containers exist.
+3. **PostgreSQL Flexible Server & Rehydration**:
+   - Provisions a `Standard_B1ms` server with PostGIS 3.5 enabled (`azure.extensions = 'POSTGIS'`).
+   - Checks for persisted database backup in the Storage Account (`database/database-backup.sql`). If present, downloads and executes it to rehydrate the entire database back to its pre-teardown state (all webcams, markers, captured images, devices, and jobs).
+   - If no backup exists (first run), executes initial schema (`01-init-schema.sql`), legacy seeds (`02-seed-webcams.sql`), and 310 refreshed NZTA cameras (`03-seed-webcams-refreshed.sql`).
 4. **Cloud Container Builds (ACR)**:
    - Creates an Azure Container Registry (`Basic`).
    - Runs `az acr build` to build and tag the 3 multi-stage Linux containers (`api-service`, `capture-worker`, `web-ui`) directly in the cloud (no local Docker required).
