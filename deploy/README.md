@@ -198,12 +198,28 @@ az deployment group create \
 
 ---
 
-## Teardown & Cleaning Up
+## Cost-Saving Teardown & Database Persistence
 
-To delete all provisioned resources and stop all recurring billing:
+To delete billable compute and database resources while **preserving your database data and captured CCTV photos**:
 
 ```bash
 ./deploy/destroy-azure.sh
 ```
 
-Type `yes` when prompted. This deletes the entire `rg-mybigbro` resource group asynchronously in Azure.
+### What `destroy-azure.sh` does:
+1. **Dumps Database Contents**: Connects to the PostgreSQL Flexible Server and dumps the complete schema, tables, PostGIS geometries, markers, webcams, and captured images into a SQL rehydration script.
+2. **Uploads to Storage Account**: Saves the script as `database-backup.sql` inside the `database` container of your persistent Azure Storage Account (`stbigbro<suffix>`).
+3. **Selectively Tears Down Billable Services**:
+   - Container Apps (`web-ui`, `api-service`, `capture-worker`)
+   - Container Apps Environment
+   - PostgreSQL Flexible Server
+   - Azure Container Registry
+   - Log Analytics Workspace
+4. **Preserves Storage Account & Resource Group**: Keeps `rg-mybigbro` and `stbigbro<suffix>` active, reducing your ongoing Azure costs to storage only (**~$0.50 – $1.00 / month**).
+
+### Re-Deploying & Rehydrating:
+When you want to spin everything back up:
+```bash
+./deploy/deploy-azure.sh
+```
+`deploy-azure.sh` automatically detects the existing Storage Account in `rg-mybigbro`, reuses it, and detects `database/database-backup.sql` to fully rehydrate the PostgreSQL database back to its exact state prior to teardown.

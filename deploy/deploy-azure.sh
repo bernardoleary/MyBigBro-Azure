@@ -50,14 +50,24 @@ CONTAINER_IMAGE_TAG="${IMAGE_TAG:-latest}"
 SKIP_BUILD="${SKIP_BUILD:-false}"
 SKIP_DB_INIT="${SKIP_DB_INIT:-false}"
 
-# Generate deterministic random suffix for globally unique Azure resources
+# Detect existing storage account in resource group if RANDOM_SUFFIX is not explicitly set
 if [[ -z "${RANDOM_SUFFIX:-}" ]]; then
     if [[ -f "${SCRIPT_DIR}/.suffix" ]]; then
         RANDOM_SUFFIX=$(cat "${SCRIPT_DIR}/.suffix")
-    else
-        RANDOM_SUFFIX=$(head -c 16 /dev/urandom | tr -dc 'a-z0-9' | head -c 5)
-        echo -n "${RANDOM_SUFFIX}" > "${SCRIPT_DIR}/.suffix"
+    elif command -v az &>/dev/null && az group exists --name "${RESOURCE_GROUP}" 2>/dev/null | grep -q true; then
+        EXISTING_SA=$(az storage account list --resource-group "${RESOURCE_GROUP}" --query "[?starts_with(name, 'stbigbro')].name | [0]" -o tsv 2>/dev/null || true)
+        if [[ -n "${EXISTING_SA}" && "${EXISTING_SA}" != "None" ]]; then
+            RANDOM_SUFFIX="${EXISTING_SA#stbigbro}"
+            echo -n "${RANDOM_SUFFIX}" > "${SCRIPT_DIR}/.suffix"
+            info "Discovered existing Storage Account '${EXISTING_SA}'. Reusing suffix '${RANDOM_SUFFIX}'."
+        fi
     fi
+fi
+
+# Generate deterministic random suffix for globally unique Azure resources if not discovered
+if [[ -z "${RANDOM_SUFFIX:-}" ]]; then
+    RANDOM_SUFFIX=$(head -c 16 /dev/urandom | tr -dc 'a-z0-9' | head -c 5)
+    echo -n "${RANDOM_SUFFIX}" > "${SCRIPT_DIR}/.suffix"
 fi
 
 STORAGE_ACCOUNT="${AZURE_STORAGE_ACCOUNT:-stbigbro${RANDOM_SUFFIX}}"
@@ -130,16 +140,20 @@ done
 # Step 1: Resource Group
 # ==============================================================================
 info "Step 1/7: Creating or verifying Resource Group '${RESOURCE_GROUP}'..."
-az group create \
-    --name "${RESOURCE_GROUP}" \
-    --location "${LOCATION}" \
-    --output none
-success "Resource Group '${RESOURCE_GROUP}' is ready."
+if az group exists --name "${RESOURCE_GROUP}" 2>/dev/null | grep -q true; then
+    info "Resource Group '${RESOURCE_GROUP}' already exists. Reusing it."
+else
+    az group create \
+        --name "${RESOURCE_GROUP}" \
+        --location "${LOCATION}" \
+        --output none
+    success "Resource Group '${RESOURCE_GROUP}' created."
+fi
 
 # ==============================================================================
 # Step 2: Azure Blob Storage
 # ==============================================================================
-info "Step 2/7: Creating Azure Blob Storage Account '${STORAGE_ACCOUNT}'..."
+info "Step 2/7: Creating or verifying Azure Blob Storage Account '${STORAGE_ACCOUNT}'..."
 if ! az storage account show --name "${STORAGE_ACCOUNT}" --resource-group "${RESOURCE_GROUP}" &>/dev/null; then
     az storage account create \
         --name "${STORAGE_ACCOUNT}" \
@@ -152,7 +166,7 @@ if ! az storage account show --name "${STORAGE_ACCOUNT}" --resource-group "${RES
         --output none
     success "Storage Account '${STORAGE_ACCOUNT}' created."
 else
-    info "Storage Account '${STORAGE_ACCOUNT}' already exists."
+    info "Storage Account '${STORAGE_ACCOUNT}' already exists. Reusing existing storage account."
 fi
 
 STORAGE_CONNECTION_STRING=$(az storage account show-connection-string \
@@ -160,7 +174,7 @@ STORAGE_CONNECTION_STRING=$(az storage account show-connection-string \
     --resource-group "${RESOURCE_GROUP}" \
     --query connectionString -o tsv)
 
-info "Creating 'images' blob container with public read access..."
+info "Ensuring 'images' blob container exists with public read access..."
 az storage container create \
     --name images \
     --account-name "${STORAGE_ACCOUNT}" \
@@ -168,6 +182,13 @@ az storage container create \
     --public-access blob \
     --output none 2>/dev/null || true
 success "Blob storage container 'images' configured."
+
+# Ensure 'database' container exists for database rehydration / backups
+az storage container create \
+    --name database \
+    --account-name "${STORAGE_ACCOUNT}" \
+    --connection-string "${STORAGE_CONNECTION_STRING}" \
+    --output none 2>/dev/null || true
 
 # ==============================================================================
 # Step 3: Azure Database for PostgreSQL - Flexible Server (with PostGIS)
@@ -245,26 +266,61 @@ else
     info "PostGIS extension already enabled in 'azure.extensions'."
 fi
 
-# Seed Database Schema & 105 NZTA Webcams
+# Seed Database Schema & Webcams (or Rehydrate from Storage Account backup if available)
 POSTGRES_HOST="${POSTGRES_SERVER}.postgres.database.azure.com"
 if [[ "${SKIP_DB_INIT}" != "true" ]]; then
-    info "Executing schema initialisation (01-init-schema.sql)..."
-    if command -v psql &>/dev/null; then
-        PGPASSWORD="${POSTGRES_PASSWORD}" psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f "${REPO_ROOT}/docker/postgres/01-init-schema.sql" >/dev/null
-        info "Seeding 105 legacy NZTA traffic webcams (02-seed-webcams.sql)..."
-        PGPASSWORD="${POSTGRES_PASSWORD}" psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f "${REPO_ROOT}/docker/postgres/02-seed-webcams.sql" >/dev/null
-        info "Seeding 310 refreshed NZTA traffic webcams (03-seed-webcams-refreshed.sql)..."
-        PGPASSWORD="${POSTGRES_PASSWORD}" psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f "${REPO_ROOT}/docker/postgres/03-seed-webcams-refreshed.sql" >/dev/null
-    elif command -v docker &>/dev/null; then
-        docker run --rm -v "${REPO_ROOT}/docker/postgres:/sql" -e PGPASSWORD="${POSTGRES_PASSWORD}" postgres:16-alpine psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f /sql/01-init-schema.sql >/dev/null
-        info "Seeding 105 legacy NZTA traffic webcams (02-seed-webcams.sql)..."
-        docker run --rm -v "${REPO_ROOT}/docker/postgres:/sql" -e PGPASSWORD="${POSTGRES_PASSWORD}" postgres:16-alpine psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f /sql/02-seed-webcams.sql >/dev/null
-        info "Seeding 310 refreshed NZTA traffic webcams (03-seed-webcams-refreshed.sql)..."
-        docker run --rm -v "${REPO_ROOT}/docker/postgres:/sql" -e PGPASSWORD="${POSTGRES_PASSWORD}" postgres:16-alpine psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f /sql/03-seed-webcams-refreshed.sql >/dev/null
+    HAS_BACKUP=$(az storage blob exists \
+        --account-name "${STORAGE_ACCOUNT}" \
+        --container-name database \
+        --name database-backup.sql \
+        --connection-string "${STORAGE_CONNECTION_STRING}" \
+        --query exists -o tsv 2>/dev/null || echo "false")
+
+    if [[ "${HAS_BACKUP}" == "true" ]]; then
+        info "Found persisted database backup in '${STORAGE_ACCOUNT}/database/database-backup.sql'."
+        info "Downloading and executing rehydration script..."
+        BACKUP_SQL_PATH="/tmp/rehydrate-${RANDOM_SUFFIX}.sql"
+        az storage blob download \
+            --account-name "${STORAGE_ACCOUNT}" \
+            --container-name database \
+            --name database-backup.sql \
+            --file "${BACKUP_SQL_PATH}" \
+            --connection-string "${STORAGE_CONNECTION_STRING}" \
+            --output none
+
+        # Sanitize modern psql metadata commands if present
+        sed -i -E '/^\\(restrict|unrestrict)/d' "${BACKUP_SQL_PATH}" 2>/dev/null || true
+        sed -i '/transaction_timeout/d' "${BACKUP_SQL_PATH}" 2>/dev/null || true
+
+        info "Rehydrating database '${POSTGRES_DB}' on '${POSTGRES_HOST}'..."
+        if command -v psql &>/dev/null; then
+            PGPASSWORD="${POSTGRES_PASSWORD}" psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f "${BACKUP_SQL_PATH}" >/dev/null
+        elif command -v docker &>/dev/null; then
+            docker run --rm -v "$(dirname "${BACKUP_SQL_PATH}"):/sql" -e PGPASSWORD="${POSTGRES_PASSWORD}" postgres:16-alpine psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f "/sql/$(basename "${BACKUP_SQL_PATH}")" >/dev/null
+        else
+            warn "Neither 'psql' nor 'docker' is available locally. Skipping database rehydration."
+        fi
+        rm -f "${BACKUP_SQL_PATH}"
+        success "Database '${POSTGRES_DB}' rehydrated successfully from persisted storage backup."
     else
-        warn "Neither 'psql' nor 'docker' is available locally. Skipping database seeding."
+        info "No persisted database backup found in storage account. Executing fresh schema initialisation..."
+        if command -v psql &>/dev/null; then
+            PGPASSWORD="${POSTGRES_PASSWORD}" psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f "${REPO_ROOT}/docker/postgres/01-init-schema.sql" >/dev/null
+            info "Seeding 105 legacy NZTA traffic webcams (02-seed-webcams.sql)..."
+            PGPASSWORD="${POSTGRES_PASSWORD}" psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f "${REPO_ROOT}/docker/postgres/02-seed-webcams.sql" >/dev/null
+            info "Seeding 310 refreshed NZTA traffic webcams (03-seed-webcams-refreshed.sql)..."
+            PGPASSWORD="${POSTGRES_PASSWORD}" psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f "${REPO_ROOT}/docker/postgres/03-seed-webcams-refreshed.sql" >/dev/null
+        elif command -v docker &>/dev/null; then
+            docker run --rm -v "${REPO_ROOT}/docker/postgres:/sql" -e PGPASSWORD="${POSTGRES_PASSWORD}" postgres:16-alpine psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f /sql/01-init-schema.sql >/dev/null
+            info "Seeding 105 legacy NZTA traffic webcams (02-seed-webcams.sql)..."
+            docker run --rm -v "${REPO_ROOT}/docker/postgres:/sql" -e PGPASSWORD="${POSTGRES_PASSWORD}" postgres:16-alpine psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f /sql/02-seed-webcams.sql >/dev/null
+            info "Seeding 310 refreshed NZTA traffic webcams (03-seed-webcams-refreshed.sql)..."
+            docker run --rm -v "${REPO_ROOT}/docker/postgres:/sql" -e PGPASSWORD="${POSTGRES_PASSWORD}" postgres:16-alpine psql -h "${POSTGRES_HOST}" -p 5432 -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -v "sslmode=require" -f /sql/03-seed-webcams-refreshed.sql >/dev/null
+        else
+            warn "Neither 'psql' nor 'docker' is available locally. Skipping database seeding."
+        fi
+        success "Database schema and seed webcams loaded successfully."
     fi
-    success "Database schema and seed webcams loaded successfully."
 fi
 
 # Construct connection string
