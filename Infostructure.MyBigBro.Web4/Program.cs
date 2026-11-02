@@ -5,6 +5,7 @@ using Infostructure.MyBigBro.BusinessLogic.Services;
 using Infostructure.MyBigBro.BusinessLogic.WebCam;
 using Infostructure.MyBigBro.DataModel.DataAccess;
 using Infostructure.MyBigBro.ImageStorageServiceAgent;
+using Infostructure.MyBigBro.Web4.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
@@ -49,6 +50,10 @@ builder.Services.AddScoped<IGeoMarkerService>(sp =>
 builder.Services.AddScoped<IAccountService>(sp =>
     new AccountService(sp.GetRequiredService<IMyBigBroRepository>()));
 builder.Services.AddScoped<IFormsAuthenticationService, FormsAuthenticationService>();
+
+// Register CommuteStripService (Auckland 15-min rolling time-lapse buffer & London TfL JamCams)
+builder.Services.AddSingleton<CommuteStripService>();
+builder.Services.AddHostedService(sp => sp.GetRequiredService<CommuteStripService>());
 
 builder.Services.AddCors(options =>
 {

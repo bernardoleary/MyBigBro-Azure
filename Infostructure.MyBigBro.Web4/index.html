@@ -2,18 +2,22 @@
 <html ng-app="MyBigBroApp">
 <head>
     <meta charset="utf-8" />
-    <title>My Big Bro</title>
+    <title>MyBigBro — Auckland &amp; London Motorway Commute Strip</title>
     <link rel="shortcut icon" type="image/x-icon" href="/content/images/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-    <link href="content/css/bootstrap.css?v=3" rel="stylesheet" />
-    <link href="content/css/toaster.css?v=3" rel="stylesheet" />
-    <link href="content/css/loading-bar.min.css?v=3" rel="stylesheet" />
-    <link href="content/css/datetimepicker.css?v=3" rel="stylesheet" />
-    <link href="content/css/navbar.css?v=3" rel="stylesheet" />
-    <link href="content/css/site.css?v=3" rel="stylesheet" />
+    <link href="content/css/bootstrap.css?v=4" rel="stylesheet" />
+    <link href="content/css/toaster.css?v=4" rel="stylesheet" />
+    <link href="content/css/loading-bar.min.css?v=4" rel="stylesheet" />
+    <link href="content/css/datetimepicker.css?v=4" rel="stylesheet" />
+    <link href="content/css/navbar.css?v=4" rel="stylesheet" />
+    <link href="content/css/site.css?v=4" rel="stylesheet" />
     <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
     <style>
@@ -22,27 +26,325 @@
             height: 100%;
             margin: 0;
             padding: 0;
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body.map-mode-active {
             overflow: hidden;
+        }
+
+        body.strip-mode-active {
+            overflow-y: auto;
+            padding-top: 56px;
         }
 
         #map {
             display: block;
             position: absolute;
             bottom: 0;
-            top: 50px;
+            top: 52px;
             left: 0;
             right: 0;
             z-index: 1;
         }
 
-        .navbar-fixed-top {
+        .navbar-mbb {
+            background: #0f172a;
+            border-bottom: 1px solid #1e293b;
+            min-height: 52px;
+            margin-bottom: 0;
             z-index: 1030;
+        }
+
+        .navbar-mbb .navbar-brand {
+            color: #f8fafc !important;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 15px 12px;
+        }
+
+        .mode-tabs {
+            display: inline-flex;
+            gap: 6px;
+            padding: 8px 0;
+        }
+
+        .mode-tab-btn {
+            background: #1e293b;
+            color: #cbd5e1;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .mode-tab-btn:hover {
+            background: #334155;
+            color: #fff;
+        }
+
+        .mode-tab-btn.active {
+            background: #0284c7;
+            color: #ffffff;
+            border-color: #38bdf8;
+        }
+
+        /* Commute Strip Layout */
+        .commute-wrapper {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 16px 14px 60px 14px;
+        }
+
+        .city-banner {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 14px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .city-pill-group {
+            display: inline-flex;
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 3px;
+            gap: 4px;
+        }
+
+        .city-pill {
+            border: none;
+            background: transparent;
+            color: #94a3b8;
+            padding: 7px 14px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .city-pill.active {
+            background: #0284c7;
+            color: #fff;
+        }
+
+        .corridor-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .corridor-btn {
+            background: #1e293b;
+            color: #e2e8f0;
+            border: 1px solid #334155;
+            border-radius: 20px;
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .corridor-btn:hover {
+            border-color: #38bdf8;
+            color: #fff;
+        }
+
+        .corridor-btn.active {
+            background: #0ea5e9;
+            color: #0f172a;
+            border-color: #7dd3fc;
+            font-weight: 700;
+        }
+
+        .playback-bar {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 12px 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .scrubber-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+            min-width: 240px;
+        }
+
+        .scrubber-group input[type=range] {
+            flex: 1;
+            accent-color: #38bdf8;
+            cursor: pointer;
+        }
+
+        .camera-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 16px;
+        }
+
+        .camera-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .camera-card-header {
+            padding: 10px 14px;
+            background: #0f172a;
+            border-bottom: 1px solid #334155;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+        }
+
+        .camera-seq-badge {
+            background: #0284c7;
+            color: #fff;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .camera-title-wrap {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .camera-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #f8fafc;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0;
+        }
+
+        .camera-subtitle {
+            font-size: 11px;
+            color: #94a3b8;
+            margin: 0;
+        }
+
+        .star-btn {
+            background: transparent;
+            border: none;
+            color: #64748b;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 2px 6px;
+            line-height: 1;
+        }
+
+        .star-btn.starred {
+            color: #facc15;
+        }
+
+        .camera-media-box {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            background: #020617;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .camera-media-box img,
+        .camera-media-box video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .media-overlay-badge {
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(148, 163, 184, 0.3);
+            color: #e2e8f0;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .media-map-btn {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(2, 132, 199, 0.9);
+            border: none;
+            color: #fff;
+            padding: 4px 9px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .supporter-bar {
+            margin-top: 24px;
+            background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 14px 18px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        /* Modal dark overrides */
+        .modal-content {
+            background-color: #1e293b;
+            color: #f8fafc;
+            border: 1px solid #475569;
+        }
+        .modal-header, .modal-footer {
+            border-color: #334155;
+        }
+        .close {
+            color: #f8fafc;
+            opacity: 0.8;
         }
 
         .dropdown-menu {
             padding: 6px;
             min-width: 260px;
             z-index: 1040;
+            color: #1e293b;
         }
 
         .datetimepicker {
@@ -60,33 +362,35 @@
     </style>
 
     <!-- Load jQuery first so Bootstrap and AngularJS bind to full jQuery -->
-    <script src="scripts/jquery.min.js?v=3"></script>
-    <script src="scripts/bootstrap.js?v=3"></script>
-    <script src="scripts/moment.js?v=3"></script>
-    <script src="scripts/underscore.js?v=3"></script>
+    <script src="scripts/jquery.min.js?v=4"></script>
+    <script src="scripts/bootstrap.js?v=4"></script>
+    <script src="scripts/moment.js?v=4"></script>
+    <script src="scripts/underscore.js?v=4"></script>
 
     <!-- AngularJS 1.2.x & modules -->
-    <script src="scripts/angular.min.js?v=3"></script>
-    <script src="scripts/angular-route.min.js?v=3"></script>
-    <script src="scripts/angular-resource.min.js?v=3"></script>
-    <script src="scripts/angular-animate.min.js?v=3"></script>
-    <script src="scripts/toaster.js?v=3"></script>
-    <script src="scripts/loading-bar.min.js?v=3"></script>
-    <script src="scripts/datetimepicker.js?v=3"></script>
+    <script src="scripts/angular.min.js?v=4"></script>
+    <script src="scripts/angular-route.min.js?v=4"></script>
+    <script src="scripts/angular-resource.min.js?v=4"></script>
+    <script src="scripts/angular-animate.min.js?v=4"></script>
+    <script src="scripts/toaster.js?v=4"></script>
+    <script src="scripts/loading-bar.min.js?v=4"></script>
+    <script src="scripts/datetimepicker.js?v=4"></script>
 
     <!-- OpenStreetMap / Leaflet -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     <!-- Application scripts -->
-    <script src="app/app.js?v=3"></script>
-    <script src="app/services/capturedImagesGeoMarkerService.js?v=3"></script>
-    <script src="app/services/webCamsService.js?v=3"></script>
-    <script src="app/controllers/mainController.js?v=4"></script>
+    <script src="app/app.js?v=5"></script>
+    <script src="app/services/capturedImagesGeoMarkerService.js?v=5"></script>
+    <script src="app/services/webCamsService.js?v=5"></script>
+    <script src="app/services/commuteService.js?v=5"></script>
+    <script src="app/controllers/mainController.js?v=5"></script>
 </head>
-<body data-ng-controller="mainController" ng-cloak>
-    <!-- Modal Map -->
+<body data-ng-controller="mainController" ng-class="{'map-mode-active': viewMode === 'map', 'strip-mode-active': viewMode !== 'map'}" ng-cloak>
+
+    <!-- Modal Map / Camera Preview -->
     <div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="mapModalTitle" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -108,30 +412,17 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title" id="myModalLabel">About My Big Bro</h4>
+                    <h4 class="modal-title" id="myModalLabel">About MyBigBro Commute Strip &amp; Camera Replay</h4>
                 </div>
                 <div class="modal-body" id="divAbout">
                     <p>
-                        Use "My Big Bro" to track yourself on your city's or region's network of CCTV traffic webcams.
+                        <strong>MyBigBro</strong> turns static traffic cameras into an instant <strong>Commute Corridor Strip</strong> for <strong>Auckland (NZTA)</strong> and <strong>London (TfL JamCams)</strong>.
                     </p>
-                    <p>
-                        New York, London, Hong Kong, Singapore, Tennessee, Boston, New Zealand, Sydney...and more to come!
-                    </p>
-                    <p>
-                        My Big Bro captures and stores images of you from publicly available CCTV cameras as you move through your city.
-                    </p>
-                    <p>
-                        <strong>You will need a copy of the My Big Bro app to make use of this service - <a href="https://play.google.com/store/apps/details?id=com.infostructure.mybigbro" target="_blank">click here.</a></strong>
-                    </p>
-                    <p>
-                        Take a look at the My Big Bro "How To" video to get an overview as to how the app works - <a href="https://www.youtube.com/watch?v=o52_4ArtdyY" target="_blank">click here.</a>
-                    </p>
-                    <p>
-                        Tweet me on <a href="https://twitter.com/mybigbrotv" target="_blank">@mybigbrotv</a> or email <a href="mailto:bro@mybigbro.tv" target="_blank">bro@mybigbro.tv</a> if you have any questions or suggestions.
-                    </p>
-                    <p>
-                        More cameras are being added all the time - contact me anytime with your ideas, I'd love to hear them!
-                    </p>
+                    <ul>
+                        <li><strong>Auckland (310 NZTA Cameras):</strong> Automatically buffers a rolling 15-minute time-lapse loop on major motorway corridors (SH1, SH16, SH18, SH20) so you can immediately see whether traffic is flowing or stationary.</li>
+                        <li><strong>London (890 TfL JamCams):</strong> Plays simultaneous live video loops along the A406 North Circular, Blackwall Tunnel / A13, A4/M4 &amp; A40 Westway, and Central Thames Bridges.</li>
+                        <li><strong>PWA Drive Mode:</strong> Keep your screen awake on a dash mount to automatically capture motorway snapshots as you drive past cameras.</li>
+                    </ul>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -140,26 +431,45 @@
         </div>
     </div>
 
-    <!-- Header -->
-    <header class="container">
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
+    <!-- Top Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top navbar-mbb" role="navigation">
+            <div class="container-fluid" style="max-width: 1200px;">
                 <div class="navbar-header">
-                    <img style="max-width:100px; float:left; margin-right:8px;" src="/content/images/ic_launcher_48x48.png" alt="My Big Bro">
+                    <img style="max-width:34px; float:left; margin:9px 8px 0 4px; border-radius:6px;" src="/content/images/ic_launcher_48x48.png" alt="MyBigBro">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#" data-toggle="modal" data-target="#aboutModal" title="About">What is My Big Bro?</a>
+                    <a class="navbar-brand" href="#" data-toggle="modal" data-target="#aboutModal" title="About MyBigBro">MyBigBro</a>
                 </div>
+
                 <div class="collapse navbar-collapse">
-                    <!-- Date/time search window -->
-                    <ul class="nav navbar-nav">
+                    <div class="mode-tabs navbar-left">
+                        <button type="button" class="mode-tab-btn" ng-class="{'active': viewMode === 'strip'}" ng-click="setViewMode('strip')">
+                            🚗 Commute Strip
+                        </button>
+                        <button type="button" class="mode-tab-btn" ng-class="{'active': viewMode === 'map'}" ng-click="setViewMode('map')">
+                            🗺️ Map &amp; Captures
+                        </button>
+                        <button type="button" class="mode-tab-btn" ng-class="{'active': viewMode === 'drive'}" ng-click="setViewMode('drive')">
+                            📍 Drive Mode <span ng-if="drive.isTracking" class="label label-success">LIVE</span>
+                        </button>
+                    </div>
+
+                    <!-- Map-specific filter controls (shown when in Map mode) -->
+                    <ul class="nav navbar-nav navbar-right" ng-show="viewMode === 'map'">
+                        <li>
+                            <a href="#" ng-click="toggleCorridorCamsOnMap()">
+                                <span ng-if="showCorridorCamsOnMap">📷 Hide Cams</span>
+                                <span ng-if="!showCorridorCamsOnMap">📷 Show Cams</span>
+                            </a>
+                        </li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" id="dropdownStart" role="button" data-toggle="dropdown" href="#" title="Select a start date/time to search from.">
-                                Start Date/Time: {{ (data.startdatetime | date:'yyyy-MM-dd HH:mm') || 'All' }} <strong class="caret"></strong>
+                            <a class="dropdown-toggle" id="dropdownStart" role="button" data-toggle="dropdown" href="#">
+                                From: {{ (data.startdatetime | date:'MM-dd HH:mm') || 'All' }} <strong class="caret"></strong>
                             </a>
                             <div class="dropdown-menu" role="menu" aria-labelledby="dropdownStart">
                                 <datetimepicker id="datetimepickerStart"
@@ -170,8 +480,8 @@
                             </div>
                         </li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" id="dropdownEnd" role="button" data-toggle="dropdown" href="#" title="Select an end date/time to search to.">
-                                End Date/Time: {{ (data.enddatetime | date:'yyyy-MM-dd HH:mm') || 'All' }} <strong class="caret"></strong>
+                            <a class="dropdown-toggle" id="dropdownEnd" role="button" data-toggle="dropdown" href="#">
+                                To: {{ (data.enddatetime | date:'MM-dd HH:mm') || 'All' }} <strong class="caret"></strong>
                             </a>
                             <div class="dropdown-menu" role="menu" aria-labelledby="dropdownEnd">
                                 <datetimepicker id="datetimepickerEnd"
@@ -181,20 +491,232 @@
                                 </datetimepicker>
                             </div>
                         </li>
+                        <li>
+                            <form class="navbar-form" role="search" ng-submit="onDeviceNameChange($event)" style="margin-top:8px; margin-bottom:0;">
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-sm" style="width:120px;" ng-model="data.devicename" placeholder="Device Name">
+                                </div>
+                                <button type="button" class="btn btn-xs btn-info" ng-click="onDeviceNameChange($event)">Search</button>
+                                <button type="button" class="btn btn-xs btn-default" ng-click="onResetFilters($event)">Reset</button>
+                            </form>
+                        </li>
                     </ul>
-                    <form class="navbar-form navbar-left" role="search" ng-submit="onDeviceNameChange($event)">
-                        <div class="form-group">
-                            <input type="text" class="form-control" ng-model="data.devicename" placeholder="Device Name" title="You can search by both a device name and a date range.">
-                        </div>
-                        <button type="button" class="btn btn-default" ng-click="onDeviceNameChange($event)" title="Type in your device name and hit search.">Search</button>
-                        <button type="button" class="btn btn-link" ng-click="onResetFilters($event)" title="Clear date and device filters.">Reset</button>
-                    </form>
                 </div>
             </div>
         </nav>
     </header>
 
-    <section id="body">
+    <!-- ======================================================================= -->
+    <!-- MODE 1: COMMUTE STRIP (AUCKLAND 15-MIN TIME-LAPSE & LONDON LIVE VIDEO)  -->
+    <!-- ======================================================================= -->
+    <section ng-show="viewMode === 'strip'" class="commute-wrapper">
+        <div class="city-banner">
+            <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px;">
+                <div>
+                    <h3 style="margin:0 0 4px 0; font-size:20px; font-weight:700; color:#fff;">
+                        {{ commute.activeCorridor ? commute.activeCorridor.Name : 'Motorway Commute Strip' }}
+                    </h3>
+                    <p style="margin:0; font-size:13px; color:#94a3b8;">
+                        {{ commute.activeCorridor ? commute.activeCorridor.Description : '' }}
+                    </p>
+                </div>
+
+                <!-- City Switcher: Auckland vs London -->
+                <div class="city-pill-group">
+                    <button type="button" class="city-pill" ng-class="{'active': commute.city === 'auckland'}" ng-click="selectCity('auckland')">
+                        🇳🇿 Auckland (NZTA Loop)
+                    </button>
+                    <button type="button" class="city-pill" ng-class="{'active': commute.city === 'london'}" ng-click="selectCity('london')">
+                        🇬🇧 London (TfL Video)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Corridor Selection Pills -->
+            <div class="corridor-pills">
+                <button type="button"
+                        class="corridor-btn"
+                        ng-repeat="corr in commute.cityCorridors"
+                        ng-class="{'active': commute.selectedCorridorId === corr.Id}"
+                        ng-click="selectCorridor(corr.Id)">
+                    {{ corr.ShortName }} ({{ corr.Cameras.length }})
+                </button>
+                <button type="button"
+                        class="corridor-btn"
+                        ng-class="{'active': commute.selectedCorridorId === 'starred'}"
+                        ng-click="selectCorridor('starred')">
+                    ⭐ My Starred ({{ commute.starredIds.length }})
+                </button>
+            </div>
+        </div>
+
+        <!-- Playback / Direction / Scrubber Control Bar -->
+        <div class="playback-bar">
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                <button type="button" class="btn btn-sm btn-primary" ng-click="toggleDirection()" title="Reverse camera driving order">
+                    ⇅ {{ commute.isReversed ? commute.activeCorridor.InboundLabel : commute.activeCorridor.OutboundLabel }}
+                </button>
+
+                <!-- Controls for Auckland Time-Lapse Buffer -->
+                <span ng-if="commute.city === 'auckland'">
+                    <button type="button" class="btn btn-sm" ng-class="commute.isPlaying ? 'btn-success' : 'btn-warning'" ng-click="togglePlay()">
+                        {{ commute.isPlaying ? '⏸ Pause Loop' : '▶ Play Loop' }}
+                    </button>
+                    <div class="btn-group btn-group-sm" style="margin-left:4px;">
+                        <button type="button" class="btn btn-default" ng-class="{'active': commute.speedMs === 1000}" ng-click="setSpeed(1000)">1x</button>
+                        <button type="button" class="btn btn-default" ng-class="{'active': commute.speedMs === 650}" ng-click="setSpeed(650)">2x</button>
+                        <button type="button" class="btn btn-default" ng-class="{'active': commute.speedMs === 300}" ng-click="setSpeed(300)">4x</button>
+                    </div>
+                </span>
+
+                <!-- Controls for London Live Video vs Still Mode -->
+                <span ng-if="commute.city === 'london'">
+                    <button type="button" class="btn btn-sm" ng-class="commute.londonVideoMode ? 'btn-success' : 'btn-default'" ng-click="commute.londonVideoMode = !commute.londonVideoMode">
+                        {{ commute.londonVideoMode ? '🎥 Live MP4 Video Loops (On)' : '🖼️ Static JPEG Mode' }}
+                    </button>
+                </span>
+            </div>
+
+            <!-- Timeline Scrubber (Auckland) -->
+            <div class="scrubber-group" ng-if="commute.city === 'auckland'">
+                <span style="font-size:12px; color:#94a3b8; white-space:nowrap;">
+                    Frame <strong>{{ commute.frameStep + 1 }}</strong> / {{ commute.maxFrameCount }} (max 15m)
+                </span>
+                <input type="range" min="0" max="{{ commute.maxFrameCount > 1 ? commute.maxFrameCount - 1 : 0 }}" ng-model="commute.frameStep" ng-disabled="commute.maxFrameCount <= 1" />
+            </div>
+
+            <!-- Manual Poll / Refresh Button -->
+            <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-size:11px; color:#94a3b8;">Updated {{ commute.lastUpdatedText }}</span>
+                <button type="button" class="btn btn-sm btn-info" ng-click="pollFreshFrameNow()" ng-disabled="commute.isPolling">
+                    {{ commute.isPolling ? '⏳ Fetching...' : (commute.city === 'auckland' ? '📸 Capture Fresh Frame' : '🔄 Refresh JamCams') }}
+                </button>
+            </div>
+        </div>
+
+        <!-- Empty State for Starred Strip -->
+        <div ng-if="commute.displayedCameras.length === 0" class="alert alert-info" style="background:#1e293b; border-color:#38bdf8; color:#e2e8f0;">
+            <strong>No cameras in this strip yet!</strong> Tap the <strong>☆</strong> icon on any camera in Auckland or London to build your own custom door-to-door commute strip.
+        </div>
+
+        <!-- Camera Strip Grid -->
+        <div class="camera-grid">
+            <div class="camera-card" ng-repeat="cam in commute.displayedCameras track by cam.Id">
+                <div class="camera-card-header">
+                    <span class="camera-seq-badge">{{ $index + 1 }}</span>
+                    <div class="camera-title-wrap">
+                        <h4 class="camera-title" title="{{ cam.Name }}">{{ cam.Name }}</h4>
+                        <p class="camera-subtitle">{{ cam.Subtitle || (cam.Lat.toFixed(3) + ', ' + cam.Lng.toFixed(3)) }}</p>
+                    </div>
+                    <button type="button"
+                            class="star-btn"
+                            ng-class="{'starred': isStarred(cam.Id)}"
+                            ng-click="toggleStar(cam.Id, $event)"
+                            title="Add/remove from My Starred Commute Strip">
+                        {{ isStarred(cam.Id) ? '★' : '☆' }}
+                    </button>
+                </div>
+
+                <div class="camera-media-box">
+                    <!-- London Live MP4 Video Feed -->
+                    <video ng-if="cam.City === 'london' && commute.londonVideoMode && cam.VideoUrl"
+                           ng-src="{{ getLondonVideoUrl(cam) }}"
+                           poster="{{ cam.ImageUrl }}"
+                           autoplay
+                           loop
+                           muted
+                           playsinline
+                           controls>
+                    </video>
+
+                    <!-- Auckland Buffered Time-Lapse Image (or London Still Fallback) -->
+                    <img ng-if="cam.City !== 'london' || !commute.londonVideoMode || !cam.VideoUrl"
+                         ng-src="{{ getActiveFrameUrl(cam) }}"
+                         alt="{{ cam.Name }}"
+                         loading="lazy" />
+
+                    <span class="media-overlay-badge" ng-if="cam.City === 'auckland'">
+                        🕒 {{ getActiveFrameTimestamp(cam) }} ({{ cam.Frames.length || 1 }}f)
+                    </span>
+                    <span class="media-overlay-badge" ng-if="cam.City === 'london'">
+                        🇬🇧 TfL JamCam Live
+                    </span>
+
+                    <button type="button" class="media-map-btn" ng-click="focusCameraOnMap(cam)">
+                        📍 Map
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Non-intrusive Server Funding / Supporter Bar -->
+        <div class="supporter-bar">
+            <div>
+                <strong style="color:#38bdf8;">⚡ Independent Commuter Utility (Auckland &amp; London)</strong>
+                <div style="font-size:12px; color:#94a3b8;">
+                    Star (★) your daily cameras to save a custom door-to-door strip on your phone home screen (PWA).
+                </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:10px;">
+                <span style="font-size:12px; color:#cbd5e1;">Server Goal: <strong>$35 / $45 NZD</strong></span>
+                <button type="button" class="btn btn-sm btn-warning" style="font-weight:700; color:#0f172a;" data-toggle="modal" data-target="#aboutModal">
+                    ☕ Support Server ($5)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- MODE 2: PWA DRIVE TRACKER (WAKE LOCK + BROWSER GEOLOCATION)             -->
+    <!-- ======================================================================= -->
+    <section ng-show="viewMode === 'drive'" class="commute-wrapper">
+        <div class="city-banner" style="max-width:680px; margin:20px auto;">
+            <h3 style="margin-top:0; color:#fff;">📍 PWA Live Drive Tracker (Dash-Mount Mode)</h3>
+            <p style="color:#94a3b8; font-size:13px;">
+                Automatically triggers motorway camera snapshots as your vehicle enters a camera's visibility zone. Uses the <strong>Screen Wake Lock API</strong> to keep your phone awake while mounted on your dashboard.
+            </p>
+
+            <div class="form-group" style="margin-top:16px;">
+                <label style="color:#cbd5e1; font-size:13px;">Your Vehicle / Device Tag:</label>
+                <input type="text" class="form-control" ng-model="drive.deviceName" ng-disabled="drive.isTracking" style="max-width:320px; background:#0f172a; color:#fff; border-color:#334155;" />
+            </div>
+
+            <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
+                <button type="button"
+                        class="btn btn-lg"
+                        ng-class="drive.isTracking ? 'btn-danger' : 'btn-success'"
+                        ng-click="toggleDriveTracking()">
+                    {{ drive.isTracking ? '⏹ Stop Drive Tracking' : '▶ Start Live Drive (Keep Screen Awake)' }}
+                </button>
+
+                <button type="button" class="btn btn-lg btn-info" ng-click="simulateSh16Ping()" title="Test triggering an Auckland SH16 motorway camera from your desktop">
+                    🧪 Simulate SH16 Camera Pass
+                </button>
+            </div>
+
+            <div style="margin-top:18px; padding:12px; background:#0f172a; border:1px solid #334155; border-radius:8px; font-size:13px;">
+                <div><strong>Status:</strong> <span style="color:#38bdf8;">{{ drive.statusMessage }}</span></div>
+                <div style="margin-top:6px;">
+                    <strong>Screen Wake Lock:</strong>
+                    <span class="label" ng-class="drive.wakeLockActive ? 'label-success' : 'label-default'">
+                        {{ drive.wakeLockActive ? 'ACTIVE (Screen Kept Awake)' : 'Inactive' }}
+                    </span>
+                    <span style="margin-left:12px;"><strong>GPS Pings Sent:</strong> {{ drive.pingCount }}</span>
+                </div>
+                <div ng-if="drive.nearestCam" style="margin-top:10px; padding-top:10px; border-top:1px solid #1e293b;">
+                    <strong>Nearest Motorway Camera:</strong> {{ drive.nearestCam.Name }}
+                    <button type="button" class="btn btn-xs btn-primary" style="margin-left:8px;" ng-click="setViewMode('map'); data.devicename = drive.deviceName; onDeviceNameChange()">
+                        View Captured Photos on Map →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- MODE 3: INTERACTIVE LEAFLET MAP & GPS CAPTURED IMAGES                   -->
+    <!-- ======================================================================= -->
+    <section id="body" ng-show="viewMode === 'map'">
         <div id="map"></div>
     </section>
 
@@ -202,6 +724,11 @@
         $(document).on('click', '.dropdown-menu', function (e) {
             e.stopPropagation();
         });
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js').catch(function () {});
+            });
+        }
     </script>
 </body>
 </html>
