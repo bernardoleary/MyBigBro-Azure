@@ -42,37 +42,19 @@ angular.module('MyBigBroApp.controllers', []).
             isDragging: false
         };
 
-        // Option #1 Monetization: Single Fixed Sponsor / AdSense Slot Configuration
-        // Set adsenseEnabled: true and populate client/slot once AdSense is approved,
-        // or set directSponsor to display a custom corridor sponsor banner.
-        $scope.adConfig = {
-            adsenseEnabled: false,
-            adsenseClient: 'ca-pub-XXXXXXXXXXXXXXXX',
-            adsenseSlot: 'XXXXXXXXXX',
-            directSponsor: {
-                badge: 'SPONSORED',
-                headline: 'Sponsor the {{corridor}} Commute Strip',
-                subtext: 'Reach daily {{city}} commuters on Motorway Live & help cover our $20/mo Azure hosting.',
-                ctaText: 'Sponsor Inquiry →',
-                ctaUrl: 'mailto:sponsors@motorway.live?subject=Corridor%20Sponsorship%20Inquiry'
-            }
+        // Option #2: Ad-Free Community Support / Azure Hosting Goal Configuration
+        $scope.supportConfig = {
+            monthlyCostUsd: 20,
+            currentFundedUsd: 5,
+            coffeePriceUsd: 3,
+            supportUrl: 'https://ko-fi.com/motorwaylive',
+            buttonLabel: '☕ Buy a Coffee ($3)'
         };
 
-        $scope.getSponsorHeadline = function () {
-            var corrName = ($scope.commute.activeCorridor && $scope.commute.activeCorridor.ShortName) || 'Motorway';
-            return $scope.adConfig.directSponsor.headline.replace('{{corridor}}', corrName);
-        };
-
-        $scope.getSponsorSubtext = function () {
-            var cityMap = {
-                'auckland': 'Auckland',
-                'wellington': 'Wellington',
-                'queensland': 'Queensland',
-                'london': 'London',
-                'nyc': 'New York'
-            };
-            var cityName = cityMap[$scope.commute.city] || 'motorway';
-            return $scope.adConfig.directSponsor.subtext.replace('{{city}}', cityName);
+        $scope.getHostingGoalPercent = function () {
+            if (!$scope.supportConfig.monthlyCostUsd) return 0;
+            var pct = Math.round(($scope.supportConfig.currentFundedUsd / $scope.supportConfig.monthlyCostUsd) * 100);
+            return Math.min(100, Math.max(0, pct));
         };
 
         $scope.getAgencyAttribution = function () {
