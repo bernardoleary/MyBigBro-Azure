@@ -482,6 +482,65 @@
             right: 0;
             z-index: 10;
         }
+
+        /* Single Non-Intrusive Sponsor / Ad Slot (Option #1) */
+        .sponsor-slot-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.96) 0%, rgba(15, 23, 42, 0.96) 100%);
+            border: 1px solid #1e293b;
+            border-radius: 10px;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .sponsor-tag {
+            font-size: 9.5px;
+            font-weight: 800;
+            letter-spacing: 0.7px;
+            text-transform: uppercase;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: rgba(56, 189, 248, 0.14);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.28);
+        }
+
+        .sponsor-cta {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: #f8fafc;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: all 0.15s ease;
+        }
+
+        .sponsor-cta:hover {
+            background: #0284c7;
+            border-color: #38bdf8;
+            color: #ffffff;
+        }
+
+        .agency-footer {
+            margin-top: 18px;
+            padding-top: 12px;
+            border-top: 1px solid #1e293b;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 11.5px;
+            color: #64748b;
+        }
     </style>
 
     <script src="scripts/jquery.min.js?v=7"></script>
@@ -495,11 +554,11 @@
     <script src="scripts/datetimepicker.js?v=7"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-    <script src="app/app.js?v=9"></script>
-    <script src="app/services/capturedImagesGeoMarkerService.js?v=9"></script>
-    <script src="app/services/webCamsService.js?v=9"></script>
-    <script src="app/services/commuteService.js?v=9"></script>
-    <script src="app/controllers/mainController.js?v=9"></script>
+    <script src="app/app.js?v=10"></script>
+    <script src="app/services/capturedImagesGeoMarkerService.js?v=10"></script>
+    <script src="app/services/webCamsService.js?v=10"></script>
+    <script src="app/services/commuteService.js?v=10"></script>
+    <script src="app/controllers/mainController.js?v=10"></script>
 </head>
 <body data-ng-controller="mainController" ng-cloak>
 
@@ -700,6 +759,35 @@
                     <span>▼ Next: <strong style="color:#f8fafc;">{{ getNextJourneyCamera().Name }}</strong></span>
                     <span style="color:#38bdf8; font-weight:600;">+{{ getNextJourneyCamera().DistFromPrevKm }} km (~{{ getNextJourneyCamera().MinsFromPrev }} min)</span>
                 </div>
+
+                <!-- Option #1: Single Fixed Sponsor / AdSense Slot Below Journey Card -->
+                <div class="sponsor-slot-card">
+                    <!-- AdSense Responsive Banner (when adConfig.adsenseEnabled === true) -->
+                    <div ng-if="adConfig.adsenseEnabled" style="width:100%; min-height:90px; text-align:center;">
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="{{ adConfig.adsenseClient }}"
+                             data-ad-slot="{{ adConfig.adsenseSlot }}"
+                             data-ad-format="horizontal"
+                             data-full-width-responsive="true"></ins>
+                    </div>
+
+                    <!-- Direct Corridor Sponsor / Fallback House Banner -->
+                    <div ng-if="!adConfig.adsenseEnabled" style="display:flex; align-items:center; justify-content:space-between; width:100%; gap:12px; flex-wrap:wrap;">
+                        <div style="min-width:0;">
+                            <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
+                                <span class="sponsor-tag">{{ adConfig.directSponsor.badge }}</span>
+                                <span style="font-size:13.5px; font-weight:700; color:#f8fafc;">{{ getSponsorHeadline() }}</span>
+                            </div>
+                            <div style="font-size:12px; color:#94a3b8;">
+                                {{ getSponsorSubtext() }}
+                            </div>
+                        </div>
+                        <a class="sponsor-cta" ng-href="{{ adConfig.directSponsor.ctaUrl }}">
+                            {{ adConfig.directSponsor.ctaText }}
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -741,7 +829,31 @@
                     </span>
                 </div>
             </div>
+
+            <!-- Single Fixed Sponsor / AdSense Slot at Bottom of All Cams List -->
+            <div class="sponsor-slot-card">
+                <div ng-if="!adConfig.adsenseEnabled" style="display:flex; align-items:center; justify-content:space-between; width:100%; gap:12px; flex-wrap:wrap;">
+                    <div style="min-width:0;">
+                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
+                            <span class="sponsor-tag">{{ adConfig.directSponsor.badge }}</span>
+                            <span style="font-size:13.5px; font-weight:700; color:#f8fafc;">{{ getSponsorHeadline() }}</span>
+                        </div>
+                        <div style="font-size:12px; color:#94a3b8;">
+                            {{ getSponsorSubtext() }}
+                        </div>
+                    </div>
+                    <a class="sponsor-cta" ng-href="{{ adConfig.directSponsor.ctaUrl }}">
+                        {{ adConfig.directSponsor.ctaText }}
+                    </a>
+                </div>
+            </div>
         </div>
+
+        <!-- Required Agency Attribution Footer -->
+        <footer class="agency-footer">
+            <span>{{ getAgencyAttribution() }}</span>
+            <span>Motorway Live • Fast Commute Camera Strips</span>
+        </footer>
     </main>
 
     <!-- Map View -->

@@ -42,6 +42,52 @@ angular.module('MyBigBroApp.controllers', []).
             isDragging: false
         };
 
+        // Option #1 Monetization: Single Fixed Sponsor / AdSense Slot Configuration
+        // Set adsenseEnabled: true and populate client/slot once AdSense is approved,
+        // or set directSponsor to display a custom corridor sponsor banner.
+        $scope.adConfig = {
+            adsenseEnabled: false,
+            adsenseClient: 'ca-pub-XXXXXXXXXXXXXXXX',
+            adsenseSlot: 'XXXXXXXXXX',
+            directSponsor: {
+                badge: 'SPONSORED',
+                headline: 'Sponsor the {{corridor}} Commute Strip',
+                subtext: 'Reach daily {{city}} commuters on Motorway Live & help cover our $20/mo Azure hosting.',
+                ctaText: 'Sponsor Inquiry →',
+                ctaUrl: 'mailto:sponsors@motorway.live?subject=Corridor%20Sponsorship%20Inquiry'
+            }
+        };
+
+        $scope.getSponsorHeadline = function () {
+            var corrName = ($scope.commute.activeCorridor && $scope.commute.activeCorridor.ShortName) || 'Motorway';
+            return $scope.adConfig.directSponsor.headline.replace('{{corridor}}', corrName);
+        };
+
+        $scope.getSponsorSubtext = function () {
+            var cityMap = {
+                'auckland': 'Auckland',
+                'wellington': 'Wellington',
+                'queensland': 'Queensland',
+                'london': 'London',
+                'nyc': 'New York'
+            };
+            var cityName = cityMap[$scope.commute.city] || 'motorway';
+            return $scope.adConfig.directSponsor.subtext.replace('{{city}}', cityName);
+        };
+
+        $scope.getAgencyAttribution = function () {
+            if ($scope.commute.city === 'london') {
+                return 'Powered by TfL Open Data (Contains OS data © Crown copyright and database rights)';
+            }
+            if ($scope.commute.city === 'queensland') {
+                return 'Camera data provided by State of Queensland (Department of Transport and Main Roads / QLDTraffic)';
+            }
+            if ($scope.commute.city === 'nyc') {
+                return 'Traffic camera images provided by New York City Department of Transportation (NYC DOT)';
+            }
+            return 'Motorway camera feeds provided by NZ Transport Agency Waka Kotahi (CC BY 4.0)';
+        };
+
         $scope.trustUrl = function (url) {
             return url ? $sce.trustAsResourceUrl(url) : '';
         };
@@ -322,7 +368,7 @@ angular.module('MyBigBroApp.controllers', []).
                 });
 
                 stage.addEventListener('mousedown', function (e) {
-                    if (e.target && (e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT' || e.target.tagName === 'VIDEO')) return;
+                    if (e.target && (e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT' || e.target.tagName === 'VIDEO' || e.target.tagName === 'A' || (e.target.closest && e.target.closest('.sponsor-slot-card')))) return;
                     $scope.$applyAsync(function () {
                         $scope.onStageDragStart(e.clientY);
                     });
