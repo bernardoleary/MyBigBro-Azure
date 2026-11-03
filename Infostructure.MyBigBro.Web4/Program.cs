@@ -89,12 +89,10 @@ if (File.Exists(Path.Combine(contentRoot, "index.html")))
     });
 }
 
-app.MapGet("/healthz", async (MyBigBroContext db) =>
+app.MapGet("/healthz", (CommuteStripService commute) =>
 {
-    bool canConnect = await db.Database.CanConnectAsync();
-    return canConnect
-        ? Results.Ok(new { status = "Healthy", database = "PostgreSQL" })
-        : Results.Problem("Database connection failed", statusCode: 503);
+    var corridors = commute.GetCorridors();
+    return Results.Ok(new { status = "Healthy", app = "onramp.cam", corridors = corridors.Count });
 });
 
 app.MapControllers();

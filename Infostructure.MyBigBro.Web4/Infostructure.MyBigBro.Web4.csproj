@@ -4,6 +4,13 @@
     <AssemblyName>Infostructure.MyBigBro.Web4</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="index.html" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="sw.js" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="app\**" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="scripts\**" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="content\**" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Infostructure.MyBigBro.BusinessLogic\Infostructure.MyBigBro.BusinessLogic.csproj" />
     <ProjectReference Include="..\Infostructure.MyBigBro.DataModel\Infostructure.MyBigBro.DataModel.csproj" />
     <ProjectReference Include="..\Infostructure.MyBigBro.Domain\Infostructure.MyBigBro.Domain.csproj" />
