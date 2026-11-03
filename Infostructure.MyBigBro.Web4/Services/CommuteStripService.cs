@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
@@ -52,6 +54,17 @@ namespace Infostructure.MyBigBro.Web4.Services
         public List<CommuteCameraDto> Cameras { get; set; } = new();
     }
 
+    public class SupportStatusDto
+    {
+        public decimal MonthlyCostUsd { get; set; } = 20m;
+        public decimal CurrentFundedUsd { get; set; } = 5m;
+        public decimal CoffeePriceUsd { get; set; } = 3m;
+        public int SupporterCount { get; set; } = 2;
+        public string SupportUrl { get; set; } = "https://buymeacoffee.com/onrampcam";
+        public string ButtonLabel { get; set; } = "☕ Buy a Coffee ($3)";
+        public string CurrentMonth { get; set; } = string.Empty;
+    }
+
     public class CommuteStripService : BackgroundService
     {
         public const int MaxFramesPerCamera = 15;
@@ -62,6 +75,8 @@ namespace Infostructure.MyBigBro.Web4.Services
         private readonly ConcurrentDictionary<string, List<CameraFrameEntry>> _frameBuffers = new();
         private readonly List<CommuteCorridorDto> _corridors;
         private readonly SemaphoreSlim _pollLock = new(1, 1);
+        private readonly object _supportLock = new();
+        private SupportStatusDto _supportStatus;
         private DateTime _lastLondonRefreshUtc = DateTime.MinValue;
 
         public CommuteStripService(ILogger<CommuteStripService> logger)
@@ -73,6 +88,128 @@ namespace Infostructure.MyBigBro.Web4.Services
             };
             _httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("MyBigBro-CommuteStrip/2.0 (+https://github.com/bernardoleary/MyBigBro-Azure)");
             _corridors = BuildDefaultCorridors();
+            _supportStatus = LoadOrCreateSupportStatus();
+        }
+
+        public SupportStatusDto GetSupportStatus()
+        {
+            lock (_supportLock)
+            {
+                string currentMonth = DateTime.UtcNow.ToString("yyyy-MM", CultureInfo.InvariantCulture);
+                if (_supportStatus.CurrentMonth != currentMonth)
+                {
+                    _supportStatus.CurrentMonth = currentMonth;
+                    _supportStatus.CurrentFundedUsd = GetDefaultFundedUsd();
+                    _supportStatus.SupporterCount = _supportStatus.CurrentFundedUsd > 0 ? 1 : 0;
+                    SaveSupportStatus(_supportStatus);
+                }
+
+                // Always allow live override of URL and Monthly Cost via environment variables
+                string? envUrl = Environment.GetEnvironmentVariable("ONRAMP_SUPPORT_URL");
+                if (!string.IsNullOrWhiteSpace(envUrl))
+                {
+                    _supportStatus.SupportUrl = envUrl.Trim();
+                }
+
+                string? envCost = Environment.GetEnvironmentVariable("ONRAMP_MONTHLY_COST_USD");
+                if (decimal.TryParse(envCost, NumberStyles.Any, CultureInfo.InvariantCulture, out var parsedCost) && parsedCost > 0)
+                {
+                    _supportStatus.MonthlyCostUsd = parsedCost;
+                }
+
+                return new SupportStatusDto
+                {
+                    MonthlyCostUsd = _supportStatus.MonthlyCostUsd,
+                    CurrentFundedUsd = _supportStatus.CurrentFundedUsd,
+                    CoffeePriceUsd = _supportStatus.CoffeePriceUsd,
+                    SupporterCount = _supportStatus.SupporterCount,
+                    SupportUrl = _supportStatus.SupportUrl,
+                    ButtonLabel = _supportStatus.ButtonLabel,
+                    CurrentMonth = _supportStatus.CurrentMonth
+                };
+            }
+        }
+
+        public SupportStatusDto RecordSupportContribution(decimal amountUsd)
+        {
+            if (amountUsd <= 0)
+            {
+                return GetSupportStatus();
+            }
+
+            lock (_supportLock)
+            {
+                var status = GetSupportStatus();
+                _supportStatus.CurrentFundedUsd = Math.Round(_supportStatus.CurrentFundedUsd + amountUsd, 2);
+                _supportStatus.SupporterCount += 1;
+                SaveSupportStatus(_supportStatus);
+                return GetSupportStatus();
+            }
+        }
+
+        private static string GetSupportFilePath()
+        {
+            string home = Environment.GetEnvironmentVariable("HOME") ?? "/tmp";
+            string dir = Directory.Exists(Path.Combine(home, "site")) ? Path.Combine(home, "site") : "/tmp";
+            return Path.Combine(dir, "onramp-support-status.json");
+        }
+
+        private static decimal GetDefaultFundedUsd()
+        {
+            string? envFunded = Environment.GetEnvironmentVariable("ONRAMP_FUNDED_USD");
+            if (decimal.TryParse(envFunded, NumberStyles.Any, CultureInfo.InvariantCulture, out var val) && val >= 0)
+            {
+                return val;
+            }
+            return 5m;
+        }
+
+        private SupportStatusDto LoadOrCreateSupportStatus()
+        {
+            string currentMonth = DateTime.UtcNow.ToString("yyyy-MM", CultureInfo.InvariantCulture);
+            string path = GetSupportFilePath();
+            try
+            {
+                if (File.Exists(path))
+                {
+                    string json = File.ReadAllText(path);
+                    var loaded = JsonSerializer.Deserialize<SupportStatusDto>(json);
+                    if (loaded != null && loaded.CurrentMonth == currentMonth)
+                    {
+                        return loaded;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogDebug(ex, "Non-fatal error reading support status file.");
+            }
+
+            var initial = new SupportStatusDto
+            {
+                MonthlyCostUsd = 20m,
+                CurrentFundedUsd = GetDefaultFundedUsd(),
+                CoffeePriceUsd = 3m,
+                SupporterCount = 2,
+                SupportUrl = Environment.GetEnvironmentVariable("ONRAMP_SUPPORT_URL") ?? "https://buymeacoffee.com/onrampcam",
+                ButtonLabel = "☕ Buy a Coffee ($3)",
+                CurrentMonth = currentMonth
+            };
+            SaveSupportStatus(initial);
+            return initial;
+        }
+
+        private void SaveSupportStatus(SupportStatusDto dto)
+        {
+            try
+            {
+                string path = GetSupportFilePath();
+                File.WriteAllText(path, JsonSerializer.Serialize(dto));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogDebug(ex, "Non-fatal error saving support status file.");
+            }
         }
 
         public IReadOnlyList<CommuteCorridorDto> GetCorridors(string? city = null)

@@ -16,5 +16,9 @@ angular.module('MyBigBroApp.services')
             return $http.post('/api/commute/poll' + q, {});
         };
 
+        commuteFactory.getSupportStatus = function () {
+            return $http.get('/api/commute/support');
+        };
+
         return commuteFactory;
     }]);

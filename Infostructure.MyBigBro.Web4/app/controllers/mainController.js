@@ -47,8 +47,21 @@ angular.module('MyBigBroApp.controllers', []).
             monthlyCostUsd: 20,
             currentFundedUsd: 5,
             coffeePriceUsd: 3,
-            supportUrl: 'https://ko-fi.com/onrampcam',
+            supporterCount: 2,
+            supportUrl: 'https://buymeacoffee.com/onrampcam',
             buttonLabel: '☕ Buy a Coffee ($3)'
+        };
+
+        $scope.loadSupportStatus = function () {
+            commuteService.getSupportStatus().success(function (status) {
+                if (!status) return;
+                $scope.supportConfig.monthlyCostUsd = status.MonthlyCostUsd || 20;
+                $scope.supportConfig.currentFundedUsd = status.CurrentFundedUsd || 0;
+                $scope.supportConfig.coffeePriceUsd = status.CoffeePriceUsd || 3;
+                $scope.supportConfig.supporterCount = status.SupporterCount || 0;
+                if (status.SupportUrl) $scope.supportConfig.supportUrl = status.SupportUrl;
+                if (status.ButtonLabel) $scope.supportConfig.buttonLabel = status.ButtonLabel;
+            });
         };
 
         $scope.getHostingGoalPercent = function () {
@@ -499,6 +512,7 @@ angular.module('MyBigBroApp.controllers', []).
 
         var refreshCorridorsPromise = $interval(function () {
             $scope.loadCommuteCorridors(true);
+            $scope.loadSupportStatus();
         }, 30000);
 
         $scope.$on('$destroy', function () {
@@ -542,4 +556,5 @@ angular.module('MyBigBroApp.controllers', []).
         }
 
         $scope.loadCommuteCorridors(false);
+        $scope.loadSupportStatus();
     });
