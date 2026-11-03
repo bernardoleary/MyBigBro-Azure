@@ -509,6 +509,96 @@ namespace Infostructure.MyBigBro.Web4.Services
                 },
 
                 // =========================================================================
+                // WELLINGTON, NEW ZEALAND (NZTA Waka Kotahi Live Motorway Corridors)
+                // =========================================================================
+                new CommuteCorridorDto
+                {
+                    Id = "wlg-sh1-urban",
+                    City = "wellington",
+                    ShortName = "SH1 Urban & Ngauranga",
+                    Name = "SH1 Urban Motorway & Ngauranga Gorge (CBD ↔ Tawa)",
+                    Description = "Terrace Tunnel, Tinakori Rd, SH1/SH2 Ngauranga Interchange, Ngauranga Gorge, Johnsonville, Churton Park & Tawa",
+                    InboundLabel = "Citybound (Tawa / Johnsonville → Wellington CBD)",
+                    OutboundLabel = "Northbound (Wellington CBD → Ngauranga / Tawa)",
+                    Cameras = new List<CommuteCameraDto>
+                    {
+                        WlgCam("wlg-828", "SH1 Clifton Terrace (Terrace Tunnel)", "Terrace Tunnel Northern Approach", -41.2834, 174.7738, "https://www.trafficnz.info/camera/828.jpg"),
+                        WlgCam("wlg-230", "SH1 Tinakori Rd On-ramp", "Thorndon / Urban Motorway", -41.2763, 174.7731, "https://www.trafficnz.info/camera/230.jpg"),
+                        WlgCam("wlg-282", "SH1 / SH2 Ngauranga Interchange", "Hutt Rd / Gorge Split", -41.2481, 174.8136, "https://www.trafficnz.info/camera/282.jpg"),
+                        WlgCam("wlg-228", "SH1 Ngauranga Gorge", "Mid-Gorge Climb", -41.2410, 174.8090, "https://www.trafficnz.info/camera/228.jpg"),
+                        WlgCam("wlg-227", "SH1 Newlands Interchange", "Newlands Rd Overbridge", -41.2319, 174.8095, "https://www.trafficnz.info/camera/227.jpg"),
+                        WlgCam("wlg-226", "SH1 Johnsonville Off-ramp", "Johnsonville Town Centre", -41.2280, 174.8081, "https://www.trafficnz.info/camera/226.jpg"),
+                        WlgCam("wlg-795", "SH1 Churton Park South", "Glenside / Westchester Dr", -41.2057, 174.8184, "https://www.trafficnz.info/camera/795.jpg"),
+                        WlgCam("wlg-796", "SH1 Churton Park North", "Churton Park Interchange", -41.2045, 174.8214, "https://www.trafficnz.info/camera/796.jpg"),
+                        WlgCam("wlg-277", "SH1 Tawa / Linden Merge", "Transmission Gully / SH59 Split", -41.1777, 174.8300, "https://www.trafficnz.info/camera/277.jpg"),
+                    }
+                },
+                new CommuteCorridorDto
+                {
+                    Id = "wlg-sh1-tg",
+                    City = "wellington",
+                    ShortName = "SH1 Transmission Gully",
+                    Name = "SH1 Transmission Gully & Kapiti Expressway (Tawa ↔ Otaki)",
+                    Description = "Linden Merge, Kenepuru, Waitangirua, SH58 Pauatahanui, Paekakariki, Mackays Crossing & Otaki",
+                    InboundLabel = "Southbound (Kapiti / Transmission Gully → Wellington)",
+                    OutboundLabel = "Northbound (Tawa → Transmission Gully / Kapiti)",
+                    Cameras = new List<CommuteCameraDto>
+                    {
+                        WlgCam("wlg-277", "SH1 Tawa / Linden Merge", "Southern Portal of Transmission Gully", -41.1777, 174.8300, "https://www.trafficnz.info/camera/277.jpg"),
+                        WlgCam("wlg-794", "SH1 Kenepuru Interchange", "Porirua South / Kenepuru Link", -41.1519, 174.8449, "https://www.trafficnz.info/camera/794.jpg"),
+                        WlgCam("wlg-792", "SH1 Waitangirua South", "Cannons Creek / Waitangirua Link", -41.1321, 174.9012, "https://www.trafficnz.info/camera/792.jpg"),
+                        WlgCam("wlg-793", "SH1 Waitangirua North", "Approach to James Cook Saddle", -41.1318, 174.9000, "https://www.trafficnz.info/camera/793.jpg"),
+                        WlgCam("wlg-790", "SH1 / SH58 Pauatahanui South", "Haywards Hill / Hutt Valley Turnoff", -41.1133, 174.9185, "https://www.trafficnz.info/camera/790.jpg"),
+                        WlgCam("wlg-791", "SH1 / SH58 Pauatahanui North", "Battle Hill / Wainui Saddle Approach", -41.1122, 174.9178, "https://www.trafficnz.info/camera/791.jpg"),
+                        WlgCam("wlg-789", "SH1 Paekakariki Interchange", "SH59 Coastal Merge South", -40.9827, 174.9707, "https://www.trafficnz.info/camera/789.jpg"),
+                        WlgCam("wlg-787", "SH1 Mackays Crossing", "Queen Elizabeth Park / Kapiti Approach", -40.9712, 174.9830, "https://www.trafficnz.info/camera/787.jpg"),
+                        WlgCam("wlg-804", "SH1 Te Horo / Makahuri", "PP2O Expressway South", -40.8205, 175.1024, "https://www.trafficnz.info/camera/804.jpg"),
+                        WlgCam("wlg-808", "SH1 Otaki Gorge Rd", "Otaki River Approach", -40.7749, 175.1448, "https://www.trafficnz.info/camera/808.jpg"),
+                        WlgCam("wlg-810", "SH1 Otaki / Rahui Rd", "Otaki Township Overbridge", -40.7615, 175.1599, "https://www.trafficnz.info/camera/810.jpg"),
+                    }
+                },
+                new CommuteCorridorDto
+                {
+                    Id = "wlg-sh59",
+                    City = "wellington",
+                    ShortName = "SH59 Porirua & Coast",
+                    Name = "SH59 Porirua & Kapiti Coastal Route (Linden ↔ Paekakariki)",
+                    Description = "Linden, Paremata Roundabout, Mana / Plimmerton, Pukerua Bay & Paekakariki Coastal",
+                    InboundLabel = "Southbound (Paekakariki / Plimmerton → Porirua / CBD)",
+                    OutboundLabel = "Northbound (Porirua → Paremata / Kapiti Coast)",
+                    Cameras = new List<CommuteCameraDto>
+                    {
+                        WlgCam("wlg-277", "SH1 / SH59 Linden Merge", "Tawa / Porirua Motorway Split", -41.1777, 174.8300, "https://www.trafficnz.info/camera/277.jpg"),
+                        WlgCam("wlg-637", "SH59 Paremata Roundabout", "Paremata Bridge / SH58 Turnoff", -41.1056, 174.8686, "https://www.trafficnz.info/camera/637.jpg"),
+                        WlgCam("wlg-280", "SH59 Plimmerton Roundabout", "Mana Esplanade / Plimmerton", -41.0830, 174.8690, "https://www.trafficnz.info/camera/280.jpg"),
+                        WlgCam("wlg-720", "SH59 Airlie Rd", "Pukerua Bay South Climb", -41.0576, 174.8760, "https://www.trafficnz.info/camera/720.jpg"),
+                        WlgCam("wlg-719", "SH59 Pukerua Bay", "Pukerua Bay Summit", -41.0288, 174.8994, "https://www.trafficnz.info/camera/719.jpg"),
+                        WlgCam("wlg-279", "SH59 Paekakariki Coastal", "Centennial Highway / Beach", -40.9997, 174.9397, "https://www.trafficnz.info/camera/279.jpg"),
+                        WlgCam("wlg-787", "SH1 / SH59 Mackays Crossing", "Rejoin SH1 Kapiti Expressway", -40.9712, 174.9830, "https://www.trafficnz.info/camera/787.jpg"),
+                    }
+                },
+                new CommuteCorridorDto
+                {
+                    Id = "wlg-sh2",
+                    City = "wellington",
+                    ShortName = "SH2 Hutt Valley",
+                    Name = "SH2 Hutt Valley & Petone Foreshore (CBD ↔ Upper Hutt)",
+                    Description = "Terrace Tunnel, Ngauranga Interchange, Petone Foreshore, Kennedy Good Bridge & Stokes Valley",
+                    InboundLabel = "Citybound (Upper / Lower Hutt → Wellington CBD)",
+                    OutboundLabel = "Northbound (Wellington CBD → Petone / Hutt Valley)",
+                    Cameras = new List<CommuteCameraDto>
+                    {
+                        WlgCam("wlg-828", "SH1 Clifton Terrace (Terrace Tunnel)", "Wellington CBD Approach", -41.2834, 174.7738, "https://www.trafficnz.info/camera/828.jpg"),
+                        WlgCam("wlg-230", "SH1 Tinakori Rd On-ramp", "Thorndon Elevated Motorway", -41.2763, 174.7731, "https://www.trafficnz.info/camera/230.jpg"),
+                        WlgCam("wlg-282", "SH1 / SH2 Ngauranga Interchange", "SH2 Hutt Road Harbour Edge", -41.2481, 174.8136, "https://www.trafficnz.info/camera/282.jpg"),
+                        WlgCam("wlg-232", "SH2 Petone Interchange", "Petone Esplanade / Korokoro", -41.2240, 174.8600, "https://www.trafficnz.info/camera/232.jpg"),
+                        WlgCam("wlg-722", "SH2 Kennedy Good Bridge", "Lower Hutt / Belmont / Avalon", -41.1899, 174.9299, "https://www.trafficnz.info/camera/722.jpg"),
+                        WlgCam("wlg-801", "SH2 Stokes Valley Roundabout SB", "Silverstream / Eastern Hutt Rd", -41.1609, 174.9812, "https://www.trafficnz.info/camera/801.jpg"),
+                        WlgCam("wlg-802", "SH2 Stokes Valley Roundabout EB", "Stokes Valley Entrance / Manor Park", -41.1609, 174.9813, "https://www.trafficnz.info/camera/802.jpg"),
+                    }
+                },
+
+                // =========================================================================
                 // LONDON, UNITED KINGDOM (TfL Live JamCam Video Corridors)
                 // =========================================================================
                 new CommuteCorridorDto
@@ -801,6 +891,20 @@ namespace Infostructure.MyBigBro.Web4.Services
                 Lng = lng,
                 ImageUrl = imageUrl,
                 City = "auckland"
+            };
+        }
+
+        private static CommuteCameraDto WlgCam(string id, string name, string subtitle, double lat, double lng, string imageUrl)
+        {
+            return new CommuteCameraDto
+            {
+                Id = id,
+                Name = name,
+                Subtitle = subtitle,
+                Lat = lat,
+                Lng = lng,
+                ImageUrl = imageUrl,
+                City = "wellington"
             };
         }
 

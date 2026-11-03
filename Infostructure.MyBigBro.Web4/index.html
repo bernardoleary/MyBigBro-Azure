@@ -495,11 +495,11 @@
     <script src="scripts/datetimepicker.js?v=7"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-    <script src="app/app.js?v=8"></script>
-    <script src="app/services/capturedImagesGeoMarkerService.js?v=8"></script>
-    <script src="app/services/webCamsService.js?v=8"></script>
-    <script src="app/services/commuteService.js?v=8"></script>
-    <script src="app/controllers/mainController.js?v=8"></script>
+    <script src="app/app.js?v=9"></script>
+    <script src="app/services/capturedImagesGeoMarkerService.js?v=9"></script>
+    <script src="app/services/webCamsService.js?v=9"></script>
+    <script src="app/services/commuteService.js?v=9"></script>
+    <script src="app/controllers/mainController.js?v=9"></script>
 </head>
 <body data-ng-controller="mainController" ng-cloak>
 
@@ -516,6 +516,9 @@
                 <div class="segmented">
                     <button type="button" class="seg-btn" ng-class="{'active': commute.city === 'auckland'}" ng-click="selectCity('auckland')">
                         🇳🇿 Auckland
+                    </button>
+                    <button type="button" class="seg-btn" ng-class="{'active': commute.city === 'wellington'}" ng-click="selectCity('wellington')">
+                        🇳🇿 Wellington
                     </button>
                     <button type="button" class="seg-btn" ng-class="{'active': commute.city === 'queensland'}" ng-click="selectCity('queensland')">
                         🇦🇺 Queensland

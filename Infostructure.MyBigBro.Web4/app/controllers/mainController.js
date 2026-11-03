@@ -78,6 +78,9 @@ angular.module('MyBigBroApp.controllers', []).
             if (name.indexOf('SH18') !== -1) return { code: 'SH18', bg: '#047857' };
             if (name.indexOf('SH20A') !== -1) return { code: 'SH20A', bg: '#b45309' };
             if (name.indexOf('SH20') !== -1) return { code: 'SH20', bg: '#6d28d9' };
+            if (name.indexOf('SH59') !== -1) return { code: 'SH59', bg: '#0f766e' };
+            if (name.indexOf('SH58') !== -1) return { code: 'SH58', bg: '#b45309' };
+            if (name.indexOf('SH2') !== -1 && name.indexOf('SH1 / SH2') === -1) return { code: 'SH2', bg: '#0369a1' };
             if (name.indexOf('SH1') !== -1) return { code: 'SH1', bg: '#be123c' };
             if (name.indexOf('A406') !== -1 || name.indexOf('HANGER') !== -1) return { code: 'A406', bg: '#15803d' };
             if (name.indexOf('A13') !== -1 || name.indexOf('LIMEHOUSE') !== -1 || name.indexOf('A12') !== -1) return { code: 'A13', bg: '#0369a1' };
