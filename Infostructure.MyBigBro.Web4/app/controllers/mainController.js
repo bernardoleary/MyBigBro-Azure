@@ -47,7 +47,7 @@ angular.module('MyBigBroApp.controllers', []).
             monthlyCostUsd: 20,
             currentFundedUsd: 5,
             coffeePriceUsd: 3,
-            supportUrl: 'https://ko-fi.com/motorwaylive',
+            supportUrl: 'https://ko-fi.com/onrampcam',
             buttonLabel: '☕ Buy a Coffee ($3)'
         };
 

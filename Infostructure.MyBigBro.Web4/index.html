@@ -2,7 +2,7 @@
 <html ng-app="MyBigBroApp">
 <head>
     <meta charset="utf-8" />
-    <title>Motorway Live — Auckland, Queensland, London &amp; NYC</title>
+    <title>OnRamp — Live Commute Camera Strips (onramp.cam)</title>
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#090d16">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -554,11 +554,11 @@
     <script src="scripts/datetimepicker.js?v=7"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-    <script src="app/app.js?v=11"></script>
-    <script src="app/services/capturedImagesGeoMarkerService.js?v=11"></script>
-    <script src="app/services/webCamsService.js?v=11"></script>
-    <script src="app/services/commuteService.js?v=11"></script>
-    <script src="app/controllers/mainController.js?v=11"></script>
+    <script src="app/app.js?v=12"></script>
+    <script src="app/services/capturedImagesGeoMarkerService.js?v=12"></script>
+    <script src="app/services/webCamsService.js?v=12"></script>
+    <script src="app/services/commuteService.js?v=12"></script>
+    <script src="app/controllers/mainController.js?v=12"></script>
 </head>
 <body data-ng-controller="mainController" ng-cloak>
 
@@ -567,7 +567,7 @@
         <div class="topbar-inner">
             <div class="brand">
                 <span class="brand-dot"></span>
-                <span>Motorway Live</span>
+                <span>onramp<span style="color:#38bdf8;">.cam</span></span>
             </div>
 
             <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
@@ -807,7 +807,7 @@
             <span style="color:#64748b;">{{ getAgencyAttribution() }}</span>
 
             <div class="hosting-goal-wrap">
-                <span>⚡ Keep Motorway Live ad-free • Azure hosting: <strong style="color:#e2e8f0;">${{ supportConfig.currentFundedUsd }} / ${{ supportConfig.monthlyCostUsd }}</strong> this month</span>
+                <span>⚡ Keep <strong>onramp.cam</strong> ad-free • Azure hosting: <strong style="color:#e2e8f0;">${{ supportConfig.currentFundedUsd }} / ${{ supportConfig.monthlyCostUsd }}</strong> this month</span>
                 <div class="hosting-bar-track" title="{{ getHostingGoalPercent() }}% of monthly Azure hosting funded">
                     <div class="hosting-bar-fill" ng-style="{'width': getHostingGoalPercent() + '%'}"></div>
                 </div>

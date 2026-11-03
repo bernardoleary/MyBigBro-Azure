@@ -1,7 +1,7 @@
 {
-  "name": "Motorway Live — Commute Camera Strip",
-  "short_name": "Motorway Live",
-  "description": "Live motorway camera journey strip and time-lapse for Auckland and London.",
+  "name": "OnRamp — Live Commute Camera Strips",
+  "short_name": "OnRamp",
+  "description": "Swipe down your motorway commute camera strip in Auckland, Wellington, Queensland, London & NYC.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#090d16",
