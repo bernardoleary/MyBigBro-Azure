@@ -24,13 +24,13 @@ angular.module('MyBigBroApp.controllers', []).
         $scope.corridorMapMarkers = [];
         $scope.showCorridorCamsOnMap = true;
 
-        // Top-level View Mode: 'strip' (Commute Strip PoC), 'map' (Interactive Map), 'drive' (PWA Wake-Lock GPS Tracker)
+        // Top-level View Mode: 'strip' (Commute Infographic), 'map' (Interactive Map), 'drive' (PWA Wake-Lock GPS Tracker)
         var initialMode = getParameterByName("view");
         var initialDevice = getParameterByName("deviceName");
         $scope.viewMode = initialDevice ? 'map' : (initialMode || 'strip');
 
         // =========================================================================
-        // COMMUTE STRIP & 15-MIN TIME-LAPSE / LIVE JAMCAM STATE
+        // COMMUTE STRIP & INFOGRAPHIC JOURNEY DECK STATE
         // =========================================================================
         var savedStarred = [];
         try {
@@ -41,11 +41,15 @@ angular.module('MyBigBroApp.controllers', []).
 
         $scope.commute = {
             city: localStorage.getItem('mybigbro_city') || 'auckland',
+            layoutMode: localStorage.getItem('mybigbro_layout') || 'deck', // 'deck' (Drag Up/Down 1-by-1) or 'spine' (Full Infographic Spine)
             allCorridors: [],
             cityCorridors: [],
             selectedCorridorId: localStorage.getItem('mybigbro_corridor') || 'ak-sh16',
             activeCorridor: null,
             displayedCameras: [],
+            activeCamIndex: 0,
+            totalRouteKm: 0,
+            totalRouteMins: 0,
             isReversed: localStorage.getItem('mybigbro_reversed') === 'true',
             isPlaying: true,
             speedMs: 650,
@@ -55,7 +59,10 @@ angular.module('MyBigBroApp.controllers', []).
             lastUpdatedText: 'Just now',
             londonVideoMode: true,
             starredIds: savedStarred,
-            cacheBust: Date.now()
+            cacheBust: Date.now(),
+            dragOffsetY: 0,
+            isDragging: false,
+            transitionDir: ''
         };
 
         // =========================================================================
@@ -89,6 +96,57 @@ angular.module('MyBigBroApp.controllers', []).
                 }, 100);
             }
         };
+
+        $scope.setLayoutMode = function (mode) {
+            $scope.commute.layoutMode = mode;
+            localStorage.setItem('mybigbro_layout', mode);
+        };
+
+        // Haversine distance in km between two lat/lng points
+        function calcDistanceKm(lat1, lon1, lat2, lon2) {
+            var R = 6371;
+            var dLat = (lat2 - lat1) * Math.PI / 180.0;
+            var dLon = (lon2 - lon1) * Math.PI / 180.0;
+            var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(lat1 * Math.PI / 180.0) * Math.cos(lat2 * Math.PI / 180.0) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            // Multiply by 1.18 road winding factor for realistic motorway road distance
+            return R * c * 1.18;
+        }
+
+        function detectHighwayBadge(cam) {
+            var name = (cam.Name || '').toUpperCase();
+            if (name.indexOf('SH16') !== -1) return { code: 'SH16', color: '#dc2626', bg: '#991b1b' };
+            if (name.indexOf('SH18') !== -1) return { code: 'SH18', color: '#059669', bg: '#065f46' };
+            if (name.indexOf('SH20A') !== -1) return { code: 'SH20A', color: '#d97706', bg: '#92400e' };
+            if (name.indexOf('SH20') !== -1) return { code: 'SH20', color: '#7c3aed', bg: '#5b21b6' };
+            if (name.indexOf('SH1') !== -1) return { code: 'SH1', color: '#e11d48', bg: '#9f1239' };
+            if (name.indexOf('A406') !== -1 || name.indexOf('HANGER') !== -1) return { code: 'A406', color: '#16a34a', bg: '#14532d' };
+            if (name.indexOf('A13') !== -1 || name.indexOf('LIMEHOUSE') !== -1 || name.indexOf('A12') !== -1) return { code: 'A13/A12', color: '#0284c7', bg: '#0c4a6e' };
+            if (name.indexOf('A40') !== -1) return { code: 'A40', color: '#16a34a', bg: '#14532d' };
+            if (name.indexOf('A4 ') !== -1 || name.indexOf('CHISWICK') !== -1) return { code: 'A4/M4', color: '#2563eb', bg: '#1e3a8a' };
+            if (cam.City === 'london') return { code: 'TfL', color: '#0284c7', bg: '#0c4a6e' };
+            return { code: 'MWY', color: '#0284c7', bg: '#0c4a6e' };
+        }
+
+        function detectLandmark(cam) {
+            var text = ((cam.Name || '') + ' ' + (cam.Subtitle || '')).toLowerCase();
+            if (text.indexOf('causeway') !== -1 || text.indexOf('whau') !== -1) return '🌊 Waitemata Harbour Causeway';
+            if (text.indexOf('waterview') !== -1) return '🚇 Waterview Tunnel Interchange';
+            if (text.indexOf('onewa') !== -1) return '🌉 Auckland Harbour Bridge North';
+            if (text.indexOf('central mwy') !== -1) return '🔀 Central Motorway Junction (Spaghetti Jct)';
+            if (text.indexOf('upper harbour bridge') !== -1) return '🌉 Upper Harbour Bridge Crossing';
+            if (text.indexOf('airport') !== -1 || text.indexOf('george bolt') !== -1) return '✈️ Auckland International Airport Link';
+            if (text.indexOf('onehunga') !== -1 || text.indexOf('coronation') !== -1) return '🌉 Manukau Harbour / Mangere Bridge';
+            if (text.indexOf('hanger lane') !== -1) return '🔄 Hanger Lane Gyratory & A40 Interchange';
+            if (text.indexOf('ace cafe') !== -1) return '🏍️ Iconic Ace Cafe North Circular';
+            if (text.indexOf('limehouse') !== -1) return '🚇 Limehouse Link Tunnel';
+            if (text.indexOf('blackwall') !== -1) return '🚇 Blackwall River Thames Tunnel';
+            if (text.indexOf('heathrow') !== -1) return '✈️ Heathrow Airport Spur & M4';
+            if (text.indexOf('bridge') !== -1 && cam.City === 'london') return '🌉 River Thames Crossing';
+            return '';
+        }
 
         // Load Corridors from Backend
         $scope.loadCommuteCorridors = function (preserveCursor) {
@@ -162,19 +220,60 @@ angular.module('MyBigBroApp.controllers', []).
             if (!$scope.commute.activeCorridor || !$scope.commute.activeCorridor.Cameras) {
                 $scope.commute.displayedCameras = [];
                 $scope.commute.maxFrameCount = 1;
+                $scope.commute.activeCamIndex = 0;
                 return;
             }
 
-            var list = $scope.commute.activeCorridor.Cameras.slice();
+            var rawList = $scope.commute.activeCorridor.Cameras.slice();
             if ($scope.commute.isReversed) {
-                list.reverse();
+                rawList.reverse();
             }
-            $scope.commute.displayedCameras = list;
+
+            var totalKm = 0;
+            var totalMins = 0;
+            var enriched = [];
+            var avgSpeedKmh = $scope.commute.city === 'london' ? 48 : 82;
+
+            for (var i = 0; i < rawList.length; i++) {
+                var cam = angular.copy(rawList[i]);
+                var distFromPrev = 0;
+                var minsFromPrev = 0;
+                if (i > 0) {
+                    distFromPrev = calcDistanceKm(rawList[i - 1].Lat, rawList[i - 1].Lng, cam.Lat, cam.Lng);
+                    if (distFromPrev > 40) distFromPrev = 2.5; // cap if starred across cities
+                    minsFromPrev = Math.max(1, Math.round((distFromPrev / avgSpeedKmh) * 60));
+                }
+                totalKm += distFromPrev;
+                totalMins += minsFromPrev;
+
+                cam.SeqNumber = i + 1;
+                cam.DistFromPrevKm = distFromPrev.toFixed(1);
+                cam.MinsFromPrev = minsFromPrev;
+                cam.CumulativeKm = totalKm.toFixed(1);
+                cam.CumulativeMins = totalMins;
+                cam.Badge = detectHighwayBadge(cam);
+                cam.Landmark = detectLandmark(cam);
+                enriched.push(cam);
+            }
+
+            for (var k = 0; k < enriched.length; k++) {
+                enriched[k].ProgressPct = enriched.length > 1
+                    ? Math.round((k / (enriched.length - 1)) * 100)
+                    : 100;
+            }
+
+            $scope.commute.displayedCameras = enriched;
+            $scope.commute.totalRouteKm = totalKm.toFixed(1);
+            $scope.commute.totalRouteMins = Math.max(1, totalMins);
+
+            if (!preserveCursor || $scope.commute.activeCamIndex >= enriched.length) {
+                $scope.commute.activeCamIndex = 0;
+            }
 
             var maxF = 1;
-            for (var i = 0; i < list.length; i++) {
-                if (list[i].Frames && list[i].Frames.length > maxF) {
-                    maxF = list[i].Frames.length;
+            for (var m = 0; m < enriched.length; m++) {
+                if (enriched[m].Frames && enriched[m].Frames.length > maxF) {
+                    maxF = enriched[m].Frames.length;
                 }
             }
             $scope.commute.maxFrameCount = maxF;
@@ -182,6 +281,188 @@ angular.module('MyBigBroApp.controllers', []).
                 $scope.commute.frameStep = maxF - 1;
             }
         }
+
+        // =========================================================================
+        // JOURNEY DECK NAVIGATION (Drag Up/Down, Wheel, Keyboard & Rail Click)
+        // =========================================================================
+        $scope.getCurrentJourneyCamera = function () {
+            if (!$scope.commute.displayedCameras || !$scope.commute.displayedCameras.length) {
+                return null;
+            }
+            return $scope.commute.displayedCameras[$scope.commute.activeCamIndex] || $scope.commute.displayedCameras[0];
+        };
+
+        $scope.getPrevJourneyCamera = function () {
+            if ($scope.commute.activeCamIndex <= 0) return null;
+            return $scope.commute.displayedCameras[$scope.commute.activeCamIndex - 1];
+        };
+
+        $scope.getNextJourneyCamera = function () {
+            if (!$scope.commute.displayedCameras) return null;
+            if ($scope.commute.activeCamIndex >= $scope.commute.displayedCameras.length - 1) return null;
+            return $scope.commute.displayedCameras[$scope.commute.activeCamIndex + 1];
+        };
+
+        $scope.goToCameraIndex = function (idx, dirHint) {
+            if (!$scope.commute.displayedCameras || idx < 0 || idx >= $scope.commute.displayedCameras.length) {
+                return;
+            }
+            if (idx === $scope.commute.activeCamIndex) return;
+
+            $scope.commute.transitionDir = dirHint || (idx > $scope.commute.activeCamIndex ? 'next' : 'prev');
+            $scope.commute.activeCamIndex = idx;
+
+            $timeout(function () {
+                $scope.commute.transitionDir = '';
+            }, 260);
+
+            // If in spine mode, also smooth-scroll to that node
+            if ($scope.commute.layoutMode === 'spine') {
+                var el = document.getElementById('spine-cam-' + idx);
+                if (el && el.scrollIntoView) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        };
+
+        $scope.nextCameraInJourney = function () {
+            if ($scope.commute.activeCamIndex < $scope.commute.displayedCameras.length - 1) {
+                $scope.goToCameraIndex($scope.commute.activeCamIndex + 1, 'next');
+            }
+        };
+
+        $scope.prevCameraInJourney = function () {
+            if ($scope.commute.activeCamIndex > 0) {
+                $scope.goToCameraIndex($scope.commute.activeCamIndex - 1, 'prev');
+            }
+        };
+
+        // Pointer / Touch Drag Up & Down Gesture on the Journey Stage
+        var dragStartY = null;
+        var lastWheelTime = 0;
+
+        $scope.onStageDragStart = function (clientY) {
+            dragStartY = clientY;
+            $scope.commute.isDragging = true;
+            $scope.commute.dragOffsetY = 0;
+        };
+
+        $scope.onStageDragMove = function (clientY) {
+            if (dragStartY === null || !$scope.commute.isDragging) return;
+            var dy = clientY - dragStartY;
+            // Clamp visual drag displacement to [-110, 110] px
+            if (dy > 110) dy = 110;
+            if (dy < -110) dy = -110;
+            $scope.commute.dragOffsetY = dy;
+        };
+
+        $scope.onStageDragEnd = function () {
+            if (dragStartY === null || !$scope.commute.isDragging) return;
+            var dy = $scope.commute.dragOffsetY;
+            dragStartY = null;
+            $scope.commute.isDragging = false;
+            $scope.commute.dragOffsetY = 0;
+
+            // Dragging UP (negative dy) advances forward to the NEXT camera down the highway
+            // Dragging DOWN (positive dy) moves back to the PREVIOUS camera
+            if (dy < -42) {
+                $scope.nextCameraInJourney();
+            } else if (dy > 42) {
+                $scope.prevCameraInJourney();
+            }
+        };
+
+        // Bind touch, mouse drag, wheel, and arrow keys to the Journey Stage
+        $timeout(function () {
+            var stage = document.getElementById('journey-drag-stage');
+            if (stage) {
+                stage.addEventListener('touchstart', function (e) {
+                    if (e.touches && e.touches.length === 1) {
+                        $scope.$applyAsync(function () {
+                            $scope.onStageDragStart(e.touches[0].clientY);
+                        });
+                    }
+                }, { passive: true });
+
+                stage.addEventListener('touchmove', function (e) {
+                    if ($scope.commute.isDragging && e.touches && e.touches.length === 1) {
+                        if (Math.abs(e.touches[0].clientY - (dragStartY || 0)) > 12) {
+                            e.preventDefault();
+                        }
+                        $scope.$applyAsync(function () {
+                            $scope.onStageDragMove(e.touches[0].clientY);
+                        });
+                    }
+                }, { passive: false });
+
+                stage.addEventListener('touchend', function () {
+                    $scope.$applyAsync(function () {
+                        $scope.onStageDragEnd();
+                    });
+                });
+
+                stage.addEventListener('mousedown', function (e) {
+                    if (e.target && (e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT' || e.target.tagName === 'VIDEO')) {
+                        return;
+                    }
+                    $scope.$applyAsync(function () {
+                        $scope.onStageDragStart(e.clientY);
+                    });
+                });
+
+                window.addEventListener('mousemove', function (e) {
+                    if ($scope.commute.isDragging) {
+                        $scope.$applyAsync(function () {
+                            $scope.onStageDragMove(e.clientY);
+                        });
+                    }
+                });
+
+                window.addEventListener('mouseup', function () {
+                    if ($scope.commute.isDragging) {
+                        $scope.$applyAsync(function () {
+                            $scope.onStageDragEnd();
+                        });
+                    }
+                });
+
+                stage.addEventListener('wheel', function (e) {
+                    if ($scope.viewMode !== 'strip' || $scope.commute.layoutMode !== 'deck') return;
+                    var now = Date.now();
+                    if (now - lastWheelTime < 320) {
+                        e.preventDefault();
+                        return;
+                    }
+                    if (Math.abs(e.deltaY) > 22) {
+                        e.preventDefault();
+                        lastWheelTime = now;
+                        $scope.$applyAsync(function () {
+                            if (e.deltaY > 0) {
+                                $scope.nextCameraInJourney();
+                            } else {
+                                $scope.prevCameraInJourney();
+                            }
+                        });
+                    }
+                }, { passive: false });
+            }
+
+            window.addEventListener('keydown', function (e) {
+                if ($scope.viewMode !== 'strip' || $scope.commute.layoutMode !== 'deck') return;
+                if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
+                if (e.key === 'ArrowDown' || e.key === 'j' || e.key === 'PageDown') {
+                    e.preventDefault();
+                    $scope.$applyAsync(function () {
+                        $scope.nextCameraInJourney();
+                    });
+                } else if (e.key === 'ArrowUp' || e.key === 'k' || e.key === 'PageUp') {
+                    e.preventDefault();
+                    $scope.$applyAsync(function () {
+                        $scope.prevCameraInJourney();
+                    });
+                }
+            });
+        }, 250);
 
         $scope.selectCity = function (city) {
             $scope.commute.city = city;
@@ -209,7 +490,7 @@ angular.module('MyBigBroApp.controllers', []).
         $scope.toggleDirection = function () {
             $scope.commute.isReversed = !$scope.commute.isReversed;
             localStorage.setItem('mybigbro_reversed', $scope.commute.isReversed ? 'true' : 'false');
-            rebuildDisplayedCameras(true);
+            rebuildDisplayedCameras(false);
         };
 
         $scope.togglePlay = function () {
@@ -254,7 +535,6 @@ angular.module('MyBigBroApp.controllers', []).
                 if (idx < 0) idx = 0;
                 return cam.Frames[idx].Url;
             }
-            // Fallback to live URL with cache-bust timestamp
             var sep = cam.ImageUrl.indexOf('?') === -1 ? '?' : '&';
             return cam.ImageUrl + sep + '_cb=' + $scope.commute.cacheBust;
         };
@@ -283,7 +563,7 @@ angular.module('MyBigBroApp.controllers', []).
                 ? $scope.commute.selectedCorridorId
                 : null;
             commuteService.triggerPoll(corrId).success(function () {
-                $scope.loadCommuteCorridors(false);
+                $scope.loadCommuteCorridors(true);
                 $scope.commute.isPolling = false;
             }).error(function () {
                 $scope.commute.isPolling = false;
@@ -291,6 +571,7 @@ angular.module('MyBigBroApp.controllers', []).
         };
 
         $scope.focusCameraOnMap = function (cam) {
+            if (!cam) return;
             $scope.setViewMode('map');
             $timeout(function () {
                 $scope.map.setView([cam.Lat, cam.Lng], 15);
@@ -356,7 +637,6 @@ angular.module('MyBigBroApp.controllers', []).
             $scope.drive.isTracking = true;
             $scope.drive.statusMessage = 'Acquiring GPS lock & requesting Screen Wake Lock...';
 
-            // Request Screen Wake Lock so phone doesn't sleep on dash mount
             if ('wakeLock' in navigator) {
                 navigator.wakeLock.request('screen').then(function (sentinel) {
                     $scope.drive.wakeLockSentinel = sentinel;
