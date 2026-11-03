@@ -42,6 +42,94 @@ angular.module('MyBigBroApp.controllers', []).
             isDragging: false
         };
 
+        $scope.cityDropdownOpen = false;
+        $scope.cityOptions = [
+            {
+                id: 'auckland',
+                name: 'Auckland',
+                shortCode: 'AKL',
+                dialCode: '09',
+                country: 'New Zealand',
+                flagCode: 'nz',
+                emblem: '⛵',
+                distinctLabel: '⛵ 09 • City of Sails',
+                subtitle: 'Harbour Bridge, SH1, SH16, SH18 & SH20',
+                accentBg: 'rgba(56, 189, 248, 0.16)',
+                accentBorder: 'rgba(56, 189, 248, 0.4)',
+                accentColor: '#38bdf8'
+            },
+            {
+                id: 'wellington',
+                name: 'Wellington',
+                shortCode: 'WLG',
+                dialCode: '04',
+                country: 'New Zealand',
+                flagCode: 'nz',
+                emblem: '💨',
+                distinctLabel: '💨 04 • Windy Welly',
+                subtitle: 'Ngauranga Gorge, Transmission Gully, SH59 & SH2',
+                accentBg: 'rgba(250, 204, 21, 0.16)',
+                accentBorder: 'rgba(250, 204, 21, 0.4)',
+                accentColor: '#facc15'
+            },
+            {
+                id: 'queensland',
+                name: 'Queensland',
+                shortCode: 'QLD',
+                dialCode: 'BNE',
+                country: 'Australia',
+                flagCode: 'au',
+                emblem: '☀️',
+                distinctLabel: '☀️ BNE • Sunshine State',
+                subtitle: 'Pacific M1, Gateway, Gympie Rd & Centenary',
+                accentBg: 'rgba(16, 185, 129, 0.16)',
+                accentBorder: 'rgba(16, 185, 129, 0.4)',
+                accentColor: '#34d399'
+            },
+            {
+                id: 'london',
+                name: 'London',
+                shortCode: 'LDN',
+                dialCode: '020',
+                country: 'United Kingdom',
+                flagCode: 'gb',
+                emblem: '🚇',
+                distinctLabel: '🚇 TfL • Live Video Loops',
+                subtitle: 'A406 North Circular, A4 Westway & A13 Docklands',
+                accentBg: 'rgba(244, 63, 94, 0.16)',
+                accentBorder: 'rgba(244, 63, 94, 0.4)',
+                accentColor: '#fb7185'
+            },
+            {
+                id: 'nyc',
+                name: 'New York',
+                shortCode: 'NYC',
+                dialCode: '212',
+                country: 'United States',
+                flagCode: 'us',
+                emblem: '🗽',
+                distinctLabel: '🗽 NYC • Five Boroughs',
+                subtitle: 'FDR Drive, BQE I-278, West Side & LIE I-495',
+                accentBg: 'rgba(168, 85, 247, 0.16)',
+                accentBorder: 'rgba(168, 85, 247, 0.4)',
+                accentColor: '#c084fc'
+            }
+        ];
+
+        $scope.getActiveCityOption = function () {
+            for (var i = 0; i < $scope.cityOptions.length; i++) {
+                if ($scope.cityOptions[i].id === $scope.commute.city) {
+                    return $scope.cityOptions[i];
+                }
+            }
+            return $scope.cityOptions[0];
+        };
+
+        $scope.toggleCityDropdown = function ($event) {
+            if ($event) $event.stopPropagation();
+            $scope.cityDropdownOpen = !$scope.cityDropdownOpen;
+        };
+
         // Option #2: Ad-Free Community Support / Azure Hosting Goal Configuration
         $scope.supportConfig = {
             monthlyCostUsd: 20,
@@ -404,6 +492,10 @@ angular.module('MyBigBroApp.controllers', []).
             }
 
             window.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && $scope.cityDropdownOpen) {
+                    $scope.$applyAsync(function () { $scope.cityDropdownOpen = false; });
+                    return;
+                }
                 if ($scope.viewMode !== 'strip' || $scope.commute.layoutMode !== 'deck') return;
                 if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
                 if (e.key === 'ArrowDown' || e.key === 'j') {
@@ -414,9 +506,21 @@ angular.module('MyBigBroApp.controllers', []).
                     $scope.$applyAsync(function () { $scope.prevCameraInJourney(); });
                 }
             });
+
+            window.addEventListener('click', function (e) {
+                if (!$scope.cityDropdownOpen) return;
+                var dropdownEl = document.getElementById('city-selector-dropdown');
+                if (dropdownEl && !dropdownEl.contains(e.target)) {
+                    $scope.$applyAsync(function () {
+                        $scope.cityDropdownOpen = false;
+                    });
+                }
+            });
         }, 250);
 
-        $scope.selectCity = function (city) {
+        $scope.selectCity = function (city, $event) {
+            if ($event) $event.stopPropagation();
+            $scope.cityDropdownOpen = false;
             $scope.commute.city = city;
             localStorage.setItem('mybigbro_city', city);
             if ($scope.commute.selectedCorridorId === 'starred') {
