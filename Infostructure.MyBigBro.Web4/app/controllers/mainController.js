@@ -48,7 +48,7 @@ angular.module('MyBigBroApp.controllers', []).
             currentFundedUsd: 5,
             coffeePriceUsd: 3,
             supporterCount: 2,
-            supportUrl: 'https://buymeacoffee.com/bernardoleary',
+            supportUrl: 'https://buymeacoffee.com/onrampcam',
             buttonLabel: '☕ Buy a Coffee ($3)'
         };
 

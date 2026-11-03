@@ -60,7 +60,7 @@ namespace Infostructure.MyBigBro.Web4.Services
         public decimal CurrentFundedUsd { get; set; } = 5m;
         public decimal CoffeePriceUsd { get; set; } = 3m;
         public int SupporterCount { get; set; } = 2;
-        public string SupportUrl { get; set; } = "https://buymeacoffee.com/bernardoleary";
+        public string SupportUrl { get; set; } = "https://buymeacoffee.com/onrampcam";
         public string ButtonLabel { get; set; } = "☕ Buy a Coffee ($3)";
         public string CurrentMonth { get; set; } = string.Empty;
     }
@@ -111,9 +111,9 @@ namespace Infostructure.MyBigBro.Web4.Services
                     _supportStatus.SupportUrl = envUrl.Trim();
                 }
                 else if (string.IsNullOrWhiteSpace(_supportStatus.SupportUrl) ||
-                         _supportStatus.SupportUrl.Contains("buymeacoffee.com/onrampcam", StringComparison.OrdinalIgnoreCase))
+                         _supportStatus.SupportUrl.Contains("bernardoleary", StringComparison.OrdinalIgnoreCase))
                 {
-                    _supportStatus.SupportUrl = "https://buymeacoffee.com/bernardoleary";
+                    _supportStatus.SupportUrl = "https://buymeacoffee.com/onrampcam";
                     SaveSupportStatus(_supportStatus);
                 }
 
@@ -197,7 +197,7 @@ namespace Infostructure.MyBigBro.Web4.Services
                 CurrentFundedUsd = GetDefaultFundedUsd(),
                 CoffeePriceUsd = 3m,
                 SupporterCount = 2,
-                SupportUrl = Environment.GetEnvironmentVariable("ONRAMP_SUPPORT_URL") ?? "https://buymeacoffee.com/bernardoleary",
+                SupportUrl = Environment.GetEnvironmentVariable("ONRAMP_SUPPORT_URL") ?? "https://buymeacoffee.com/onrampcam",
                 ButtonLabel = "☕ Buy a Coffee ($3)",
                 CurrentMonth = currentMonth
             };
