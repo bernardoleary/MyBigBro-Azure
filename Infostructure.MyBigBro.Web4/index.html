@@ -162,94 +162,6 @@
             color: #fff;
         }
 
-        /* Clean Subway Line Progress */
-        .route-line-card {
-            background: #111827;
-            border: 1px solid #1e293b;
-            border-radius: 12px;
-            padding: 12px 14px;
-            margin-bottom: 14px;
-            overflow-x: auto;
-        }
-
-        .route-nodes {
-            display: flex;
-            align-items: center;
-            min-width: 520px;
-        }
-
-        .route-node {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            cursor: pointer;
-            user-select: none;
-        }
-
-        .route-connector {
-            position: absolute;
-            top: 9px;
-            left: -50%;
-            width: 100%;
-            height: 3px;
-            background: #1e293b;
-            z-index: 1;
-        }
-
-        .route-connector.passed {
-            background: #0284c7;
-        }
-
-        .route-dot {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #090d16;
-            border: 2.5px solid #475569;
-            z-index: 2;
-            font-size: 9.5px;
-            font-weight: 700;
-            color: #64748b;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.15s ease;
-        }
-
-        .route-node.passed .route-dot {
-            background: #0284c7;
-            border-color: #38bdf8;
-            color: #fff;
-        }
-
-        .route-node.active .route-dot {
-            width: 24px;
-            height: 24px;
-            background: #38bdf8;
-            border-color: #fff;
-            color: #090d16;
-            font-weight: 800;
-            box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25);
-        }
-
-        .route-node-label {
-            margin-top: 5px;
-            font-size: 10.5px;
-            color: #64748b;
-            max-width: 72px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            text-align: center;
-        }
-
-        .route-node.active .route-node-label {
-            color: #f8fafc;
-            font-weight: 700;
-        }
-
         /* Journey Deck Layout */
         .deck-grid {
             display: grid;
@@ -650,22 +562,6 @@
             <button type="button" class="dir-btn" ng-click="toggleDirection()" ng-if="commute.activeCorridor">
                 ⇅ {{ commute.isReversed ? commute.activeCorridor.InboundLabel : commute.activeCorridor.OutboundLabel }}
             </button>
-        </div>
-
-        <!-- Horizontal Route Progress Line -->
-        <div class="route-line-card" ng-if="commute.displayedCameras.length > 0">
-            <div class="route-nodes">
-                <div class="route-node"
-                     ng-repeat="cam in commute.displayedCameras track by cam.Id"
-                     ng-class="{'passed': $index < commute.activeCamIndex, 'active': $index === commute.activeCamIndex}"
-                     ng-click="goToCameraIndex($index)">
-                    <div class="route-connector" ng-if="$index > 0" ng-class="{'passed': $index <= commute.activeCamIndex}"></div>
-                    <div class="route-dot">{{ $index + 1 }}</div>
-                    <div class="route-node-label">
-                        {{ cam.Name.replace('SH16 ', '').replace('SH1 ', '').replace('SH20 ', '').replace('SH18 ', '').replace('A406 ', '').replace('A13 ', '').replace('A4 ', '') }}
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- Empty Saved State -->
