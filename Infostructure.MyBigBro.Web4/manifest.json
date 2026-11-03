@@ -1,22 +1,10 @@
 {
-  "name": "MyBigBro — Motorway Commute Strip & Camera Time-Lapse",
-  "short_name": "MyBigBro",
-  "description": "Live 15-minute motorway time-lapse commute strips for Auckland (NZTA) and live JamCam video strips for London (TfL).",
+  "name": "Motorway Live — Commute Camera Strip",
+  "short_name": "Motorway Live",
+  "description": "Live motorway camera journey strip and time-lapse for Auckland and London.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
-  "orientation": "portrait-primary",
-  "icons": [
-    {
-      "src": "/content/images/ic_launcher_48x48.png",
-      "sizes": "48x48",
-      "type": "image/png"
-    },
-    {
-      "src": "/content/images/ic_launcher_48x48.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
-  ]
+  "background_color": "#090d16",
+  "theme_color": "#090d16",
+  "orientation": "portrait-primary"
 }
