@@ -356,68 +356,60 @@
             color: #fff;
         }
 
-        /* Journey Deck Layout */
+        /* Journey Deck Layout: Slim Dot Spine + Responsive Stage */
         .deck-grid {
             display: grid;
-            grid-template-columns: 250px 1fr;
-            gap: 16px;
-            align-items: start;
+            grid-template-columns: 32px minmax(0, 1fr);
+            gap: 10px;
+            align-items: center;
+            width: 100%;
+            max-width: 100%;
         }
 
-        @media (max-width: 780px) {
-            .deck-grid {
-                grid-template-columns: 1fr;
-            }
-            .spine-sidebar {
-                order: 2;
-            }
-            .stage-wrap {
-                order: 1;
-            }
-        }
-
-        /* Vertical Spine Sidebar */
+        /* Vertical Dot-Only Spine Sidebar */
         .spine-sidebar {
             background: #111827;
             border: 1px solid #1e293b;
-            border-radius: 12px;
-            padding: 10px 8px;
-            max-height: 560px;
-            overflow-y: auto;
+            border-radius: 999px;
+            padding: 12px 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            box-sizing: border-box;
+            user-select: none;
         }
 
         .spine-item {
             display: flex;
-            align-items: stretch;
-            padding: 4px 8px;
-            border-radius: 8px;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
             cursor: pointer;
-        }
-
-        .spine-item:hover {
-            background: rgba(255, 255, 255, 0.04);
-        }
-
-        .spine-item.active {
-            background: rgba(2, 132, 199, 0.18);
+            padding: 0;
         }
 
         .spine-track {
-            width: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-right: 8px;
-            flex-shrink: 0;
+            width: 100%;
         }
 
         .spine-dot {
-            width: 12px;
-            height: 12px;
+            width: 11px;
+            height: 11px;
             border-radius: 50%;
             background: #1e293b;
             border: 2px solid #475569;
-            margin-top: 5px;
+            transition: all 0.15s ease;
+            flex-shrink: 0;
+        }
+
+        .spine-item:hover .spine-dot {
+            border-color: #94a3b8;
+            transform: scale(1.15);
         }
 
         .spine-item.passed .spine-dot {
@@ -429,65 +421,60 @@
             width: 14px;
             height: 14px;
             background: #38bdf8;
-            border-color: #fff;
+            border-color: #ffffff;
+            box-shadow: 0 0 8px rgba(56, 189, 248, 0.85);
         }
 
         .spine-line {
             width: 2px;
-            flex: 1;
-            min-height: 20px;
+            height: 14px;
             background: #1e293b;
+            transition: background 0.15s ease;
         }
 
         .spine-item.passed .spine-line {
             background: #0284c7;
         }
 
-        .spine-text {
-            flex: 1;
-            min-width: 0;
-            padding: 2px 0 8px 0;
-        }
-
-        .spine-title {
-            font-size: 12.5px;
-            font-weight: 600;
-            color: #cbd5e1;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .spine-item.active .spine-title {
-            color: #fff;
-            font-weight: 700;
-        }
-
-        .spine-sub {
-            font-size: 11px;
-            color: #64748b;
-            display: flex;
-            justify-content: space-between;
-        }
-
         /* Main Camera Stage */
         .stage-wrap {
             user-select: none;
+            min-width: 0;
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
         }
 
         .step-peek {
             background: #111827;
             border: 1px solid #1e293b;
             border-radius: 10px;
-            padding: 8px 14px;
+            padding: 9px 12px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 8px;
             font-size: 12.5px;
-            color: #94a3b8;
+            color: #cbd5e1;
             cursor: pointer;
-            transition: border-color 0.15s ease;
+            transition: all 0.15s ease;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .step-peek-arrow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            background: rgba(56, 189, 248, 0.14);
+            color: #38bdf8;
+            font-size: 11px;
+            font-weight: 800;
+            flex-shrink: 0;
         }
 
         .step-peek-name {
@@ -496,15 +483,20 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .step-peek-meta {
             flex-shrink: 0;
             white-space: nowrap;
+            font-size: 11.5px;
         }
 
         .step-peek:hover {
             border-color: #38bdf8;
+            background: #172033;
             color: #f8fafc;
         }
 
@@ -513,6 +505,9 @@
             border: 1px solid #334155;
             border-radius: 14px;
             margin: 8px 0;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
             overflow: hidden;
             box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
             cursor: grab;
@@ -525,16 +520,18 @@
         }
 
         .stage-header {
-            padding: 12px 16px;
+            padding: 10px 14px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 10px;
+            gap: 8px;
             border-bottom: 1px solid #1e293b;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .stage-title {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 800;
             color: #fff;
             white-space: nowrap;
@@ -543,7 +540,7 @@
         }
 
         .stage-subtitle {
-            font-size: 12px;
+            font-size: 11.5px;
             color: #94a3b8;
             white-space: nowrap;
             overflow: hidden;
@@ -577,8 +574,8 @@
         .viewport-box {
             position: relative;
             width: 100%;
-            aspect-ratio: 16 / 10;
-            max-height: 480px;
+            max-width: 100%;
+            height: clamp(200px, 46vh, 440px);
             background: #020617;
             display: flex;
             align-items: center;
@@ -588,64 +585,48 @@
 
         .viewport-box img,
         .viewport-box video {
+            display: block;
             width: 100%;
             height: 100%;
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
         }
 
         .overlay-pill {
             position: absolute;
-            bottom: 10px;
-            left: 10px;
-            background: rgba(9, 13, 22, 0.85);
-            border: 1px solid rgba(148, 163, 184, 0.25);
+            bottom: 8px;
+            left: 8px;
+            background: rgba(9, 13, 22, 0.82);
+            border: 1px solid rgba(148, 163, 184, 0.22);
             color: #e2e8f0;
-            padding: 4px 10px;
+            padding: 3px 9px;
             border-radius: 6px;
-            font-size: 11.5px;
+            font-size: 11px;
             font-weight: 600;
-            max-width: calc(100% - 20px);
+            max-width: calc(100% - 16px);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-        }
-
-        .drag-tip {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(9, 13, 22, 0.75);
-            color: #94a3b8;
-            padding: 4px 9px;
-            border-radius: 6px;
-            font-size: 11px;
             pointer-events: none;
         }
 
         .stage-controls {
-            padding: 10px 16px;
+            padding: 8px 12px;
             background: #0b1120;
             border-top: 1px solid #1e293b;
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-        }
-
-        .stage-nav-btns {
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            gap: 8px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .stage-scrubber-wrap {
             display: flex;
             align-items: center;
             gap: 8px;
-            flex: 1;
-            max-width: 340px;
-            min-width: 180px;
+            width: 100%;
         }
 
         .ctrl-btn {
@@ -821,14 +802,18 @@
             }
 
             .container-main {
-                padding: 10px 10px 28px 10px;
+                padding: 8px 10px 24px 10px;
+                width: 100%;
+                max-width: 100vw;
+                box-sizing: border-box;
+                overflow-x: hidden;
             }
 
             .corridor-strip {
                 flex-direction: column;
                 align-items: stretch;
-                gap: 8px;
-                margin-bottom: 10px;
+                gap: 6px;
+                margin-bottom: 8px;
             }
 
             .corridor-pills {
@@ -840,23 +825,52 @@
             }
 
             .pill-btn {
-                padding: 6px 12px;
+                padding: 5px 11px;
                 font-size: 12px;
             }
 
             .dir-btn {
                 width: 100%;
                 text-align: center;
-                padding: 7px 12px;
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .deck-grid {
+                grid-template-columns: 26px minmax(0, 1fr);
+                gap: 8px;
+            }
+
+            .spine-sidebar {
+                width: 26px;
+                padding: 10px 3px;
+            }
+
+            .spine-dot {
+                width: 10px;
+                height: 10px;
+            }
+
+            .spine-item.active .spine-dot {
+                width: 13px;
+                height: 13px;
+            }
+
+            .spine-line {
+                height: 12px;
+            }
+
+            .step-peek {
+                padding: 8px 10px;
                 font-size: 12px;
             }
 
             .stage-header {
-                padding: 10px 12px;
+                padding: 8px 11px;
             }
 
             .stage-title {
-                font-size: 15px;
+                font-size: 14.5px;
             }
 
             .stage-subtitle {
@@ -864,12 +878,9 @@
             }
 
             .viewport-box {
-                aspect-ratio: 4 / 3;
-            }
-
-            .drag-tip {
-                font-size: 10px;
-                padding: 3px 7px;
+                width: 100%;
+                max-width: 100%;
+                height: clamp(180px, 37vh, 290px);
             }
 
             .overlay-pill {
@@ -878,30 +889,13 @@
             }
 
             .stage-controls {
-                padding: 10px 12px;
-                gap: 8px;
-            }
-
-            .stage-nav-btns {
-                width: 100%;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 8px;
-            }
-
-            .stage-nav-btns .ctrl-btn {
-                padding: 8px 12px;
-                font-size: 13px;
-                text-align: center;
+                padding: 7px 10px;
+                gap: 6px;
             }
 
             .stage-scrubber-wrap {
                 width: 100%;
                 max-width: none;
-            }
-
-            .spine-sidebar {
-                max-height: 300px;
             }
 
             .all-spine-card {
@@ -952,11 +946,11 @@
     <script src="scripts/datetimepicker.js?v=7"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-    <script src="app/app.js?v=14"></script>
-    <script src="app/services/capturedImagesGeoMarkerService.js?v=14"></script>
-    <script src="app/services/webCamsService.js?v=14"></script>
-    <script src="app/services/commuteService.js?v=14"></script>
-    <script src="app/controllers/mainController.js?v=14"></script>
+    <script src="app/app.js?v=15"></script>
+    <script src="app/services/capturedImagesGeoMarkerService.js?v=15"></script>
+    <script src="app/services/webCamsService.js?v=15"></script>
+    <script src="app/services/commuteService.js?v=15"></script>
+    <script src="app/controllers/mainController.js?v=15"></script>
 </head>
 <body data-ng-controller="mainController" ng-cloak>
 
@@ -1129,22 +1123,16 @@
         <!-- =============================================================== -->
         <div class="deck-grid" ng-if="commute.layoutMode === 'deck' && commute.displayedCameras.length > 0">
 
-            <!-- Left Route Spine -->
-            <aside class="spine-sidebar">
+            <!-- Left Dot-Only Route Spine -->
+            <aside class="spine-sidebar" aria-label="Route stops">
                 <div class="spine-item"
                      ng-repeat="cam in commute.displayedCameras track by cam.Id"
                      ng-class="{'passed': $index < commute.activeCamIndex, 'active': $index === commute.activeCamIndex}"
-                     ng-click="goToCameraIndex($index)">
+                     ng-click="goToCameraIndex($index)"
+                     title="{{ $index + 1 }}. {{ cam.Name }} ({{ cam.CumulativeKm }} km)">
                     <div class="spine-track">
                         <div class="spine-dot"></div>
                         <div class="spine-line" ng-if="!$last"></div>
-                    </div>
-                    <div class="spine-text">
-                        <div class="spine-title">{{ $index + 1 }}. {{ cam.Name }}</div>
-                        <div class="spine-sub">
-                            <span>{{ cam.Subtitle }}</span>
-                            <span>{{ cam.CumulativeKm }} km</span>
-                        </div>
                     </div>
                 </div>
             </aside>
@@ -1152,20 +1140,23 @@
             <!-- Right Interactive Drag Stage -->
             <div class="stage-wrap" id="journey-drag-stage">
 
-                <!-- Previous Stop Bar -->
+                <!-- Previous Stop Arrow Bar (Above Image) -->
                 <div class="step-peek" ng-if="getPrevJourneyCamera()" ng-click="prevCameraInJourney()">
-                    <span class="step-peek-name">▲ <strong>{{ getPrevJourneyCamera().Name }}</strong></span>
-                    <span class="step-peek-meta">Previous Stop</span>
+                    <span class="step-peek-name">
+                        <span class="step-peek-arrow">▲</span>
+                        <strong>{{ getPrevJourneyCamera().Name }}</strong>
+                    </span>
+                    <span class="step-peek-meta">Previous</span>
                 </div>
 
-                <!-- Active Camera Card -->
+                <!-- Active Camera Card (Uncluttered Frame) -->
                 <div class="camera-stage-card"
                      ng-if="getCurrentJourneyCamera()"
                      ng-class="{'dragging': commute.isDragging}"
                      ng-style="{'transform': 'translateY(' + commute.dragOffsetY + 'px)'}">
 
                     <div class="stage-header">
-                        <div style="display:flex; align-items:center; gap:10px; min-width:0; flex:1;">
+                        <div style="display:flex; align-items:center; gap:8px; min-width:0; flex:1;">
                             <span class="hwy-badge" ng-style="{'background-color': getCurrentJourneyCamera().Badge.bg}">
                                 {{ getCurrentJourneyCamera().Badge.code }}
                             </span>
@@ -1189,61 +1180,38 @@
                     </div>
 
                     <div class="viewport-box">
-                        <video ng-if="getCurrentJourneyCamera().City === 'london' && commute.londonVideoMode && getCurrentJourneyCamera().VideoUrl"
+                        <video ng-if="getCurrentJourneyCamera().City === 'london' && getCurrentJourneyCamera().VideoUrl"
                                ng-src="{{ getLondonVideoUrl(getCurrentJourneyCamera()) }}"
                                poster="{{ getCurrentJourneyCamera().ImageUrl }}"
                                autoplay loop muted playsinline controls>
                         </video>
 
-                        <img ng-if="getCurrentJourneyCamera().City !== 'london' || !commute.londonVideoMode || !getCurrentJourneyCamera().VideoUrl"
+                        <img ng-if="getCurrentJourneyCamera().City !== 'london' || !getCurrentJourneyCamera().VideoUrl"
                              ng-src="{{ getActiveFrameUrl(getCurrentJourneyCamera()) }}"
                              alt="{{ getCurrentJourneyCamera().Name }}" />
-
-                        <div class="drag-tip">↕ Drag up/down or scroll</div>
 
                         <span class="overlay-pill" ng-if="getCurrentJourneyCamera().City !== 'london'">
                             {{ getActiveFrameTimestamp(getCurrentJourneyCamera()) }} • Frame {{ commute.frameStep + 1 }}/{{ getCurrentJourneyCamera().Frames.length || 1 }}
                         </span>
-                        <span class="overlay-pill" ng-if="getCurrentJourneyCamera().City === 'london'">
-                            Live Video Loop
-                        </span>
                     </div>
 
-                    <!-- Clean Playback & Step Controls -->
-                    <div class="stage-controls">
-                        <div class="stage-nav-btns">
-                            <button type="button" class="ctrl-btn" ng-click="prevCameraInJourney()" ng-disabled="!getPrevJourneyCamera()">
-                                ← Prev
-                            </button>
-                            <button type="button" class="ctrl-btn primary" ng-click="nextCameraInJourney()" ng-disabled="!getNextJourneyCamera()">
-                                Next →
-                            </button>
-                        </div>
-
-                        <!-- Time-Lapse Scrubber (Auckland, Wellington, Queensland & NYC) -->
-                        <div class="stage-scrubber-wrap" ng-if="commute.city !== 'london'">
+                    <!-- Minimal Time-Lapse Scrubber Only (When Multiple Frames Available) -->
+                    <div class="stage-controls" ng-if="commute.city !== 'london' && commute.maxFrameCount > 1">
+                        <div class="stage-scrubber-wrap">
                             <button type="button" class="ctrl-btn" ng-click="togglePlay()">
                                 {{ commute.isPlaying ? '⏸' : '▶' }}
                             </button>
-                            <input type="range" style="flex:1; accent-color:#38bdf8;" min="0" max="{{ commute.maxFrameCount > 1 ? commute.maxFrameCount - 1 : 0 }}" ng-model="commute.frameStep" ng-disabled="commute.maxFrameCount <= 1" />
-                            <button type="button" class="ctrl-btn" ng-click="pollFreshFrameNow()" ng-disabled="commute.isPolling" title="Fetch fresh frame now">
-                                {{ commute.isPolling ? '...' : '↻' }}
-                            </button>
-                        </div>
-
-                        <!-- London Video/Still Toggle -->
-                        <div ng-if="commute.city === 'london'" style="display:flex; align-items:center; gap:6px;">
-                            <button type="button" class="ctrl-btn" ng-click="commute.londonVideoMode = !commute.londonVideoMode">
-                                {{ commute.londonVideoMode ? 'Switch to Still' : 'Switch to Video' }}
-                            </button>
-                            <button type="button" class="ctrl-btn" ng-click="pollFreshFrameNow()">↻</button>
+                            <input type="range" style="flex:1; accent-color:#38bdf8;" min="0" max="{{ commute.maxFrameCount - 1 }}" ng-model="commute.frameStep" />
                         </div>
                     </div>
                 </div>
 
-                <!-- Next Stop Bar -->
+                <!-- Next Stop Arrow Bar (Below Image) -->
                 <div class="step-peek" ng-if="getNextJourneyCamera()" ng-click="nextCameraInJourney()">
-                    <span class="step-peek-name">▼ Next: <strong style="color:#f8fafc;">{{ getNextJourneyCamera().Name }}</strong></span>
+                    <span class="step-peek-name">
+                        <span class="step-peek-arrow">▼</span>
+                        <strong style="color:#f8fafc;">{{ getNextJourneyCamera().Name }}</strong>
+                    </span>
                     <span class="step-peek-meta" style="color:#38bdf8; font-weight:600;">+{{ getNextJourneyCamera().DistFromPrevKm }} km (~{{ getNextJourneyCamera().MinsFromPrev }} min)</span>
                 </div>
             </div>
