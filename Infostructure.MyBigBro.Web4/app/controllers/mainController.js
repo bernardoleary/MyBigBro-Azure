@@ -83,7 +83,20 @@ angular.module('MyBigBroApp.controllers', []).
             if (name.indexOf('A13') !== -1 || name.indexOf('LIMEHOUSE') !== -1 || name.indexOf('A12') !== -1) return { code: 'A13', bg: '#0369a1' };
             if (name.indexOf('A40') !== -1) return { code: 'A40', bg: '#15803d' };
             if (name.indexOf('A4 ') !== -1 || name.indexOf('CHISWICK') !== -1) return { code: 'A4', bg: '#1d4ed8' };
-            return { code: cam.City === 'london' ? 'TfL' : 'NZTA', bg: '#0284c7' };
+            if (name.indexOf('M1') !== -1 || name.indexOf('GATEWAY') !== -1 || name.indexOf('BRUCE') !== -1) return { code: 'M1', bg: '#15803d' };
+            if (name.indexOf('M2') !== -1 || name.indexOf('IPSWICH MWY') !== -1) return { code: 'M2', bg: '#047857' };
+            if (name.indexOf('M3') !== -1) return { code: 'M3', bg: '#0f766e' };
+            if (name.indexOf('M5') !== -1 || name.indexOf('CENTENARY') !== -1) return { code: 'M5', bg: '#b45309' };
+            if (name.indexOf('M7') !== -1) return { code: 'M7', bg: '#6d28d9' };
+            if (name.indexOf('FDR') !== -1 || name.indexOf('HARLEM RIVER') !== -1) return { code: 'FDR', bg: '#0369a1' };
+            if (name.indexOf('I-278') !== -1 || name.indexOf('BQE') !== -1) return { code: 'I-278', bg: '#1d4ed8' };
+            if (name.indexOf('I-495') !== -1 || name.indexOf('LIE') !== -1) return { code: 'I-495', bg: '#1e40af' };
+            if (name.indexOf('NY-9A') !== -1 || name.indexOf('WEST ST') !== -1 || name.indexOf('12TH AVE') !== -1) return { code: 'NY-9A', bg: '#047857' };
+            if (name.indexOf('GRAND CENTRAL') !== -1) return { code: 'GCP', bg: '#0f766e' };
+            if (cam.City === 'london') return { code: 'TfL', bg: '#0284c7' };
+            if (cam.City === 'queensland') return { code: 'QLD', bg: '#15803d' };
+            if (cam.City === 'nyc') return { code: 'NYC', bg: '#1d4ed8' };
+            return { code: 'NZTA', bg: '#0284c7' };
         }
 
         $scope.loadCommuteCorridors = function (preserveCursor) {

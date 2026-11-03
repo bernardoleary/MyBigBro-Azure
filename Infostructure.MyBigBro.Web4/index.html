@@ -2,7 +2,7 @@
 <html ng-app="MyBigBroApp">
 <head>
     <meta charset="utf-8" />
-    <title>Motorway Live — Auckland &amp; London Commute Cameras</title>
+    <title>Motorway Live — Auckland, Queensland, London &amp; NYC</title>
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#090d16">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -495,11 +495,11 @@
     <script src="scripts/datetimepicker.js?v=7"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-    <script src="app/app.js?v=7"></script>
-    <script src="app/services/capturedImagesGeoMarkerService.js?v=7"></script>
-    <script src="app/services/webCamsService.js?v=7"></script>
-    <script src="app/services/commuteService.js?v=7"></script>
-    <script src="app/controllers/mainController.js?v=7"></script>
+    <script src="app/app.js?v=8"></script>
+    <script src="app/services/capturedImagesGeoMarkerService.js?v=8"></script>
+    <script src="app/services/webCamsService.js?v=8"></script>
+    <script src="app/services/commuteService.js?v=8"></script>
+    <script src="app/controllers/mainController.js?v=8"></script>
 </head>
 <body data-ng-controller="mainController" ng-cloak>
 
@@ -517,8 +517,14 @@
                     <button type="button" class="seg-btn" ng-class="{'active': commute.city === 'auckland'}" ng-click="selectCity('auckland')">
                         🇳🇿 Auckland
                     </button>
+                    <button type="button" class="seg-btn" ng-class="{'active': commute.city === 'queensland'}" ng-click="selectCity('queensland')">
+                        🇦🇺 Queensland
+                    </button>
                     <button type="button" class="seg-btn" ng-class="{'active': commute.city === 'london'}" ng-click="selectCity('london')">
                         🇬🇧 London
+                    </button>
+                    <button type="button" class="seg-btn" ng-class="{'active': commute.city === 'nyc'}" ng-click="selectCity('nyc')">
+                        🇺🇸 NYC
                     </button>
                 </div>
 
@@ -646,7 +652,7 @@
 
                         <div class="drag-tip">↕ Drag up/down or scroll</div>
 
-                        <span class="overlay-pill" ng-if="getCurrentJourneyCamera().City === 'auckland'">
+                        <span class="overlay-pill" ng-if="getCurrentJourneyCamera().City !== 'london'">
                             {{ getActiveFrameTimestamp(getCurrentJourneyCamera()) }} • Frame {{ commute.frameStep + 1 }}/{{ getCurrentJourneyCamera().Frames.length || 1 }}
                         </span>
                         <span class="overlay-pill" ng-if="getCurrentJourneyCamera().City === 'london'">
@@ -665,8 +671,8 @@
                             </button>
                         </div>
 
-                        <!-- Auckland Time-Lapse Scrubber -->
-                        <div ng-if="commute.city === 'auckland'" style="display:flex; align-items:center; gap:8px; flex:1; max-width:340px;">
+                        <!-- Time-Lapse Scrubber (Auckland, Queensland & NYC) -->
+                        <div ng-if="commute.city !== 'london'" style="display:flex; align-items:center; gap:8px; flex:1; max-width:340px;">
                             <button type="button" class="ctrl-btn" ng-click="togglePlay()">
                                 {{ commute.isPlaying ? '⏸' : '▶' }}
                             </button>
@@ -727,7 +733,7 @@
                          ng-src="{{ getActiveFrameUrl(cam) }}"
                          alt="{{ cam.Name }}"
                          loading="lazy" />
-                    <span class="overlay-pill" ng-if="cam.City === 'auckland'">
+                    <span class="overlay-pill" ng-if="cam.City !== 'london'">
                         {{ getActiveFrameTimestamp(cam) }}
                     </span>
                 </div>

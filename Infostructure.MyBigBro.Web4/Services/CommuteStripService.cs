@@ -132,7 +132,7 @@ namespace Infostructure.MyBigBro.Web4.Services
                 else
                 {
                     targetCameras = _corridors
-                        .Where(c => string.Equals(c.City, "auckland", StringComparison.OrdinalIgnoreCase))
+                        .Where(c => !string.Equals(c.City, "london", StringComparison.OrdinalIgnoreCase))
                         .SelectMany(c => c.Cameras)
                         .GroupBy(cam => cam.Id)
                         .Select(g => g.First());
@@ -598,6 +598,194 @@ namespace Infostructure.MyBigBro.Web4.Services
                         LondonCam("JamCams_00001.04227", "Westminster Bridge South", "St Thomas' / Waterloo Approach", 51.5012, -0.1158, "00001.04227"),
                         LondonCam("JamCams_00001.04223", "Waterloo Bridge / Strand", "Kingsway Underpass South", 51.5053, -0.1140, "00001.04223"),
                     }
+                },
+
+                // =========================================================================
+                // QUEENSLAND, AUSTRALIA (TMR QLDTraffic Live Motorway Corridors)
+                // =========================================================================
+                new CommuteCorridorDto
+                {
+                    Id = "qld-m1-pacific",
+                    City = "queensland",
+                    ShortName = "M1 Pacific (Bris ↔ GC)",
+                    Name = "M1 Pacific Motorway (Brisbane ↔ Gold Coast)",
+                    Description = "Woolloongabba, Upper Mt Gravatt, Rochedale, Loganholme, Beenleigh, Coomera & Helensvale",
+                    InboundLabel = "Northbound (Gold Coast → Brisbane CBD)",
+                    OutboundLabel = "Southbound (Brisbane CBD → Gold Coast)",
+                    Cameras = new List<CommuteCameraDto>
+                    {
+                        QldCam("qld-137", "M3 / M1 Woolloongabba", "Arrow St / Coronation Dr Merge", -27.4951, 153.0381, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/MRMETRO-1214.jpg"),
+                        QldCam("qld-39",  "M1 Upper Mt Gravatt", "Klumpp Rd / Garden City", -27.5509, 153.0677, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/Upper_MtGravatt_Pac_Mwy_Nth.jpg"),
+                        QldCam("qld-42",  "M1 Rochedale / Gateway Merge", "Gateway Motorway Overpass", -27.5813, 153.1034, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/Rochedale_Pac_Mwy_Sth.jpg"),
+                        QldCam("qld-101", "M1 Rochedale South (Exit 19)", "200m North of Exit 19", -27.6067, 153.1197, "https://cameras.qldtraffic.qld.gov.au/Gold_Coast/MRSCHD-298.jpg"),
+                        QldCam("qld-105", "M1 Slacks Creek (Exit 23)", "Chatswood Rd / Paradise Rd", -27.6379, 153.1375, "https://cameras.qldtraffic.qld.gov.au/Gold_Coast/MRSCHD-294.jpg"),
+                        QldCam("qld-99",  "M1 Daisy Hill (Exit 24)", "Winnetts Rd Interchange", -27.6437, 153.1447, "https://cameras.qldtraffic.qld.gov.au/Gold_Coast/MRSCHD-300.jpg"),
+                        QldCam("qld-33",  "M1 Loganholme / Grandis St", "Logan Motorway Approach", -27.6634, 153.1719, "https://cameras.qldtraffic.qld.gov.au/Gold_Coast/GrandisNth.jpg"),
+                        QldCam("qld-89",  "M1 Logan River Bridge", "Beenleigh North", -27.6980, 153.1957, "https://cameras.qldtraffic.qld.gov.au/Gold_Coast/MRSCHD-311.jpg"),
+                        QldCam("qld-93",  "M1 Yatala South (Exit 41)", "Computer Rd / Yatala", -27.7549, 153.2378, "https://cameras.qldtraffic.qld.gov.au/Gold_Coast/m1-exit-41-yatala-south.jpg"),
+                        QldCam("qld-102", "M1 Coomera (Exit 54)", "Dreamworld / Coomera Interchange", -27.8580, 153.3085, "https://cameras.qldtraffic.qld.gov.au/Gold_Coast/MRSCHD-297.jpg"),
+                        QldCam("qld-100", "M1 Oxenford (Exit 57)", "Tamborine-Oxenford Rd", -27.8852, 153.3149, "https://cameras.qldtraffic.qld.gov.au/Gold_Coast/MRSCHD-299.jpg"),
+                        QldCam("qld-106", "M1 Helensvale (Exit 60)", "Gold Coast Hwy Interchange", -27.9082, 153.3178, "https://cameras.qldtraffic.qld.gov.au/Gold_Coast/MRSCHD-293.jpg"),
+                        QldCam("qld-22",  "M1 Gaven / Smith St Mwy (Exit 66)", "Southport / Smith St Turnoff", -27.9509, 153.3433, "https://cameras.qldtraffic.qld.gov.au/Gold_Coast/m1-smithstreet.jpg"),
+                    }
+                },
+                new CommuteCorridorDto
+                {
+                    Id = "qld-gateway",
+                    City = "queensland",
+                    ShortName = "M1 Gateway Motorway",
+                    Name = "M1 Gateway Motorway (Bracken Ridge ↔ Gateway Bridge ↔ Rochedale)",
+                    Description = "Bracken Ridge, Nudgee, Airport / Southern Cross Way, Sir Leo Hielscher Bridge & Eight Mile Plains",
+                    InboundLabel = "Northbound (Rochedale → Airport / Bracken Ridge)",
+                    OutboundLabel = "Southbound (Bracken Ridge → Gateway Bridge / M1)",
+                    Cameras = new List<CommuteCameraDto>
+                    {
+                        QldCam("qld-180", "M1 Gateway Bracken Ridge (Exit 123)", "Bracken Ridge Rd Interchange", -27.3116, 153.0369, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/118696-8-Eastbound_Mainline_coverage_including_Bracken_Ridge_Rd_Exit_lane.jpg"),
+                        QldCam("qld-175", "M1 Gateway Nudgee Interchange", "Nudgee Rd / Banyo", -27.3724, 153.0974, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/118696-3-Southbound_Nudgee_Interchange.jpg"),
+                        QldCam("qld-173", "M1 Gateway / Southern Cross Way", "Brisbane Airport Link Merge", -27.3874, 153.0944, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/118696-1-Southern_Cross_Way_interchange.jpg"),
+                        QldCam("qld-37",  "M1 Gateway Eagle Farm", "Kingsford Smith Dr Interchange", -27.4344, 153.0863, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/MRMETRO-1219d.jpg"),
+                        QldCam("qld-31",  "M1 Sir Leo Hielscher (Gateway) Bridge", "Brisbane River Crossing", -27.4553, 153.1073, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/gateway.jpg"),
+                        QldCam("qld-78",  "M1 Gateway Murarrie", "Lytton Rd / Port of Brisbane Link", -27.4551, 153.1070, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/MRMETRO-1465.jpg"),
+                        QldCam("qld-83",  "M1 Gateway Wishart", "Mt Gravatt-Capalaba Rd", -27.5452, 153.1157, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/105223_Metropolitan-Wishart-Mt-Gravatt-Capalaba-Rd.jpg"),
+                        QldCam("qld-41",  "M1 Gateway Rochedale South", "Miles Platting Rd / Pacific Mwy Merge", -27.5777, 153.1058, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/rochedale_gateway_mwy_sth.jpg"),
+                    }
+                },
+                new CommuteCorridorDto
+                {
+                    Id = "qld-bruce-north",
+                    City = "queensland",
+                    ShortName = "M1 Bruce Hwy North",
+                    Name = "M1 Bruce Highway (North Lakes ↔ Caboolture ↔ Sunshine Coast)",
+                    Description = "North Lakes, Narangba, Burpengary, Caboolture / Bribie Island Rd & Beerburrum",
+                    InboundLabel = "Southbound (Sunshine Coast → Brisbane)",
+                    OutboundLabel = "Northbound (Brisbane → Sunshine Coast)",
+                    Cameras = new List<CommuteCameraDto>
+                    {
+                        QldCam("qld-126", "M1 Bruce Hwy North Lakes", "Anzac Ave / Redcliffe Turnoff", -27.2461, 153.0173, "https://cameras.qldtraffic.qld.gov.au/Sunshine_Coast/MRNCHD-423.jpg"),
+                        QldCam("qld-55",  "M1 Bruce Hwy Narangba", "Boundary Rd Interchange", -27.2125, 152.9916, "https://cameras.qldtraffic.qld.gov.au/Sunshine_Coast/Bndry-Rd-Nrngba-sth.jpg"),
+                        QldCam("qld-58",  "M1 Bruce Hwy Burpengary", "Station Rd / Deception Bay Rd", -27.1531, 152.9774, "https://cameras.qldtraffic.qld.gov.au/Sunshine_Coast/bruce_hwy_burpengary.jpg"),
+                        QldCam("qld-57",  "M1 Bruce Hwy Uhlmann Rd", "Burpengary North", -27.1391, 152.9780, "https://cameras.qldtraffic.qld.gov.au/Sunshine_Coast/bruce-uhlmann-north.jpg"),
+                        QldCam("qld-56",  "M1 Bruce Hwy Caboolture", "Bribie Island Rd Interchange", -27.0855, 152.9753, "https://cameras.qldtraffic.qld.gov.au/Sunshine_Coast/Bribie_Island_Rd_Interchange_South.jpg"),
+                        QldCam("qld-146", "M1 Bruce Hwy Beerburrum", "Steve Irwin Way / Red Rd", -26.9578, 152.9870, "https://cameras.qldtraffic.qld.gov.au/Sunshine_Coast/Bruce_Hwy_Red_Rd_Beerburrum_South.jpg"),
+                    }
+                },
+                new CommuteCorridorDto
+                {
+                    Id = "qld-west-ipswich",
+                    City = "queensland",
+                    ShortName = "M2 / M5 West & Ipswich",
+                    Name = "M5 Western & Centenary Fwy + M2 Ipswich Motorway",
+                    Description = "Toowong, Indooroopilly, Centenary Bridge, Darra, Archerfield, Goodna & Dinmore",
+                    InboundLabel = "Citybound (Ipswich / West → Brisbane)",
+                    OutboundLabel = "Westbound (Brisbane → Centenary / Ipswich)",
+                    Cameras = new List<CommuteCameraDto>
+                    {
+                        QldCam("qld-38",  "M5 Western Fwy Toowong", "Mt Coot-tha Rd Roundabout", -27.4783, 152.9848, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/Toowong_MtCootha_West.jpg"),
+                        QldCam("qld-6",   "M5 Western Fwy Indooroopilly", "Moggill Rd Interchange", -27.5007, 152.9627, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/Indooroopilly_Western_Fwy_Sth.jpg"),
+                        QldCam("qld-127", "M5 Centenary Bridge", "Fig Tree Pocket / Jindalee", -27.5243, 152.9472, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/MRMETRO-1226.jpg"),
+                        QldCam("qld-136", "M5 Centenary Hwy Darra", "Sumner Rd / Ipswich Mwy Approach", -27.5598, 152.9396, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/MRMETRO-1215.jpg"),
+                        QldCam("qld-1",   "M7 Ipswich Rd Archerfield", "Granard Rd / Rocklea", -27.5552, 153.0087, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/Archerfield_Ipswich_Mwy_sth.jpg"),
+                        QldCam("qld-32",  "M2 Ipswich Mwy Goodna", "Railway Tce / Woogaroo Creek", -27.6016, 152.8866, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/Goodna_Ipswich_Mwy_East.jpg"),
+                        QldCam("qld-29",  "M2 Ipswich Mwy Dinmore", "Warrego Hwy Merge", -27.5957, 152.8415, "https://cameras.qldtraffic.qld.gov.au/Metropolitan/Dinmore_Ipswich_Mwy_east.jpg"),
+                    }
+                },
+
+                // =========================================================================
+                // NEW YORK CITY, USA (NYC DOT / NYCTMC Live Commute Corridors)
+                // =========================================================================
+                new CommuteCorridorDto
+                {
+                    Id = "nyc-fdr",
+                    City = "nyc",
+                    ShortName = "FDR Drive (East Side)",
+                    Name = "FDR Drive & Harlem River Dr (Battery Park ↔ Harlem)",
+                    Description = "Battery Park Underpass, Brooklyn Bridge, Lower East Side, Midtown Tunnel, Upper East Side & Harlem",
+                    InboundLabel = "Southbound (Harlem → Downtown / Battery)",
+                    OutboundLabel = "Northbound (Battery → Midtown / Harlem)",
+                    Cameras = new List<CommuteCameraDto>
+                    {
+                        NycCam("nyc-fdr-bpu", "FDR Dr @ Battery Park Underpass", "Lower Manhattan / South Ferry", 40.7018, -74.0108, "4048d465-2272-446e-bccb-c49ea6d62bd3"),
+                        NycCam("nyc-fdr-bb",  "FDR Dr @ Brooklyn Bridge", "Civic Center / Peck Slip", 40.7084, -73.9985, "ecba28cb-ac70-4d25-abcb-6506111ea120"),
+                        NycCam("nyc-fdr-grd", "FDR Dr @ Grand St", "Lower East Side / Williamsburg Br", 40.7132, -73.9775, "24c402b2-915d-49f8-9529-f723a171c134"),
+                        NycCam("nyc-fdr-e6",  "FDR Dr @ E 6th St", "East Village", 40.7215, -73.9746, "c75873dc-16d0-4e9c-b5b5-1c6ede0b0b63"),
+                        NycCam("nyc-fdr-e23", "FDR Dr @ E 23rd St", "Stuyvesant Town / Kips Bay", 40.7348, -73.9747, "e278de5c-4cfa-46e7-aa85-59512db61f0d"),
+                        NycCam("nyc-fdr-e36", "FDR Dr @ E 36th St", "Queens-Midtown Tunnel Approach", 40.7444, -73.9712, "04ffc69c-92a7-4c02-aa18-2b16e7ba81f2"),
+                        NycCam("nyc-fdr-e53", "FDR Dr @ E 53rd St", "Sutton Place / UN Plaza North", 40.7547, -73.9622, "8d7e94a5-7a81-4e92-8171-9f6c0f0ca7bf"),
+                        NycCam("nyc-fdr-e64", "FDR Dr @ E 64th St", "Upper East Side / Queensboro Br", 40.7612, -73.9557, "c5040f93-f4ec-4803-8370-8b931b0443e2"),
+                        NycCam("nyc-fdr-e79", "FDR Dr @ E 79th St", "Yorkville / Gracie Mansion", 40.7703, -73.9476, "0267c1e2-6eaf-49d4-a063-df89e9242993"),
+                        NycCam("nyc-fdr-e96", "FDR Dr @ E 96th St", "Carnegie Hill / East Harlem", 40.7821, -73.9437, "155b2bff-5dd2-4109-bd10-e098376c8476"),
+                        NycCam("nyc-fdr-122", "FDR Dr @ E 122nd St", "RFK Triborough Bridge Approach", 40.7987, -73.9291, "ec1e7b42-18de-4475-8c89-9e80f21e5b6c"),
+                        NycCam("nyc-fdr-145", "Harlem River Dr @ 145th St", "Harlem / Bronx Bridge Crossings", 40.8196, -73.9342, "6c2996f1-3d8f-44a9-8ce0-a827ae8d3680"),
+                    }
+                },
+                new CommuteCorridorDto
+                {
+                    Id = "nyc-bqe",
+                    City = "nyc",
+                    ShortName = "I-278 BQE (Bklyn ↔ Qns)",
+                    Name = "I-278 Brooklyn-Queens Expressway (Bay Ridge ↔ Astoria)",
+                    Description = "Belt Pkwy Merge, Gowanus, Atlantic Ave, Brooklyn Heights Cantilever, Williamsburg, Kosciuszko Br & Queens Blvd",
+                    InboundLabel = "Southbound (Astoria / Queens → Brooklyn)",
+                    OutboundLabel = "Northbound (Brooklyn → Kosciuszko / Queens)",
+                    Cameras = new List<CommuteCameraDto>
+                    {
+                        NycCam("nyc-bqe-60",    "I-278 BQE @ Belt Pkwy & 60th St", "Sunset Park / Verrazzano Approach", 40.6419, -74.0203, "2b06cd6d-e698-4c1a-b306-6827fb19ced7"),
+                        NycCam("nyc-bqe-union", "I-278 BQE @ Union St", "Carroll Gardens / Gowanus Canal", 40.6841, -74.0015, "ea774ec2-327b-4f3d-97ac-fd404c612cb1"),
+                        NycCam("nyc-bqe-atl",   "I-278 BQE @ Atlantic Ave", "Cobble Hill / Brooklyn Pier 6", 40.6906, -73.9985, "47070afa-8638-4dfe-8df0-bdfa391f57b7"),
+                        NycCam("nyc-bqe-fur",   "I-278 BQE @ Furman St Cantilever", "Brooklyn Heights Promenade", 40.7000, -73.9962, "03051d28-db9c-4527-97c7-0bb3f35e7cef"),
+                        NycCam("nyc-bqe-sands", "I-278 BQE @ Sands St", "DUMBO / Manhattan Bridge Merge", 40.6994, -73.9839, "4be502c3-830e-40d3-8c39-1047d50adc9c"),
+                        NycCam("nyc-bqe-wythe", "I-278 BQE @ Wythe Ave", "Williamsburg / Bedford Ave", 40.7017, -73.9612, "6d42b7fb-604b-4172-b35d-c0556c5d3fcf"),
+                        NycCam("nyc-bqe-metro", "I-278 BQE @ Metropolitan Ave", "Williamsburg Bridge Approach", 40.7137, -73.9533, "6232350a-c27c-4964-a6e8-7bd0507b6826"),
+                        NycCam("nyc-bqe-kosc",  "I-278 BQE @ Kosciuszko Bridge", "Greenpoint / Newtown Creek", 40.7250, -73.9341, "433c7f12-86e0-41ea-bb29-781bef1b2444"),
+                        NycCam("nyc-bqe-qblvd", "I-278 BQE @ Queens Blvd", "Woodside / LIE Interchange", 40.7388, -73.9016, "d872e1a0-8c5f-47da-9469-bf40a3673ade"),
+                        NycCam("nyc-bqe-30av",  "I-278 BQE @ 30th Ave", "Astoria / Grand Central Pkwy Link", 40.7594, -73.9017, "13064b49-6f97-43a2-9cf8-947767afaa12"),
+                    }
+                },
+                new CommuteCorridorDto
+                {
+                    Id = "nyc-west-side",
+                    City = "nyc",
+                    ShortName = "NY-9A West Side Hwy",
+                    Name = "NY-9A West Side Highway / 12th Ave (Battery ↔ Midtown West)",
+                    Description = "Brooklyn-Battery Tunnel, WTC, Tribeca, Holland Tunnel (Canal St), Chelsea Piers, Lincoln Tunnel & 57th St",
+                    InboundLabel = "Southbound (Midtown West → Financial District)",
+                    OutboundLabel = "Northbound (Battery → Lincoln Tunnel / 57th St)",
+                    Cameras = new List<CommuteCameraDto>
+                    {
+                        NycCam("nyc-ws-bat", "NY-9A West St @ Battery Place", "Battery Park / South Ferry", 40.7049, -74.0169, "140a20d7-7ae7-409c-8c18-67d6b2ef7b2d"),
+                        NycCam("nyc-ws-bbt", "NY-9A West St @ Battery Tunnel", "Hugh L. Carey Tunnel Portal", 40.7077, -74.0156, "86d418ab-10bc-4b73-a283-153abffabb0f"),
+                        NycCam("nyc-ws-wtc", "NY-9A West St @ Fulton St", "One World Trade Center", 40.7130, -74.0140, "5c4582a7-6492-41ac-9bac-fa872878117b"),
+                        NycCam("nyc-ws-chm", "NY-9A West St @ Chambers St", "Tribeca", 40.7172, -74.0129, "34616ac5-0cc5-4b86-ac7a-82c77238a536"),
+                        NycCam("nyc-ws-cnl", "NY-9A West St @ Canal St", "Holland Tunnel (I-78) Approach", 40.7258, -74.0111, "7d10cfbb-0465-4958-90fc-ddd5349d6635"),
+                        NycCam("nyc-ws-hou", "NY-9A West St @ W Houston St", "Hudson Square / Pier 40", 40.7291, -74.0105, "67a4769b-dfb2-4a0d-9605-114df107646c"),
+                        NycCam("nyc-ws-22",  "NY-9A 12th Ave @ W 22nd St", "Chelsea Piers", 40.7483, -74.0076, "9b923606-16ba-45ad-a105-aabcc98ef1fa"),
+                        NycCam("nyc-ws-34",  "NY-9A 12th Ave @ W 34th St", "Hudson Yards / Lincoln Tunnel South", 40.7570, -74.0048, "3809d95f-f99e-4eca-9121-9c7db73f8cbd"),
+                        NycCam("nyc-ws-42",  "NY-9A 12th Ave @ W 42nd St", "Lincoln Tunnel / Circle Line", 40.7620, -74.0011, "9bd74b87-32d1-4767-8081-86a2e83f28f2"),
+                        NycCam("nyc-ws-46",  "NY-9A 12th Ave @ W 46th St", "Intrepid Museum Pier 86", 40.7643, -73.9986, "2be7f4d2-3a72-45ba-95ad-b526643ef248"),
+                        NycCam("nyc-ws-57",  "NY-9A 12th Ave @ W 57th St", "Henry Hudson Pkwy Start", 40.7715, -73.9942, "3095997f-dd41-4e71-a810-9290576c17a6"),
+                    }
+                },
+                new CommuteCorridorDto
+                {
+                    Id = "nyc-crossings",
+                    City = "nyc",
+                    ShortName = "East River Bridges & LIE",
+                    Name = "East River Bridges, I-495 Long Island Expy & Grand Central Pkwy",
+                    Description = "Brooklyn Bridge, Manhattan Bridge, Williamsburg Bridge, Queensboro Bridge, LIE & LaGuardia Airport",
+                    InboundLabel = "Manhattan-bound (Queens / Brooklyn → Manhattan)",
+                    OutboundLabel = "Outbound (Manhattan → Brooklyn / Queens / LGA)",
+                    Cameras = new List<CommuteCameraDto>
+                    {
+                        NycCam("nyc-br-bb",   "Brooklyn Bridge Midspan", "North Roadway Midspan", 40.7060, -73.9967, "32651453-d9de-4cde-af4b-be42b8de2775"),
+                        NycCam("nyc-br-mhb",  "Manhattan Bridge Upper Rdwy", "Brooklyn Tower Walkway", 40.7050, -73.9896, "00077ee3-2c13-4674-adbd-a51b3484b0be"),
+                        NycCam("nyc-br-wbb",  "Williamsburg Bridge @ Delancey", "Manhattan Approach / FDR", 40.7148, -73.9766, "ae2f7e1a-e781-4d24-9434-12f4f4ef4f2b"),
+                        NycCam("nyc-br-qbb1", "Queensboro Bridge West Channel", "Manhattan / Roosevelt Island Span", 40.7580, -73.9570, "0173e3be-ac26-49b0-bf76-642428d0721a"),
+                        NycCam("nyc-br-qbb2", "Queensboro Bridge Queens Pier", "Upper Roadway East Span", 40.7553, -73.9509, "bfcb2b32-7ae7-4060-a39b-80f71a1db289"),
+                        NycCam("nyc-br-qbb3", "Queensboro Bridge @ Thomson Ave", "Long Island City Plaza", 40.7456, -73.9394, "b963b25c-9fcf-4a12-b502-c57468510315"),
+                        NycCam("nyc-lie-grd", "I-495 Long Island Expy @ Grand Ave", "Maspeth / BQE Interchange", 40.7258, -73.8956, "7c92c63b-2786-4600-9108-62cea2806345"),
+                        NycCam("nyc-lie-gcp", "I-495 LIE @ Grand Central Pkwy", "Corona / Flushing Meadows", 40.7401, -73.8450, "6504ada3-3a93-4811-b2cd-31c377066f66"),
+                        NycCam("nyc-gcp-lga", "Grand Central Pkwy @ LGA Exit", "LaGuardia Airport 94th St", 40.7715, -73.8775, "9fa5b0dd-e955-449e-97e1-9c53ad9c23a8"),
+                    }
                 }
             };
         }
@@ -628,6 +816,34 @@ namespace Infostructure.MyBigBro.Web4.Services
                 ImageUrl = $"https://s3-eu-west-1.amazonaws.com/jamcams.tfl.gov.uk/{s3Key}.jpg",
                 VideoUrl = $"https://s3-eu-west-1.amazonaws.com/jamcams.tfl.gov.uk/{s3Key}.mp4",
                 City = "london"
+            };
+        }
+
+        private static CommuteCameraDto QldCam(string id, string name, string subtitle, double lat, double lng, string imageUrl)
+        {
+            return new CommuteCameraDto
+            {
+                Id = id,
+                Name = name,
+                Subtitle = subtitle,
+                Lat = lat,
+                Lng = lng,
+                ImageUrl = imageUrl,
+                City = "queensland"
+            };
+        }
+
+        private static CommuteCameraDto NycCam(string id, string name, string subtitle, double lat, double lng, string nycUuid)
+        {
+            return new CommuteCameraDto
+            {
+                Id = id,
+                Name = name,
+                Subtitle = subtitle,
+                Lat = lat,
+                Lng = lng,
+                ImageUrl = $"https://nycgrid.mketiku.com/api/camera-image/{nycUuid}",
+                City = "nyc"
             };
         }
     }
