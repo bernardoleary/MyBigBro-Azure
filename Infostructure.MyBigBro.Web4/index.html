@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#090d16">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
 
     <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
@@ -32,42 +32,42 @@
             display: none !important;
         }
 
-        /* Top Bar */
+        /* Compact Top Bar — Guaranteed to keep Map button visible on all phones */
         .topbar {
             position: sticky;
             top: 0;
             z-index: 200;
-            background: rgba(9, 13, 22, 0.94);
+            background: rgba(9, 13, 22, 0.95);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             border-bottom: 1px solid #1e293b;
-            padding: 8px 14px;
+            padding: 6px 12px;
         }
 
         .topbar-inner {
-            max-width: 980px;
+            max-width: 1440px;
             margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 8px;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
         }
 
         .brand {
             display: flex;
             align-items: center;
-            gap: 7px;
+            gap: 6px;
             font-weight: 800;
-            font-size: 16px;
+            font-size: 15px;
             letter-spacing: -0.3px;
             color: #f8fafc;
             flex-shrink: 0;
         }
 
         .brand-dot {
-            width: 9px;
-            height: 9px;
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
             background: #10b981;
             box-shadow: 0 0 8px #10b981;
@@ -77,25 +77,28 @@
         .topbar-actions {
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: flex-end;
+            gap: 6px;
             min-width: 0;
+            flex-wrap: nowrap;
         }
 
-        /* Country / City Dropdown with Flag + City Emblem */
+        /* Simple, Clean Country / City Dropdown */
         .city-dropdown-wrap {
             position: relative;
+            flex-shrink: 0;
         }
 
         .city-trigger-btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             background: #111827;
             border: 1px solid #334155;
-            border-radius: 9px;
-            padding: 5px 10px 5px 8px;
+            border-radius: 8px;
+            padding: 5px 9px;
             color: #f8fafc;
-            font-size: 13px;
+            font-size: 12.5px;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.15s ease;
@@ -108,59 +111,19 @@
             background: #1e293b;
         }
 
-        .flag-emblem-stack {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 28px;
-            height: 20px;
+        .flag-svg {
+            width: 20px;
+            height: 14px;
+            border-radius: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: block;
             flex-shrink: 0;
         }
 
-        .flag-svg {
-            width: 26px;
-            height: 18px;
-            border-radius: 3px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            display: block;
-        }
-
-        .city-corner-emblem {
-            position: absolute;
-            right: -5px;
-            bottom: -4px;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background: #090d16;
-            border: 1.5px solid #334155;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 9.5px;
-            line-height: 1;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        .city-distinct-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 3px;
-            padding: 2px 6px;
-            border-radius: 5px;
-            font-size: 10.5px;
-            font-weight: 800;
-            letter-spacing: 0.2px;
-            border: 1px solid transparent;
-        }
-
         .city-chevron {
-            font-size: 11px;
+            font-size: 10px;
             color: #94a3b8;
             transition: transform 0.15s ease;
-            margin-left: 1px;
         }
 
         .city-trigger-btn.open .city-chevron {
@@ -170,29 +133,17 @@
 
         .city-dropdown-menu {
             position: absolute;
-            top: calc(100% + 8px);
-            right: 0;
-            width: 340px;
+            top: calc(100% + 6px);
+            left: 0;
+            min-width: 176px;
             background: rgba(15, 23, 42, 0.98);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border: 1px solid #334155;
-            border-radius: 12px;
-            padding: 6px;
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65);
+            border-radius: 10px;
+            padding: 4px;
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.65);
             z-index: 300;
-        }
-
-        .city-dropdown-header {
-            padding: 6px 10px 4px 10px;
-            font-size: 10.5px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.6px;
-            color: #64748b;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
         }
 
         .city-option-btn {
@@ -202,55 +153,34 @@
             justify-content: space-between;
             gap: 10px;
             background: transparent;
-            border: 1px solid transparent;
-            border-radius: 9px;
+            border: none;
+            border-radius: 7px;
             padding: 8px 10px;
             color: #e2e8f0;
+            font-size: 13px;
+            font-weight: 600;
             text-align: left;
             cursor: pointer;
-            transition: all 0.12s ease;
+            transition: background 0.12s ease;
         }
 
         .city-option-btn:hover {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.07);
         }
 
         .city-option-btn.active {
-            background: rgba(2, 132, 199, 0.16);
-            border-color: rgba(56, 189, 248, 0.35);
+            background: rgba(2, 132, 199, 0.2);
+            color: #38bdf8;
+            font-weight: 700;
         }
 
         .city-option-left {
             display: flex;
             align-items: center;
-            gap: 11px;
-            min-width: 0;
-            flex: 1;
+            gap: 8px;
         }
 
-        .city-option-text {
-            min-width: 0;
-            flex: 1;
-        }
-
-        .city-option-title-row {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 13.5px;
-            font-weight: 700;
-            color: #f8fafc;
-        }
-
-        .city-option-sub {
-            font-size: 11px;
-            color: #94a3b8;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            margin-top: 2px;
-        }
-
+        /* View Switcher (Journey | All Cams | Map) */
         .segmented {
             display: inline-flex;
             background: #111827;
@@ -265,7 +195,7 @@
             border: none;
             background: transparent;
             color: #94a3b8;
-            padding: 5px 10px;
+            padding: 5px 9px;
             border-radius: 6px;
             font-size: 12px;
             font-weight: 600;
@@ -283,40 +213,37 @@
             color: #ffffff;
         }
 
-        /* Route Bar */
+        /* Main Container — Wide & Image-First */
         .container-main {
-            max-width: 980px;
+            max-width: min(1440px, 98vw);
             margin: 0 auto;
-            padding: 12px 14px 36px 14px;
+            padding: 6px 10px 24px 10px;
         }
 
+        /* Compact Corridor & Direction Strip */
         .corridor-strip {
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 12px;
+            gap: 6px;
+            margin-bottom: 6px;
         }
 
         .corridor-pills {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 5px;
             min-width: 0;
-        }
-
-        .corridor-pills::-webkit-scrollbar {
-            display: none;
         }
 
         .pill-btn {
             background: #111827;
             color: #cbd5e1;
             border: 1px solid #1e293b;
-            border-radius: 18px;
-            padding: 6px 13px;
-            font-size: 12.5px;
+            border-radius: 16px;
+            padding: 4px 11px;
+            font-size: 12px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.15s ease;
@@ -340,9 +267,9 @@
             background: #1e293b;
             color: #38bdf8;
             border: 1px solid #334155;
-            border-radius: 18px;
-            padding: 6px 13px;
-            font-size: 12.5px;
+            border-radius: 16px;
+            padding: 4px 11px;
+            font-size: 12px;
             font-weight: 700;
             cursor: pointer;
             max-width: 100%;
@@ -356,28 +283,27 @@
             color: #fff;
         }
 
-        /* Journey Deck Layout: Slim Dot Spine + Responsive Stage */
+        /* Journey Deck Layout: Slim Dot Spine on Desktop + Full-Width Stage on Mobile */
         .deck-grid {
             display: grid;
-            grid-template-columns: 32px minmax(0, 1fr);
-            gap: 10px;
+            grid-template-columns: 28px minmax(0, 1fr);
+            gap: 8px;
             align-items: center;
             width: 100%;
             max-width: 100%;
         }
 
-        /* Vertical Dot-Only Spine Sidebar */
+        /* Vertical Dot-Only Spine Sidebar (Desktop/Tablet) */
         .spine-sidebar {
             background: #111827;
             border: 1px solid #1e293b;
             border-radius: 999px;
-            padding: 12px 4px;
+            padding: 10px 3px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 32px;
-            box-sizing: border-box;
+            width: 28px;
             user-select: none;
         }
 
@@ -398,8 +324,8 @@
         }
 
         .spine-dot {
-            width: 11px;
-            height: 11px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background: #1e293b;
             border: 2px solid #475569;
@@ -418,8 +344,8 @@
         }
 
         .spine-item.active .spine-dot {
-            width: 14px;
-            height: 14px;
+            width: 13px;
+            height: 13px;
             background: #38bdf8;
             border-color: #ffffff;
             box-shadow: 0 0 8px rgba(56, 189, 248, 0.85);
@@ -427,7 +353,7 @@
 
         .spine-line {
             width: 2px;
-            height: 14px;
+            height: 12px;
             background: #1e293b;
             transition: background 0.15s ease;
         }
@@ -436,43 +362,52 @@
             background: #0284c7;
         }
 
+        /* Mobile Horizontal Dot Progress Bar (Saves 100% horizontal width for the image) */
+        .mobile-spine-bar {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 5px 10px;
+            background: #0b1120;
+            border-bottom: 1px solid #1e293b;
+            overflow-x: auto;
+        }
+
         /* Main Camera Stage */
         .stage-wrap {
             user-select: none;
             min-width: 0;
             width: 100%;
             max-width: 100%;
-            overflow: hidden;
         }
 
         .step-peek {
             background: #111827;
             border: 1px solid #1e293b;
-            border-radius: 10px;
-            padding: 9px 12px;
+            border-radius: 9px;
+            padding: 6px 11px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 8px;
-            font-size: 12.5px;
+            font-size: 12px;
             color: #cbd5e1;
             cursor: pointer;
             transition: all 0.15s ease;
             width: 100%;
-            max-width: 100%;
-            box-sizing: border-box;
         }
 
         .step-peek-arrow {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 22px;
-            height: 22px;
-            border-radius: 6px;
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
             background: rgba(56, 189, 248, 0.14);
             color: #38bdf8;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 800;
             flex-shrink: 0;
         }
@@ -485,13 +420,13 @@
             text-overflow: ellipsis;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 7px;
         }
 
         .step-peek-meta {
             flex-shrink: 0;
             white-space: nowrap;
-            font-size: 11.5px;
+            font-size: 11px;
         }
 
         .step-peek:hover {
@@ -503,11 +438,10 @@
         .camera-stage-card {
             background: #111827;
             border: 1px solid #334155;
-            border-radius: 14px;
-            margin: 8px 0;
+            border-radius: 12px;
+            margin: 5px 0;
             width: 100%;
             max-width: 100%;
-            box-sizing: border-box;
             overflow: hidden;
             box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
             cursor: grab;
@@ -520,18 +454,17 @@
         }
 
         .stage-header {
-            padding: 10px 14px;
+            padding: 7px 12px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 8px;
             border-bottom: 1px solid #1e293b;
             width: 100%;
-            box-sizing: border-box;
         }
 
         .stage-title {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 800;
             color: #fff;
             white-space: nowrap;
@@ -540,7 +473,7 @@
         }
 
         .stage-subtitle {
-            font-size: 11.5px;
+            font-size: 11px;
             color: #94a3b8;
             white-space: nowrap;
             overflow: hidden;
@@ -548,7 +481,7 @@
         }
 
         .hwy-badge {
-            padding: 2px 7px;
+            padding: 2px 6px;
             border-radius: 4px;
             font-size: 11px;
             font-weight: 800;
@@ -571,11 +504,14 @@
             color: #facc15;
         }
 
+        /* =================================================================
+           TOP PRIORITY: Maximum Responsive Camera Image Size by Device
+           ================================================================= */
         .viewport-box {
             position: relative;
             width: 100%;
             max-width: 100%;
-            height: clamp(200px, 46vh, 440px);
+            height: clamp(420px, calc(100dvh - 172px), 900px);
             background: #020617;
             display: flex;
             align-items: center;
@@ -597,11 +533,11 @@
             position: absolute;
             bottom: 8px;
             left: 8px;
-            background: rgba(9, 13, 22, 0.82);
+            background: rgba(9, 13, 22, 0.78);
             border: 1px solid rgba(148, 163, 184, 0.22);
             color: #e2e8f0;
-            padding: 3px 9px;
-            border-radius: 6px;
+            padding: 2px 8px;
+            border-radius: 5px;
             font-size: 11px;
             font-weight: 600;
             max-width: calc(100% - 16px);
@@ -612,14 +548,13 @@
         }
 
         .stage-controls {
-            padding: 8px 12px;
+            padding: 6px 12px;
             background: #0b1120;
             border-top: 1px solid #1e293b;
             display: flex;
             align-items: center;
             gap: 8px;
             width: 100%;
-            box-sizing: border-box;
         }
 
         .stage-scrubber-wrap {
@@ -634,7 +569,7 @@
             color: #e2e8f0;
             border: 1px solid #334155;
             border-radius: 6px;
-            padding: 6px 12px;
+            padding: 5px 10px;
             font-size: 12px;
             font-weight: 600;
             cursor: pointer;
@@ -645,59 +580,53 @@
             color: #fff;
         }
 
-        .ctrl-btn:disabled {
-            opacity: 0.4;
-            cursor: default;
-        }
-
-        .ctrl-btn.primary {
-            background: #0284c7;
-            border-color: #38bdf8;
-            color: #fff;
-        }
-
-        /* All-Cameras Feed Layout */
+        /* All-Cameras Feed Layout: Full-Width Images (No side column shrinking images) */
         .all-spine-list {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 560px), 1fr));
             gap: 12px;
         }
 
         .all-spine-card {
             background: #111827;
-            border: 1px solid #1e293b;
+            border: 1px solid #334155;
             border-radius: 12px;
             overflow: hidden;
-            display: grid;
-            grid-template-columns: 240px 1fr;
+            display: flex;
+            flex-direction: column;
         }
 
         .all-spine-info {
-            padding: 14px;
-            border-right: 1px solid #1e293b;
+            padding: 8px 12px;
+            border-bottom: 1px solid #1e293b;
             display: flex;
-            flex-direction: column;
+            align-items: center;
             justify-content: space-between;
+            gap: 8px;
         }
 
         .all-spine-media {
             position: relative;
-            aspect-ratio: 4 / 3;
-            max-height: 360px;
+            width: 100%;
             background: #020617;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .all-spine-media img,
         .all-spine-media video {
+            display: block;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            max-height: 78dvh;
+            object-fit: contain;
         }
 
         /* Map View */
         #map {
             position: fixed;
-            top: 50px;
+            top: 45px;
             bottom: 0;
             left: 0;
             right: 0;
@@ -706,8 +635,8 @@
 
         /* Option #2: Ad-Free Community Hosting Goal & Coffee Pill in Footer */
         .agency-footer {
-            margin-top: 20px;
-            padding: 12px 16px;
+            margin-top: 16px;
+            padding: 10px 14px;
             background: #111827;
             border: 1px solid #1e293b;
             border-radius: 10px;
@@ -715,8 +644,8 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 12px;
-            font-size: 12px;
+            gap: 10px;
+            font-size: 11.5px;
             color: #94a3b8;
         }
 
@@ -763,156 +692,144 @@
             color: #022c22;
         }
 
-        /* Responsive Mobile Styles */
-        @media (max-width: 680px) {
+        /* =================================================================
+           Responsive Tablet & Mobile Styles — Full-Bleed Edge-to-Edge Image
+           ================================================================= */
+        @media (max-width: 768px) {
             .topbar {
-                padding: 8px 10px;
+                padding: 6px 8px;
+            }
+
+            .topbar-inner {
+                gap: 5px;
             }
 
             .brand {
-                font-size: 14.5px;
-                gap: 6px;
+                font-size: 13.5px;
+                gap: 5px;
+            }
+
+            .topbar-actions {
+                gap: 5px;
             }
 
             .city-trigger-btn {
-                padding: 5px 8px;
-                font-size: 12px;
-                gap: 6px;
-            }
-
-            .city-trigger-name {
-                max-width: 86px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-            .city-dropdown-menu {
-                position: fixed;
-                top: 52px;
-                left: 10px;
-                right: 10px;
-                width: auto;
-                max-height: calc(100vh - 70px);
-                overflow-y: auto;
+                padding: 4px 7px;
+                font-size: 11.5px;
+                gap: 5px;
             }
 
             .seg-btn {
-                padding: 5px 8px;
+                padding: 4px 7px;
                 font-size: 11.5px;
             }
 
             .container-main {
-                padding: 8px 10px 24px 10px;
+                padding: 5px 6px 20px 6px;
                 width: 100%;
                 max-width: 100vw;
-                box-sizing: border-box;
-                overflow-x: hidden;
             }
 
             .corridor-strip {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 6px;
-                margin-bottom: 8px;
+                gap: 4px;
+                margin-bottom: 5px;
             }
 
             .corridor-pills {
-                flex-wrap: wrap;
                 width: 100%;
-                gap: 5px;
+                gap: 4px;
             }
 
             .pill-btn {
                 flex: 1 1 auto;
                 text-align: center;
-                padding: 6px 9px;
+                padding: 4px 8px;
                 font-size: 11.5px;
             }
 
             .dir-btn {
                 width: 100%;
                 text-align: center;
-                padding: 6px 12px;
-                font-size: 12px;
+                padding: 4px 10px;
+                font-size: 11.5px;
             }
 
+            /* Give 100% of mobile width to the camera stage instead of a side column */
             .deck-grid {
-                grid-template-columns: 26px minmax(0, 1fr);
-                gap: 8px;
+                grid-template-columns: minmax(0, 1fr);
+                gap: 0;
             }
 
             .spine-sidebar {
-                width: 26px;
-                padding: 10px 3px;
+                display: none;
             }
 
-            .spine-dot {
-                width: 10px;
-                height: 10px;
+            .mobile-spine-bar {
+                display: flex;
             }
 
-            .spine-item.active .spine-dot {
-                width: 13px;
-                height: 13px;
-            }
-
-            .spine-line {
-                height: 12px;
-            }
-
-            .step-peek {
-                padding: 8px 10px;
-                font-size: 12px;
+            /* Edge-to-edge camera card so the image spans 100vw on phones */
+            .camera-stage-card {
+                margin: 4px -6px;
+                width: calc(100% + 12px);
+                max-width: 100vw;
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
             }
 
             .stage-header {
-                padding: 8px 11px;
+                padding: 6px 10px;
             }
 
             .stage-title {
-                font-size: 14.5px;
+                font-size: 14px;
             }
 
             .stage-subtitle {
-                font-size: 11px;
+                font-size: 10.5px;
             }
 
+            /* Full-width, uncropped, natural-ratio large image on mobile portrait */
             .viewport-box {
                 width: 100%;
-                max-width: 100%;
-                height: clamp(180px, 37vh, 290px);
+                height: auto;
+                min-height: 240px;
+                max-height: calc(100dvh - 148px);
             }
 
-            .overlay-pill {
-                font-size: 10.5px;
-                padding: 3px 8px;
-            }
-
-            .stage-controls {
-                padding: 7px 10px;
-                gap: 6px;
-            }
-
-            .stage-scrubber-wrap {
+            .viewport-box img,
+            .viewport-box video {
                 width: 100%;
-                max-width: none;
+                height: auto;
+                max-height: calc(100dvh - 148px);
+                object-fit: contain;
+            }
+
+            .step-peek {
+                padding: 6px 9px;
+                font-size: 11.5px;
+            }
+
+            .all-spine-list {
+                grid-template-columns: 1fr;
+                gap: 10px;
             }
 
             .all-spine-card {
-                grid-template-columns: 1fr;
-            }
-
-            .all-spine-info {
+                margin: 0 -6px;
+                width: calc(100% + 12px);
+                max-width: 100vw;
+                border-radius: 0;
+                border-left: none;
                 border-right: none;
-                border-bottom: 1px solid #1e293b;
-                padding: 12px;
             }
 
             .agency-footer {
                 flex-direction: column;
                 align-items: flex-start;
-                padding: 12px;
-                gap: 10px;
+                padding: 10px;
+                gap: 8px;
             }
 
             .hosting-goal-wrap {
@@ -923,14 +840,46 @@
             .coffee-pill-btn {
                 width: 100%;
                 justify-content: center;
-                padding: 8px 14px;
-                font-size: 12.5px;
+                padding: 7px 12px;
+                font-size: 12px;
             }
         }
 
-        @media (max-width: 390px) {
-            .city-distinct-pill.trigger-pill {
+        /* Compact brand on narrow phones so Brand + Country + Journey/All Cams/Map always fit on 1 line */
+        @media (max-width: 400px) {
+            .brand-tld {
                 display: none;
+            }
+
+            .city-trigger-btn {
+                padding: 4px 6px;
+                font-size: 11px;
+            }
+
+            .seg-btn {
+                padding: 4px 6px;
+                font-size: 11px;
+            }
+        }
+
+        /* Phone Landscape Mode: Maximize camera height across the horizontal screen */
+        @media (max-height: 540px) and (orientation: landscape) {
+            .corridor-strip {
+                margin-bottom: 4px;
+            }
+
+            .viewport-box {
+                height: calc(100dvh - 82px);
+                min-height: 200px;
+                max-height: calc(100dvh - 82px);
+            }
+
+            .viewport-box img,
+            .viewport-box video {
+                width: 100%;
+                height: 100%;
+                max-height: 100%;
+                object-fit: contain;
             }
         }
     </style>
@@ -939,80 +888,71 @@
     <script src="scripts/moment.js?v=7"></script>
     <script src="scripts/angular.min.js?v=7"></script>
     <script src="scripts/angular-route.min.js?v=7"></script>
-    <script src="scripts/angular-resource.min.js?v=7"></script>
     <script src="scripts/angular-animate.min.js?v=7"></script>
+    <script src="scripts/angular-resource.min.js?v=7"></script>
     <script src="scripts/toaster.js?v=7"></script>
     <script src="scripts/loading-bar.min.js?v=7"></script>
     <script src="scripts/datetimepicker.js?v=7"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-    <script src="app/app.js?v=15"></script>
-    <script src="app/services/capturedImagesGeoMarkerService.js?v=15"></script>
-    <script src="app/services/webCamsService.js?v=15"></script>
-    <script src="app/services/commuteService.js?v=15"></script>
-    <script src="app/controllers/mainController.js?v=15"></script>
+    <script src="app/app.js?v=17"></script>
+    <script src="app/services/capturedImagesGeoMarkerService.js?v=17"></script>
+    <script src="app/services/webCamsService.js?v=17"></script>
+    <script src="app/services/commuteService.js?v=17"></script>
+    <script src="app/controllers/mainController.js?v=17"></script>
 </head>
 <body data-ng-controller="mainController" ng-cloak>
 
-    <!-- Reusable Inline SVG Flag + City Emblem Template -->
-    <script type="text/ng-template" id="city-flag-emblem.html">
-        <span class="flag-emblem-stack">
-            <!-- New Zealand Flag SVG -->
-            <svg class="flag-svg" ng-if="opt.flagCode === 'nz'" viewBox="0 0 60 36" xmlns="http://www.w3.org/2000/svg">
-                <rect width="60" height="36" fill="#00247d"/>
-                <path d="M0,0 L30,18 M30,0 L0,18" stroke="#fff" stroke-width="3.6"/>
-                <path d="M0,0 L30,18 M30,0 L0,18" stroke="#cc142b" stroke-width="2"/>
-                <path d="M15,0 V18 M0,9 H30" stroke="#fff" stroke-width="6"/>
-                <path d="M15,0 V18 M0,9 H30" stroke="#cc142b" stroke-width="3.6"/>
-                <rect x="30" width="30" height="18" fill="#00247d"/>
-                <rect y="18" width="60" height="18" fill="#00247d"/>
-                <!-- 4 Red Stars with White Borders (Southern Cross) -->
-                <circle cx="45" cy="7" r="2.6" fill="#cc142b" stroke="#fff" stroke-width="0.9"/>
-                <circle cx="45" cy="29" r="2.8" fill="#cc142b" stroke="#fff" stroke-width="0.9"/>
-                <circle cx="38" cy="17" r="2.5" fill="#cc142b" stroke="#fff" stroke-width="0.9"/>
-                <circle cx="52" cy="15" r="2.2" fill="#cc142b" stroke="#fff" stroke-width="0.9"/>
-            </svg>
-            <!-- Australia Flag SVG -->
-            <svg class="flag-svg" ng-if="opt.flagCode === 'au'" viewBox="0 0 60 36" xmlns="http://www.w3.org/2000/svg">
-                <rect width="60" height="36" fill="#00008b"/>
-                <path d="M0,0 L30,18 M30,0 L0,18" stroke="#fff" stroke-width="3.6"/>
-                <path d="M0,0 L30,18 M30,0 L0,18" stroke="#ff0000" stroke-width="2"/>
-                <path d="M15,0 V18 M0,9 H30" stroke="#fff" stroke-width="6"/>
-                <path d="M15,0 V18 M0,9 H30" stroke="#ff0000" stroke-width="3.6"/>
-                <rect x="30" width="30" height="18" fill="#00008b"/>
-                <rect y="18" width="60" height="18" fill="#00008b"/>
-                <circle cx="15" cy="27" r="3.4" fill="#fff"/>
-                <circle cx="45" cy="7" r="2.1" fill="#fff"/>
-                <circle cx="45" cy="29" r="2.3" fill="#fff"/>
-                <circle cx="38" cy="17" r="2.1" fill="#fff"/>
-                <circle cx="52" cy="15" r="2.0" fill="#fff"/>
-                <circle cx="48" cy="21" r="1.3" fill="#fff"/>
-            </svg>
-            <!-- UK Union Jack SVG -->
-            <svg class="flag-svg" ng-if="opt.flagCode === 'gb'" viewBox="0 0 60 36" xmlns="http://www.w3.org/2000/svg">
-                <rect width="60" height="36" fill="#012169"/>
-                <path d="M0,0 L60,36 M60,0 L0,36" stroke="#fff" stroke-width="7"/>
-                <path d="M0,0 L60,36 M60,0 L0,36" stroke="#C8102E" stroke-width="4"/>
-                <path d="M30,0 V36 M0,18 H60" stroke="#fff" stroke-width="11"/>
-                <path d="M30,0 V36 M0,18 H60" stroke="#C8102E" stroke-width="6.5"/>
-            </svg>
-            <!-- USA Flag SVG -->
-            <svg class="flag-svg" ng-if="opt.flagCode === 'us'" viewBox="0 0 60 36" xmlns="http://www.w3.org/2000/svg">
-                <rect width="60" height="36" fill="#B22234"/>
-                <path d="M0,5.5 H60 M0,11 H60 M0,16.5 H60 M0,22 H60 M0,27.5 H60 M0,33 H60" stroke="#fff" stroke-width="2.7"/>
-                <rect width="26" height="19" fill="#3C3B6E"/>
-                <circle cx="6" cy="5" r="1.2" fill="#fff"/>
-                <circle cx="13" cy="5" r="1.2" fill="#fff"/>
-                <circle cx="20" cy="5" r="1.2" fill="#fff"/>
-                <circle cx="9.5" cy="9.5" r="1.2" fill="#fff"/>
-                <circle cx="16.5" cy="9.5" r="1.2" fill="#fff"/>
-                <circle cx="6" cy="14" r="1.2" fill="#fff"/>
-                <circle cx="13" cy="14" r="1.2" fill="#fff"/>
-                <circle cx="20" cy="14" r="1.2" fill="#fff"/>
-            </svg>
-            <!-- Clever City Emblem Badge (⛵ Sail for Auckland vs 💨 Wind for Wellington) -->
-            <span class="city-corner-emblem" ng-style="{'border-color': opt.accentColor}">{{ opt.emblem }}</span>
-        </span>
+    <!-- Simple Reusable Country Flag SVG Template -->
+    <script type="text/ng-template" id="city-flag.html">
+        <svg class="flag-svg" ng-if="opt.flagCode === 'nz'" viewBox="0 0 60 36" xmlns="http://www.w3.org/2000/svg">
+            <rect width="60" height="36" fill="#00247d"/>
+            <path d="M0,0 L30,18 M30,0 L0,18" stroke="#fff" stroke-width="3.6"/>
+            <path d="M0,0 L30,18 M30,0 L0,18" stroke="#cc142b" stroke-width="2"/>
+            <path d="M15,0 V18 M0,9 H30" stroke="#fff" stroke-width="6"/>
+            <path d="M15,0 V18 M0,9 H30" stroke="#cc142b" stroke-width="3.6"/>
+            <rect x="30" width="30" height="18" fill="#00247d"/>
+            <rect y="18" width="60" height="18" fill="#00247d"/>
+            <circle cx="45" cy="7" r="2.6" fill="#cc142b" stroke="#fff" stroke-width="0.9"/>
+            <circle cx="45" cy="29" r="2.8" fill="#cc142b" stroke="#fff" stroke-width="0.9"/>
+            <circle cx="38" cy="17" r="2.5" fill="#cc142b" stroke="#fff" stroke-width="0.9"/>
+            <circle cx="52" cy="15" r="2.2" fill="#cc142b" stroke="#fff" stroke-width="0.9"/>
+        </svg>
+        <svg class="flag-svg" ng-if="opt.flagCode === 'au'" viewBox="0 0 60 36" xmlns="http://www.w3.org/2000/svg">
+            <rect width="60" height="36" fill="#00008b"/>
+            <path d="M0,0 L30,18 M30,0 L0,18" stroke="#fff" stroke-width="3.6"/>
+            <path d="M0,0 L30,18 M30,0 L0,18" stroke="#ff0000" stroke-width="2"/>
+            <path d="M15,0 V18 M0,9 H30" stroke="#fff" stroke-width="6"/>
+            <path d="M15,0 V18 M0,9 H30" stroke="#ff0000" stroke-width="3.6"/>
+            <rect x="30" width="30" height="18" fill="#00008b"/>
+            <rect y="18" width="60" height="18" fill="#00008b"/>
+            <circle cx="15" cy="27" r="3.4" fill="#fff"/>
+            <circle cx="45" cy="7" r="2.1" fill="#fff"/>
+            <circle cx="45" cy="29" r="2.3" fill="#fff"/>
+            <circle cx="38" cy="17" r="2.1" fill="#fff"/>
+            <circle cx="52" cy="15" r="2.0" fill="#fff"/>
+            <circle cx="48" cy="21" r="1.3" fill="#fff"/>
+        </svg>
+        <svg class="flag-svg" ng-if="opt.flagCode === 'gb'" viewBox="0 0 60 36" xmlns="http://www.w3.org/2000/svg">
+            <rect width="60" height="36" fill="#012169"/>
+            <path d="M0,0 L60,36 M60,0 L0,36" stroke="#fff" stroke-width="7"/>
+            <path d="M0,0 L60,36 M60,0 L0,36" stroke="#C8102E" stroke-width="4"/>
+            <path d="M30,0 V36 M0,18 H60" stroke="#fff" stroke-width="11"/>
+            <path d="M30,0 V36 M0,18 H60" stroke="#C8102E" stroke-width="6.5"/>
+        </svg>
+        <svg class="flag-svg" ng-if="opt.flagCode === 'us'" viewBox="0 0 60 36" xmlns="http://www.w3.org/2000/svg">
+            <rect width="60" height="36" fill="#B22234"/>
+            <path d="M0,5.5 H60 M0,11 H60 M0,16.5 H60 M0,22 H60 M0,27.5 H60 M0,33 H60" stroke="#fff" stroke-width="2.7"/>
+            <rect width="26" height="19" fill="#3C3B6E"/>
+            <circle cx="6" cy="5" r="1.2" fill="#fff"/>
+            <circle cx="13" cy="5" r="1.2" fill="#fff"/>
+            <circle cx="20" cy="5" r="1.2" fill="#fff"/>
+            <circle cx="9.5" cy="9.5" r="1.2" fill="#fff"/>
+            <circle cx="16.5" cy="9.5" r="1.2" fill="#fff"/>
+            <circle cx="6" cy="14" r="1.2" fill="#fff"/>
+            <circle cx="13" cy="14" r="1.2" fill="#fff"/>
+            <circle cx="20" cy="14" r="1.2" fill="#fff"/>
+        </svg>
     </script>
 
     <!-- Minimal Responsive Top Bar -->
@@ -1020,11 +960,11 @@
         <div class="topbar-inner">
             <div class="brand">
                 <span class="brand-dot"></span>
-                <span>onramp<span style="color:#38bdf8;">.cam</span></span>
+                <span>onramp<span class="brand-tld" style="color:#38bdf8;">.cam</span></span>
             </div>
 
             <div class="topbar-actions">
-                <!-- Country & City Dropdown Selector -->
+                <!-- Simple Country & City Dropdown Selector -->
                 <div class="city-dropdown-wrap" id="city-selector-dropdown">
                     <button type="button"
                             class="city-trigger-btn"
@@ -1032,46 +972,27 @@
                             ng-click="toggleCityDropdown($event)"
                             aria-haspopup="listbox"
                             aria-expanded="{{ cityDropdownOpen }}">
-                        <span ng-repeat="opt in [getActiveCityOption()]" ng-include="'city-flag-emblem.html'"></span>
-                        <span class="city-trigger-name">{{ getActiveCityOption().name }}</span>
-                        <span class="city-distinct-pill trigger-pill"
-                              ng-style="{'background': getActiveCityOption().accentBg, 'color': getActiveCityOption().accentColor, 'border-color': getActiveCityOption().accentBorder}">
-                            {{ getActiveCityOption().dialCode }} • {{ getActiveCityOption().shortCode }}
-                        </span>
+                        <span ng-repeat="opt in [getActiveCityOption()]" ng-include="'city-flag.html'"></span>
+                        <span>{{ getActiveCityOption().name }}</span>
                         <span class="city-chevron">▾</span>
                     </button>
 
-                    <!-- Dropdown Popover Menu -->
                     <div class="city-dropdown-menu" ng-show="cityDropdownOpen" role="listbox">
-                        <div class="city-dropdown-header">
-                            <span>Select Commute Region</span>
-                            <span>🇳🇿 ⛵ 09 vs 💨 04</span>
-                        </div>
-
                         <button type="button"
                                 class="city-option-btn"
                                 ng-repeat="opt in cityOptions track by opt.id"
                                 ng-class="{'active': commute.city === opt.id}"
                                 ng-click="selectCity(opt.id, $event)">
-                            <div class="city-option-left">
-                                <span ng-include="'city-flag-emblem.html'"></span>
-                                <div class="city-option-text">
-                                    <div class="city-option-title-row">
-                                        <span>{{ opt.name }}</span>
-                                        <span class="city-distinct-pill"
-                                              ng-style="{'background': opt.accentBg, 'color': opt.accentColor, 'border-color': opt.accentBorder}">
-                                            {{ opt.distinctLabel }}
-                                        </span>
-                                    </div>
-                                    <div class="city-option-sub">{{ opt.subtitle }}</div>
-                                </div>
-                            </div>
-                            <span ng-if="commute.city === opt.id" style="color:#38bdf8; font-weight:800; font-size:14px;">✓</span>
+                            <span class="city-option-left">
+                                <span ng-include="'city-flag.html'"></span>
+                                <span>{{ opt.name }}</span>
+                            </span>
+                            <span ng-if="commute.city === opt.id">✓</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- View Switcher -->
+                <!-- View Switcher (Journey | All Cams | Map) -->
                 <div class="segmented">
                     <button type="button" class="seg-btn" ng-class="{'active': viewMode === 'strip' && commute.layoutMode === 'deck'}" ng-click="setViewMode('strip'); setLayoutMode('deck')">
                         Journey
@@ -1123,7 +1044,7 @@
         <!-- =============================================================== -->
         <div class="deck-grid" ng-if="commute.layoutMode === 'deck' && commute.displayedCameras.length > 0">
 
-            <!-- Left Dot-Only Route Spine -->
+            <!-- Left Dot-Only Route Spine (Desktop/Tablet) -->
             <aside class="spine-sidebar" aria-label="Route stops">
                 <div class="spine-item"
                      ng-repeat="cam in commute.displayedCameras track by cam.Id"
@@ -1137,7 +1058,7 @@
                 </div>
             </aside>
 
-            <!-- Right Interactive Drag Stage -->
+            <!-- Interactive Drag Stage -->
             <div class="stage-wrap" id="journey-drag-stage">
 
                 <!-- Previous Stop Arrow Bar (Above Image) -->
@@ -1149,11 +1070,22 @@
                     <span class="step-peek-meta">Previous</span>
                 </div>
 
-                <!-- Active Camera Card (Uncluttered Frame) -->
+                <!-- Active Camera Card (Maximized Image Viewport) -->
                 <div class="camera-stage-card"
                      ng-if="getCurrentJourneyCamera()"
                      ng-class="{'dragging': commute.isDragging}"
                      ng-style="{'transform': 'translateY(' + commute.dragOffsetY + 'px)'}">
+
+                    <!-- Mobile Horizontal Dot Strip (Keeps 100% of screen width for the camera image) -->
+                    <div class="mobile-spine-bar" aria-label="Route stops">
+                        <div class="spine-item"
+                             style="width:auto;"
+                             ng-repeat="cam in commute.displayedCameras track by cam.Id"
+                             ng-class="{'passed': $index < commute.activeCamIndex, 'active': $index === commute.activeCamIndex}"
+                             ng-click="goToCameraIndex($index)">
+                            <div class="spine-dot"></div>
+                        </div>
+                    </div>
 
                     <div class="stage-header">
                         <div style="display:flex; align-items:center; gap:8px; min-width:0; flex:1;">
@@ -1165,7 +1097,7 @@
                                     {{ getCurrentJourneyCamera().Name }}
                                 </div>
                                 <div class="stage-subtitle">
-                                    Stop {{ getCurrentJourneyCamera().SeqNumber }} of {{ commute.displayedCameras.length }} • {{ getCurrentJourneyCamera().Subtitle }} • {{ getCurrentJourneyCamera().CumulativeKm }} km ({{ getCurrentJourneyCamera().CumulativeMins }} min)
+                                    Stop {{ getCurrentJourneyCamera().SeqNumber }}/{{ commute.displayedCameras.length }} • {{ getCurrentJourneyCamera().Subtitle }} • {{ getCurrentJourneyCamera().CumulativeKm }} km ({{ getCurrentJourneyCamera().CumulativeMins }}m)
                                 </div>
                             </div>
                         </div>
@@ -1191,7 +1123,7 @@
                              alt="{{ getCurrentJourneyCamera().Name }}" />
 
                         <span class="overlay-pill" ng-if="getCurrentJourneyCamera().City !== 'london'">
-                            {{ getActiveFrameTimestamp(getCurrentJourneyCamera()) }} • Frame {{ commute.frameStep + 1 }}/{{ getCurrentJourneyCamera().Frames.length || 1 }}
+                            {{ getActiveFrameTimestamp(getCurrentJourneyCamera()) }} • {{ commute.frameStep + 1 }}/{{ getCurrentJourneyCamera().Frames.length || 1 }}
                         </span>
                     </div>
 
@@ -1212,32 +1144,27 @@
                         <span class="step-peek-arrow">▼</span>
                         <strong style="color:#f8fafc;">{{ getNextJourneyCamera().Name }}</strong>
                     </span>
-                    <span class="step-peek-meta" style="color:#38bdf8; font-weight:600;">+{{ getNextJourneyCamera().DistFromPrevKm }} km (~{{ getNextJourneyCamera().MinsFromPrev }} min)</span>
+                    <span class="step-peek-meta" style="color:#38bdf8; font-weight:600;">+{{ getNextJourneyCamera().DistFromPrevKm }} km (~{{ getNextJourneyCamera().MinsFromPrev }}m)</span>
                 </div>
             </div>
         </div>
 
         <!-- =============================================================== -->
-        <!-- MODE B: ALL CAMERAS SPINE LIST                                  -->
+        <!-- MODE B: ALL CAMERAS SPINE LIST (FULL-WIDTH RESPONSIVE IMAGES)   -->
         <!-- =============================================================== -->
         <div class="all-spine-list" ng-if="commute.layoutMode === 'spine' && commute.displayedCameras.length > 0">
             <div class="all-spine-card" ng-repeat="cam in commute.displayedCameras track by cam.Id">
                 <div class="all-spine-info">
-                    <div>
-                        <div style="display:flex; justify-content:space-between; align-items:center;">
-                            <span class="hwy-badge" ng-style="{'background-color': cam.Badge.bg}">{{ cam.Badge.code }}</span>
-                            <button type="button" class="star-btn" ng-class="{'starred': isStarred(cam.Id)}" ng-click="toggleStar(cam.Id, $event)">
-                                {{ isStarred(cam.Id) ? '★' : '☆' }}
-                            </button>
+                    <div style="display:flex; align-items:center; gap:8px; min-width:0; flex:1;">
+                        <span class="hwy-badge" ng-style="{'background-color': cam.Badge.bg}">{{ cam.Badge.code }}</span>
+                        <div style="min-width:0; flex:1;">
+                            <div class="stage-title">{{ cam.SeqNumber }}. {{ cam.Name }}</div>
+                            <div class="stage-subtitle">{{ cam.Subtitle }} • {{ cam.CumulativeKm }} km (~{{ cam.CumulativeMins }}m)</div>
                         </div>
-                        <h4 style="margin:10px 0 4px 0; font-size:16px; font-weight:700; color:#fff;">
-                            {{ cam.SeqNumber }}. {{ cam.Name }}
-                        </h4>
-                        <div style="font-size:12px; color:#94a3b8;">{{ cam.Subtitle }}</div>
                     </div>
-                    <div style="font-size:12px; color:#38bdf8; font-weight:600; margin-top:12px;">
-                        {{ cam.CumulativeKm }} km • ~{{ cam.CumulativeMins }} min from start
-                    </div>
+                    <button type="button" class="star-btn" ng-class="{'starred': isStarred(cam.Id)}" ng-click="toggleStar(cam.Id, $event)">
+                        {{ isStarred(cam.Id) ? '★' : '☆' }}
+                    </button>
                 </div>
 
                 <div class="all-spine-media">

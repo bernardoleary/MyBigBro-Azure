@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mybigbro-pwa-v1';
+const CACHE_NAME = 'mybigbro-pwa-v3';
 const APP_SHELL = [
   '/',
   '/index.html',

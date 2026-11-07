@@ -574,7 +574,7 @@ namespace Infostructure.MyBigBro.Web4.Services
                         Cam("ak-247","SH1 Rosedale", "Rosedale / Bush Rd", -36.7434, 174.7204, "https://www.trafficnz.info/camera/820.jpg"),
                         Cam("ak-24", "SH1 Greville Rd", "Albany / Pinehill", -36.735, 174.717, "https://www.trafficnz.info/camera/10.jpg"),
                         Cam("ak-245","SH1 McClymonts Rd", "Albany North / Oteha Valley", -36.7243, 174.7139, "https://www.trafficnz.info/camera/818.jpg"),
-                        Cam("ak-256","SH1 Redvale", "Lonely Track Rd", -36.6857, 174.7012, "https://www.trafficnz.info/camera/723.jpg"),
+                        Cam("ak-256","SH1 Albany / Redvale", "Albany North / Lonely Track Rd", -36.6857, 174.7012, "https://www.trafficnz.info/camera/723.jpg"),
                     }
                 },
                 new CommuteCorridorDto
@@ -634,8 +634,8 @@ namespace Infostructure.MyBigBro.Web4.Services
                     ShortName = "SH18 Upper Harbour",
                     Name = "SH18 Upper Harbour Highway (Westgate ↔ Constellation)",
                     Description = "Hobsonville, Brigham Creek, Upper Harbour Bridge, Greenhithe & Albany Hwy",
-                    InboundLabel = "Eastbound (Westgate → North Shore)",
-                    OutboundLabel = "Westbound (North Shore → Westgate)",
+                    InboundLabel = "Westbound (North Shore → Westgate)",
+                    OutboundLabel = "Eastbound (Westgate → North Shore)",
                     Cameras = new List<CommuteCameraDto>
                     {
                         Cam("ak-18", "SH18 Trig Rd", "Westgate / Whenuapai South", -36.808, 174.621, "https://www.trafficnz.info/camera/221.jpg"),
@@ -751,8 +751,8 @@ namespace Infostructure.MyBigBro.Web4.Services
                     ShortName = "A406 North Circular",
                     Name = "A406 North Circular (Chiswick ↔ Hanger Lane ↔ Walthamstow)",
                     Description = "Gunnersbury, Hanger Lane Gyratory, Ace Cafe / Stonebridge, Brentfield & Billet Underpass",
-                    InboundLabel = "Eastbound (Chiswick → East London)",
-                    OutboundLabel = "Westbound (East London → Chiswick)",
+                    InboundLabel = "Westbound (East London → Chiswick)",
+                    OutboundLabel = "Eastbound (Chiswick → East London)",
                     Cameras = new List<CommuteCameraDto>
                     {
                         LondonCam("JamCams_00001.08008", "A406 Gunnersbury Ave", "Chiswick / Gunnersbury Lane", 51.5006, -0.2843, "00001.08008"),
@@ -800,15 +800,15 @@ namespace Infostructure.MyBigBro.Web4.Services
                     OutboundLabel = "Westbound (Central London → M4 / Heathrow)",
                     Cameras = new List<CommuteCameraDto>
                     {
-                        LondonCam("JamCams_00001.06948", "A4 Colnbrook / Heathrow West", "M25 / Stanwell Moor Rd", 51.4839, -0.4925, "00001.06948"),
-                        LondonCam("JamCams_00001.06506", "A4 Heathrow Tunnel / Sipson Rd", "M4 Spur & Emirates Roundabout", 51.4814, -0.4510, "00001.06506"),
-                        LondonCam("JamCams_00001.06914", "A4 Bath Rd / Henlys Roundabout", "Hounslow West", 51.4751, -0.3944, "00001.06914"),
-                        LondonCam("JamCams_00001.06910", "A4 Great West Rd / Sutton Ln", "Osterley", 51.4781, -0.3724, "00001.06910"),
-                        LondonCam("JamCams_00001.06611", "A4 / M4 Elevated at Syon Lane", "Brentford / Gillette Corner", 51.4833, -0.3261, "00001.06611"),
-                        LondonCam("JamCams_00001.06648", "A4 Chiswick Roundabout", "M4 J1 / North Circular", 51.4912, -0.2829, "00001.06648"),
-                        LondonCam("JamCams_00001.06605", "A4 Great West Rd / Sutton Court", "Chiswick Flyover East", 51.4875, -0.2671, "00001.06605"),
-                        LondonCam("JamCams_00001.07312", "A40 Western Ave / Argyle Rd", "Perivale / Hoover Building", 51.5339, -0.3296, "00001.07312"),
                         LondonCam("JamCams_00001.07310", "A40 Western Ave / Connell Cres", "Park Royal / Hanger Lane", 51.5287, -0.2875, "00001.07310"),
+                        LondonCam("JamCams_00001.07312", "A40 Western Ave / Argyle Rd", "Perivale / Hoover Building", 51.5339, -0.3296, "00001.07312"),
+                        LondonCam("JamCams_00001.06605", "A4 Great West Rd / Sutton Court", "Chiswick Flyover East", 51.4875, -0.2671, "00001.06605"),
+                        LondonCam("JamCams_00001.06648", "A4 Chiswick Roundabout", "M4 J1 / North Circular", 51.4912, -0.2829, "00001.06648"),
+                        LondonCam("JamCams_00001.06611", "A4 / M4 Elevated at Syon Lane", "Brentford / Gillette Corner", 51.4833, -0.3261, "00001.06611"),
+                        LondonCam("JamCams_00001.06910", "A4 Great West Rd / Sutton Ln", "Osterley", 51.4781, -0.3724, "00001.06910"),
+                        LondonCam("JamCams_00001.06914", "A4 Bath Rd / Henlys Roundabout", "Hounslow West", 51.4751, -0.3944, "00001.06914"),
+                        LondonCam("JamCams_00001.06506", "A4 Heathrow Tunnel / Sipson Rd", "M4 Spur & Emirates Roundabout", 51.4814, -0.4510, "00001.06506"),
+                        LondonCam("JamCams_00001.06948", "A4 Colnbrook / Heathrow West", "M25 / Stanwell Moor Rd", 51.4839, -0.4925, "00001.06948"),
                     }
                 },
                 new CommuteCorridorDto
@@ -818,8 +818,8 @@ namespace Infostructure.MyBigBro.Web4.Services
                     ShortName = "Thames Bridges & Central",
                     Name = "Central London Thames Crossings & Embankment",
                     Description = "Albert Bridge, Chelsea Bridge, Vauxhall Cross, Westminster Bridge & Waterloo Bridge",
-                    InboundLabel = "Eastbound (Chelsea → Waterloo)",
-                    OutboundLabel = "Westbound (Waterloo → Chelsea)",
+                    InboundLabel = "Westbound (Waterloo → Chelsea)",
+                    OutboundLabel = "Eastbound (Chelsea → Waterloo)",
                     Cameras = new List<CommuteCameraDto>
                     {
                         LondonCam("JamCams_00001.06549", "Chelsea Embankment / Albert Bridge", "Albert Bridge North", 51.4837, -0.1673, "00001.06549"),
