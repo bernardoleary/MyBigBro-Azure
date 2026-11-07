@@ -248,6 +248,45 @@ namespace Infostructure.MyBigBro.Web4.Services
             }
         }
 
+        public CameraFrameEntry? GetLatestPreviewFrame(string? preferredCameraId = null)
+        {
+            var candidateIds = new List<string>();
+            if (!string.IsNullOrWhiteSpace(preferredCameraId))
+            {
+                candidateIds.Add(preferredCameraId.Trim());
+            }
+            candidateIds.AddRange(new[] { "ak-28", "ak-29", "ak-266", "wlg-282", "qld-31" });
+
+            foreach (var camId in candidateIds)
+            {
+                if (_frameBuffers.TryGetValue(camId, out var list))
+                {
+                    lock (list)
+                    {
+                        var latest = list.LastOrDefault(f => f.ImageBytes.Length > 0);
+                        if (latest != null)
+                        {
+                            return latest;
+                        }
+                    }
+                }
+            }
+
+            foreach (var kvp in _frameBuffers)
+            {
+                lock (kvp.Value)
+                {
+                    var latest = kvp.Value.LastOrDefault(f => f.ImageBytes.Length > 0);
+                    if (latest != null)
+                    {
+                        return latest;
+                    }
+                }
+            }
+
+            return null;
+        }
+
         public async Task<int> PollCorridorCamerasNowAsync(string? corridorId = null, CancellationToken cancellationToken = default)
         {
             if (!await _pollLock.WaitAsync(TimeSpan.FromSeconds(2), cancellationToken))

@@ -6,6 +6,8 @@
   <ItemGroup>
     <Content Include="index.html" CopyToPublishDirectory="PreserveNewest" />
     <Content Include="sw.js" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="robots.txt" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="sitemap.xml" CopyToPublishDirectory="PreserveNewest" />
     <Content Include="app\**" CopyToPublishDirectory="PreserveNewest" />
     <Content Include="scripts\**" CopyToPublishDirectory="PreserveNewest" />
     <Content Include="content\**" CopyToPublishDirectory="PreserveNewest" />

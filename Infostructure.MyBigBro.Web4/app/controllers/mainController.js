@@ -18,12 +18,27 @@ angular.module('MyBigBroApp.controllers', []).
             savedStarred = [];
         }
 
+        // Parse deep-link query parameters (?city=auckland&corridor=ak-sh1-north&cam=ak-28)
+        var urlParams = {};
+        try {
+            var search = window.location.search.substring(1).split('&');
+            for (var p = 0; p < search.length; p++) {
+                if (!search[p]) continue;
+                var pair = search[p].split('=');
+                urlParams[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+            }
+        } catch (e) { }
+
+        var initialCity = urlParams.city || localStorage.getItem('mybigbro_city') || 'auckland';
+        var initialCorridor = urlParams.corridor || localStorage.getItem('mybigbro_corridor') || 'ak-sh16';
+        var initialCamId = urlParams.cam || null;
+
         $scope.commute = {
-            city: localStorage.getItem('mybigbro_city') || 'auckland',
+            city: initialCity,
             layoutMode: localStorage.getItem('mybigbro_layout') || 'deck',
             allCorridors: [],
             cityCorridors: [],
-            selectedCorridorId: localStorage.getItem('mybigbro_corridor') || 'ak-sh16',
+            selectedCorridorId: initialCorridor,
             activeCorridor: null,
             displayedCameras: [],
             activeCamIndex: 0,
@@ -40,6 +55,80 @@ angular.module('MyBigBroApp.controllers', []).
             cacheBust: Date.now(),
             dragOffsetY: 0,
             isDragging: false
+        };
+
+        $scope.shareCopiedMessage = '';
+        $scope.showSupportPrompt = false;
+        $scope.supportPromptReason = '';
+        var stepInteractions = 0;
+
+        function canShowSupportPrompt() {
+            try {
+                var dismissedAt = parseInt(localStorage.getItem('onramp_support_dismissed_at') || '0', 10);
+                if (dismissedAt && (Date.now() - dismissedAt) < 3 * 24 * 60 * 60 * 1000) {
+                    return false;
+                }
+            } catch (e) { }
+            return true;
+        }
+
+        $scope.maybeTriggerSupportPrompt = function (reason) {
+            if ($scope.showSupportPrompt || !canShowSupportPrompt()) return;
+            $scope.supportPromptReason = reason || 'Keep onramp.cam 100% ad-free for daily commuters.';
+            $scope.showSupportPrompt = true;
+        };
+
+        $scope.dismissSupportPrompt = function ($event) {
+            if ($event) $event.stopPropagation();
+            $scope.showSupportPrompt = false;
+            try {
+                localStorage.setItem('onramp_support_dismissed_at', String(Date.now()));
+            } catch (e) { }
+        };
+
+        // Track repeat visits to gently prompt regular commuters
+        try {
+            var visits = parseInt(localStorage.getItem('onramp_visit_count') || '0', 10) + 1;
+            localStorage.setItem('onramp_visit_count', String(visits));
+            if (visits >= 2 && canShowSupportPrompt()) {
+                $timeout(function () {
+                    $scope.maybeTriggerSupportPrompt('Using onramp.cam for your commute? Help cover this month\'s $20 server cost.');
+                }, 8000);
+            }
+        } catch (e) { }
+
+        $scope.shareCurrentCamera = function (cam, $event) {
+            if ($event) $event.stopPropagation();
+            var targetCam = cam || $scope.getCurrentJourneyCamera();
+            var shareUrl = 'https://onramp.cam/?city=' + encodeURIComponent($scope.commute.city) +
+                '&corridor=' + encodeURIComponent($scope.commute.selectedCorridorId || '') +
+                (targetCam ? '&cam=' + encodeURIComponent(targetCam.Id) : '');
+            var shareTitle = targetCam
+                ? (targetCam.Name + ' — Live Motorway Camera on onramp.cam')
+                : 'onramp.cam — Live Commute Camera Strips';
+            var shareText = targetCam
+                ? ('Check live traffic at ' + targetCam.Name + ' (' + (targetCam.Subtitle || '') + ') on onramp.cam:')
+                : 'Live motorway commute camera strips on onramp.cam:';
+
+            if (navigator.share) {
+                navigator.share({
+                    title: shareTitle,
+                    text: shareText,
+                    url: shareUrl
+                }).catch(function () { });
+                return;
+            }
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(shareUrl).then(function () {
+                    $scope.$applyAsync(function () {
+                        $scope.shareCopiedMessage = '✓ Link copied!';
+                    });
+                    $timeout(function () {
+                        $scope.shareCopiedMessage = '';
+                    }, 2200);
+                });
+            }
         };
 
         $scope.cityDropdownOpen = false;
@@ -276,7 +365,15 @@ angular.module('MyBigBroApp.controllers', []).
             $scope.commute.totalRouteKm = totalKm.toFixed(1);
             $scope.commute.totalRouteMins = Math.max(1, totalMins);
 
-            if (!preserveCursor || $scope.commute.activeCamIndex >= enriched.length) {
+            if (initialCamId) {
+                for (var cIdx = 0; cIdx < enriched.length; cIdx++) {
+                    if (enriched[cIdx].Id === initialCamId) {
+                        $scope.commute.activeCamIndex = cIdx;
+                        break;
+                    }
+                }
+                initialCamId = null;
+            } else if (!preserveCursor || $scope.commute.activeCamIndex >= enriched.length) {
                 $scope.commute.activeCamIndex = 0;
             }
 
@@ -316,12 +413,20 @@ angular.module('MyBigBroApp.controllers', []).
         $scope.nextCameraInJourney = function () {
             if ($scope.commute.activeCamIndex < $scope.commute.displayedCameras.length - 1) {
                 $scope.commute.activeCamIndex++;
+                stepInteractions++;
+                if (stepInteractions === 3) {
+                    $scope.maybeTriggerSupportPrompt('Checking the motorway before you leave? Keep onramp.cam ad-free for $3.');
+                }
             }
         };
 
         $scope.prevCameraInJourney = function () {
             if ($scope.commute.activeCamIndex > 0) {
                 $scope.commute.activeCamIndex--;
+                stepInteractions++;
+                if (stepInteractions === 3) {
+                    $scope.maybeTriggerSupportPrompt('Checking the motorway before you leave? Keep onramp.cam ad-free for $3.');
+                }
             }
         };
 
@@ -490,8 +595,12 @@ angular.module('MyBigBroApp.controllers', []).
         $scope.toggleStar = function (camId, $event) {
             if ($event) $event.stopPropagation();
             var idx = $scope.commute.starredIds.indexOf(camId);
-            if (idx === -1) $scope.commute.starredIds.push(camId);
-            else $scope.commute.starredIds.splice(idx, 1);
+            if (idx === -1) {
+                $scope.commute.starredIds.push(camId);
+                $scope.maybeTriggerSupportPrompt('Saved to your personal commute strip! Chip in $3 to help cover monthly hosting.');
+            } else {
+                $scope.commute.starredIds.splice(idx, 1);
+            }
             try {
                 localStorage.setItem('mybigbro_starred_cams', JSON.stringify($scope.commute.starredIds));
             } catch (e) { }

@@ -141,5 +141,18 @@ namespace Infostructure.MyBigBro.Web4.Controllers
             Response.Headers[Microsoft.Net.Http.Headers.HeaderNames.CacheControl] = "public, max-age=3600";
             return File(frame.ImageBytes, frame.ContentType);
         }
+
+        [HttpGet("og-preview.jpg")]
+        public ActionResult GetOgPreviewImage([FromQuery] string? cam = null)
+        {
+            var frame = _commuteStripService.GetLatestPreviewFrame(cam);
+            if (frame != null && frame.ImageBytes.Length > 0)
+            {
+                Response.Headers[Microsoft.Net.Http.Headers.HeaderNames.CacheControl] = "public, max-age=180";
+                return File(frame.ImageBytes, frame.ContentType);
+            }
+
+            return Redirect("https://www.trafficnz.info/camera/50.jpg");
+        }
     }
 }

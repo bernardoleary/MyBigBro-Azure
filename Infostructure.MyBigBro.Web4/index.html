@@ -2,12 +2,47 @@
 <html ng-app="MyBigBroApp">
 <head>
     <meta charset="utf-8" />
-    <title>OnRamp — Live Commute Camera Strips (onramp.cam)</title>
+    <title>OnRamp — Live Motorway Commute Camera Strips (onramp.cam)</title>
+    <meta name="description" content="Instant, ad-free live motorway commute camera strips and time-lapse loops for Auckland (SH1, SH16, SH18, SH20), Wellington (Ngauranga, Transmission Gully, SH2), Queensland (M1 Pacific, Gateway, Bruce Hwy), London (TfL JamCams), and NYC." />
+    <meta name="keywords" content="Auckland motorway cameras, SH1 Harbour Bridge camera, SH16 Northwestern camera, Wellington traffic cameras, Transmission Gully camera, Ngauranga Gorge camera, M1 Pacific Motorway cameras, QLDTraffic cameras, TfL JamCams, live traffic cameras, commute strip" />
+    <link rel="canonical" href="https://onramp.cam/" />
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#090d16">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+
+    <!-- Open Graph / WhatsApp / Slack / Reddit / Social Unfurl Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="onramp.cam" />
+    <meta property="og:url" content="https://onramp.cam/" />
+    <meta property="og:title" content="onramp.cam — Live Motorway Commute Camera Strips" />
+    <meta property="og:description" content="Step through live motorway cameras in your exact commute order. Ad-free live strips & time-lapse loops for Auckland, Wellington, Brisbane/Gold Coast, London & NYC." />
+    <meta property="og:image" content="https://onramp.cam/api/commute/og-preview.jpg" />
+
+    <!-- Twitter / X Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="onramp.cam — Live Motorway Commute Camera Strips" />
+    <meta name="twitter:description" content="Step through live motorway cameras in your exact commute order. Ad-free live strips for Auckland, Wellington, Queensland, London & NYC." />
+    <meta name="twitter:image" content="https://onramp.cam/api/commute/og-preview.jpg" />
+
+    <!-- JSON-LD Structured Data for Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "OnRamp (onramp.cam)",
+      "url": "https://onramp.cam/",
+      "applicationCategory": "TravelApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Live motorway commute camera strips and rolling time-lapse loops for Auckland, Wellington, Queensland, London, and New York City."
+    }
+    </script>
 
     <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
@@ -504,6 +539,50 @@
             color: #facc15;
         }
 
+        .share-btn {
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: #cbd5e1;
+            border-radius: 6px;
+            padding: 3px 8px;
+            font-size: 11px;
+            font-weight: 700;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: all 0.15s ease;
+        }
+
+        .share-btn:hover {
+            border-color: #38bdf8;
+            color: #fff;
+        }
+
+        /* Non-intrusive Support / Donation Prompt Toast */
+        .support-prompt-banner {
+            margin: 6px 0;
+            padding: 8px 12px;
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.38);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 12px;
+            color: #e2e8f0;
+        }
+
+        .support-dismiss-btn {
+            background: transparent;
+            border: none;
+            color: #94a3b8;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 2px 6px;
+            line-height: 1;
+        }
+
         /* =================================================================
            TOP PRIORITY: Maximum Responsive Camera Image Size by Device
            ================================================================= */
@@ -895,11 +974,11 @@
     <script src="scripts/datetimepicker.js?v=7"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-    <script src="app/app.js?v=17"></script>
-    <script src="app/services/capturedImagesGeoMarkerService.js?v=17"></script>
-    <script src="app/services/webCamsService.js?v=17"></script>
-    <script src="app/services/commuteService.js?v=17"></script>
-    <script src="app/controllers/mainController.js?v=17"></script>
+    <script src="app/app.js?v=18"></script>
+    <script src="app/services/capturedImagesGeoMarkerService.js?v=18"></script>
+    <script src="app/services/webCamsService.js?v=18"></script>
+    <script src="app/services/commuteService.js?v=18"></script>
+    <script src="app/controllers/mainController.js?v=18"></script>
 </head>
 <body data-ng-controller="mainController" ng-cloak>
 
@@ -1034,6 +1113,17 @@
             </button>
         </div>
 
+        <!-- Smart Non-Intrusive Support Prompt (Triggers after repeat use or starring a camera) -->
+        <div class="support-prompt-banner" ng-if="showSupportPrompt">
+            <span>⚡ {{ supportPromptReason }}</span>
+            <div style="display:flex; align-items:center; gap:8px;">
+                <a class="coffee-pill-btn" ng-href="{{ supportConfig.supportUrl }}" target="_blank" rel="noopener">
+                    {{ supportConfig.buttonLabel }}
+                </a>
+                <button type="button" class="support-dismiss-btn" ng-click="dismissSupportPrompt($event)" title="Dismiss">✕</button>
+            </div>
+        </div>
+
         <!-- Empty Saved State -->
         <div ng-if="commute.displayedCameras.length === 0" style="background:#111827; border:1px solid #1e293b; border-radius:12px; padding:24px; text-align:center; color:#94a3b8;">
             Tap <strong>☆</strong> on any camera to save your personal commute strip.
@@ -1102,13 +1192,21 @@
                             </div>
                         </div>
 
-                        <button type="button"
-                                class="star-btn"
-                                ng-class="{'starred': isStarred(getCurrentJourneyCamera().Id)}"
-                                ng-click="toggleStar(getCurrentJourneyCamera().Id, $event)"
-                                title="Save camera">
-                            {{ isStarred(getCurrentJourneyCamera().Id) ? '★' : '☆' }}
-                        </button>
+                        <div style="display:flex; align-items:center; gap:4px; flex-shrink:0;">
+                            <button type="button"
+                                    class="share-btn"
+                                    ng-click="shareCurrentCamera(getCurrentJourneyCamera(), $event)"
+                                    title="Share live camera link">
+                                {{ shareCopiedMessage || '↗ Share' }}
+                            </button>
+                            <button type="button"
+                                    class="star-btn"
+                                    ng-class="{'starred': isStarred(getCurrentJourneyCamera().Id)}"
+                                    ng-click="toggleStar(getCurrentJourneyCamera().Id, $event)"
+                                    title="Save camera">
+                                {{ isStarred(getCurrentJourneyCamera().Id) ? '★' : '☆' }}
+                            </button>
+                        </div>
                     </div>
 
                     <div class="viewport-box">
@@ -1162,9 +1260,14 @@
                             <div class="stage-subtitle">{{ cam.Subtitle }} • {{ cam.CumulativeKm }} km (~{{ cam.CumulativeMins }}m)</div>
                         </div>
                     </div>
-                    <button type="button" class="star-btn" ng-class="{'starred': isStarred(cam.Id)}" ng-click="toggleStar(cam.Id, $event)">
-                        {{ isStarred(cam.Id) ? '★' : '☆' }}
-                    </button>
+                    <div style="display:flex; align-items:center; gap:4px; flex-shrink:0;">
+                        <button type="button" class="share-btn" ng-click="shareCurrentCamera(cam, $event)" title="Share live camera link">
+                            ↗ Share
+                        </button>
+                        <button type="button" class="star-btn" ng-class="{'starred': isStarred(cam.Id)}" ng-click="toggleStar(cam.Id, $event)">
+                            {{ isStarred(cam.Id) ? '★' : '☆' }}
+                        </button>
+                    </div>
                 </div>
 
                 <div class="all-spine-media">
